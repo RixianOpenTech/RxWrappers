@@ -6,13 +6,13 @@ using MS.Core;
 
 namespace System.Runtime.Remoting
 {
-public static class _IObjectHandle
-{
-    
-public static IObservable<System.Object> Unwrap(this IObservable<System.Runtime.Remoting.IObjectHandle> IObjectHandleValue)
-{
-    return Observable.Select(IObjectHandleValue, (IObjectHandleValueLambda) => IObjectHandleValueLambda.Unwrap());
-}
+    public static class __IObjectHandle
+    {
+        
+        public static IObservable<System.Object> Unwrap(this IObservable<System.Runtime.Remoting.IObjectHandle> IObjectHandleValue)
+        {
+            return Observable.Select(IObjectHandleValue, (IObjectHandleValueLambda) => IObjectHandleValueLambda.Unwrap());
+        }
 
-}
+    }
 }

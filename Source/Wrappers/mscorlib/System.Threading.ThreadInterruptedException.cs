@@ -6,8 +6,8 @@ using MS.Core;
 
 namespace System.Threading
 {
-public static class _ThreadInterruptedException
-{
-    
-}
+    public static class __ThreadInterruptedException
+    {
+        
+    }
 }

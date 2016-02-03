@@ -6,8 +6,8 @@ using MS.Core;
 
 namespace System.Runtime.Serialization.Formatters
 {
-public static class _TypeFilterLevel
-{
-    
-}
+    public static class __TypeFilterLevel
+    {
+        
+    }
 }

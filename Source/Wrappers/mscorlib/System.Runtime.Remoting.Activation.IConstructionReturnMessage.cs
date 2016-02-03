@@ -6,8 +6,8 @@ using MS.Core;
 
 namespace System.Runtime.Remoting.Activation
 {
-public static class _IConstructionReturnMessage
-{
-    
-}
+    public static class __IConstructionReturnMessage
+    {
+        
+    }
 }

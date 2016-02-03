@@ -6,8 +6,8 @@ using MS.Core;
 
 namespace System.Diagnostics.Contracts
 {
-public static class _ContractRuntimeIgnoredAttribute
-{
-    
-}
+    public static class __ContractRuntimeIgnoredAttribute
+    {
+        
+    }
 }

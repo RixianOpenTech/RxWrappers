@@ -6,8 +6,8 @@ using MS.Core;
 
 namespace System.Security.Cryptography
 {
-public static class _HMACMD5
-{
-    
-}
+    public static class __HMACMD5
+    {
+        
+    }
 }

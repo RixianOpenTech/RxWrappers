@@ -6,19 +6,19 @@ using MS.Core;
 
 namespace System.Security.Cryptography
 {
-public static class _Aes
-{
-    
-public static IObservable<System.Security.Cryptography.Aes> Create()
-{
-    return ObservableExt.Factory(() => System.Security.Cryptography.Aes.Create());
-}
+    public static class __Aes
+    {
+        
+        public static IObservable<System.Security.Cryptography.Aes> Create()
+        {
+            return ObservableExt.Factory(() => System.Security.Cryptography.Aes.Create());
+        }
 
 
-public static IObservable<System.Security.Cryptography.Aes> Create(IObservable<System.String> algorithmName)
-{
-    return Observable.Select(algorithmName, (algorithmNameLambda) => System.Security.Cryptography.Aes.Create(algorithmNameLambda));
-}
+        public static IObservable<System.Security.Cryptography.Aes> Create(IObservable<System.String> algorithmName)
+        {
+            return Observable.Select(algorithmName, (algorithmNameLambda) => System.Security.Cryptography.Aes.Create(algorithmNameLambda));
+        }
 
-}
+    }
 }

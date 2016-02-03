@@ -6,19 +6,19 @@ using MS.Core;
 
 namespace System
 {
-public static class _UnhandledExceptionEventArgs
-{
-    
-public static IObservable<System.Object> get_ExceptionObject(this IObservable<System.UnhandledExceptionEventArgs> UnhandledExceptionEventArgsValue)
-{
-    return Observable.Select(UnhandledExceptionEventArgsValue, (UnhandledExceptionEventArgsValueLambda) => UnhandledExceptionEventArgsValueLambda.ExceptionObject);
-}
+    public static class __UnhandledExceptionEventArgs
+    {
+        
+        public static IObservable<System.Object> get_ExceptionObject(this IObservable<System.UnhandledExceptionEventArgs> UnhandledExceptionEventArgsValue)
+        {
+            return Observable.Select(UnhandledExceptionEventArgsValue, (UnhandledExceptionEventArgsValueLambda) => UnhandledExceptionEventArgsValueLambda.ExceptionObject);
+        }
 
 
-public static IObservable<System.Boolean> get_IsTerminating(this IObservable<System.UnhandledExceptionEventArgs> UnhandledExceptionEventArgsValue)
-{
-    return Observable.Select(UnhandledExceptionEventArgsValue, (UnhandledExceptionEventArgsValueLambda) => UnhandledExceptionEventArgsValueLambda.IsTerminating);
-}
+        public static IObservable<System.Boolean> get_IsTerminating(this IObservable<System.UnhandledExceptionEventArgs> UnhandledExceptionEventArgsValue)
+        {
+            return Observable.Select(UnhandledExceptionEventArgsValue, (UnhandledExceptionEventArgsValueLambda) => UnhandledExceptionEventArgsValueLambda.IsTerminating);
+        }
 
-}
+    }
 }

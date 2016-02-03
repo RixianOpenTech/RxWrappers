@@ -6,8 +6,8 @@ using MS.Core;
 
 namespace System.IO
 {
-public static class _DriveType
-{
-    
-}
+    public static class __DriveType
+    {
+        
+    }
 }

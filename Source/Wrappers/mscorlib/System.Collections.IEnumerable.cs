@@ -6,13 +6,13 @@ using MS.Core;
 
 namespace System.Collections
 {
-public static class _IEnumerable
-{
-    
-public static IObservable<System.Collections.IEnumerator> GetEnumerator(this IObservable<System.Collections.IEnumerable> IEnumerableValue)
-{
-    return Observable.Select(IEnumerableValue, (IEnumerableValueLambda) => IEnumerableValueLambda.GetEnumerator());
-}
+    public static class __IEnumerable
+    {
+        
+        public static IObservable<System.Collections.IEnumerator> GetEnumerator(this IObservable<System.Collections.IEnumerable> IEnumerableValue)
+        {
+            return Observable.Select(IEnumerableValue, (IEnumerableValueLambda) => IEnumerableValueLambda.GetEnumerator());
+        }
 
-}
+    }
 }

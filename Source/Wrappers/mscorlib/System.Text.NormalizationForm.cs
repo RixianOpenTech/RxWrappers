@@ -6,8 +6,8 @@ using MS.Core;
 
 namespace System.Text
 {
-public static class _NormalizationForm
-{
-    
-}
+    public static class __NormalizationForm
+    {
+        
+    }
 }

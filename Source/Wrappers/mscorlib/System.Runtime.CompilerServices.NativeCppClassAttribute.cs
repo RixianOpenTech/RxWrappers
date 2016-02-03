@@ -6,8 +6,8 @@ using MS.Core;
 
 namespace System.Runtime.CompilerServices
 {
-public static class _NativeCppClassAttribute
-{
-    
-}
+    public static class __NativeCppClassAttribute
+    {
+        
+    }
 }

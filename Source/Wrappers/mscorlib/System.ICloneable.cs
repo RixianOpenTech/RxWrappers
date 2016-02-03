@@ -6,13 +6,13 @@ using MS.Core;
 
 namespace System
 {
-public static class _ICloneable
-{
-    
-public static IObservable<System.Object> Clone(this IObservable<System.ICloneable> ICloneableValue)
-{
-    return Observable.Select(ICloneableValue, (ICloneableValueLambda) => ICloneableValueLambda.Clone());
-}
+    public static class __ICloneable
+    {
+        
+        public static IObservable<System.Object> Clone(this IObservable<System.ICloneable> ICloneableValue)
+        {
+            return Observable.Select(ICloneableValue, (ICloneableValueLambda) => ICloneableValueLambda.Clone());
+        }
 
-}
+    }
 }

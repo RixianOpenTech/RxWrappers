@@ -6,13 +6,13 @@ using MS.Core;
 
 namespace System.Reflection
 {
-public static class _AssemblyCopyrightAttribute
-{
-    
-public static IObservable<System.String> get_Copyright(this IObservable<System.Reflection.AssemblyCopyrightAttribute> AssemblyCopyrightAttributeValue)
-{
-    return Observable.Select(AssemblyCopyrightAttributeValue, (AssemblyCopyrightAttributeValueLambda) => AssemblyCopyrightAttributeValueLambda.Copyright);
-}
+    public static class __AssemblyCopyrightAttribute
+    {
+        
+        public static IObservable<System.String> get_Copyright(this IObservable<System.Reflection.AssemblyCopyrightAttribute> AssemblyCopyrightAttributeValue)
+        {
+            return Observable.Select(AssemblyCopyrightAttributeValue, (AssemblyCopyrightAttributeValueLambda) => AssemblyCopyrightAttributeValueLambda.Copyright);
+        }
 
-}
+    }
 }

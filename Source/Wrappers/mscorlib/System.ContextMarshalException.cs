@@ -6,8 +6,8 @@ using MS.Core;
 
 namespace System
 {
-public static class _ContextMarshalException
-{
-    
-}
+    public static class __ContextMarshalException
+    {
+        
+    }
 }

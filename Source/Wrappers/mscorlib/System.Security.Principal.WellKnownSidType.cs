@@ -6,8 +6,8 @@ using MS.Core;
 
 namespace System.Security.Principal
 {
-public static class _WellKnownSidType
-{
-    
-}
+    public static class __WellKnownSidType
+    {
+        
+    }
 }

@@ -6,8 +6,8 @@ using MS.Core;
 
 namespace System.Runtime.Serialization.Formatters
 {
-public static class _FormatterAssemblyStyle
-{
-    
-}
+    public static class __FormatterAssemblyStyle
+    {
+        
+    }
 }

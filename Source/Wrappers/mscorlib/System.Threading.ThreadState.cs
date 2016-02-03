@@ -6,8 +6,8 @@ using MS.Core;
 
 namespace System.Threading
 {
-public static class _ThreadState
-{
-    
-}
+    public static class __ThreadState
+    {
+        
+    }
 }

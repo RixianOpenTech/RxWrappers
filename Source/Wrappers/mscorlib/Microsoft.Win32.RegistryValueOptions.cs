@@ -6,8 +6,8 @@ using MS.Core;
 
 namespace Microsoft.Win32
 {
-public static class _RegistryValueOptions
-{
-    
-}
+    public static class __RegistryValueOptions
+    {
+        
+    }
 }

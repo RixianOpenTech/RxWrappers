@@ -6,8 +6,8 @@ using MS.Core;
 
 namespace System
 {
-public static class _ContextBoundObject
-{
-    
-}
+    public static class __ContextBoundObject
+    {
+        
+    }
 }

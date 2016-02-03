@@ -6,13 +6,13 @@ using MS.Core;
 
 namespace System.Reflection
 {
-public static class _AssemblyCompanyAttribute
-{
-    
-public static IObservable<System.String> get_Company(this IObservable<System.Reflection.AssemblyCompanyAttribute> AssemblyCompanyAttributeValue)
-{
-    return Observable.Select(AssemblyCompanyAttributeValue, (AssemblyCompanyAttributeValueLambda) => AssemblyCompanyAttributeValueLambda.Company);
-}
+    public static class __AssemblyCompanyAttribute
+    {
+        
+        public static IObservable<System.String> get_Company(this IObservable<System.Reflection.AssemblyCompanyAttribute> AssemblyCompanyAttributeValue)
+        {
+            return Observable.Select(AssemblyCompanyAttributeValue, (AssemblyCompanyAttributeValueLambda) => AssemblyCompanyAttributeValueLambda.Company);
+        }
 
-}
+    }
 }

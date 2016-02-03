@@ -6,8 +6,8 @@ using MS.Core;
 
 namespace System.Security.AccessControl
 {
-public static class _AuditFlags
-{
-    
-}
+    public static class __AuditFlags
+    {
+        
+    }
 }

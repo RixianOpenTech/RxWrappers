@@ -6,8 +6,8 @@ using MS.Core;
 
 namespace System.Runtime.Remoting.Metadata
 {
-public static class _XmlFieldOrderOption
-{
-    
-}
+    public static class __XmlFieldOrderOption
+    {
+        
+    }
 }

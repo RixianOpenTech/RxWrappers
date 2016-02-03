@@ -6,8 +6,8 @@ using MS.Core;
 
 namespace System.Runtime.Serialization
 {
-public static class _OnSerializingAttribute
-{
-    
-}
+    public static class __OnSerializingAttribute
+    {
+        
+    }
 }

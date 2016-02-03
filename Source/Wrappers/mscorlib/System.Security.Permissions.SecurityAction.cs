@@ -6,8 +6,8 @@ using MS.Core;
 
 namespace System.Security.Permissions
 {
-public static class _SecurityAction
-{
-    
-}
+    public static class __SecurityAction
+    {
+        
+    }
 }

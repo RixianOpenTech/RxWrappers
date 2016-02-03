@@ -6,25 +6,25 @@ using MS.Core;
 
 namespace System.Globalization
 {
-public static class _DaylightTime
-{
-    
-public static IObservable<System.DateTime> get_Start(this IObservable<System.Globalization.DaylightTime> DaylightTimeValue)
-{
-    return Observable.Select(DaylightTimeValue, (DaylightTimeValueLambda) => DaylightTimeValueLambda.Start);
-}
+    public static class __DaylightTime
+    {
+        
+        public static IObservable<System.DateTime> get_Start(this IObservable<System.Globalization.DaylightTime> DaylightTimeValue)
+        {
+            return Observable.Select(DaylightTimeValue, (DaylightTimeValueLambda) => DaylightTimeValueLambda.Start);
+        }
 
 
-public static IObservable<System.DateTime> get_End(this IObservable<System.Globalization.DaylightTime> DaylightTimeValue)
-{
-    return Observable.Select(DaylightTimeValue, (DaylightTimeValueLambda) => DaylightTimeValueLambda.End);
-}
+        public static IObservable<System.DateTime> get_End(this IObservable<System.Globalization.DaylightTime> DaylightTimeValue)
+        {
+            return Observable.Select(DaylightTimeValue, (DaylightTimeValueLambda) => DaylightTimeValueLambda.End);
+        }
 
 
-public static IObservable<System.TimeSpan> get_Delta(this IObservable<System.Globalization.DaylightTime> DaylightTimeValue)
-{
-    return Observable.Select(DaylightTimeValue, (DaylightTimeValueLambda) => DaylightTimeValueLambda.Delta);
-}
+        public static IObservable<System.TimeSpan> get_Delta(this IObservable<System.Globalization.DaylightTime> DaylightTimeValue)
+        {
+            return Observable.Select(DaylightTimeValue, (DaylightTimeValueLambda) => DaylightTimeValueLambda.Delta);
+        }
 
-}
+    }
 }

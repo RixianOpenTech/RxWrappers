@@ -6,13 +6,13 @@ using MS.Core;
 
 namespace System.Reflection
 {
-public static class _StrongNameKeyPair
-{
-    
-public static IObservable<System.Byte[]> get_PublicKey(this IObservable<System.Reflection.StrongNameKeyPair> StrongNameKeyPairValue)
-{
-    return Observable.Select(StrongNameKeyPairValue, (StrongNameKeyPairValueLambda) => StrongNameKeyPairValueLambda.PublicKey);
-}
+    public static class __StrongNameKeyPair
+    {
+        
+        public static IObservable<System.Byte[]> get_PublicKey(this IObservable<System.Reflection.StrongNameKeyPair> StrongNameKeyPairValue)
+        {
+            return Observable.Select(StrongNameKeyPairValue, (StrongNameKeyPairValueLambda) => StrongNameKeyPairValueLambda.PublicKey);
+        }
 
-}
+    }
 }

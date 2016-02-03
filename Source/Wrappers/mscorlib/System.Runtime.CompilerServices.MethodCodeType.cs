@@ -6,8 +6,8 @@ using MS.Core;
 
 namespace System.Runtime.CompilerServices
 {
-public static class _MethodCodeType
-{
-    
-}
+    public static class __MethodCodeType
+    {
+        
+    }
 }

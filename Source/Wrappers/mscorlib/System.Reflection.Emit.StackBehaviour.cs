@@ -6,8 +6,8 @@ using MS.Core;
 
 namespace System.Reflection.Emit
 {
-public static class _StackBehaviour
-{
-    
-}
+    public static class __StackBehaviour
+    {
+        
+    }
 }

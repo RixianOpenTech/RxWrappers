@@ -6,8 +6,8 @@ using MS.Core;
 
 namespace System.Runtime.ConstrainedExecution
 {
-public static class _CriticalFinalizerObject
-{
-    
-}
+    public static class __CriticalFinalizerObject
+    {
+        
+    }
 }

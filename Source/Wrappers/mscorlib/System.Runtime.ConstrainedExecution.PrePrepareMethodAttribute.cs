@@ -6,8 +6,8 @@ using MS.Core;
 
 namespace System.Runtime.ConstrainedExecution
 {
-public static class _PrePrepareMethodAttribute
-{
-    
-}
+    public static class __PrePrepareMethodAttribute
+    {
+        
+    }
 }

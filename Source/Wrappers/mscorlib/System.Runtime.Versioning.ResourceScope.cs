@@ -6,8 +6,8 @@ using MS.Core;
 
 namespace System.Runtime.Versioning
 {
-public static class _ResourceScope
-{
-    
-}
+    public static class __ResourceScope
+    {
+        
+    }
 }

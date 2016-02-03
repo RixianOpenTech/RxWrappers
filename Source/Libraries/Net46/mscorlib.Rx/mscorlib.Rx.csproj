@@ -176,9 +176,6 @@
     <Compile Include="..\..\..\Wrappers\mscorlib\System.ApplicationIdentity.cs">
       <Link>System.ApplicationIdentity.cs</Link>
     </Compile>
-    <Compile Include="..\..\..\Wrappers\mscorlib\System.ArgIterator.cs">
-      <Link>System.ArgIterator.cs</Link>
-    </Compile>
     <Compile Include="..\..\..\Wrappers\mscorlib\System.ArgumentException.cs">
       <Link>System.ArgumentException.cs</Link>
     </Compile>
@@ -1991,45 +1988,6 @@
     <Compile Include="..\..\..\Wrappers\mscorlib\System.Runtime.InteropServices.ComSourceInterfacesAttribute.cs">
       <Link>System.Runtime.InteropServices.ComSourceInterfacesAttribute.cs</Link>
     </Compile>
-    <Compile Include="..\..\..\Wrappers\mscorlib\System.Runtime.InteropServices.ComTypes.BINDPTR.cs">
-      <Link>System.Runtime.InteropServices.ComTypes.BINDPTR.cs</Link>
-    </Compile>
-    <Compile Include="..\..\..\Wrappers\mscorlib\System.Runtime.InteropServices.ComTypes.BIND_OPTS.cs">
-      <Link>System.Runtime.InteropServices.ComTypes.BIND_OPTS.cs</Link>
-    </Compile>
-    <Compile Include="..\..\..\Wrappers\mscorlib\System.Runtime.InteropServices.ComTypes.CALLCONV.cs">
-      <Link>System.Runtime.InteropServices.ComTypes.CALLCONV.cs</Link>
-    </Compile>
-    <Compile Include="..\..\..\Wrappers\mscorlib\System.Runtime.InteropServices.ComTypes.CONNECTDATA.cs">
-      <Link>System.Runtime.InteropServices.ComTypes.CONNECTDATA.cs</Link>
-    </Compile>
-    <Compile Include="..\..\..\Wrappers\mscorlib\System.Runtime.InteropServices.ComTypes.DESCKIND.cs">
-      <Link>System.Runtime.InteropServices.ComTypes.DESCKIND.cs</Link>
-    </Compile>
-    <Compile Include="..\..\..\Wrappers\mscorlib\System.Runtime.InteropServices.ComTypes.DISPPARAMS.cs">
-      <Link>System.Runtime.InteropServices.ComTypes.DISPPARAMS.cs</Link>
-    </Compile>
-    <Compile Include="..\..\..\Wrappers\mscorlib\System.Runtime.InteropServices.ComTypes.ELEMDESC+DESCUNION.cs">
-      <Link>System.Runtime.InteropServices.ComTypes.ELEMDESC+DESCUNION.cs</Link>
-    </Compile>
-    <Compile Include="..\..\..\Wrappers\mscorlib\System.Runtime.InteropServices.ComTypes.ELEMDESC.cs">
-      <Link>System.Runtime.InteropServices.ComTypes.ELEMDESC.cs</Link>
-    </Compile>
-    <Compile Include="..\..\..\Wrappers\mscorlib\System.Runtime.InteropServices.ComTypes.EXCEPINFO.cs">
-      <Link>System.Runtime.InteropServices.ComTypes.EXCEPINFO.cs</Link>
-    </Compile>
-    <Compile Include="..\..\..\Wrappers\mscorlib\System.Runtime.InteropServices.ComTypes.FILETIME.cs">
-      <Link>System.Runtime.InteropServices.ComTypes.FILETIME.cs</Link>
-    </Compile>
-    <Compile Include="..\..\..\Wrappers\mscorlib\System.Runtime.InteropServices.ComTypes.FUNCDESC.cs">
-      <Link>System.Runtime.InteropServices.ComTypes.FUNCDESC.cs</Link>
-    </Compile>
-    <Compile Include="..\..\..\Wrappers\mscorlib\System.Runtime.InteropServices.ComTypes.FUNCFLAGS.cs">
-      <Link>System.Runtime.InteropServices.ComTypes.FUNCFLAGS.cs</Link>
-    </Compile>
-    <Compile Include="..\..\..\Wrappers\mscorlib\System.Runtime.InteropServices.ComTypes.FUNCKIND.cs">
-      <Link>System.Runtime.InteropServices.ComTypes.FUNCKIND.cs</Link>
-    </Compile>
     <Compile Include="..\..\..\Wrappers\mscorlib\System.Runtime.InteropServices.ComTypes.IBindCtx.cs">
       <Link>System.Runtime.InteropServices.ComTypes.IBindCtx.cs</Link>
     </Compile>
@@ -2038,12 +1996,6 @@
     </Compile>
     <Compile Include="..\..\..\Wrappers\mscorlib\System.Runtime.InteropServices.ComTypes.IConnectionPointContainer.cs">
       <Link>System.Runtime.InteropServices.ComTypes.IConnectionPointContainer.cs</Link>
-    </Compile>
-    <Compile Include="..\..\..\Wrappers\mscorlib\System.Runtime.InteropServices.ComTypes.IDLDESC.cs">
-      <Link>System.Runtime.InteropServices.ComTypes.IDLDESC.cs</Link>
-    </Compile>
-    <Compile Include="..\..\..\Wrappers\mscorlib\System.Runtime.InteropServices.ComTypes.IDLFLAG.cs">
-      <Link>System.Runtime.InteropServices.ComTypes.IDLFLAG.cs</Link>
     </Compile>
     <Compile Include="..\..\..\Wrappers\mscorlib\System.Runtime.InteropServices.ComTypes.IEnumConnectionPoints.cs">
       <Link>System.Runtime.InteropServices.ComTypes.IEnumConnectionPoints.cs</Link>
@@ -2062,12 +2014,6 @@
     </Compile>
     <Compile Include="..\..\..\Wrappers\mscorlib\System.Runtime.InteropServices.ComTypes.IMoniker.cs">
       <Link>System.Runtime.InteropServices.ComTypes.IMoniker.cs</Link>
-    </Compile>
-    <Compile Include="..\..\..\Wrappers\mscorlib\System.Runtime.InteropServices.ComTypes.IMPLTYPEFLAGS.cs">
-      <Link>System.Runtime.InteropServices.ComTypes.IMPLTYPEFLAGS.cs</Link>
-    </Compile>
-    <Compile Include="..\..\..\Wrappers\mscorlib\System.Runtime.InteropServices.ComTypes.INVOKEKIND.cs">
-      <Link>System.Runtime.InteropServices.ComTypes.INVOKEKIND.cs</Link>
     </Compile>
     <Compile Include="..\..\..\Wrappers\mscorlib\System.Runtime.InteropServices.ComTypes.IPersistFile.cs">
       <Link>System.Runtime.InteropServices.ComTypes.IPersistFile.cs</Link>
@@ -2092,48 +2038,6 @@
     </Compile>
     <Compile Include="..\..\..\Wrappers\mscorlib\System.Runtime.InteropServices.ComTypes.ITypeLib2.cs">
       <Link>System.Runtime.InteropServices.ComTypes.ITypeLib2.cs</Link>
-    </Compile>
-    <Compile Include="..\..\..\Wrappers\mscorlib\System.Runtime.InteropServices.ComTypes.LIBFLAGS.cs">
-      <Link>System.Runtime.InteropServices.ComTypes.LIBFLAGS.cs</Link>
-    </Compile>
-    <Compile Include="..\..\..\Wrappers\mscorlib\System.Runtime.InteropServices.ComTypes.PARAMDESC.cs">
-      <Link>System.Runtime.InteropServices.ComTypes.PARAMDESC.cs</Link>
-    </Compile>
-    <Compile Include="..\..\..\Wrappers\mscorlib\System.Runtime.InteropServices.ComTypes.PARAMFLAG.cs">
-      <Link>System.Runtime.InteropServices.ComTypes.PARAMFLAG.cs</Link>
-    </Compile>
-    <Compile Include="..\..\..\Wrappers\mscorlib\System.Runtime.InteropServices.ComTypes.STATSTG.cs">
-      <Link>System.Runtime.InteropServices.ComTypes.STATSTG.cs</Link>
-    </Compile>
-    <Compile Include="..\..\..\Wrappers\mscorlib\System.Runtime.InteropServices.ComTypes.SYSKIND.cs">
-      <Link>System.Runtime.InteropServices.ComTypes.SYSKIND.cs</Link>
-    </Compile>
-    <Compile Include="..\..\..\Wrappers\mscorlib\System.Runtime.InteropServices.ComTypes.TYPEATTR.cs">
-      <Link>System.Runtime.InteropServices.ComTypes.TYPEATTR.cs</Link>
-    </Compile>
-    <Compile Include="..\..\..\Wrappers\mscorlib\System.Runtime.InteropServices.ComTypes.TYPEDESC.cs">
-      <Link>System.Runtime.InteropServices.ComTypes.TYPEDESC.cs</Link>
-    </Compile>
-    <Compile Include="..\..\..\Wrappers\mscorlib\System.Runtime.InteropServices.ComTypes.TYPEFLAGS.cs">
-      <Link>System.Runtime.InteropServices.ComTypes.TYPEFLAGS.cs</Link>
-    </Compile>
-    <Compile Include="..\..\..\Wrappers\mscorlib\System.Runtime.InteropServices.ComTypes.TYPEKIND.cs">
-      <Link>System.Runtime.InteropServices.ComTypes.TYPEKIND.cs</Link>
-    </Compile>
-    <Compile Include="..\..\..\Wrappers\mscorlib\System.Runtime.InteropServices.ComTypes.TYPELIBATTR.cs">
-      <Link>System.Runtime.InteropServices.ComTypes.TYPELIBATTR.cs</Link>
-    </Compile>
-    <Compile Include="..\..\..\Wrappers\mscorlib\System.Runtime.InteropServices.ComTypes.VARDESC+DESCUNION.cs">
-      <Link>System.Runtime.InteropServices.ComTypes.VARDESC+DESCUNION.cs</Link>
-    </Compile>
-    <Compile Include="..\..\..\Wrappers\mscorlib\System.Runtime.InteropServices.ComTypes.VARDESC.cs">
-      <Link>System.Runtime.InteropServices.ComTypes.VARDESC.cs</Link>
-    </Compile>
-    <Compile Include="..\..\..\Wrappers\mscorlib\System.Runtime.InteropServices.ComTypes.VARFLAGS.cs">
-      <Link>System.Runtime.InteropServices.ComTypes.VARFLAGS.cs</Link>
-    </Compile>
-    <Compile Include="..\..\..\Wrappers\mscorlib\System.Runtime.InteropServices.ComTypes.VARKIND.cs">
-      <Link>System.Runtime.InteropServices.ComTypes.VARKIND.cs</Link>
     </Compile>
     <Compile Include="..\..\..\Wrappers\mscorlib\System.Runtime.InteropServices.ComUnregisterFunctionAttribute.cs">
       <Link>System.Runtime.InteropServices.ComUnregisterFunctionAttribute.cs</Link>
@@ -2162,17 +2066,11 @@
     <Compile Include="..\..\..\Wrappers\mscorlib\System.Runtime.InteropServices.DefaultDllImportSearchPathsAttribute.cs">
       <Link>System.Runtime.InteropServices.DefaultDllImportSearchPathsAttribute.cs</Link>
     </Compile>
-    <Compile Include="..\..\..\Wrappers\mscorlib\System.Runtime.InteropServices.DESCKIND.cs">
-      <Link>System.Runtime.InteropServices.DESCKIND.cs</Link>
-    </Compile>
     <Compile Include="..\..\..\Wrappers\mscorlib\System.Runtime.InteropServices.DispatchWrapper.cs">
       <Link>System.Runtime.InteropServices.DispatchWrapper.cs</Link>
     </Compile>
     <Compile Include="..\..\..\Wrappers\mscorlib\System.Runtime.InteropServices.DispIdAttribute.cs">
       <Link>System.Runtime.InteropServices.DispIdAttribute.cs</Link>
-    </Compile>
-    <Compile Include="..\..\..\Wrappers\mscorlib\System.Runtime.InteropServices.DISPPARAMS.cs">
-      <Link>System.Runtime.InteropServices.DISPPARAMS.cs</Link>
     </Compile>
     <Compile Include="..\..\..\Wrappers\mscorlib\System.Runtime.InteropServices.DllImportAttribute.cs">
       <Link>System.Runtime.InteropServices.DllImportAttribute.cs</Link>
@@ -2180,17 +2078,8 @@
     <Compile Include="..\..\..\Wrappers\mscorlib\System.Runtime.InteropServices.DllImportSearchPath.cs">
       <Link>System.Runtime.InteropServices.DllImportSearchPath.cs</Link>
     </Compile>
-    <Compile Include="..\..\..\Wrappers\mscorlib\System.Runtime.InteropServices.ELEMDESC+DESCUNION.cs">
-      <Link>System.Runtime.InteropServices.ELEMDESC+DESCUNION.cs</Link>
-    </Compile>
-    <Compile Include="..\..\..\Wrappers\mscorlib\System.Runtime.InteropServices.ELEMDESC.cs">
-      <Link>System.Runtime.InteropServices.ELEMDESC.cs</Link>
-    </Compile>
     <Compile Include="..\..\..\Wrappers\mscorlib\System.Runtime.InteropServices.ErrorWrapper.cs">
       <Link>System.Runtime.InteropServices.ErrorWrapper.cs</Link>
-    </Compile>
-    <Compile Include="..\..\..\Wrappers\mscorlib\System.Runtime.InteropServices.EXCEPINFO.cs">
-      <Link>System.Runtime.InteropServices.EXCEPINFO.cs</Link>
     </Compile>
     <Compile Include="..\..\..\Wrappers\mscorlib\System.Runtime.InteropServices.Expando.IExpando.cs">
       <Link>System.Runtime.InteropServices.Expando.IExpando.cs</Link>
@@ -2206,18 +2095,6 @@
     </Compile>
     <Compile Include="..\..\..\Wrappers\mscorlib\System.Runtime.InteropServices.FieldOffsetAttribute.cs">
       <Link>System.Runtime.InteropServices.FieldOffsetAttribute.cs</Link>
-    </Compile>
-    <Compile Include="..\..\..\Wrappers\mscorlib\System.Runtime.InteropServices.FILETIME.cs">
-      <Link>System.Runtime.InteropServices.FILETIME.cs</Link>
-    </Compile>
-    <Compile Include="..\..\..\Wrappers\mscorlib\System.Runtime.InteropServices.FUNCDESC.cs">
-      <Link>System.Runtime.InteropServices.FUNCDESC.cs</Link>
-    </Compile>
-    <Compile Include="..\..\..\Wrappers\mscorlib\System.Runtime.InteropServices.FUNCFLAGS.cs">
-      <Link>System.Runtime.InteropServices.FUNCFLAGS.cs</Link>
-    </Compile>
-    <Compile Include="..\..\..\Wrappers\mscorlib\System.Runtime.InteropServices.FUNCKIND.cs">
-      <Link>System.Runtime.InteropServices.FUNCKIND.cs</Link>
     </Compile>
     <Compile Include="..\..\..\Wrappers\mscorlib\System.Runtime.InteropServices.GCHandle.cs">
       <Link>System.Runtime.InteropServices.GCHandle.cs</Link>
@@ -3175,9 +3052,6 @@
     </Compile>
     <Compile Include="..\..\..\Wrappers\mscorlib\System.Runtime.TargetedPatchingOptOutAttribute.cs">
       <Link>System.Runtime.TargetedPatchingOptOutAttribute.cs</Link>
-    </Compile>
-    <Compile Include="..\..\..\Wrappers\mscorlib\System.Runtime.Versioning.CompatibilitySwitch.cs">
-      <Link>System.Runtime.Versioning.CompatibilitySwitch.cs</Link>
     </Compile>
     <Compile Include="..\..\..\Wrappers\mscorlib\System.Runtime.Versioning.ComponentGuaranteesAttribute.cs">
       <Link>System.Runtime.Versioning.ComponentGuaranteesAttribute.cs</Link>
@@ -4528,9 +4402,6 @@
     </Compile>
     <Compile Include="..\..\..\Wrappers\mscorlib\System.TypeCode.cs">
       <Link>System.TypeCode.cs</Link>
-    </Compile>
-    <Compile Include="..\..\..\Wrappers\mscorlib\System.TypedReference.cs">
-      <Link>System.TypedReference.cs</Link>
     </Compile>
     <Compile Include="..\..\..\Wrappers\mscorlib\System.TypeInitializationException.cs">
       <Link>System.TypeInitializationException.cs</Link>

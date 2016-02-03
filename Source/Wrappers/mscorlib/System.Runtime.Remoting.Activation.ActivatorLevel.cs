@@ -6,8 +6,8 @@ using MS.Core;
 
 namespace System.Runtime.Remoting.Activation
 {
-public static class _ActivatorLevel
-{
-    
-}
+    public static class __ActivatorLevel
+    {
+        
+    }
 }

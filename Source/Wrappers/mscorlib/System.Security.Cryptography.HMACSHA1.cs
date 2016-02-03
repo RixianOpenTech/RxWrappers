@@ -6,8 +6,8 @@ using MS.Core;
 
 namespace System.Security.Cryptography
 {
-public static class _HMACSHA1
-{
-    
-}
+    public static class __HMACSHA1
+    {
+        
+    }
 }

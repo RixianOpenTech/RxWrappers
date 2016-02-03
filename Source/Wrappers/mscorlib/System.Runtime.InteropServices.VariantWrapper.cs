@@ -6,13 +6,13 @@ using MS.Core;
 
 namespace System.Runtime.InteropServices
 {
-public static class _VariantWrapper
-{
-    
-public static IObservable<System.Object> get_WrappedObject(this IObservable<System.Runtime.InteropServices.VariantWrapper> VariantWrapperValue)
-{
-    return Observable.Select(VariantWrapperValue, (VariantWrapperValueLambda) => VariantWrapperValueLambda.WrappedObject);
-}
+    public static class __VariantWrapper
+    {
+        
+        public static IObservable<System.Object> get_WrappedObject(this IObservable<System.Runtime.InteropServices.VariantWrapper> VariantWrapperValue)
+        {
+            return Observable.Select(VariantWrapperValue, (VariantWrapperValueLambda) => VariantWrapperValueLambda.WrappedObject);
+        }
 
-}
+    }
 }

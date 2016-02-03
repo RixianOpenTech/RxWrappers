@@ -6,8 +6,8 @@ using MS.Core;
 
 namespace System.Security.AccessControl
 {
-public static class _EventWaitHandleRights
-{
-    
-}
+    public static class __EventWaitHandleRights
+    {
+        
+    }
 }

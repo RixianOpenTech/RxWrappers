@@ -6,8 +6,8 @@ using MS.Core;
 
 namespace System.Threading
 {
-public static class _AutoResetEvent
-{
-    
-}
+    public static class __AutoResetEvent
+    {
+        
+    }
 }

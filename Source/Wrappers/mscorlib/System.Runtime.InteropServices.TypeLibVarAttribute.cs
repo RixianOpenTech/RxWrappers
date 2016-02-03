@@ -6,13 +6,13 @@ using MS.Core;
 
 namespace System.Runtime.InteropServices
 {
-public static class _TypeLibVarAttribute
-{
-    
-public static IObservable<System.Runtime.InteropServices.TypeLibVarFlags> get_Value(this IObservable<System.Runtime.InteropServices.TypeLibVarAttribute> TypeLibVarAttributeValue)
-{
-    return Observable.Select(TypeLibVarAttributeValue, (TypeLibVarAttributeValueLambda) => TypeLibVarAttributeValueLambda.Value);
-}
+    public static class __TypeLibVarAttribute
+    {
+        
+        public static IObservable<System.Runtime.InteropServices.TypeLibVarFlags> get_Value(this IObservable<System.Runtime.InteropServices.TypeLibVarAttribute> TypeLibVarAttributeValue)
+        {
+            return Observable.Select(TypeLibVarAttributeValue, (TypeLibVarAttributeValueLambda) => TypeLibVarAttributeValueLambda.Value);
+        }
 
-}
+    }
 }

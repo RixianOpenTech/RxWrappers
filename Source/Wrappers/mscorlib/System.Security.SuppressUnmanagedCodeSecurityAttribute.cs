@@ -6,8 +6,8 @@ using MS.Core;
 
 namespace System.Security
 {
-public static class _SuppressUnmanagedCodeSecurityAttribute
-{
-    
-}
+    public static class __SuppressUnmanagedCodeSecurityAttribute
+    {
+        
+    }
 }

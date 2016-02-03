@@ -6,8 +6,8 @@ using MS.Core;
 
 namespace System.Threading
 {
-public static class _LazyThreadSafetyMode
-{
-    
-}
+    public static class __LazyThreadSafetyMode
+    {
+        
+    }
 }

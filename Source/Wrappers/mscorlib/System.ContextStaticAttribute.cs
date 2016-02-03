@@ -6,8 +6,8 @@ using MS.Core;
 
 namespace System
 {
-public static class _ContextStaticAttribute
-{
-    
-}
+    public static class __ContextStaticAttribute
+    {
+        
+    }
 }

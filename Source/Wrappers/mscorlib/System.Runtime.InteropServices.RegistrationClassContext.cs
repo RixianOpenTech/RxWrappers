@@ -6,8 +6,8 @@ using MS.Core;
 
 namespace System.Runtime.InteropServices
 {
-public static class _RegistrationClassContext
-{
-    
-}
+    public static class __RegistrationClassContext
+    {
+        
+    }
 }

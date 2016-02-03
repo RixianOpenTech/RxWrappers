@@ -6,13 +6,13 @@ using MS.Core;
 
 namespace System.Runtime.Remoting.Messaging
 {
-public static class _IMessage
-{
-    
-public static IObservable<System.Collections.IDictionary> get_Properties(this IObservable<System.Runtime.Remoting.Messaging.IMessage> IMessageValue)
-{
-    return Observable.Select(IMessageValue, (IMessageValueLambda) => IMessageValueLambda.Properties);
-}
+    public static class __IMessage
+    {
+        
+        public static IObservable<System.Collections.IDictionary> get_Properties(this IObservable<System.Runtime.Remoting.Messaging.IMessage> IMessageValue)
+        {
+            return Observable.Select(IMessageValue, (IMessageValueLambda) => IMessageValueLambda.Properties);
+        }
 
-}
+    }
 }

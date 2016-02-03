@@ -6,8 +6,8 @@ using MS.Core;
 
 namespace System.Runtime.ConstrainedExecution
 {
-public static class _Cer
-{
-    
-}
+    public static class __Cer
+    {
+        
+    }
 }

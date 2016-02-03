@@ -6,8 +6,8 @@ using MS.Core;
 
 namespace System
 {
-public static class _SpecialFolderOption
-{
-    
-}
+    public static class __SpecialFolderOption
+    {
+        
+    }
 }

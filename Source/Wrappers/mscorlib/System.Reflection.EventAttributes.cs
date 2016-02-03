@@ -6,8 +6,8 @@ using MS.Core;
 
 namespace System.Reflection
 {
-public static class _EventAttributes
-{
-    
-}
+    public static class __EventAttributes
+    {
+        
+    }
 }

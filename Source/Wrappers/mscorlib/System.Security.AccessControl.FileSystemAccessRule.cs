@@ -6,13 +6,13 @@ using MS.Core;
 
 namespace System.Security.AccessControl
 {
-public static class _FileSystemAccessRule
-{
-    
-public static IObservable<System.Security.AccessControl.FileSystemRights> get_FileSystemRights(this IObservable<System.Security.AccessControl.FileSystemAccessRule> FileSystemAccessRuleValue)
-{
-    return Observable.Select(FileSystemAccessRuleValue, (FileSystemAccessRuleValueLambda) => FileSystemAccessRuleValueLambda.FileSystemRights);
-}
+    public static class __FileSystemAccessRule
+    {
+        
+        public static IObservable<System.Security.AccessControl.FileSystemRights> get_FileSystemRights(this IObservable<System.Security.AccessControl.FileSystemAccessRule> FileSystemAccessRuleValue)
+        {
+            return Observable.Select(FileSystemAccessRuleValue, (FileSystemAccessRuleValueLambda) => FileSystemAccessRuleValueLambda.FileSystemRights);
+        }
 
-}
+    }
 }

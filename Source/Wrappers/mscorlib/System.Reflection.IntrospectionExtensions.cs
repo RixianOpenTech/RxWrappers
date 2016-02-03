@@ -6,13 +6,13 @@ using MS.Core;
 
 namespace System.Reflection
 {
-public static class _IntrospectionExtensions
-{
-    
-public static IObservable<System.Reflection.TypeInfo> GetTypeInfo(IObservable<System.Type> type)
-{
-    return Observable.Select(type, (typeLambda) => System.Reflection.IntrospectionExtensions.GetTypeInfo(typeLambda));
-}
+    public static class __IntrospectionExtensions
+    {
+        
+        public static IObservable<System.Reflection.TypeInfo> GetTypeInfo(IObservable<System.Type> type)
+        {
+            return Observable.Select(type, (typeLambda) => System.Reflection.IntrospectionExtensions.GetTypeInfo(typeLambda));
+        }
 
-}
+    }
 }

@@ -6,8 +6,8 @@ using MS.Core;
 
 namespace System.Runtime.Remoting.Lifetime
 {
-public static class _LeaseState
-{
-    
-}
+    public static class __LeaseState
+    {
+        
+    }
 }

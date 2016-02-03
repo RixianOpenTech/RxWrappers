@@ -6,8 +6,8 @@ using MS.Core;
 
 namespace System.Security.Principal
 {
-public static class _TokenImpersonationLevel
-{
-    
-}
+    public static class __TokenImpersonationLevel
+    {
+        
+    }
 }

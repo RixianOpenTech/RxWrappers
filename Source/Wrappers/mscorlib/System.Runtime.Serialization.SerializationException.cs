@@ -6,8 +6,8 @@ using MS.Core;
 
 namespace System.Runtime.Serialization
 {
-public static class _SerializationException
-{
-    
-}
+    public static class __SerializationException
+    {
+        
+    }
 }

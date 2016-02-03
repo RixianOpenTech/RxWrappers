@@ -6,13 +6,13 @@ using MS.Core;
 
 namespace System.Reflection
 {
-public static class _AssemblyTrademarkAttribute
-{
-    
-public static IObservable<System.String> get_Trademark(this IObservable<System.Reflection.AssemblyTrademarkAttribute> AssemblyTrademarkAttributeValue)
-{
-    return Observable.Select(AssemblyTrademarkAttributeValue, (AssemblyTrademarkAttributeValueLambda) => AssemblyTrademarkAttributeValueLambda.Trademark);
-}
+    public static class __AssemblyTrademarkAttribute
+    {
+        
+        public static IObservable<System.String> get_Trademark(this IObservable<System.Reflection.AssemblyTrademarkAttribute> AssemblyTrademarkAttributeValue)
+        {
+            return Observable.Select(AssemblyTrademarkAttributeValue, (AssemblyTrademarkAttributeValueLambda) => AssemblyTrademarkAttributeValueLambda.Trademark);
+        }
 
-}
+    }
 }

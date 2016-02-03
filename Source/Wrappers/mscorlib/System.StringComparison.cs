@@ -6,8 +6,8 @@ using MS.Core;
 
 namespace System
 {
-public static class _StringComparison
-{
-    
-}
+    public static class __StringComparison
+    {
+        
+    }
 }

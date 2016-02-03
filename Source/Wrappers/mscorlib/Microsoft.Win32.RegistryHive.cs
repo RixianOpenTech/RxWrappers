@@ -6,8 +6,8 @@ using MS.Core;
 
 namespace Microsoft.Win32
 {
-public static class _RegistryHive
-{
-    
-}
+    public static class __RegistryHive
+    {
+        
+    }
 }

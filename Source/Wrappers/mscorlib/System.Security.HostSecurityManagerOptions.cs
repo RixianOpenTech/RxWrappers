@@ -6,8 +6,8 @@ using MS.Core;
 
 namespace System.Security
 {
-public static class _HostSecurityManagerOptions
-{
-    
-}
+    public static class __HostSecurityManagerOptions
+    {
+        
+    }
 }

@@ -6,8 +6,8 @@ using MS.Core;
 
 namespace System.Runtime.Remoting.Messaging
 {
-public static class _OneWayAttribute
-{
-    
-}
+    public static class __OneWayAttribute
+    {
+        
+    }
 }

@@ -6,13 +6,13 @@ using MS.Core;
 
 namespace System.Threading
 {
-public static class _RegisteredWaitHandle
-{
-    
-public static IObservable<System.Boolean> Unregister(this IObservable<System.Threading.RegisteredWaitHandle> RegisteredWaitHandleValue, IObservable<System.Threading.WaitHandle> waitObject)
-{
-    return Observable.Zip(RegisteredWaitHandleValue, waitObject, (RegisteredWaitHandleValueLambda, waitObjectLambda) => RegisteredWaitHandleValueLambda.Unregister(waitObjectLambda));
-}
+    public static class __RegisteredWaitHandle
+    {
+        
+        public static IObservable<System.Boolean> Unregister(this IObservable<System.Threading.RegisteredWaitHandle> RegisteredWaitHandleValue, IObservable<System.Threading.WaitHandle> waitObject)
+        {
+            return Observable.Zip(RegisteredWaitHandleValue, waitObject, (RegisteredWaitHandleValueLambda, waitObjectLambda) => RegisteredWaitHandleValueLambda.Unregister(waitObjectLambda));
+        }
 
-}
+    }
 }

@@ -6,8 +6,8 @@ using MS.Core;
 
 namespace System.Runtime.Remoting.Channels
 {
-public static class _ServerProcessing
-{
-    
-}
+    public static class __ServerProcessing
+    {
+        
+    }
 }

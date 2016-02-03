@@ -6,8 +6,8 @@ using MS.Core;
 
 namespace System.Reflection
 {
-public static class _AssemblyNameFlags
-{
-    
-}
+    public static class __AssemblyNameFlags
+    {
+        
+    }
 }

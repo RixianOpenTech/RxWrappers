@@ -6,8 +6,8 @@ using MS.Core;
 
 namespace System.Runtime.Remoting.Channels
 {
-public static class _IServerFormatterSinkProvider
-{
-    
-}
+    public static class __IServerFormatterSinkProvider
+    {
+        
+    }
 }

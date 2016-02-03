@@ -6,8 +6,8 @@ using MS.Core;
 
 namespace System
 {
-public static class _Base64FormattingOptions
-{
-    
-}
+    public static class __Base64FormattingOptions
+    {
+        
+    }
 }

@@ -6,13 +6,13 @@ using MS.Core;
 
 namespace System.Runtime.InteropServices
 {
-public static class _DefaultCharSetAttribute
-{
-    
-public static IObservable<System.Runtime.InteropServices.CharSet> get_CharSet(this IObservable<System.Runtime.InteropServices.DefaultCharSetAttribute> DefaultCharSetAttributeValue)
-{
-    return Observable.Select(DefaultCharSetAttributeValue, (DefaultCharSetAttributeValueLambda) => DefaultCharSetAttributeValueLambda.CharSet);
-}
+    public static class __DefaultCharSetAttribute
+    {
+        
+        public static IObservable<System.Runtime.InteropServices.CharSet> get_CharSet(this IObservable<System.Runtime.InteropServices.DefaultCharSetAttribute> DefaultCharSetAttributeValue)
+        {
+            return Observable.Select(DefaultCharSetAttributeValue, (DefaultCharSetAttributeValueLambda) => DefaultCharSetAttributeValueLambda.CharSet);
+        }
 
-}
+    }
 }

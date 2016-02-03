@@ -6,13 +6,13 @@ using MS.Core;
 
 namespace System.Runtime.InteropServices
 {
-public static class _FieldOffsetAttribute
-{
-    
-public static IObservable<System.Int32> get_Value(this IObservable<System.Runtime.InteropServices.FieldOffsetAttribute> FieldOffsetAttributeValue)
-{
-    return Observable.Select(FieldOffsetAttributeValue, (FieldOffsetAttributeValueLambda) => FieldOffsetAttributeValueLambda.Value);
-}
+    public static class __FieldOffsetAttribute
+    {
+        
+        public static IObservable<System.Int32> get_Value(this IObservable<System.Runtime.InteropServices.FieldOffsetAttribute> FieldOffsetAttributeValue)
+        {
+            return Observable.Select(FieldOffsetAttributeValue, (FieldOffsetAttributeValueLambda) => FieldOffsetAttributeValueLambda.Value);
+        }
 
-}
+    }
 }

@@ -6,13 +6,13 @@ using MS.Core;
 
 namespace System.Security.AccessControl
 {
-public static class _AuditRule1
-{
-    
-public static IObservable<T> get_Rights<T>(this IObservable<System.Security.AccessControl.AuditRule<T>> AuditRuleValue)
-{
-    return Observable.Select(AuditRuleValue, (AuditRuleValueLambda) => AuditRuleValueLambda.Rights);
-}
+    public static class __AuditRule1
+    {
+        
+        public static IObservable<T> get_Rights<T>(this IObservable<System.Security.AccessControl.AuditRule<T>> AuditRuleValue) where T : struct 
+        {
+            return Observable.Select(AuditRuleValue, (AuditRuleValueLambda) => AuditRuleValueLambda.Rights);
+        }
 
-}
+    }
 }

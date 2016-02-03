@@ -6,8 +6,8 @@ using MS.Core;
 
 namespace System
 {
-public static class _DayOfWeek
-{
-    
-}
+    public static class __DayOfWeek
+    {
+        
+    }
 }

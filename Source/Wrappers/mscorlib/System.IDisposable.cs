@@ -6,13 +6,13 @@ using MS.Core;
 
 namespace System
 {
-public static class _IDisposable
-{
-    
-public static IObservable<System.Reactive.Unit> Dispose(this IObservable<System.IDisposable> IDisposableValue)
-{
-    return Observable.Do(IDisposableValue, (IDisposableValueLambda) => IDisposableValueLambda.Dispose()).ToUnit();
-}
+    public static class __IDisposable
+    {
+        
+        public static IObservable<System.Reactive.Unit> Dispose(this IObservable<System.IDisposable> IDisposableValue)
+        {
+            return Observable.Do(IDisposableValue, (IDisposableValueLambda) => IDisposableValueLambda.Dispose()).ToUnit();
+        }
 
-}
+    }
 }

@@ -6,13 +6,13 @@ using MS.Core;
 
 namespace System.Runtime.CompilerServices
 {
-public static class _RequiredAttributeAttribute
-{
-    
-public static IObservable<System.Type> get_RequiredContract(this IObservable<System.Runtime.CompilerServices.RequiredAttributeAttribute> RequiredAttributeAttributeValue)
-{
-    return Observable.Select(RequiredAttributeAttributeValue, (RequiredAttributeAttributeValueLambda) => RequiredAttributeAttributeValueLambda.RequiredContract);
-}
+    public static class __RequiredAttributeAttribute
+    {
+        
+        public static IObservable<System.Type> get_RequiredContract(this IObservable<System.Runtime.CompilerServices.RequiredAttributeAttribute> RequiredAttributeAttributeValue)
+        {
+            return Observable.Select(RequiredAttributeAttributeValue, (RequiredAttributeAttributeValueLambda) => RequiredAttributeAttributeValueLambda.RequiredContract);
+        }
 
-}
+    }
 }

@@ -6,8 +6,8 @@ using MS.Core;
 
 namespace System.Diagnostics.SymbolStore
 {
-public static class _SymDocumentType
-{
-    
-}
+    public static class __SymDocumentType
+    {
+        
+    }
 }

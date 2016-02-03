@@ -6,8 +6,8 @@ using MS.Core;
 
 namespace System.Runtime.InteropServices
 {
-public static class _ComMemberType
-{
-    
-}
+    public static class __ComMemberType
+    {
+        
+    }
 }

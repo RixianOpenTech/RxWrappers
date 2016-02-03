@@ -6,13 +6,13 @@ using MS.Core;
 
 namespace System.Runtime.CompilerServices
 {
-public static class _TypeForwardedFromAttribute
-{
-    
-public static IObservable<System.String> get_AssemblyFullName(this IObservable<System.Runtime.CompilerServices.TypeForwardedFromAttribute> TypeForwardedFromAttributeValue)
-{
-    return Observable.Select(TypeForwardedFromAttributeValue, (TypeForwardedFromAttributeValueLambda) => TypeForwardedFromAttributeValueLambda.AssemblyFullName);
-}
+    public static class __TypeForwardedFromAttribute
+    {
+        
+        public static IObservable<System.String> get_AssemblyFullName(this IObservable<System.Runtime.CompilerServices.TypeForwardedFromAttribute> TypeForwardedFromAttributeValue)
+        {
+            return Observable.Select(TypeForwardedFromAttributeValue, (TypeForwardedFromAttributeValueLambda) => TypeForwardedFromAttributeValueLambda.AssemblyFullName);
+        }
 
-}
+    }
 }

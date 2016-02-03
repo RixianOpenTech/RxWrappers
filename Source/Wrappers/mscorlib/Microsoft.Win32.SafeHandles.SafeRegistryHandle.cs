@@ -6,8 +6,8 @@ using MS.Core;
 
 namespace Microsoft.Win32.SafeHandles
 {
-public static class _SafeRegistryHandle
-{
-    
-}
+    public static class __SafeRegistryHandle
+    {
+        
+    }
 }

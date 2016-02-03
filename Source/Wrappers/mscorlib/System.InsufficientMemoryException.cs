@@ -6,8 +6,8 @@ using MS.Core;
 
 namespace System
 {
-public static class _InsufficientMemoryException
-{
-    
-}
+    public static class __InsufficientMemoryException
+    {
+        
+    }
 }

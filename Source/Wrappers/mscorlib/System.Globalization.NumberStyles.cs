@@ -6,8 +6,8 @@ using MS.Core;
 
 namespace System.Globalization
 {
-public static class _NumberStyles
-{
-    
-}
+    public static class __NumberStyles
+    {
+        
+    }
 }

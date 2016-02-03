@@ -6,8 +6,8 @@ using MS.Core;
 
 namespace System.Runtime.CompilerServices
 {
-public static class _IsLong
-{
-    
-}
+    public static class __IsLong
+    {
+        
+    }
 }

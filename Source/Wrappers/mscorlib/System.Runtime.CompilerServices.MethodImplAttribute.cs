@@ -6,13 +6,13 @@ using MS.Core;
 
 namespace System.Runtime.CompilerServices
 {
-public static class _MethodImplAttribute
-{
-    
-public static IObservable<System.Runtime.CompilerServices.MethodImplOptions> get_Value(this IObservable<System.Runtime.CompilerServices.MethodImplAttribute> MethodImplAttributeValue)
-{
-    return Observable.Select(MethodImplAttributeValue, (MethodImplAttributeValueLambda) => MethodImplAttributeValueLambda.Value);
-}
+    public static class __MethodImplAttribute
+    {
+        
+        public static IObservable<System.Runtime.CompilerServices.MethodImplOptions> get_Value(this IObservable<System.Runtime.CompilerServices.MethodImplAttribute> MethodImplAttributeValue)
+        {
+            return Observable.Select(MethodImplAttributeValue, (MethodImplAttributeValueLambda) => MethodImplAttributeValueLambda.Value);
+        }
 
-}
+    }
 }

@@ -6,8 +6,8 @@ using MS.Core;
 
 namespace System.Security.AccessControl
 {
-public static class _ControlFlags
-{
-    
-}
+    public static class __ControlFlags
+    {
+        
+    }
 }

@@ -6,8 +6,8 @@ using MS.Core;
 
 namespace System.Security.Claims
 {
-public static class _ClaimTypes
-{
-    
-}
+    public static class __ClaimTypes
+    {
+        
+    }
 }

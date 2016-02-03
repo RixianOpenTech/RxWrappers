@@ -6,8 +6,8 @@ using MS.Core;
 
 namespace System.Reflection
 {
-public static class _MemberTypes
-{
-    
-}
+    public static class __MemberTypes
+    {
+        
+    }
 }

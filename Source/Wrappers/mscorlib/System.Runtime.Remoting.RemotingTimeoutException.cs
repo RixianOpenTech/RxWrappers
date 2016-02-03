@@ -6,8 +6,8 @@ using MS.Core;
 
 namespace System.Runtime.Remoting
 {
-public static class _RemotingTimeoutException
-{
-    
-}
+    public static class __RemotingTimeoutException
+    {
+        
+    }
 }

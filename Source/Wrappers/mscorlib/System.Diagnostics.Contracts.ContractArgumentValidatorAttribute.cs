@@ -6,8 +6,8 @@ using MS.Core;
 
 namespace System.Diagnostics.Contracts
 {
-public static class _ContractArgumentValidatorAttribute
-{
-    
-}
+    public static class __ContractArgumentValidatorAttribute
+    {
+        
+    }
 }

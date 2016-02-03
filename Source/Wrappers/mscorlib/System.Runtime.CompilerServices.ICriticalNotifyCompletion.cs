@@ -6,13 +6,13 @@ using MS.Core;
 
 namespace System.Runtime.CompilerServices
 {
-public static class _ICriticalNotifyCompletion
-{
-    
-public static IObservable<System.Reactive.Unit> UnsafeOnCompleted(this IObservable<System.Runtime.CompilerServices.ICriticalNotifyCompletion> ICriticalNotifyCompletionValue, IObservable<System.Action> continuation)
-{
-    return ObservableExt.ZipExecute(ICriticalNotifyCompletionValue, continuation, (ICriticalNotifyCompletionValueLambda, continuationLambda) => ICriticalNotifyCompletionValueLambda.UnsafeOnCompleted(continuationLambda));
-}
+    public static class __ICriticalNotifyCompletion
+    {
+        
+        public static IObservable<System.Reactive.Unit> UnsafeOnCompleted(this IObservable<System.Runtime.CompilerServices.ICriticalNotifyCompletion> ICriticalNotifyCompletionValue, IObservable<System.Action> continuation)
+        {
+            return ObservableExt.ZipExecute(ICriticalNotifyCompletionValue, continuation, (ICriticalNotifyCompletionValueLambda, continuationLambda) => ICriticalNotifyCompletionValueLambda.UnsafeOnCompleted(continuationLambda));
+        }
 
-}
+    }
 }

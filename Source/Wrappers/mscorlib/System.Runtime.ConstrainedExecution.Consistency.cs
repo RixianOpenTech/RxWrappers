@@ -6,8 +6,8 @@ using MS.Core;
 
 namespace System.Runtime.ConstrainedExecution
 {
-public static class _Consistency
-{
-    
-}
+    public static class __Consistency
+    {
+        
+    }
 }

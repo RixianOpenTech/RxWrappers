@@ -6,8 +6,8 @@ using MS.Core;
 
 namespace System.IO
 {
-public static class _FileAttributes
-{
-    
-}
+    public static class __FileAttributes
+    {
+        
+    }
 }

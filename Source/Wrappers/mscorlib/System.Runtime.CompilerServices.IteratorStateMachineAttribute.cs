@@ -6,8 +6,8 @@ using MS.Core;
 
 namespace System.Runtime.CompilerServices
 {
-public static class _IteratorStateMachineAttribute
-{
-    
-}
+    public static class __IteratorStateMachineAttribute
+    {
+        
+    }
 }

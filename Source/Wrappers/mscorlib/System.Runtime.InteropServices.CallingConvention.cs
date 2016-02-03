@@ -6,8 +6,8 @@ using MS.Core;
 
 namespace System.Runtime.InteropServices
 {
-public static class _CallingConvention
-{
-    
-}
+    public static class __CallingConvention
+    {
+        
+    }
 }

@@ -6,8 +6,8 @@ using MS.Core;
 
 namespace System
 {
-public static class _InvalidOperationException
-{
-    
-}
+    public static class __InvalidOperationException
+    {
+        
+    }
 }

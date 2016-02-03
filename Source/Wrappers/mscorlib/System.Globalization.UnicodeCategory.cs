@@ -6,8 +6,8 @@ using MS.Core;
 
 namespace System.Globalization
 {
-public static class _UnicodeCategory
-{
-    
-}
+    public static class __UnicodeCategory
+    {
+        
+    }
 }

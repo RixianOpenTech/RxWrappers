@@ -6,13 +6,13 @@ using MS.Core;
 
 namespace Microsoft.Win32.SafeHandles
 {
-public static class _SafeHandleZeroOrMinusOneIsInvalid
-{
-    
-public static IObservable<System.Boolean> get_IsInvalid(this IObservable<Microsoft.Win32.SafeHandles.SafeHandleZeroOrMinusOneIsInvalid> SafeHandleZeroOrMinusOneIsInvalidValue)
-{
-    return Observable.Select(SafeHandleZeroOrMinusOneIsInvalidValue, (SafeHandleZeroOrMinusOneIsInvalidValueLambda) => SafeHandleZeroOrMinusOneIsInvalidValueLambda.IsInvalid);
-}
+    public static class __SafeHandleZeroOrMinusOneIsInvalid
+    {
+        
+        public static IObservable<System.Boolean> get_IsInvalid(this IObservable<Microsoft.Win32.SafeHandles.SafeHandleZeroOrMinusOneIsInvalid> SafeHandleZeroOrMinusOneIsInvalidValue)
+        {
+            return Observable.Select(SafeHandleZeroOrMinusOneIsInvalidValue, (SafeHandleZeroOrMinusOneIsInvalidValueLambda) => SafeHandleZeroOrMinusOneIsInvalidValueLambda.IsInvalid);
+        }
 
-}
+    }
 }

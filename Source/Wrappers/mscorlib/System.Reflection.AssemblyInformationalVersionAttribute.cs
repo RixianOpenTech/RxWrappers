@@ -6,13 +6,13 @@ using MS.Core;
 
 namespace System.Reflection
 {
-public static class _AssemblyInformationalVersionAttribute
-{
-    
-public static IObservable<System.String> get_InformationalVersion(this IObservable<System.Reflection.AssemblyInformationalVersionAttribute> AssemblyInformationalVersionAttributeValue)
-{
-    return Observable.Select(AssemblyInformationalVersionAttributeValue, (AssemblyInformationalVersionAttributeValueLambda) => AssemblyInformationalVersionAttributeValueLambda.InformationalVersion);
-}
+    public static class __AssemblyInformationalVersionAttribute
+    {
+        
+        public static IObservable<System.String> get_InformationalVersion(this IObservable<System.Reflection.AssemblyInformationalVersionAttribute> AssemblyInformationalVersionAttributeValue)
+        {
+            return Observable.Select(AssemblyInformationalVersionAttributeValue, (AssemblyInformationalVersionAttributeValueLambda) => AssemblyInformationalVersionAttributeValueLambda.InformationalVersion);
+        }
 
-}
+    }
 }

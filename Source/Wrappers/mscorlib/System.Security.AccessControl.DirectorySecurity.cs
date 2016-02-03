@@ -6,8 +6,8 @@ using MS.Core;
 
 namespace System.Security.AccessControl
 {
-public static class _DirectorySecurity
-{
-    
-}
+    public static class __DirectorySecurity
+    {
+        
+    }
 }

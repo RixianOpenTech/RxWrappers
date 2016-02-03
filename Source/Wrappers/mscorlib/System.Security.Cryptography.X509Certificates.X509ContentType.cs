@@ -6,8 +6,8 @@ using MS.Core;
 
 namespace System.Security.Cryptography.X509Certificates
 {
-public static class _X509ContentType
-{
-    
-}
+    public static class __X509ContentType
+    {
+        
+    }
 }

@@ -6,8 +6,8 @@ using MS.Core;
 
 namespace System.IO.IsolatedStorage
 {
-public static class _IsolatedStorageScope
-{
-    
-}
+    public static class __IsolatedStorageScope
+    {
+        
+    }
 }

@@ -6,13 +6,13 @@ using MS.Core;
 
 namespace System.Runtime.InteropServices
 {
-public static class _LCIDConversionAttribute
-{
-    
-public static IObservable<System.Int32> get_Value(this IObservable<System.Runtime.InteropServices.LCIDConversionAttribute> LCIDConversionAttributeValue)
-{
-    return Observable.Select(LCIDConversionAttributeValue, (LCIDConversionAttributeValueLambda) => LCIDConversionAttributeValueLambda.Value);
-}
+    public static class __LCIDConversionAttribute
+    {
+        
+        public static IObservable<System.Int32> get_Value(this IObservable<System.Runtime.InteropServices.LCIDConversionAttribute> LCIDConversionAttributeValue)
+        {
+            return Observable.Select(LCIDConversionAttributeValue, (LCIDConversionAttributeValueLambda) => LCIDConversionAttributeValueLambda.Value);
+        }
 
-}
+    }
 }

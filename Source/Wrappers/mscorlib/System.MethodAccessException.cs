@@ -6,8 +6,8 @@ using MS.Core;
 
 namespace System
 {
-public static class _MethodAccessException
-{
-    
-}
+    public static class __MethodAccessException
+    {
+        
+    }
 }

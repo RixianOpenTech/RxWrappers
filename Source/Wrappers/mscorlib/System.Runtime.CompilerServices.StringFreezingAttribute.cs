@@ -6,8 +6,8 @@ using MS.Core;
 
 namespace System.Runtime.CompilerServices
 {
-public static class _StringFreezingAttribute
-{
-    
-}
+    public static class __StringFreezingAttribute
+    {
+        
+    }
 }

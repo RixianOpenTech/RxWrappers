@@ -6,13 +6,13 @@ using MS.Core;
 
 namespace System
 {
-public static class _MissingFieldException
-{
-    
-public static IObservable<System.String> get_Message(this IObservable<System.MissingFieldException> MissingFieldExceptionValue)
-{
-    return Observable.Select(MissingFieldExceptionValue, (MissingFieldExceptionValueLambda) => MissingFieldExceptionValueLambda.Message);
-}
+    public static class __MissingFieldException
+    {
+        
+        public static IObservable<System.String> get_Message(this IObservable<System.MissingFieldException> MissingFieldExceptionValue)
+        {
+            return Observable.Select(MissingFieldExceptionValue, (MissingFieldExceptionValueLambda) => MissingFieldExceptionValueLambda.Message);
+        }
 
-}
+    }
 }

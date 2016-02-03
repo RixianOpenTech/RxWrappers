@@ -6,8 +6,8 @@ using MS.Core;
 
 namespace System.Runtime
 {
-public static class _GCLatencyMode
-{
-    
-}
+    public static class __GCLatencyMode
+    {
+        
+    }
 }

@@ -6,8 +6,8 @@ using MS.Core;
 
 namespace System.IO
 {
-public static class _FileAccess
-{
-    
-}
+    public static class __FileAccess
+    {
+        
+    }
 }

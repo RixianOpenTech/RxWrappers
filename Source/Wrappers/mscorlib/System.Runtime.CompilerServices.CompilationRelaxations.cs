@@ -6,8 +6,8 @@ using MS.Core;
 
 namespace System.Runtime.CompilerServices
 {
-public static class _CompilationRelaxations
-{
-    
-}
+    public static class __CompilationRelaxations
+    {
+        
+    }
 }

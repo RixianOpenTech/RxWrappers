@@ -6,8 +6,8 @@ using MS.Core;
 
 namespace System.Security.Cryptography
 {
-public static class _RSASignaturePaddingMode
-{
-    
-}
+    public static class __RSASignaturePaddingMode
+    {
+        
+    }
 }

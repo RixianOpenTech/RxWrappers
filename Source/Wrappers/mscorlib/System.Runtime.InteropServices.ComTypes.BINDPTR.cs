@@ -6,8 +6,8 @@ using MS.Core;
 
 namespace System.Runtime.InteropServices.ComTypes
 {
-public static class _BINDPTR
-{
-    
-}
+    public static class __BINDPTR
+    {
+        
+    }
 }

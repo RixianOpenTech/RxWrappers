@@ -6,13 +6,13 @@ using MS.Core;
 
 namespace System
 {
-public static class _AssemblyLoadEventArgs
-{
-    
-public static IObservable<System.Reflection.Assembly> get_LoadedAssembly(this IObservable<System.AssemblyLoadEventArgs> AssemblyLoadEventArgsValue)
-{
-    return Observable.Select(AssemblyLoadEventArgsValue, (AssemblyLoadEventArgsValueLambda) => AssemblyLoadEventArgsValueLambda.LoadedAssembly);
-}
+    public static class __AssemblyLoadEventArgs
+    {
+        
+        public static IObservable<System.Reflection.Assembly> get_LoadedAssembly(this IObservable<System.AssemblyLoadEventArgs> AssemblyLoadEventArgsValue)
+        {
+            return Observable.Select(AssemblyLoadEventArgsValue, (AssemblyLoadEventArgsValueLambda) => AssemblyLoadEventArgsValueLambda.LoadedAssembly);
+        }
 
-}
+    }
 }

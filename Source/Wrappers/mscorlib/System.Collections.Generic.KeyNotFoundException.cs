@@ -6,8 +6,8 @@ using MS.Core;
 
 namespace System.Collections.Generic
 {
-public static class _KeyNotFoundException
-{
-    
-}
+    public static class __KeyNotFoundException
+    {
+        
+    }
 }

@@ -6,19 +6,19 @@ using MS.Core;
 
 namespace System.Runtime.Remoting.Contexts
 {
-public static class _ContextProperty
-{
-    
-public static IObservable<System.String> get_Name(this IObservable<System.Runtime.Remoting.Contexts.ContextProperty> ContextPropertyValue)
-{
-    return Observable.Select(ContextPropertyValue, (ContextPropertyValueLambda) => ContextPropertyValueLambda.Name);
-}
+    public static class __ContextProperty
+    {
+        
+        public static IObservable<System.String> get_Name(this IObservable<System.Runtime.Remoting.Contexts.ContextProperty> ContextPropertyValue)
+        {
+            return Observable.Select(ContextPropertyValue, (ContextPropertyValueLambda) => ContextPropertyValueLambda.Name);
+        }
 
 
-public static IObservable<System.Object> get_Property(this IObservable<System.Runtime.Remoting.Contexts.ContextProperty> ContextPropertyValue)
-{
-    return Observable.Select(ContextPropertyValue, (ContextPropertyValueLambda) => ContextPropertyValueLambda.Property);
-}
+        public static IObservable<System.Object> get_Property(this IObservable<System.Runtime.Remoting.Contexts.ContextProperty> ContextPropertyValue)
+        {
+            return Observable.Select(ContextPropertyValue, (ContextPropertyValueLambda) => ContextPropertyValueLambda.Property);
+        }
 
-}
+    }
 }

@@ -6,8 +6,8 @@ using MS.Core;
 
 namespace System.Security.Cryptography.X509Certificates
 {
-public static class _X509KeyStorageFlags
-{
-    
-}
+    public static class __X509KeyStorageFlags
+    {
+        
+    }
 }

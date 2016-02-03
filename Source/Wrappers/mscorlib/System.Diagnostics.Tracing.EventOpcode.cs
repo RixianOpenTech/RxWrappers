@@ -6,8 +6,8 @@ using MS.Core;
 
 namespace System.Diagnostics.Tracing
 {
-public static class _EventOpcode
-{
-    
-}
+    public static class __EventOpcode
+    {
+        
+    }
 }

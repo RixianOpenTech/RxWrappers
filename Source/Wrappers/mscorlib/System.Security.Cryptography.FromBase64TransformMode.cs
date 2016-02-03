@@ -6,8 +6,8 @@ using MS.Core;
 
 namespace System.Security.Cryptography
 {
-public static class _FromBase64TransformMode
-{
-    
-}
+    public static class __FromBase64TransformMode
+    {
+        
+    }
 }

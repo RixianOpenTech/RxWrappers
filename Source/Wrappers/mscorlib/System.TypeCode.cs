@@ -6,8 +6,8 @@ using MS.Core;
 
 namespace System
 {
-public static class _TypeCode
-{
-    
-}
+    public static class __TypeCode
+    {
+        
+    }
 }

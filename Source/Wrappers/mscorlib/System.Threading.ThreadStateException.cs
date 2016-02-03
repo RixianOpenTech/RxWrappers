@@ -6,8 +6,8 @@ using MS.Core;
 
 namespace System.Threading
 {
-public static class _ThreadStateException
-{
-    
-}
+    public static class __ThreadStateException
+    {
+        
+    }
 }

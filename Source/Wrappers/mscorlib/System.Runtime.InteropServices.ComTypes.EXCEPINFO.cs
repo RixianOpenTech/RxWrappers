@@ -6,8 +6,8 @@ using MS.Core;
 
 namespace System.Runtime.InteropServices.ComTypes
 {
-public static class _EXCEPINFO
-{
-    
-}
+    public static class __EXCEPINFO
+    {
+        
+    }
 }

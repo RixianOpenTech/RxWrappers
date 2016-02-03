@@ -6,13 +6,13 @@ using MS.Core;
 
 namespace System.Reflection
 {
-public static class _AssemblyKeyNameAttribute
-{
-    
-public static IObservable<System.String> get_KeyName(this IObservable<System.Reflection.AssemblyKeyNameAttribute> AssemblyKeyNameAttributeValue)
-{
-    return Observable.Select(AssemblyKeyNameAttributeValue, (AssemblyKeyNameAttributeValueLambda) => AssemblyKeyNameAttributeValueLambda.KeyName);
-}
+    public static class __AssemblyKeyNameAttribute
+    {
+        
+        public static IObservable<System.String> get_KeyName(this IObservable<System.Reflection.AssemblyKeyNameAttribute> AssemblyKeyNameAttributeValue)
+        {
+            return Observable.Select(AssemblyKeyNameAttributeValue, (AssemblyKeyNameAttributeValueLambda) => AssemblyKeyNameAttributeValueLambda.KeyName);
+        }
 
-}
+    }
 }

@@ -6,13 +6,13 @@ using MS.Core;
 
 namespace System.Runtime.CompilerServices
 {
-public static class _YieldAwaitable
-{
-    
-public static IObservable<System.Runtime.CompilerServices.YieldAwaitable.YieldAwaiter> GetAwaiter(this IObservable<System.Runtime.CompilerServices.YieldAwaitable> YieldAwaitableValue)
-{
-    return Observable.Select(YieldAwaitableValue, (YieldAwaitableValueLambda) => YieldAwaitableValueLambda.GetAwaiter());
-}
+    public static class __YieldAwaitable
+    {
+        
+        public static IObservable<System.Runtime.CompilerServices.YieldAwaitable.YieldAwaiter> GetAwaiter(this IObservable<System.Runtime.CompilerServices.YieldAwaitable> YieldAwaitableValue)
+        {
+            return Observable.Select(YieldAwaitableValue, (YieldAwaitableValueLambda) => YieldAwaitableValueLambda.GetAwaiter());
+        }
 
-}
+    }
 }

@@ -6,8 +6,8 @@ using MS.Core;
 
 namespace System.Diagnostics.Contracts
 {
-public static class _ContractAbbreviatorAttribute
-{
-    
-}
+    public static class __ContractAbbreviatorAttribute
+    {
+        
+    }
 }

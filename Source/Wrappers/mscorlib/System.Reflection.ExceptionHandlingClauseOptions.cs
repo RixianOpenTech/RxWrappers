@@ -6,8 +6,8 @@ using MS.Core;
 
 namespace System.Reflection
 {
-public static class _ExceptionHandlingClauseOptions
-{
-    
-}
+    public static class __ExceptionHandlingClauseOptions
+    {
+        
+    }
 }

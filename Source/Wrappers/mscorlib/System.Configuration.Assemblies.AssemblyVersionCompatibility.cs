@@ -6,8 +6,8 @@ using MS.Core;
 
 namespace System.Configuration.Assemblies
 {
-public static class _AssemblyVersionCompatibility
-{
-    
-}
+    public static class __AssemblyVersionCompatibility
+    {
+        
+    }
 }

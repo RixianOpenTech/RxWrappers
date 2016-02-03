@@ -6,19 +6,19 @@ using MS.Core;
 
 namespace System.Security.Cryptography
 {
-public static class _SHA512
-{
-    
-public static IObservable<System.Security.Cryptography.SHA512> Create()
-{
-    return ObservableExt.Factory(() => System.Security.Cryptography.SHA512.Create());
-}
+    public static class __SHA512
+    {
+        
+        public static IObservable<System.Security.Cryptography.SHA512> Create()
+        {
+            return ObservableExt.Factory(() => System.Security.Cryptography.SHA512.Create());
+        }
 
 
-public static IObservable<System.Security.Cryptography.SHA512> Create(IObservable<System.String> hashName)
-{
-    return Observable.Select(hashName, (hashNameLambda) => System.Security.Cryptography.SHA512.Create(hashNameLambda));
-}
+        public static IObservable<System.Security.Cryptography.SHA512> Create(IObservable<System.String> hashName)
+        {
+            return Observable.Select(hashName, (hashNameLambda) => System.Security.Cryptography.SHA512.Create(hashNameLambda));
+        }
 
-}
+    }
 }

@@ -6,8 +6,8 @@ using MS.Core;
 
 namespace System
 {
-public static class _ArrayTypeMismatchException
-{
-    
-}
+    public static class __ArrayTypeMismatchException
+    {
+        
+    }
 }

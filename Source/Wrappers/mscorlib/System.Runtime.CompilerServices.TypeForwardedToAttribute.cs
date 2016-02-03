@@ -6,13 +6,13 @@ using MS.Core;
 
 namespace System.Runtime.CompilerServices
 {
-public static class _TypeForwardedToAttribute
-{
-    
-public static IObservable<System.Type> get_Destination(this IObservable<System.Runtime.CompilerServices.TypeForwardedToAttribute> TypeForwardedToAttributeValue)
-{
-    return Observable.Select(TypeForwardedToAttributeValue, (TypeForwardedToAttributeValueLambda) => TypeForwardedToAttributeValueLambda.Destination);
-}
+    public static class __TypeForwardedToAttribute
+    {
+        
+        public static IObservable<System.Type> get_Destination(this IObservable<System.Runtime.CompilerServices.TypeForwardedToAttribute> TypeForwardedToAttributeValue)
+        {
+            return Observable.Select(TypeForwardedToAttributeValue, (TypeForwardedToAttributeValueLambda) => TypeForwardedToAttributeValueLambda.Destination);
+        }
 
-}
+    }
 }

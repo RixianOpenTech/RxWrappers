@@ -6,13 +6,13 @@ using MS.Core;
 
 namespace System.Runtime.InteropServices
 {
-public static class _ProgIdAttribute
-{
-    
-public static IObservable<System.String> get_Value(this IObservable<System.Runtime.InteropServices.ProgIdAttribute> ProgIdAttributeValue)
-{
-    return Observable.Select(ProgIdAttributeValue, (ProgIdAttributeValueLambda) => ProgIdAttributeValueLambda.Value);
-}
+    public static class __ProgIdAttribute
+    {
+        
+        public static IObservable<System.String> get_Value(this IObservable<System.Runtime.InteropServices.ProgIdAttribute> ProgIdAttributeValue)
+        {
+            return Observable.Select(ProgIdAttributeValue, (ProgIdAttributeValueLambda) => ProgIdAttributeValueLambda.Value);
+        }
 
-}
+    }
 }

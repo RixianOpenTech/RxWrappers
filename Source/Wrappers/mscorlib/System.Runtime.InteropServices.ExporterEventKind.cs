@@ -6,8 +6,8 @@ using MS.Core;
 
 namespace System.Runtime.InteropServices
 {
-public static class _ExporterEventKind
-{
-    
-}
+    public static class __ExporterEventKind
+    {
+        
+    }
 }

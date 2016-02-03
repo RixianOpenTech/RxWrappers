@@ -6,8 +6,8 @@ using MS.Core;
 
 namespace System
 {
-public static class _NonSerializedAttribute
-{
-    
-}
+    public static class __NonSerializedAttribute
+    {
+        
+    }
 }

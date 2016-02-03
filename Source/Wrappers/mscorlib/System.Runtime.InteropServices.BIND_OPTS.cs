@@ -6,8 +6,8 @@ using MS.Core;
 
 namespace System.Runtime.InteropServices
 {
-public static class _BIND_OPTS
-{
-    
-}
+    public static class __BIND_OPTS
+    {
+        
+    }
 }

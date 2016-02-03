@@ -6,8 +6,8 @@ using MS.Core;
 
 namespace System.Diagnostics
 {
-public static class _DebuggerNonUserCodeAttribute
-{
-    
-}
+    public static class __DebuggerNonUserCodeAttribute
+    {
+        
+    }
 }

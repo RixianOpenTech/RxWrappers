@@ -6,13 +6,13 @@ using MS.Core;
 
 namespace System.Threading
 {
-public static class _ThreadAbortException
-{
-    
-public static IObservable<System.Object> get_ExceptionState(this IObservable<System.Threading.ThreadAbortException> ThreadAbortExceptionValue)
-{
-    return Observable.Select(ThreadAbortExceptionValue, (ThreadAbortExceptionValueLambda) => ThreadAbortExceptionValueLambda.ExceptionState);
-}
+    public static class __ThreadAbortException
+    {
+        
+        public static IObservable<System.Object> get_ExceptionState(this IObservable<System.Threading.ThreadAbortException> ThreadAbortExceptionValue)
+        {
+            return Observable.Select(ThreadAbortExceptionValue, (ThreadAbortExceptionValueLambda) => ThreadAbortExceptionValueLambda.ExceptionState);
+        }
 
-}
+    }
 }

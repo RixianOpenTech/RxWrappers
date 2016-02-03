@@ -6,8 +6,8 @@ using MS.Core;
 
 namespace System.IO
 {
-public static class _IOException
-{
-    
-}
+    public static class __IOException
+    {
+        
+    }
 }

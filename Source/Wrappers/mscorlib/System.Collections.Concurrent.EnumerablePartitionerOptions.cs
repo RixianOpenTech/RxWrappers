@@ -6,8 +6,8 @@ using MS.Core;
 
 namespace System.Collections.Concurrent
 {
-public static class _EnumerablePartitionerOptions
-{
-    
-}
+    public static class __EnumerablePartitionerOptions
+    {
+        
+    }
 }

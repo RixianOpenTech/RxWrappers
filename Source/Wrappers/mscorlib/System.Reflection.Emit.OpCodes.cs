@@ -6,13 +6,13 @@ using MS.Core;
 
 namespace System.Reflection.Emit
 {
-public static class _OpCodes
-{
-    
-public static IObservable<System.Boolean> TakesSingleByteArgument(IObservable<System.Reflection.Emit.OpCode> inst)
-{
-    return Observable.Select(inst, (instLambda) => System.Reflection.Emit.OpCodes.TakesSingleByteArgument(instLambda));
-}
+    public static class __OpCodes
+    {
+        
+        public static IObservable<System.Boolean> TakesSingleByteArgument(IObservable<System.Reflection.Emit.OpCode> inst)
+        {
+            return Observable.Select(inst, (instLambda) => System.Reflection.Emit.OpCodes.TakesSingleByteArgument(instLambda));
+        }
 
-}
+    }
 }

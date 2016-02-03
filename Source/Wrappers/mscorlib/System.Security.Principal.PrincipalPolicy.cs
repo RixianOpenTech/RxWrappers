@@ -6,8 +6,8 @@ using MS.Core;
 
 namespace System.Security.Principal
 {
-public static class _PrincipalPolicy
-{
-    
-}
+    public static class __PrincipalPolicy
+    {
+        
+    }
 }

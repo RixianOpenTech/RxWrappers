@@ -6,13 +6,13 @@ using MS.Core;
 
 namespace System
 {
-public static class _OperationCanceledException
-{
-    
-public static IObservable<System.Threading.CancellationToken> get_CancellationToken(this IObservable<System.OperationCanceledException> OperationCanceledExceptionValue)
-{
-    return Observable.Select(OperationCanceledExceptionValue, (OperationCanceledExceptionValueLambda) => OperationCanceledExceptionValueLambda.CancellationToken);
-}
+    public static class __OperationCanceledException
+    {
+        
+        public static IObservable<System.Threading.CancellationToken> get_CancellationToken(this IObservable<System.OperationCanceledException> OperationCanceledExceptionValue)
+        {
+            return Observable.Select(OperationCanceledExceptionValue, (OperationCanceledExceptionValueLambda) => OperationCanceledExceptionValueLambda.CancellationToken);
+        }
 
-}
+    }
 }

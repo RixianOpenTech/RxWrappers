@@ -6,8 +6,8 @@ using MS.Core;
 
 namespace System.Diagnostics.Tracing
 {
-public static class _EventTask
-{
-    
-}
+    public static class __EventTask
+    {
+        
+    }
 }

@@ -6,8 +6,8 @@ using MS.Core;
 
 namespace System.Security.Policy
 {
-public static class _TrustManagerUIContext
-{
-    
-}
+    public static class __TrustManagerUIContext
+    {
+        
+    }
 }

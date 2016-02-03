@@ -6,8 +6,8 @@ using MS.Core;
 
 namespace Microsoft.Win32.SafeHandles
 {
-public static class _SafeWaitHandle
-{
-    
-}
+    public static class __SafeWaitHandle
+    {
+        
+    }
 }

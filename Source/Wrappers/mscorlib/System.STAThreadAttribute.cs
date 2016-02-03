@@ -6,8 +6,8 @@ using MS.Core;
 
 namespace System
 {
-public static class _STAThreadAttribute
-{
-    
-}
+    public static class __STAThreadAttribute
+    {
+        
+    }
 }

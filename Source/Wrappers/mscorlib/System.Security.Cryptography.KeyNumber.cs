@@ -6,8 +6,8 @@ using MS.Core;
 
 namespace System.Security.Cryptography
 {
-public static class _KeyNumber
-{
-    
-}
+    public static class __KeyNumber
+    {
+        
+    }
 }

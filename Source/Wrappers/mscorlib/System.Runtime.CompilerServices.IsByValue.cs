@@ -6,8 +6,8 @@ using MS.Core;
 
 namespace System.Runtime.CompilerServices
 {
-public static class _IsByValue
-{
-    
-}
+    public static class __IsByValue
+    {
+        
+    }
 }

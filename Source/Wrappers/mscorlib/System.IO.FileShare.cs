@@ -6,8 +6,8 @@ using MS.Core;
 
 namespace System.IO
 {
-public static class _FileShare
-{
-    
-}
+    public static class __FileShare
+    {
+        
+    }
 }

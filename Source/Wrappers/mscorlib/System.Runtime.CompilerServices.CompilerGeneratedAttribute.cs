@@ -6,8 +6,8 @@ using MS.Core;
 
 namespace System.Runtime.CompilerServices
 {
-public static class _CompilerGeneratedAttribute
-{
-    
-}
+    public static class __CompilerGeneratedAttribute
+    {
+        
+    }
 }

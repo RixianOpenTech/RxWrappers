@@ -6,13 +6,13 @@ using MS.Core;
 
 namespace System
 {
-public static class _IEquatable1
-{
-    
-public static IObservable<System.Boolean> Equals<T>(this IObservable<System.IEquatable<T>> IEquatableValue, IObservable<T> other)
-{
-    return Observable.Zip(IEquatableValue, other, (IEquatableValueLambda, otherLambda) => IEquatableValueLambda.Equals(otherLambda));
-}
+    public static class __IEquatable1
+    {
+        
+        public static IObservable<System.Boolean> Equals<T>(this IObservable<System.IEquatable<T>> IEquatableValue, IObservable<T> other)
+        {
+            return Observable.Zip(IEquatableValue, other, (IEquatableValueLambda, otherLambda) => IEquatableValueLambda.Equals(otherLambda));
+        }
 
-}
+    }
 }

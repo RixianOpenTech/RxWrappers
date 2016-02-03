@@ -6,8 +6,8 @@ using MS.Core;
 
 namespace System.Runtime.Remoting
 {
-public static class _RemotingException
-{
-    
-}
+    public static class __RemotingException
+    {
+        
+    }
 }

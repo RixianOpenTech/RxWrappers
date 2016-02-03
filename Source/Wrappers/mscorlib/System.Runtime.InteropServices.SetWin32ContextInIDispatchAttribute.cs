@@ -6,8 +6,8 @@ using MS.Core;
 
 namespace System.Runtime.InteropServices
 {
-public static class _SetWin32ContextInIDispatchAttribute
-{
-    
-}
+    public static class __SetWin32ContextInIDispatchAttribute
+    {
+        
+    }
 }

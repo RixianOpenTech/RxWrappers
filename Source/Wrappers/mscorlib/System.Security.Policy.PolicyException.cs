@@ -6,8 +6,8 @@ using MS.Core;
 
 namespace System.Security.Policy
 {
-public static class _PolicyException
-{
-    
-}
+    public static class __PolicyException
+    {
+        
+    }
 }

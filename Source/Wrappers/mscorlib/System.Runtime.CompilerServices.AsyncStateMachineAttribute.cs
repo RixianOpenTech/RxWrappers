@@ -6,8 +6,8 @@ using MS.Core;
 
 namespace System.Runtime.CompilerServices
 {
-public static class _AsyncStateMachineAttribute
-{
-    
-}
+    public static class __AsyncStateMachineAttribute
+    {
+        
+    }
 }

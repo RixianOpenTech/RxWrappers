@@ -6,13 +6,13 @@ using MS.Core;
 
 namespace System.Diagnostics
 {
-public static class _ConditionalAttribute
-{
-    
-public static IObservable<System.String> get_ConditionString(this IObservable<System.Diagnostics.ConditionalAttribute> ConditionalAttributeValue)
-{
-    return Observable.Select(ConditionalAttributeValue, (ConditionalAttributeValueLambda) => ConditionalAttributeValueLambda.ConditionString);
-}
+    public static class __ConditionalAttribute
+    {
+        
+        public static IObservable<System.String> get_ConditionString(this IObservable<System.Diagnostics.ConditionalAttribute> ConditionalAttributeValue)
+        {
+            return Observable.Select(ConditionalAttributeValue, (ConditionalAttributeValueLambda) => ConditionalAttributeValueLambda.ConditionString);
+        }
 
-}
+    }
 }

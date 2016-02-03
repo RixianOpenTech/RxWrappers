@@ -6,8 +6,8 @@ using MS.Core;
 
 namespace System.Diagnostics.SymbolStore
 {
-public static class _SymLanguageType
-{
-    
-}
+    public static class __SymLanguageType
+    {
+        
+    }
 }

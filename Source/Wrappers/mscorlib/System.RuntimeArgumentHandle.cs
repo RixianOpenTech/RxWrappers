@@ -6,8 +6,8 @@ using MS.Core;
 
 namespace System
 {
-public static class _RuntimeArgumentHandle
-{
-    
-}
+    public static class __RuntimeArgumentHandle
+    {
+        
+    }
 }

@@ -6,8 +6,8 @@ using MS.Core;
 
 namespace System.Security.Principal
 {
-public static class _WindowsAccountType
-{
-    
-}
+    public static class __WindowsAccountType
+    {
+        
+    }
 }

@@ -6,8 +6,8 @@ using MS.Core;
 
 namespace System.Reflection.Emit
 {
-public static class _FlowControl
-{
-    
-}
+    public static class __FlowControl
+    {
+        
+    }
 }

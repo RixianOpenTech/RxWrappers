@@ -6,8 +6,8 @@ using MS.Core;
 
 namespace System.IO
 {
-public static class _FileOptions
-{
-    
-}
+    public static class __FileOptions
+    {
+        
+    }
 }

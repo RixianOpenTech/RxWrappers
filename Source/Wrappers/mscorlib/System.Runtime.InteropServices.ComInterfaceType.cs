@@ -6,8 +6,8 @@ using MS.Core;
 
 namespace System.Runtime.InteropServices
 {
-public static class _ComInterfaceType
-{
-    
-}
+    public static class __ComInterfaceType
+    {
+        
+    }
 }

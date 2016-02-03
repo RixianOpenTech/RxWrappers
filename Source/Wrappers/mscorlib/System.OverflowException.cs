@@ -6,8 +6,8 @@ using MS.Core;
 
 namespace System
 {
-public static class _OverflowException
-{
-    
-}
+    public static class __OverflowException
+    {
+        
+    }
 }

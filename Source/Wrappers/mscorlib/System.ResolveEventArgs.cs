@@ -6,19 +6,19 @@ using MS.Core;
 
 namespace System
 {
-public static class _ResolveEventArgs
-{
-    
-public static IObservable<System.String> get_Name(this IObservable<System.ResolveEventArgs> ResolveEventArgsValue)
-{
-    return Observable.Select(ResolveEventArgsValue, (ResolveEventArgsValueLambda) => ResolveEventArgsValueLambda.Name);
-}
+    public static class __ResolveEventArgs
+    {
+        
+        public static IObservable<System.String> get_Name(this IObservable<System.ResolveEventArgs> ResolveEventArgsValue)
+        {
+            return Observable.Select(ResolveEventArgsValue, (ResolveEventArgsValueLambda) => ResolveEventArgsValueLambda.Name);
+        }
 
 
-public static IObservable<System.Reflection.Assembly> get_RequestingAssembly(this IObservable<System.ResolveEventArgs> ResolveEventArgsValue)
-{
-    return Observable.Select(ResolveEventArgsValue, (ResolveEventArgsValueLambda) => ResolveEventArgsValueLambda.RequestingAssembly);
-}
+        public static IObservable<System.Reflection.Assembly> get_RequestingAssembly(this IObservable<System.ResolveEventArgs> ResolveEventArgsValue)
+        {
+            return Observable.Select(ResolveEventArgsValue, (ResolveEventArgsValueLambda) => ResolveEventArgsValueLambda.RequestingAssembly);
+        }
 
-}
+    }
 }

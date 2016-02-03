@@ -6,8 +6,8 @@ using MS.Core;
 
 namespace System
 {
-public static class _NotSupportedException
-{
-    
-}
+    public static class __NotSupportedException
+    {
+        
+    }
 }

@@ -6,8 +6,8 @@ using MS.Core;
 
 namespace System.Diagnostics
 {
-public static class _DebuggerStepperBoundaryAttribute
-{
-    
-}
+    public static class __DebuggerStepperBoundaryAttribute
+    {
+        
+    }
 }

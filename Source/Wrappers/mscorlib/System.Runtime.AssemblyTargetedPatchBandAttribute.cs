@@ -6,13 +6,13 @@ using MS.Core;
 
 namespace System.Runtime
 {
-public static class _AssemblyTargetedPatchBandAttribute
-{
-    
-public static IObservable<System.String> get_TargetedPatchBand(this IObservable<System.Runtime.AssemblyTargetedPatchBandAttribute> AssemblyTargetedPatchBandAttributeValue)
-{
-    return Observable.Select(AssemblyTargetedPatchBandAttributeValue, (AssemblyTargetedPatchBandAttributeValueLambda) => AssemblyTargetedPatchBandAttributeValueLambda.TargetedPatchBand);
-}
+    public static class __AssemblyTargetedPatchBandAttribute
+    {
+        
+        public static IObservable<System.String> get_TargetedPatchBand(this IObservable<System.Runtime.AssemblyTargetedPatchBandAttribute> AssemblyTargetedPatchBandAttributeValue)
+        {
+            return Observable.Select(AssemblyTargetedPatchBandAttributeValue, (AssemblyTargetedPatchBandAttributeValueLambda) => AssemblyTargetedPatchBandAttributeValueLambda.TargetedPatchBand);
+        }
 
-}
+    }
 }

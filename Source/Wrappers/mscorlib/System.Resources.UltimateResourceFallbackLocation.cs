@@ -6,8 +6,8 @@ using MS.Core;
 
 namespace System.Resources
 {
-public static class _UltimateResourceFallbackLocation
-{
-    
-}
+    public static class __UltimateResourceFallbackLocation
+    {
+        
+    }
 }

@@ -6,8 +6,8 @@ using MS.Core;
 
 namespace System.Runtime.Versioning
 {
-public static class _ComponentGuaranteesOptions
-{
-    
-}
+    public static class __ComponentGuaranteesOptions
+    {
+        
+    }
 }

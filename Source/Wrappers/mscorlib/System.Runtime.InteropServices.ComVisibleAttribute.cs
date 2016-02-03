@@ -6,13 +6,13 @@ using MS.Core;
 
 namespace System.Runtime.InteropServices
 {
-public static class _ComVisibleAttribute
-{
-    
-public static IObservable<System.Boolean> get_Value(this IObservable<System.Runtime.InteropServices.ComVisibleAttribute> ComVisibleAttributeValue)
-{
-    return Observable.Select(ComVisibleAttributeValue, (ComVisibleAttributeValueLambda) => ComVisibleAttributeValueLambda.Value);
-}
+    public static class __ComVisibleAttribute
+    {
+        
+        public static IObservable<System.Boolean> get_Value(this IObservable<System.Runtime.InteropServices.ComVisibleAttribute> ComVisibleAttributeValue)
+        {
+            return Observable.Select(ComVisibleAttributeValue, (ComVisibleAttributeValueLambda) => ComVisibleAttributeValueLambda.Value);
+        }
 
-}
+    }
 }
