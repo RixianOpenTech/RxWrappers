@@ -8,11 +8,12 @@ namespace Microsoft.Win32.SafeHandles
 {
     public static class __CriticalHandleMinusOneIsInvalid
     {
-        
-        public static IObservable<System.Boolean> get_IsInvalid(this IObservable<Microsoft.Win32.SafeHandles.CriticalHandleMinusOneIsInvalid> CriticalHandleMinusOneIsInvalidValue)
+        public static IObservable<System.Boolean> get_IsInvalid(
+            this IObservable<Microsoft.Win32.SafeHandles.CriticalHandleMinusOneIsInvalid>
+                CriticalHandleMinusOneIsInvalidValue)
         {
-            return Observable.Select(CriticalHandleMinusOneIsInvalidValue, (CriticalHandleMinusOneIsInvalidValueLambda) => CriticalHandleMinusOneIsInvalidValueLambda.IsInvalid);
+            return Observable.Select(CriticalHandleMinusOneIsInvalidValue,
+                (CriticalHandleMinusOneIsInvalidValueLambda) => CriticalHandleMinusOneIsInvalidValueLambda.IsInvalid);
         }
-
     }
 }

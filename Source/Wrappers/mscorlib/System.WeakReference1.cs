@@ -8,27 +8,34 @@ namespace System
 {
     public static class __WeakReference1
     {
-        
-        public static IObservable<Tuple<System.Boolean, T>> TryGetTarget<T>(this IObservable<System.WeakReference<T>> WeakReferenceValue) where T : class
+        public static IObservable<Tuple<System.Boolean, T>> TryGetTarget<T>(
+            this IObservable<System.WeakReference<T>> WeakReferenceValue) where T : class
         {
-            return Observable.Select(WeakReferenceValue, (WeakReferenceValueLambda) => {
-T targetOutput = default(T);
-var result = WeakReferenceValueLambda.TryGetTarget(out targetOutput);
-return Tuple.Create(result, targetOutput);
-});
+            return Observable.Select(WeakReferenceValue, (WeakReferenceValueLambda) =>
+            {
+                T targetOutput = default(T);
+                var result = WeakReferenceValueLambda.TryGetTarget(out targetOutput);
+                return Tuple.Create(result, targetOutput);
+            });
         }
 
 
-        public static IObservable<System.Reactive.Unit> SetTarget<T>(this IObservable<System.WeakReference<T>> WeakReferenceValue, IObservable<T> target) where T : class
+        public static IObservable<System.Reactive.Unit> SetTarget<T>(
+            this IObservable<System.WeakReference<T>> WeakReferenceValue, IObservable<T> target) where T : class
         {
-            return ObservableExt.ZipExecute(WeakReferenceValue, target, (WeakReferenceValueLambda, targetLambda) => WeakReferenceValueLambda.SetTarget(targetLambda));
+            return ObservableExt.ZipExecute(WeakReferenceValue, target,
+                (WeakReferenceValueLambda, targetLambda) => WeakReferenceValueLambda.SetTarget(targetLambda));
         }
 
 
-        public static IObservable<System.Reactive.Unit> GetObjectData<T>(this IObservable<System.WeakReference<T>> WeakReferenceValue, IObservable<System.Runtime.Serialization.SerializationInfo> info, IObservable<System.Runtime.Serialization.StreamingContext> context) where T : class
+        public static IObservable<System.Reactive.Unit> GetObjectData<T>(
+            this IObservable<System.WeakReference<T>> WeakReferenceValue,
+            IObservable<System.Runtime.Serialization.SerializationInfo> info,
+            IObservable<System.Runtime.Serialization.StreamingContext> context) where T : class
         {
-            return ObservableExt.ZipExecute(WeakReferenceValue, info, context, (WeakReferenceValueLambda, infoLambda, contextLambda) => WeakReferenceValueLambda.GetObjectData(infoLambda, contextLambda));
+            return ObservableExt.ZipExecute(WeakReferenceValue, info, context,
+                (WeakReferenceValueLambda, infoLambda, contextLambda) =>
+                    WeakReferenceValueLambda.GetObjectData(infoLambda, contextLambda));
         }
-
     }
 }

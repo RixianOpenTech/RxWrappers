@@ -8,7 +8,6 @@ namespace System.IO
 {
     public static class __TextReader
     {
-        
         public static IObservable<System.Reactive.Unit> Close(this IObservable<System.IO.TextReader> TextReaderValue)
         {
             return Observable.Do(TextReaderValue, (TextReaderValueLambda) => TextReaderValueLambda.Close()).ToUnit();
@@ -33,9 +32,12 @@ namespace System.IO
         }
 
 
-        public static IObservable<int> Read(this IObservable<System.IO.TextReader> TextReaderValue, IObservable<System.Char[]> buffer, IObservable<System.Int32> index, IObservable<System.Int32> count)
+        public static IObservable<int> Read(this IObservable<System.IO.TextReader> TextReaderValue,
+            IObservable<System.Char[]> buffer, IObservable<System.Int32> index, IObservable<System.Int32> count)
         {
-            return Observable.Zip(TextReaderValue, buffer, index, count, (TextReaderValueLambda, bufferLambda, indexLambda, countLambda) => TextReaderValueLambda.Read(bufferLambda, indexLambda, countLambda));
+            return Observable.Zip(TextReaderValue, buffer, index, count,
+                (TextReaderValueLambda, bufferLambda, indexLambda, countLambda) =>
+                    TextReaderValueLambda.Read(bufferLambda, indexLambda, countLambda));
         }
 
 
@@ -45,9 +47,12 @@ namespace System.IO
         }
 
 
-        public static IObservable<int> ReadBlock(this IObservable<System.IO.TextReader> TextReaderValue, IObservable<System.Char[]> buffer, IObservable<System.Int32> index, IObservable<System.Int32> count)
+        public static IObservable<int> ReadBlock(this IObservable<System.IO.TextReader> TextReaderValue,
+            IObservable<System.Char[]> buffer, IObservable<System.Int32> index, IObservable<System.Int32> count)
         {
-            return Observable.Zip(TextReaderValue, buffer, index, count, (TextReaderValueLambda, bufferLambda, indexLambda, countLambda) => TextReaderValueLambda.ReadBlock(bufferLambda, indexLambda, countLambda));
+            return Observable.Zip(TextReaderValue, buffer, index, count,
+                (TextReaderValueLambda, bufferLambda, indexLambda, countLambda) =>
+                    TextReaderValueLambda.ReadBlock(bufferLambda, indexLambda, countLambda));
         }
 
 
@@ -59,25 +64,39 @@ namespace System.IO
 
         public static IObservable<System.String> ReadLineAsync(this IObservable<System.IO.TextReader> TextReaderValue)
         {
-            return Observable.Select(TextReaderValue, (TextReaderValueLambda) => TextReaderValueLambda.ReadLineAsync().ToObservable()).Flatten();
+            return
+                Observable.Select(TextReaderValue,
+                    (TextReaderValueLambda) => TextReaderValueLambda.ReadLineAsync().ToObservable()).Flatten();
         }
 
 
         public static IObservable<System.String> ReadToEndAsync(this IObservable<System.IO.TextReader> TextReaderValue)
         {
-            return Observable.Select(TextReaderValue, (TextReaderValueLambda) => TextReaderValueLambda.ReadToEndAsync().ToObservable()).Flatten();
+            return
+                Observable.Select(TextReaderValue,
+                    (TextReaderValueLambda) => TextReaderValueLambda.ReadToEndAsync().ToObservable()).Flatten();
         }
 
 
-        public static IObservable<System.Int32> ReadAsync(this IObservable<System.IO.TextReader> TextReaderValue, IObservable<System.Char[]> buffer, IObservable<System.Int32> index, IObservable<System.Int32> count)
+        public static IObservable<System.Int32> ReadAsync(this IObservable<System.IO.TextReader> TextReaderValue,
+            IObservable<System.Char[]> buffer, IObservable<System.Int32> index, IObservable<System.Int32> count)
         {
-            return Observable.Zip(TextReaderValue, buffer, index, count, (TextReaderValueLambda, bufferLambda, indexLambda, countLambda) => TextReaderValueLambda.ReadAsync(bufferLambda, indexLambda, countLambda).ToObservable()).Flatten();
+            return
+                Observable.Zip(TextReaderValue, buffer, index, count,
+                    (TextReaderValueLambda, bufferLambda, indexLambda, countLambda) =>
+                        TextReaderValueLambda.ReadAsync(bufferLambda, indexLambda, countLambda).ToObservable())
+                    .Flatten();
         }
 
 
-        public static IObservable<System.Int32> ReadBlockAsync(this IObservable<System.IO.TextReader> TextReaderValue, IObservable<System.Char[]> buffer, IObservable<System.Int32> index, IObservable<System.Int32> count)
+        public static IObservable<System.Int32> ReadBlockAsync(this IObservable<System.IO.TextReader> TextReaderValue,
+            IObservable<System.Char[]> buffer, IObservable<System.Int32> index, IObservable<System.Int32> count)
         {
-            return Observable.Zip(TextReaderValue, buffer, index, count, (TextReaderValueLambda, bufferLambda, indexLambda, countLambda) => TextReaderValueLambda.ReadBlockAsync(bufferLambda, indexLambda, countLambda).ToObservable()).Flatten();
+            return
+                Observable.Zip(TextReaderValue, buffer, index, count,
+                    (TextReaderValueLambda, bufferLambda, indexLambda, countLambda) =>
+                        TextReaderValueLambda.ReadBlockAsync(bufferLambda, indexLambda, countLambda).ToObservable())
+                    .Flatten();
         }
 
 
@@ -85,6 +104,5 @@ namespace System.IO
         {
             return Observable.Select(reader, (readerLambda) => System.IO.TextReader.Synchronized(readerLambda));
         }
-
     }
 }

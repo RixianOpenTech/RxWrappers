@@ -8,11 +8,11 @@ namespace System.Diagnostics
 {
     public static class __DebuggerBrowsableAttribute
     {
-        
-        public static IObservable<System.Diagnostics.DebuggerBrowsableState> get_State(this IObservable<System.Diagnostics.DebuggerBrowsableAttribute> DebuggerBrowsableAttributeValue)
+        public static IObservable<System.Diagnostics.DebuggerBrowsableState> get_State(
+            this IObservable<System.Diagnostics.DebuggerBrowsableAttribute> DebuggerBrowsableAttributeValue)
         {
-            return Observable.Select(DebuggerBrowsableAttributeValue, (DebuggerBrowsableAttributeValueLambda) => DebuggerBrowsableAttributeValueLambda.State);
+            return Observable.Select(DebuggerBrowsableAttributeValue,
+                (DebuggerBrowsableAttributeValueLambda) => DebuggerBrowsableAttributeValueLambda.State);
         }
-
     }
 }

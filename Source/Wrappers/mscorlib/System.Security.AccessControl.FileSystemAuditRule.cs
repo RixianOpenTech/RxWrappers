@@ -8,11 +8,11 @@ namespace System.Security.AccessControl
 {
     public static class __FileSystemAuditRule
     {
-        
-        public static IObservable<System.Security.AccessControl.FileSystemRights> get_FileSystemRights(this IObservable<System.Security.AccessControl.FileSystemAuditRule> FileSystemAuditRuleValue)
+        public static IObservable<System.Security.AccessControl.FileSystemRights> get_FileSystemRights(
+            this IObservable<System.Security.AccessControl.FileSystemAuditRule> FileSystemAuditRuleValue)
         {
-            return Observable.Select(FileSystemAuditRuleValue, (FileSystemAuditRuleValueLambda) => FileSystemAuditRuleValueLambda.FileSystemRights);
+            return Observable.Select(FileSystemAuditRuleValue,
+                (FileSystemAuditRuleValueLambda) => FileSystemAuditRuleValueLambda.FileSystemRights);
         }
-
     }
 }

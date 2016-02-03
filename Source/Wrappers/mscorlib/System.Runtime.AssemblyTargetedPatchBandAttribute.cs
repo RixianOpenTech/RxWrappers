@@ -8,11 +8,12 @@ namespace System.Runtime
 {
     public static class __AssemblyTargetedPatchBandAttribute
     {
-        
-        public static IObservable<System.String> get_TargetedPatchBand(this IObservable<System.Runtime.AssemblyTargetedPatchBandAttribute> AssemblyTargetedPatchBandAttributeValue)
+        public static IObservable<System.String> get_TargetedPatchBand(
+            this IObservable<System.Runtime.AssemblyTargetedPatchBandAttribute> AssemblyTargetedPatchBandAttributeValue)
         {
-            return Observable.Select(AssemblyTargetedPatchBandAttributeValue, (AssemblyTargetedPatchBandAttributeValueLambda) => AssemblyTargetedPatchBandAttributeValueLambda.TargetedPatchBand);
+            return Observable.Select(AssemblyTargetedPatchBandAttributeValue,
+                (AssemblyTargetedPatchBandAttributeValueLambda) =>
+                    AssemblyTargetedPatchBandAttributeValueLambda.TargetedPatchBand);
         }
-
     }
 }

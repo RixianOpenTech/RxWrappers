@@ -8,11 +8,11 @@ namespace System.Runtime.InteropServices
 {
     public static class __ProgIdAttribute
     {
-        
-        public static IObservable<System.String> get_Value(this IObservable<System.Runtime.InteropServices.ProgIdAttribute> ProgIdAttributeValue)
+        public static IObservable<System.String> get_Value(
+            this IObservable<System.Runtime.InteropServices.ProgIdAttribute> ProgIdAttributeValue)
         {
-            return Observable.Select(ProgIdAttributeValue, (ProgIdAttributeValueLambda) => ProgIdAttributeValueLambda.Value);
+            return Observable.Select(ProgIdAttributeValue,
+                (ProgIdAttributeValueLambda) => ProgIdAttributeValueLambda.Value);
         }
-
     }
 }

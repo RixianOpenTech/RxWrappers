@@ -8,6 +8,5 @@ namespace System.Text
 {
     public static class __NormalizationForm
     {
-        
     }
 }

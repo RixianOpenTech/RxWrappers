@@ -8,11 +8,11 @@ namespace System.Security
 {
     public static class __SecurityCriticalAttribute
     {
-        
-        public static IObservable<System.Security.SecurityCriticalScope> get_Scope(this IObservable<System.Security.SecurityCriticalAttribute> SecurityCriticalAttributeValue)
+        public static IObservable<System.Security.SecurityCriticalScope> get_Scope(
+            this IObservable<System.Security.SecurityCriticalAttribute> SecurityCriticalAttributeValue)
         {
-            return Observable.Select(SecurityCriticalAttributeValue, (SecurityCriticalAttributeValueLambda) => SecurityCriticalAttributeValueLambda.Scope);
+            return Observable.Select(SecurityCriticalAttributeValue,
+                (SecurityCriticalAttributeValueLambda) => SecurityCriticalAttributeValueLambda.Scope);
         }
-
     }
 }

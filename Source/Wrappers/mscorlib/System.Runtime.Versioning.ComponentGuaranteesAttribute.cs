@@ -8,11 +8,11 @@ namespace System.Runtime.Versioning
 {
     public static class __ComponentGuaranteesAttribute
     {
-        
-        public static IObservable<System.Runtime.Versioning.ComponentGuaranteesOptions> get_Guarantees(this IObservable<System.Runtime.Versioning.ComponentGuaranteesAttribute> ComponentGuaranteesAttributeValue)
+        public static IObservable<System.Runtime.Versioning.ComponentGuaranteesOptions> get_Guarantees(
+            this IObservable<System.Runtime.Versioning.ComponentGuaranteesAttribute> ComponentGuaranteesAttributeValue)
         {
-            return Observable.Select(ComponentGuaranteesAttributeValue, (ComponentGuaranteesAttributeValueLambda) => ComponentGuaranteesAttributeValueLambda.Guarantees);
+            return Observable.Select(ComponentGuaranteesAttributeValue,
+                (ComponentGuaranteesAttributeValueLambda) => ComponentGuaranteesAttributeValueLambda.Guarantees);
         }
-
     }
 }

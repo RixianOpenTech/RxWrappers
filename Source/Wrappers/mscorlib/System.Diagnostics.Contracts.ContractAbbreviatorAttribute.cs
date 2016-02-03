@@ -8,6 +8,5 @@ namespace System.Diagnostics.Contracts
 {
     public static class __ContractAbbreviatorAttribute
     {
-        
     }
 }

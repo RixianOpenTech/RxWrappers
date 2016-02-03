@@ -8,28 +8,37 @@ namespace System.Security.Cryptography
 {
     public static class __RSASignaturePadding
     {
-        
-        public static IObservable<System.Int32> GetHashCode(this IObservable<System.Security.Cryptography.RSASignaturePadding> RSASignaturePaddingValue)
+        public static IObservable<System.Int32> GetHashCode(
+            this IObservable<System.Security.Cryptography.RSASignaturePadding> RSASignaturePaddingValue)
         {
-            return Observable.Select(RSASignaturePaddingValue, (RSASignaturePaddingValueLambda) => RSASignaturePaddingValueLambda.GetHashCode());
+            return Observable.Select(RSASignaturePaddingValue,
+                (RSASignaturePaddingValueLambda) => RSASignaturePaddingValueLambda.GetHashCode());
         }
 
 
-        public static IObservable<System.Boolean> Equals(this IObservable<System.Security.Cryptography.RSASignaturePadding> RSASignaturePaddingValue, IObservable<System.Object> obj)
+        public static IObservable<System.Boolean> Equals(
+            this IObservable<System.Security.Cryptography.RSASignaturePadding> RSASignaturePaddingValue,
+            IObservable<System.Object> obj)
         {
-            return Observable.Zip(RSASignaturePaddingValue, obj, (RSASignaturePaddingValueLambda, objLambda) => RSASignaturePaddingValueLambda.Equals(objLambda));
+            return Observable.Zip(RSASignaturePaddingValue, obj,
+                (RSASignaturePaddingValueLambda, objLambda) => RSASignaturePaddingValueLambda.Equals(objLambda));
         }
 
 
-        public static IObservable<System.Boolean> Equals(this IObservable<System.Security.Cryptography.RSASignaturePadding> RSASignaturePaddingValue, IObservable<System.Security.Cryptography.RSASignaturePadding> other)
+        public static IObservable<System.Boolean> Equals(
+            this IObservable<System.Security.Cryptography.RSASignaturePadding> RSASignaturePaddingValue,
+            IObservable<System.Security.Cryptography.RSASignaturePadding> other)
         {
-            return Observable.Zip(RSASignaturePaddingValue, other, (RSASignaturePaddingValueLambda, otherLambda) => RSASignaturePaddingValueLambda.Equals(otherLambda));
+            return Observable.Zip(RSASignaturePaddingValue, other,
+                (RSASignaturePaddingValueLambda, otherLambda) => RSASignaturePaddingValueLambda.Equals(otherLambda));
         }
 
 
-        public static IObservable<System.String> ToString(this IObservable<System.Security.Cryptography.RSASignaturePadding> RSASignaturePaddingValue)
+        public static IObservable<System.String> ToString(
+            this IObservable<System.Security.Cryptography.RSASignaturePadding> RSASignaturePaddingValue)
         {
-            return Observable.Select(RSASignaturePaddingValue, (RSASignaturePaddingValueLambda) => RSASignaturePaddingValueLambda.ToString());
+            return Observable.Select(RSASignaturePaddingValue,
+                (RSASignaturePaddingValueLambda) => RSASignaturePaddingValueLambda.ToString());
         }
 
 
@@ -45,10 +54,11 @@ namespace System.Security.Cryptography
         }
 
 
-        public static IObservable<System.Security.Cryptography.RSASignaturePaddingMode> get_Mode(this IObservable<System.Security.Cryptography.RSASignaturePadding> RSASignaturePaddingValue)
+        public static IObservable<System.Security.Cryptography.RSASignaturePaddingMode> get_Mode(
+            this IObservable<System.Security.Cryptography.RSASignaturePadding> RSASignaturePaddingValue)
         {
-            return Observable.Select(RSASignaturePaddingValue, (RSASignaturePaddingValueLambda) => RSASignaturePaddingValueLambda.Mode);
+            return Observable.Select(RSASignaturePaddingValue,
+                (RSASignaturePaddingValueLambda) => RSASignaturePaddingValueLambda.Mode);
         }
-
     }
 }

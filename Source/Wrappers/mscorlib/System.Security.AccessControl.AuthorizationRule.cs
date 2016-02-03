@@ -8,29 +8,35 @@ namespace System.Security.AccessControl
 {
     public static class __AuthorizationRule
     {
-        
-        public static IObservable<System.Security.Principal.IdentityReference> get_IdentityReference(this IObservable<System.Security.AccessControl.AuthorizationRule> AuthorizationRuleValue)
+        public static IObservable<System.Security.Principal.IdentityReference> get_IdentityReference(
+            this IObservable<System.Security.AccessControl.AuthorizationRule> AuthorizationRuleValue)
         {
-            return Observable.Select(AuthorizationRuleValue, (AuthorizationRuleValueLambda) => AuthorizationRuleValueLambda.IdentityReference);
+            return Observable.Select(AuthorizationRuleValue,
+                (AuthorizationRuleValueLambda) => AuthorizationRuleValueLambda.IdentityReference);
         }
 
 
-        public static IObservable<System.Boolean> get_IsInherited(this IObservable<System.Security.AccessControl.AuthorizationRule> AuthorizationRuleValue)
+        public static IObservable<System.Boolean> get_IsInherited(
+            this IObservable<System.Security.AccessControl.AuthorizationRule> AuthorizationRuleValue)
         {
-            return Observable.Select(AuthorizationRuleValue, (AuthorizationRuleValueLambda) => AuthorizationRuleValueLambda.IsInherited);
+            return Observable.Select(AuthorizationRuleValue,
+                (AuthorizationRuleValueLambda) => AuthorizationRuleValueLambda.IsInherited);
         }
 
 
-        public static IObservable<System.Security.AccessControl.InheritanceFlags> get_InheritanceFlags(this IObservable<System.Security.AccessControl.AuthorizationRule> AuthorizationRuleValue)
+        public static IObservable<System.Security.AccessControl.InheritanceFlags> get_InheritanceFlags(
+            this IObservable<System.Security.AccessControl.AuthorizationRule> AuthorizationRuleValue)
         {
-            return Observable.Select(AuthorizationRuleValue, (AuthorizationRuleValueLambda) => AuthorizationRuleValueLambda.InheritanceFlags);
+            return Observable.Select(AuthorizationRuleValue,
+                (AuthorizationRuleValueLambda) => AuthorizationRuleValueLambda.InheritanceFlags);
         }
 
 
-        public static IObservable<System.Security.AccessControl.PropagationFlags> get_PropagationFlags(this IObservable<System.Security.AccessControl.AuthorizationRule> AuthorizationRuleValue)
+        public static IObservable<System.Security.AccessControl.PropagationFlags> get_PropagationFlags(
+            this IObservable<System.Security.AccessControl.AuthorizationRule> AuthorizationRuleValue)
         {
-            return Observable.Select(AuthorizationRuleValue, (AuthorizationRuleValueLambda) => AuthorizationRuleValueLambda.PropagationFlags);
+            return Observable.Select(AuthorizationRuleValue,
+                (AuthorizationRuleValueLambda) => AuthorizationRuleValueLambda.PropagationFlags);
         }
-
     }
 }

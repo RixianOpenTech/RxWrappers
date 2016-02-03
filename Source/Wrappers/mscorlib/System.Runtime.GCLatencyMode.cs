@@ -8,6 +8,5 @@ namespace System.Runtime
 {
     public static class __GCLatencyMode
     {
-        
     }
 }

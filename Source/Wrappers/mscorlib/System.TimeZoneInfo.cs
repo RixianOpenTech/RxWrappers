@@ -8,64 +8,89 @@ namespace System
 {
     public static class __TimeZoneInfo
     {
-        
-        public static IObservable<System.TimeZoneInfo.AdjustmentRule[]> GetAdjustmentRules(this IObservable<System.TimeZoneInfo> TimeZoneInfoValue)
+        public static IObservable<System.TimeZoneInfo.AdjustmentRule[]> GetAdjustmentRules(
+            this IObservable<System.TimeZoneInfo> TimeZoneInfoValue)
         {
-            return Observable.Select(TimeZoneInfoValue, (TimeZoneInfoValueLambda) => TimeZoneInfoValueLambda.GetAdjustmentRules());
+            return Observable.Select(TimeZoneInfoValue,
+                (TimeZoneInfoValueLambda) => TimeZoneInfoValueLambda.GetAdjustmentRules());
         }
 
 
-        public static IObservable<System.TimeSpan[]> GetAmbiguousTimeOffsets(this IObservable<System.TimeZoneInfo> TimeZoneInfoValue, IObservable<System.DateTimeOffset> dateTimeOffset)
+        public static IObservable<System.TimeSpan[]> GetAmbiguousTimeOffsets(
+            this IObservable<System.TimeZoneInfo> TimeZoneInfoValue, IObservable<System.DateTimeOffset> dateTimeOffset)
         {
-            return Observable.Zip(TimeZoneInfoValue, dateTimeOffset, (TimeZoneInfoValueLambda, dateTimeOffsetLambda) => TimeZoneInfoValueLambda.GetAmbiguousTimeOffsets(dateTimeOffsetLambda));
+            return Observable.Zip(TimeZoneInfoValue, dateTimeOffset,
+                (TimeZoneInfoValueLambda, dateTimeOffsetLambda) =>
+                    TimeZoneInfoValueLambda.GetAmbiguousTimeOffsets(dateTimeOffsetLambda));
         }
 
 
-        public static IObservable<System.TimeSpan[]> GetAmbiguousTimeOffsets(this IObservable<System.TimeZoneInfo> TimeZoneInfoValue, IObservable<System.DateTime> dateTime)
+        public static IObservable<System.TimeSpan[]> GetAmbiguousTimeOffsets(
+            this IObservable<System.TimeZoneInfo> TimeZoneInfoValue, IObservable<System.DateTime> dateTime)
         {
-            return Observable.Zip(TimeZoneInfoValue, dateTime, (TimeZoneInfoValueLambda, dateTimeLambda) => TimeZoneInfoValueLambda.GetAmbiguousTimeOffsets(dateTimeLambda));
+            return Observable.Zip(TimeZoneInfoValue, dateTime,
+                (TimeZoneInfoValueLambda, dateTimeLambda) =>
+                    TimeZoneInfoValueLambda.GetAmbiguousTimeOffsets(dateTimeLambda));
         }
 
 
-        public static IObservable<System.TimeSpan> GetUtcOffset(this IObservable<System.TimeZoneInfo> TimeZoneInfoValue, IObservable<System.DateTimeOffset> dateTimeOffset)
+        public static IObservable<System.TimeSpan> GetUtcOffset(this IObservable<System.TimeZoneInfo> TimeZoneInfoValue,
+            IObservable<System.DateTimeOffset> dateTimeOffset)
         {
-            return Observable.Zip(TimeZoneInfoValue, dateTimeOffset, (TimeZoneInfoValueLambda, dateTimeOffsetLambda) => TimeZoneInfoValueLambda.GetUtcOffset(dateTimeOffsetLambda));
+            return Observable.Zip(TimeZoneInfoValue, dateTimeOffset,
+                (TimeZoneInfoValueLambda, dateTimeOffsetLambda) =>
+                    TimeZoneInfoValueLambda.GetUtcOffset(dateTimeOffsetLambda));
         }
 
 
-        public static IObservable<System.TimeSpan> GetUtcOffset(this IObservable<System.TimeZoneInfo> TimeZoneInfoValue, IObservable<System.DateTime> dateTime)
+        public static IObservable<System.TimeSpan> GetUtcOffset(this IObservable<System.TimeZoneInfo> TimeZoneInfoValue,
+            IObservable<System.DateTime> dateTime)
         {
-            return Observable.Zip(TimeZoneInfoValue, dateTime, (TimeZoneInfoValueLambda, dateTimeLambda) => TimeZoneInfoValueLambda.GetUtcOffset(dateTimeLambda));
+            return Observable.Zip(TimeZoneInfoValue, dateTime,
+                (TimeZoneInfoValueLambda, dateTimeLambda) => TimeZoneInfoValueLambda.GetUtcOffset(dateTimeLambda));
         }
 
 
-        public static IObservable<System.Boolean> IsAmbiguousTime(this IObservable<System.TimeZoneInfo> TimeZoneInfoValue, IObservable<System.DateTimeOffset> dateTimeOffset)
+        public static IObservable<System.Boolean> IsAmbiguousTime(
+            this IObservable<System.TimeZoneInfo> TimeZoneInfoValue, IObservable<System.DateTimeOffset> dateTimeOffset)
         {
-            return Observable.Zip(TimeZoneInfoValue, dateTimeOffset, (TimeZoneInfoValueLambda, dateTimeOffsetLambda) => TimeZoneInfoValueLambda.IsAmbiguousTime(dateTimeOffsetLambda));
+            return Observable.Zip(TimeZoneInfoValue, dateTimeOffset,
+                (TimeZoneInfoValueLambda, dateTimeOffsetLambda) =>
+                    TimeZoneInfoValueLambda.IsAmbiguousTime(dateTimeOffsetLambda));
         }
 
 
-        public static IObservable<System.Boolean> IsAmbiguousTime(this IObservable<System.TimeZoneInfo> TimeZoneInfoValue, IObservable<System.DateTime> dateTime)
+        public static IObservable<System.Boolean> IsAmbiguousTime(
+            this IObservable<System.TimeZoneInfo> TimeZoneInfoValue, IObservable<System.DateTime> dateTime)
         {
-            return Observable.Zip(TimeZoneInfoValue, dateTime, (TimeZoneInfoValueLambda, dateTimeLambda) => TimeZoneInfoValueLambda.IsAmbiguousTime(dateTimeLambda));
+            return Observable.Zip(TimeZoneInfoValue, dateTime,
+                (TimeZoneInfoValueLambda, dateTimeLambda) => TimeZoneInfoValueLambda.IsAmbiguousTime(dateTimeLambda));
         }
 
 
-        public static IObservable<System.Boolean> IsDaylightSavingTime(this IObservable<System.TimeZoneInfo> TimeZoneInfoValue, IObservable<System.DateTimeOffset> dateTimeOffset)
+        public static IObservable<System.Boolean> IsDaylightSavingTime(
+            this IObservable<System.TimeZoneInfo> TimeZoneInfoValue, IObservable<System.DateTimeOffset> dateTimeOffset)
         {
-            return Observable.Zip(TimeZoneInfoValue, dateTimeOffset, (TimeZoneInfoValueLambda, dateTimeOffsetLambda) => TimeZoneInfoValueLambda.IsDaylightSavingTime(dateTimeOffsetLambda));
+            return Observable.Zip(TimeZoneInfoValue, dateTimeOffset,
+                (TimeZoneInfoValueLambda, dateTimeOffsetLambda) =>
+                    TimeZoneInfoValueLambda.IsDaylightSavingTime(dateTimeOffsetLambda));
         }
 
 
-        public static IObservable<System.Boolean> IsDaylightSavingTime(this IObservable<System.TimeZoneInfo> TimeZoneInfoValue, IObservable<System.DateTime> dateTime)
+        public static IObservable<System.Boolean> IsDaylightSavingTime(
+            this IObservable<System.TimeZoneInfo> TimeZoneInfoValue, IObservable<System.DateTime> dateTime)
         {
-            return Observable.Zip(TimeZoneInfoValue, dateTime, (TimeZoneInfoValueLambda, dateTimeLambda) => TimeZoneInfoValueLambda.IsDaylightSavingTime(dateTimeLambda));
+            return Observable.Zip(TimeZoneInfoValue, dateTime,
+                (TimeZoneInfoValueLambda, dateTimeLambda) =>
+                    TimeZoneInfoValueLambda.IsDaylightSavingTime(dateTimeLambda));
         }
 
 
-        public static IObservable<System.Boolean> IsInvalidTime(this IObservable<System.TimeZoneInfo> TimeZoneInfoValue, IObservable<System.DateTime> dateTime)
+        public static IObservable<System.Boolean> IsInvalidTime(this IObservable<System.TimeZoneInfo> TimeZoneInfoValue,
+            IObservable<System.DateTime> dateTime)
         {
-            return Observable.Zip(TimeZoneInfoValue, dateTime, (TimeZoneInfoValueLambda, dateTimeLambda) => TimeZoneInfoValueLambda.IsInvalidTime(dateTimeLambda));
+            return Observable.Zip(TimeZoneInfoValue, dateTime,
+                (TimeZoneInfoValueLambda, dateTimeLambda) => TimeZoneInfoValueLambda.IsInvalidTime(dateTimeLambda));
         }
 
 
@@ -75,45 +100,67 @@ namespace System
         }
 
 
-        public static IObservable<System.DateTimeOffset> ConvertTimeBySystemTimeZoneId(IObservable<System.DateTimeOffset> dateTimeOffset, IObservable<System.String> destinationTimeZoneId)
+        public static IObservable<System.DateTimeOffset> ConvertTimeBySystemTimeZoneId(
+            IObservable<System.DateTimeOffset> dateTimeOffset, IObservable<System.String> destinationTimeZoneId)
         {
-            return Observable.Zip(dateTimeOffset, destinationTimeZoneId, (dateTimeOffsetLambda, destinationTimeZoneIdLambda) => System.TimeZoneInfo.ConvertTimeBySystemTimeZoneId(dateTimeOffsetLambda, destinationTimeZoneIdLambda));
+            return Observable.Zip(dateTimeOffset, destinationTimeZoneId,
+                (dateTimeOffsetLambda, destinationTimeZoneIdLambda) =>
+                    System.TimeZoneInfo.ConvertTimeBySystemTimeZoneId(dateTimeOffsetLambda, destinationTimeZoneIdLambda));
         }
 
 
-        public static IObservable<System.DateTime> ConvertTimeBySystemTimeZoneId(IObservable<System.DateTime> dateTime, IObservable<System.String> destinationTimeZoneId)
+        public static IObservable<System.DateTime> ConvertTimeBySystemTimeZoneId(IObservable<System.DateTime> dateTime,
+            IObservable<System.String> destinationTimeZoneId)
         {
-            return Observable.Zip(dateTime, destinationTimeZoneId, (dateTimeLambda, destinationTimeZoneIdLambda) => System.TimeZoneInfo.ConvertTimeBySystemTimeZoneId(dateTimeLambda, destinationTimeZoneIdLambda));
+            return Observable.Zip(dateTime, destinationTimeZoneId,
+                (dateTimeLambda, destinationTimeZoneIdLambda) =>
+                    System.TimeZoneInfo.ConvertTimeBySystemTimeZoneId(dateTimeLambda, destinationTimeZoneIdLambda));
         }
 
 
-        public static IObservable<System.DateTime> ConvertTimeBySystemTimeZoneId(IObservable<System.DateTime> dateTime, IObservable<System.String> sourceTimeZoneId, IObservable<System.String> destinationTimeZoneId)
+        public static IObservable<System.DateTime> ConvertTimeBySystemTimeZoneId(IObservable<System.DateTime> dateTime,
+            IObservable<System.String> sourceTimeZoneId, IObservable<System.String> destinationTimeZoneId)
         {
-            return Observable.Zip(dateTime, sourceTimeZoneId, destinationTimeZoneId, (dateTimeLambda, sourceTimeZoneIdLambda, destinationTimeZoneIdLambda) => System.TimeZoneInfo.ConvertTimeBySystemTimeZoneId(dateTimeLambda, sourceTimeZoneIdLambda, destinationTimeZoneIdLambda));
+            return Observable.Zip(dateTime, sourceTimeZoneId, destinationTimeZoneId,
+                (dateTimeLambda, sourceTimeZoneIdLambda, destinationTimeZoneIdLambda) =>
+                    System.TimeZoneInfo.ConvertTimeBySystemTimeZoneId(dateTimeLambda, sourceTimeZoneIdLambda,
+                        destinationTimeZoneIdLambda));
         }
 
 
-        public static IObservable<System.DateTimeOffset> ConvertTime(IObservable<System.DateTimeOffset> dateTimeOffset, IObservable<System.TimeZoneInfo> destinationTimeZone)
+        public static IObservable<System.DateTimeOffset> ConvertTime(IObservable<System.DateTimeOffset> dateTimeOffset,
+            IObservable<System.TimeZoneInfo> destinationTimeZone)
         {
-            return Observable.Zip(dateTimeOffset, destinationTimeZone, (dateTimeOffsetLambda, destinationTimeZoneLambda) => System.TimeZoneInfo.ConvertTime(dateTimeOffsetLambda, destinationTimeZoneLambda));
+            return Observable.Zip(dateTimeOffset, destinationTimeZone,
+                (dateTimeOffsetLambda, destinationTimeZoneLambda) =>
+                    System.TimeZoneInfo.ConvertTime(dateTimeOffsetLambda, destinationTimeZoneLambda));
         }
 
 
-        public static IObservable<System.DateTime> ConvertTime(IObservable<System.DateTime> dateTime, IObservable<System.TimeZoneInfo> destinationTimeZone)
+        public static IObservable<System.DateTime> ConvertTime(IObservable<System.DateTime> dateTime,
+            IObservable<System.TimeZoneInfo> destinationTimeZone)
         {
-            return Observable.Zip(dateTime, destinationTimeZone, (dateTimeLambda, destinationTimeZoneLambda) => System.TimeZoneInfo.ConvertTime(dateTimeLambda, destinationTimeZoneLambda));
+            return Observable.Zip(dateTime, destinationTimeZone,
+                (dateTimeLambda, destinationTimeZoneLambda) =>
+                    System.TimeZoneInfo.ConvertTime(dateTimeLambda, destinationTimeZoneLambda));
         }
 
 
-        public static IObservable<System.DateTime> ConvertTime(IObservable<System.DateTime> dateTime, IObservable<System.TimeZoneInfo> sourceTimeZone, IObservable<System.TimeZoneInfo> destinationTimeZone)
+        public static IObservable<System.DateTime> ConvertTime(IObservable<System.DateTime> dateTime,
+            IObservable<System.TimeZoneInfo> sourceTimeZone, IObservable<System.TimeZoneInfo> destinationTimeZone)
         {
-            return Observable.Zip(dateTime, sourceTimeZone, destinationTimeZone, (dateTimeLambda, sourceTimeZoneLambda, destinationTimeZoneLambda) => System.TimeZoneInfo.ConvertTime(dateTimeLambda, sourceTimeZoneLambda, destinationTimeZoneLambda));
+            return Observable.Zip(dateTime, sourceTimeZone, destinationTimeZone,
+                (dateTimeLambda, sourceTimeZoneLambda, destinationTimeZoneLambda) =>
+                    System.TimeZoneInfo.ConvertTime(dateTimeLambda, sourceTimeZoneLambda, destinationTimeZoneLambda));
         }
 
 
-        public static IObservable<System.DateTime> ConvertTimeFromUtc(IObservable<System.DateTime> dateTime, IObservable<System.TimeZoneInfo> destinationTimeZone)
+        public static IObservable<System.DateTime> ConvertTimeFromUtc(IObservable<System.DateTime> dateTime,
+            IObservable<System.TimeZoneInfo> destinationTimeZone)
         {
-            return Observable.Zip(dateTime, destinationTimeZone, (dateTimeLambda, destinationTimeZoneLambda) => System.TimeZoneInfo.ConvertTimeFromUtc(dateTimeLambda, destinationTimeZoneLambda));
+            return Observable.Zip(dateTime, destinationTimeZone,
+                (dateTimeLambda, destinationTimeZoneLambda) =>
+                    System.TimeZoneInfo.ConvertTimeFromUtc(dateTimeLambda, destinationTimeZoneLambda));
         }
 
 
@@ -123,21 +170,28 @@ namespace System
         }
 
 
-        public static IObservable<System.DateTime> ConvertTimeToUtc(IObservable<System.DateTime> dateTime, IObservable<System.TimeZoneInfo> sourceTimeZone)
+        public static IObservable<System.DateTime> ConvertTimeToUtc(IObservable<System.DateTime> dateTime,
+            IObservable<System.TimeZoneInfo> sourceTimeZone)
         {
-            return Observable.Zip(dateTime, sourceTimeZone, (dateTimeLambda, sourceTimeZoneLambda) => System.TimeZoneInfo.ConvertTimeToUtc(dateTimeLambda, sourceTimeZoneLambda));
+            return Observable.Zip(dateTime, sourceTimeZone,
+                (dateTimeLambda, sourceTimeZoneLambda) =>
+                    System.TimeZoneInfo.ConvertTimeToUtc(dateTimeLambda, sourceTimeZoneLambda));
         }
 
 
-        public static IObservable<System.Boolean> Equals(this IObservable<System.TimeZoneInfo> TimeZoneInfoValue, IObservable<System.TimeZoneInfo> other)
+        public static IObservable<System.Boolean> Equals(this IObservable<System.TimeZoneInfo> TimeZoneInfoValue,
+            IObservable<System.TimeZoneInfo> other)
         {
-            return Observable.Zip(TimeZoneInfoValue, other, (TimeZoneInfoValueLambda, otherLambda) => TimeZoneInfoValueLambda.Equals(otherLambda));
+            return Observable.Zip(TimeZoneInfoValue, other,
+                (TimeZoneInfoValueLambda, otherLambda) => TimeZoneInfoValueLambda.Equals(otherLambda));
         }
 
 
-        public static IObservable<System.Boolean> Equals(this IObservable<System.TimeZoneInfo> TimeZoneInfoValue, IObservable<System.Object> obj)
+        public static IObservable<System.Boolean> Equals(this IObservable<System.TimeZoneInfo> TimeZoneInfoValue,
+            IObservable<System.Object> obj)
         {
-            return Observable.Zip(TimeZoneInfoValue, obj, (TimeZoneInfoValueLambda, objLambda) => TimeZoneInfoValueLambda.Equals(objLambda));
+            return Observable.Zip(TimeZoneInfoValue, obj,
+                (TimeZoneInfoValueLambda, objLambda) => TimeZoneInfoValueLambda.Equals(objLambda));
         }
 
 
@@ -149,25 +203,31 @@ namespace System
 
         public static IObservable<System.Int32> GetHashCode(this IObservable<System.TimeZoneInfo> TimeZoneInfoValue)
         {
-            return Observable.Select(TimeZoneInfoValue, (TimeZoneInfoValueLambda) => TimeZoneInfoValueLambda.GetHashCode());
+            return Observable.Select(TimeZoneInfoValue,
+                (TimeZoneInfoValueLambda) => TimeZoneInfoValueLambda.GetHashCode());
         }
 
 
-        public static IObservable<System.Collections.ObjectModel.ReadOnlyCollection<System.TimeZoneInfo>> GetSystemTimeZones()
+        public static IObservable<System.Collections.ObjectModel.ReadOnlyCollection<System.TimeZoneInfo>>
+            GetSystemTimeZones()
         {
             return ObservableExt.Factory(() => System.TimeZoneInfo.GetSystemTimeZones());
         }
 
 
-        public static IObservable<System.Boolean> HasSameRules(this IObservable<System.TimeZoneInfo> TimeZoneInfoValue, IObservable<System.TimeZoneInfo> other)
+        public static IObservable<System.Boolean> HasSameRules(this IObservable<System.TimeZoneInfo> TimeZoneInfoValue,
+            IObservable<System.TimeZoneInfo> other)
         {
-            return Observable.Zip(TimeZoneInfoValue, other, (TimeZoneInfoValueLambda, otherLambda) => TimeZoneInfoValueLambda.HasSameRules(otherLambda));
+            return Observable.Zip(TimeZoneInfoValue, other,
+                (TimeZoneInfoValueLambda, otherLambda) => TimeZoneInfoValueLambda.HasSameRules(otherLambda));
         }
 
 
-        public static IObservable<System.String> ToSerializedString(this IObservable<System.TimeZoneInfo> TimeZoneInfoValue)
+        public static IObservable<System.String> ToSerializedString(
+            this IObservable<System.TimeZoneInfo> TimeZoneInfoValue)
         {
-            return Observable.Select(TimeZoneInfoValue, (TimeZoneInfoValueLambda) => TimeZoneInfoValueLambda.ToSerializedString());
+            return Observable.Select(TimeZoneInfoValue,
+                (TimeZoneInfoValueLambda) => TimeZoneInfoValueLambda.ToSerializedString());
         }
 
 
@@ -177,21 +237,44 @@ namespace System
         }
 
 
-        public static IObservable<System.TimeZoneInfo> CreateCustomTimeZone(IObservable<System.String> id, IObservable<System.TimeSpan> baseUtcOffset, IObservable<System.String> displayName, IObservable<System.String> standardDisplayName)
+        public static IObservable<System.TimeZoneInfo> CreateCustomTimeZone(IObservable<System.String> id,
+            IObservable<System.TimeSpan> baseUtcOffset, IObservable<System.String> displayName,
+            IObservable<System.String> standardDisplayName)
         {
-            return Observable.Zip(id, baseUtcOffset, displayName, standardDisplayName, (idLambda, baseUtcOffsetLambda, displayNameLambda, standardDisplayNameLambda) => System.TimeZoneInfo.CreateCustomTimeZone(idLambda, baseUtcOffsetLambda, displayNameLambda, standardDisplayNameLambda));
+            return Observable.Zip(id, baseUtcOffset, displayName, standardDisplayName,
+                (idLambda, baseUtcOffsetLambda, displayNameLambda, standardDisplayNameLambda) =>
+                    System.TimeZoneInfo.CreateCustomTimeZone(idLambda, baseUtcOffsetLambda, displayNameLambda,
+                        standardDisplayNameLambda));
         }
 
 
-        public static IObservable<System.TimeZoneInfo> CreateCustomTimeZone(IObservable<System.String> id, IObservable<System.TimeSpan> baseUtcOffset, IObservable<System.String> displayName, IObservable<System.String> standardDisplayName, IObservable<System.String> daylightDisplayName, IObservable<System.TimeZoneInfo.AdjustmentRule[]> adjustmentRules)
+        public static IObservable<System.TimeZoneInfo> CreateCustomTimeZone(IObservable<System.String> id,
+            IObservable<System.TimeSpan> baseUtcOffset, IObservable<System.String> displayName,
+            IObservable<System.String> standardDisplayName, IObservable<System.String> daylightDisplayName,
+            IObservable<System.TimeZoneInfo.AdjustmentRule[]> adjustmentRules)
         {
-            return Observable.Zip(id, baseUtcOffset, displayName, standardDisplayName, daylightDisplayName, adjustmentRules, (idLambda, baseUtcOffsetLambda, displayNameLambda, standardDisplayNameLambda, daylightDisplayNameLambda, adjustmentRulesLambda) => System.TimeZoneInfo.CreateCustomTimeZone(idLambda, baseUtcOffsetLambda, displayNameLambda, standardDisplayNameLambda, daylightDisplayNameLambda, adjustmentRulesLambda));
+            return Observable.Zip(id, baseUtcOffset, displayName, standardDisplayName, daylightDisplayName,
+                adjustmentRules,
+                (idLambda, baseUtcOffsetLambda, displayNameLambda, standardDisplayNameLambda, daylightDisplayNameLambda,
+                    adjustmentRulesLambda) =>
+                    System.TimeZoneInfo.CreateCustomTimeZone(idLambda, baseUtcOffsetLambda, displayNameLambda,
+                        standardDisplayNameLambda, daylightDisplayNameLambda, adjustmentRulesLambda));
         }
 
 
-        public static IObservable<System.TimeZoneInfo> CreateCustomTimeZone(IObservable<System.String> id, IObservable<System.TimeSpan> baseUtcOffset, IObservable<System.String> displayName, IObservable<System.String> standardDisplayName, IObservable<System.String> daylightDisplayName, IObservable<System.TimeZoneInfo.AdjustmentRule[]> adjustmentRules, IObservable<System.Boolean> disableDaylightSavingTime)
+        public static IObservable<System.TimeZoneInfo> CreateCustomTimeZone(IObservable<System.String> id,
+            IObservable<System.TimeSpan> baseUtcOffset, IObservable<System.String> displayName,
+            IObservable<System.String> standardDisplayName, IObservable<System.String> daylightDisplayName,
+            IObservable<System.TimeZoneInfo.AdjustmentRule[]> adjustmentRules,
+            IObservable<System.Boolean> disableDaylightSavingTime)
         {
-            return Observable.Zip(id, baseUtcOffset, displayName, standardDisplayName, daylightDisplayName, adjustmentRules, disableDaylightSavingTime, (idLambda, baseUtcOffsetLambda, displayNameLambda, standardDisplayNameLambda, daylightDisplayNameLambda, adjustmentRulesLambda, disableDaylightSavingTimeLambda) => System.TimeZoneInfo.CreateCustomTimeZone(idLambda, baseUtcOffsetLambda, displayNameLambda, standardDisplayNameLambda, daylightDisplayNameLambda, adjustmentRulesLambda, disableDaylightSavingTimeLambda));
+            return Observable.Zip(id, baseUtcOffset, displayName, standardDisplayName, daylightDisplayName,
+                adjustmentRules, disableDaylightSavingTime,
+                (idLambda, baseUtcOffsetLambda, displayNameLambda, standardDisplayNameLambda, daylightDisplayNameLambda,
+                    adjustmentRulesLambda, disableDaylightSavingTimeLambda) =>
+                    System.TimeZoneInfo.CreateCustomTimeZone(idLambda, baseUtcOffsetLambda, displayNameLambda,
+                        standardDisplayNameLambda, daylightDisplayNameLambda, adjustmentRulesLambda,
+                        disableDaylightSavingTimeLambda));
         }
 
 
@@ -213,27 +296,35 @@ namespace System
         }
 
 
-        public static IObservable<System.String> get_StandardName(this IObservable<System.TimeZoneInfo> TimeZoneInfoValue)
+        public static IObservable<System.String> get_StandardName(
+            this IObservable<System.TimeZoneInfo> TimeZoneInfoValue)
         {
-            return Observable.Select(TimeZoneInfoValue, (TimeZoneInfoValueLambda) => TimeZoneInfoValueLambda.StandardName);
+            return Observable.Select(TimeZoneInfoValue,
+                (TimeZoneInfoValueLambda) => TimeZoneInfoValueLambda.StandardName);
         }
 
 
-        public static IObservable<System.String> get_DaylightName(this IObservable<System.TimeZoneInfo> TimeZoneInfoValue)
+        public static IObservable<System.String> get_DaylightName(
+            this IObservable<System.TimeZoneInfo> TimeZoneInfoValue)
         {
-            return Observable.Select(TimeZoneInfoValue, (TimeZoneInfoValueLambda) => TimeZoneInfoValueLambda.DaylightName);
+            return Observable.Select(TimeZoneInfoValue,
+                (TimeZoneInfoValueLambda) => TimeZoneInfoValueLambda.DaylightName);
         }
 
 
-        public static IObservable<System.TimeSpan> get_BaseUtcOffset(this IObservable<System.TimeZoneInfo> TimeZoneInfoValue)
+        public static IObservable<System.TimeSpan> get_BaseUtcOffset(
+            this IObservable<System.TimeZoneInfo> TimeZoneInfoValue)
         {
-            return Observable.Select(TimeZoneInfoValue, (TimeZoneInfoValueLambda) => TimeZoneInfoValueLambda.BaseUtcOffset);
+            return Observable.Select(TimeZoneInfoValue,
+                (TimeZoneInfoValueLambda) => TimeZoneInfoValueLambda.BaseUtcOffset);
         }
 
 
-        public static IObservable<System.Boolean> get_SupportsDaylightSavingTime(this IObservable<System.TimeZoneInfo> TimeZoneInfoValue)
+        public static IObservable<System.Boolean> get_SupportsDaylightSavingTime(
+            this IObservable<System.TimeZoneInfo> TimeZoneInfoValue)
         {
-            return Observable.Select(TimeZoneInfoValue, (TimeZoneInfoValueLambda) => TimeZoneInfoValueLambda.SupportsDaylightSavingTime);
+            return Observable.Select(TimeZoneInfoValue,
+                (TimeZoneInfoValueLambda) => TimeZoneInfoValueLambda.SupportsDaylightSavingTime);
         }
 
 
@@ -247,6 +338,5 @@ namespace System
         {
             return ObservableExt.Factory(() => System.TimeZoneInfo.Utc);
         }
-
     }
 }

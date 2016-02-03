@@ -8,35 +8,45 @@ namespace System.Runtime.InteropServices
 {
     public static class __ArrayWithOffset
     {
-        
-        public static IObservable<System.Object> GetArray(this IObservable<System.Runtime.InteropServices.ArrayWithOffset> ArrayWithOffsetValue)
+        public static IObservable<System.Object> GetArray(
+            this IObservable<System.Runtime.InteropServices.ArrayWithOffset> ArrayWithOffsetValue)
         {
-            return Observable.Select(ArrayWithOffsetValue, (ArrayWithOffsetValueLambda) => ArrayWithOffsetValueLambda.GetArray());
+            return Observable.Select(ArrayWithOffsetValue,
+                (ArrayWithOffsetValueLambda) => ArrayWithOffsetValueLambda.GetArray());
         }
 
 
-        public static IObservable<System.Int32> GetOffset(this IObservable<System.Runtime.InteropServices.ArrayWithOffset> ArrayWithOffsetValue)
+        public static IObservable<System.Int32> GetOffset(
+            this IObservable<System.Runtime.InteropServices.ArrayWithOffset> ArrayWithOffsetValue)
         {
-            return Observable.Select(ArrayWithOffsetValue, (ArrayWithOffsetValueLambda) => ArrayWithOffsetValueLambda.GetOffset());
+            return Observable.Select(ArrayWithOffsetValue,
+                (ArrayWithOffsetValueLambda) => ArrayWithOffsetValueLambda.GetOffset());
         }
 
 
-        public static IObservable<System.Int32> GetHashCode(this IObservable<System.Runtime.InteropServices.ArrayWithOffset> ArrayWithOffsetValue)
+        public static IObservable<System.Int32> GetHashCode(
+            this IObservable<System.Runtime.InteropServices.ArrayWithOffset> ArrayWithOffsetValue)
         {
-            return Observable.Select(ArrayWithOffsetValue, (ArrayWithOffsetValueLambda) => ArrayWithOffsetValueLambda.GetHashCode());
+            return Observable.Select(ArrayWithOffsetValue,
+                (ArrayWithOffsetValueLambda) => ArrayWithOffsetValueLambda.GetHashCode());
         }
 
 
-        public static IObservable<System.Boolean> Equals(this IObservable<System.Runtime.InteropServices.ArrayWithOffset> ArrayWithOffsetValue, IObservable<System.Object> obj)
+        public static IObservable<System.Boolean> Equals(
+            this IObservable<System.Runtime.InteropServices.ArrayWithOffset> ArrayWithOffsetValue,
+            IObservable<System.Object> obj)
         {
-            return Observable.Zip(ArrayWithOffsetValue, obj, (ArrayWithOffsetValueLambda, objLambda) => ArrayWithOffsetValueLambda.Equals(objLambda));
+            return Observable.Zip(ArrayWithOffsetValue, obj,
+                (ArrayWithOffsetValueLambda, objLambda) => ArrayWithOffsetValueLambda.Equals(objLambda));
         }
 
 
-        public static IObservable<System.Boolean> Equals(this IObservable<System.Runtime.InteropServices.ArrayWithOffset> ArrayWithOffsetValue, IObservable<System.Runtime.InteropServices.ArrayWithOffset> obj)
+        public static IObservable<System.Boolean> Equals(
+            this IObservable<System.Runtime.InteropServices.ArrayWithOffset> ArrayWithOffsetValue,
+            IObservable<System.Runtime.InteropServices.ArrayWithOffset> obj)
         {
-            return Observable.Zip(ArrayWithOffsetValue, obj, (ArrayWithOffsetValueLambda, objLambda) => ArrayWithOffsetValueLambda.Equals(objLambda));
+            return Observable.Zip(ArrayWithOffsetValue, obj,
+                (ArrayWithOffsetValueLambda, objLambda) => ArrayWithOffsetValueLambda.Equals(objLambda));
         }
-
     }
 }

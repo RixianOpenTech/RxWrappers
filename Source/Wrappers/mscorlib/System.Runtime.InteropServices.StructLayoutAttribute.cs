@@ -8,11 +8,11 @@ namespace System.Runtime.InteropServices
 {
     public static class __StructLayoutAttribute
     {
-        
-        public static IObservable<System.Runtime.InteropServices.LayoutKind> get_Value(this IObservable<System.Runtime.InteropServices.StructLayoutAttribute> StructLayoutAttributeValue)
+        public static IObservable<System.Runtime.InteropServices.LayoutKind> get_Value(
+            this IObservable<System.Runtime.InteropServices.StructLayoutAttribute> StructLayoutAttributeValue)
         {
-            return Observable.Select(StructLayoutAttributeValue, (StructLayoutAttributeValueLambda) => StructLayoutAttributeValueLambda.Value);
+            return Observable.Select(StructLayoutAttributeValue,
+                (StructLayoutAttributeValueLambda) => StructLayoutAttributeValueLambda.Value);
         }
-
     }
 }

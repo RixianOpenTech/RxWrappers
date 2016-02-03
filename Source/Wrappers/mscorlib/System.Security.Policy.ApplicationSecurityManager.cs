@@ -8,10 +8,14 @@ namespace System.Security.Policy
 {
     public static class __ApplicationSecurityManager
     {
-        
-        public static IObservable<System.Boolean> DetermineApplicationTrust(IObservable<System.ActivationContext> activationContext, IObservable<System.Security.Policy.TrustManagerContext> context)
+        public static IObservable<System.Boolean> DetermineApplicationTrust(
+            IObservable<System.ActivationContext> activationContext,
+            IObservable<System.Security.Policy.TrustManagerContext> context)
         {
-            return Observable.Zip(activationContext, context, (activationContextLambda, contextLambda) => System.Security.Policy.ApplicationSecurityManager.DetermineApplicationTrust(activationContextLambda, contextLambda));
+            return Observable.Zip(activationContext, context,
+                (activationContextLambda, contextLambda) =>
+                    System.Security.Policy.ApplicationSecurityManager.DetermineApplicationTrust(
+                        activationContextLambda, contextLambda));
         }
 
 
@@ -25,6 +29,5 @@ namespace System.Security.Policy
         {
             return ObservableExt.Factory(() => System.Security.Policy.ApplicationSecurityManager.ApplicationTrustManager);
         }
-
     }
 }

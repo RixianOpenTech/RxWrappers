@@ -8,29 +8,37 @@ namespace System.Globalization
 {
     public static class __KoreanLunisolarCalendar
     {
-        
-        public static IObservable<System.Int32> GetEra(this IObservable<System.Globalization.KoreanLunisolarCalendar> KoreanLunisolarCalendarValue, IObservable<System.DateTime> time)
+        public static IObservable<System.Int32> GetEra(
+            this IObservable<System.Globalization.KoreanLunisolarCalendar> KoreanLunisolarCalendarValue,
+            IObservable<System.DateTime> time)
         {
-            return Observable.Zip(KoreanLunisolarCalendarValue, time, (KoreanLunisolarCalendarValueLambda, timeLambda) => KoreanLunisolarCalendarValueLambda.GetEra(timeLambda));
+            return Observable.Zip(KoreanLunisolarCalendarValue, time,
+                (KoreanLunisolarCalendarValueLambda, timeLambda) =>
+                    KoreanLunisolarCalendarValueLambda.GetEra(timeLambda));
         }
 
 
-        public static IObservable<System.DateTime> get_MinSupportedDateTime(this IObservable<System.Globalization.KoreanLunisolarCalendar> KoreanLunisolarCalendarValue)
+        public static IObservable<System.DateTime> get_MinSupportedDateTime(
+            this IObservable<System.Globalization.KoreanLunisolarCalendar> KoreanLunisolarCalendarValue)
         {
-            return Observable.Select(KoreanLunisolarCalendarValue, (KoreanLunisolarCalendarValueLambda) => KoreanLunisolarCalendarValueLambda.MinSupportedDateTime);
+            return Observable.Select(KoreanLunisolarCalendarValue,
+                (KoreanLunisolarCalendarValueLambda) => KoreanLunisolarCalendarValueLambda.MinSupportedDateTime);
         }
 
 
-        public static IObservable<System.DateTime> get_MaxSupportedDateTime(this IObservable<System.Globalization.KoreanLunisolarCalendar> KoreanLunisolarCalendarValue)
+        public static IObservable<System.DateTime> get_MaxSupportedDateTime(
+            this IObservable<System.Globalization.KoreanLunisolarCalendar> KoreanLunisolarCalendarValue)
         {
-            return Observable.Select(KoreanLunisolarCalendarValue, (KoreanLunisolarCalendarValueLambda) => KoreanLunisolarCalendarValueLambda.MaxSupportedDateTime);
+            return Observable.Select(KoreanLunisolarCalendarValue,
+                (KoreanLunisolarCalendarValueLambda) => KoreanLunisolarCalendarValueLambda.MaxSupportedDateTime);
         }
 
 
-        public static IObservable<System.Int32[]> get_Eras(this IObservable<System.Globalization.KoreanLunisolarCalendar> KoreanLunisolarCalendarValue)
+        public static IObservable<System.Int32[]> get_Eras(
+            this IObservable<System.Globalization.KoreanLunisolarCalendar> KoreanLunisolarCalendarValue)
         {
-            return Observable.Select(KoreanLunisolarCalendarValue, (KoreanLunisolarCalendarValueLambda) => KoreanLunisolarCalendarValueLambda.Eras);
+            return Observable.Select(KoreanLunisolarCalendarValue,
+                (KoreanLunisolarCalendarValueLambda) => KoreanLunisolarCalendarValueLambda.Eras);
         }
-
     }
 }

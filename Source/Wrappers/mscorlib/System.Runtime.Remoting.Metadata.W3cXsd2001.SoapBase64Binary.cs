@@ -8,22 +8,27 @@ namespace System.Runtime.Remoting.Metadata.W3cXsd2001
 {
     public static class __SoapBase64Binary
     {
-        
-        public static IObservable<System.String> GetXsdType(this IObservable<System.Runtime.Remoting.Metadata.W3cXsd2001.SoapBase64Binary> SoapBase64BinaryValue)
+        public static IObservable<System.String> GetXsdType(
+            this IObservable<System.Runtime.Remoting.Metadata.W3cXsd2001.SoapBase64Binary> SoapBase64BinaryValue)
         {
-            return Observable.Select(SoapBase64BinaryValue, (SoapBase64BinaryValueLambda) => SoapBase64BinaryValueLambda.GetXsdType());
+            return Observable.Select(SoapBase64BinaryValue,
+                (SoapBase64BinaryValueLambda) => SoapBase64BinaryValueLambda.GetXsdType());
         }
 
 
-        public static IObservable<System.String> ToString(this IObservable<System.Runtime.Remoting.Metadata.W3cXsd2001.SoapBase64Binary> SoapBase64BinaryValue)
+        public static IObservable<System.String> ToString(
+            this IObservable<System.Runtime.Remoting.Metadata.W3cXsd2001.SoapBase64Binary> SoapBase64BinaryValue)
         {
-            return Observable.Select(SoapBase64BinaryValue, (SoapBase64BinaryValueLambda) => SoapBase64BinaryValueLambda.ToString());
+            return Observable.Select(SoapBase64BinaryValue,
+                (SoapBase64BinaryValueLambda) => SoapBase64BinaryValueLambda.ToString());
         }
 
 
-        public static IObservable<System.Runtime.Remoting.Metadata.W3cXsd2001.SoapBase64Binary> Parse(IObservable<System.String> value)
+        public static IObservable<System.Runtime.Remoting.Metadata.W3cXsd2001.SoapBase64Binary> Parse(
+            IObservable<System.String> value)
         {
-            return Observable.Select(value, (valueLambda) => System.Runtime.Remoting.Metadata.W3cXsd2001.SoapBase64Binary.Parse(valueLambda));
+            return Observable.Select(value,
+                (valueLambda) => System.Runtime.Remoting.Metadata.W3cXsd2001.SoapBase64Binary.Parse(valueLambda));
         }
 
 
@@ -33,16 +38,20 @@ namespace System.Runtime.Remoting.Metadata.W3cXsd2001
         }
 
 
-        public static IObservable<System.Byte[]> get_Value(this IObservable<System.Runtime.Remoting.Metadata.W3cXsd2001.SoapBase64Binary> SoapBase64BinaryValue)
+        public static IObservable<System.Byte[]> get_Value(
+            this IObservable<System.Runtime.Remoting.Metadata.W3cXsd2001.SoapBase64Binary> SoapBase64BinaryValue)
         {
-            return Observable.Select(SoapBase64BinaryValue, (SoapBase64BinaryValueLambda) => SoapBase64BinaryValueLambda.Value);
+            return Observable.Select(SoapBase64BinaryValue,
+                (SoapBase64BinaryValueLambda) => SoapBase64BinaryValueLambda.Value);
         }
 
 
-        public static IObservable<System.Reactive.Unit> set_Value(this IObservable<System.Runtime.Remoting.Metadata.W3cXsd2001.SoapBase64Binary> SoapBase64BinaryValue, IObservable<System.Byte[]> value)
+        public static IObservable<System.Reactive.Unit> set_Value(
+            this IObservable<System.Runtime.Remoting.Metadata.W3cXsd2001.SoapBase64Binary> SoapBase64BinaryValue,
+            IObservable<System.Byte[]> value)
         {
-            return ObservableExt.ZipExecute(SoapBase64BinaryValue, value, (SoapBase64BinaryValueLambda, valueLambda) => SoapBase64BinaryValueLambda.Value = valueLambda);
+            return ObservableExt.ZipExecute(SoapBase64BinaryValue, value,
+                (SoapBase64BinaryValueLambda, valueLambda) => SoapBase64BinaryValueLambda.Value = valueLambda);
         }
-
     }
 }

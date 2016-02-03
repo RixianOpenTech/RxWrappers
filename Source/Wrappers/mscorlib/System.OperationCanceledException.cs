@@ -8,11 +8,11 @@ namespace System
 {
     public static class __OperationCanceledException
     {
-        
-        public static IObservable<System.Threading.CancellationToken> get_CancellationToken(this IObservable<System.OperationCanceledException> OperationCanceledExceptionValue)
+        public static IObservable<System.Threading.CancellationToken> get_CancellationToken(
+            this IObservable<System.OperationCanceledException> OperationCanceledExceptionValue)
         {
-            return Observable.Select(OperationCanceledExceptionValue, (OperationCanceledExceptionValueLambda) => OperationCanceledExceptionValueLambda.CancellationToken);
+            return Observable.Select(OperationCanceledExceptionValue,
+                (OperationCanceledExceptionValueLambda) => OperationCanceledExceptionValueLambda.CancellationToken);
         }
-
     }
 }

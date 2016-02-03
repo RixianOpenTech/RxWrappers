@@ -8,11 +8,14 @@ namespace System.Runtime.Serialization
 {
     public static class __ISerializable
     {
-        
-        public static IObservable<System.Reactive.Unit> GetObjectData(this IObservable<System.Runtime.Serialization.ISerializable> ISerializableValue, IObservable<System.Runtime.Serialization.SerializationInfo> info, IObservable<System.Runtime.Serialization.StreamingContext> context)
+        public static IObservable<System.Reactive.Unit> GetObjectData(
+            this IObservable<System.Runtime.Serialization.ISerializable> ISerializableValue,
+            IObservable<System.Runtime.Serialization.SerializationInfo> info,
+            IObservable<System.Runtime.Serialization.StreamingContext> context)
         {
-            return ObservableExt.ZipExecute(ISerializableValue, info, context, (ISerializableValueLambda, infoLambda, contextLambda) => ISerializableValueLambda.GetObjectData(infoLambda, contextLambda));
+            return ObservableExt.ZipExecute(ISerializableValue, info, context,
+                (ISerializableValueLambda, infoLambda, contextLambda) =>
+                    ISerializableValueLambda.GetObjectData(infoLambda, contextLambda));
         }
-
     }
 }

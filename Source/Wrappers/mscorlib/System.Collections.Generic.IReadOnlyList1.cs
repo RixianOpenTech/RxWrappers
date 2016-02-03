@@ -8,11 +8,12 @@ namespace System.Collections.Generic
 {
     public static class __IReadOnlyList1
     {
-        
-        public static IObservable<T> get_Item<T>(this IObservable<System.Collections.Generic.IReadOnlyList<T>> IReadOnlyListValue, IObservable<System.Int32> index)
+        public static IObservable<T> get_Item<T>(
+            this IObservable<System.Collections.Generic.IReadOnlyList<T>> IReadOnlyListValue,
+            IObservable<System.Int32> index)
         {
-            return Observable.Zip(IReadOnlyListValue, index, (IReadOnlyListValueLambda, indexLambda) => IReadOnlyListValueLambda[indexLambda]);
+            return Observable.Zip(IReadOnlyListValue, index,
+                (IReadOnlyListValueLambda, indexLambda) => IReadOnlyListValueLambda[indexLambda]);
         }
-
     }
 }

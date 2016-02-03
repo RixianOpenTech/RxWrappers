@@ -8,7 +8,6 @@ namespace System.IO
 {
     public static class __DriveInfo
     {
-        
         public static IObservable<System.IO.DriveInfo[]> GetDrives()
         {
             return ObservableExt.Factory(() => System.IO.DriveInfo.GetDrives());
@@ -27,7 +26,8 @@ namespace System.IO
         }
 
 
-        public static IObservable<System.IO.DriveType> get_DriveType(this IObservable<System.IO.DriveInfo> DriveInfoValue)
+        public static IObservable<System.IO.DriveType> get_DriveType(
+            this IObservable<System.IO.DriveInfo> DriveInfoValue)
         {
             return Observable.Select(DriveInfoValue, (DriveInfoValueLambda) => DriveInfoValueLambda.DriveType);
         }
@@ -45,7 +45,8 @@ namespace System.IO
         }
 
 
-        public static IObservable<System.Int64> get_AvailableFreeSpace(this IObservable<System.IO.DriveInfo> DriveInfoValue)
+        public static IObservable<System.Int64> get_AvailableFreeSpace(
+            this IObservable<System.IO.DriveInfo> DriveInfoValue)
         {
             return Observable.Select(DriveInfoValue, (DriveInfoValueLambda) => DriveInfoValueLambda.AvailableFreeSpace);
         }
@@ -63,7 +64,8 @@ namespace System.IO
         }
 
 
-        public static IObservable<System.IO.DirectoryInfo> get_RootDirectory(this IObservable<System.IO.DriveInfo> DriveInfoValue)
+        public static IObservable<System.IO.DirectoryInfo> get_RootDirectory(
+            this IObservable<System.IO.DriveInfo> DriveInfoValue)
         {
             return Observable.Select(DriveInfoValue, (DriveInfoValueLambda) => DriveInfoValueLambda.RootDirectory);
         }
@@ -75,10 +77,11 @@ namespace System.IO
         }
 
 
-        public static IObservable<System.Reactive.Unit> set_VolumeLabel(this IObservable<System.IO.DriveInfo> DriveInfoValue, IObservable<System.String> value)
+        public static IObservable<System.Reactive.Unit> set_VolumeLabel(
+            this IObservable<System.IO.DriveInfo> DriveInfoValue, IObservable<System.String> value)
         {
-            return ObservableExt.ZipExecute(DriveInfoValue, value, (DriveInfoValueLambda, valueLambda) => DriveInfoValueLambda.VolumeLabel = valueLambda);
+            return ObservableExt.ZipExecute(DriveInfoValue, value,
+                (DriveInfoValueLambda, valueLambda) => DriveInfoValueLambda.VolumeLabel = valueLambda);
         }
-
     }
 }

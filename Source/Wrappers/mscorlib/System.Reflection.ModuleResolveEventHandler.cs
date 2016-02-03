@@ -8,23 +8,35 @@ namespace System.Reflection
 {
     public static class __ModuleResolveEventHandler
     {
-        
-        public static IObservable<System.Reflection.Module> Invoke(this IObservable<System.Reflection.ModuleResolveEventHandler> ModuleResolveEventHandlerValue, IObservable<System.Object> sender, IObservable<System.ResolveEventArgs> e)
+        public static IObservable<System.Reflection.Module> Invoke(
+            this IObservable<System.Reflection.ModuleResolveEventHandler> ModuleResolveEventHandlerValue,
+            IObservable<System.Object> sender, IObservable<System.ResolveEventArgs> e)
         {
-            return Observable.Zip(ModuleResolveEventHandlerValue, sender, e, (ModuleResolveEventHandlerValueLambda, senderLambda, eLambda) => ModuleResolveEventHandlerValueLambda.Invoke(senderLambda, eLambda));
+            return Observable.Zip(ModuleResolveEventHandlerValue, sender, e,
+                (ModuleResolveEventHandlerValueLambda, senderLambda, eLambda) =>
+                    ModuleResolveEventHandlerValueLambda.Invoke(senderLambda, eLambda));
         }
 
 
-        public static IObservable<System.IAsyncResult> BeginInvoke(this IObservable<System.Reflection.ModuleResolveEventHandler> ModuleResolveEventHandlerValue, IObservable<System.Object> sender, IObservable<System.ResolveEventArgs> e, IObservable<System.AsyncCallback> callback, IObservable<System.Object> @object)
+        public static IObservable<System.IAsyncResult> BeginInvoke(
+            this IObservable<System.Reflection.ModuleResolveEventHandler> ModuleResolveEventHandlerValue,
+            IObservable<System.Object> sender, IObservable<System.ResolveEventArgs> e,
+            IObservable<System.AsyncCallback> callback, IObservable<System.Object> @object)
         {
-            return Observable.Zip(ModuleResolveEventHandlerValue, sender, e, callback, @object, (ModuleResolveEventHandlerValueLambda, senderLambda, eLambda, callbackLambda, @objectLambda) => ModuleResolveEventHandlerValueLambda.BeginInvoke(senderLambda, eLambda, callbackLambda, @objectLambda));
+            return Observable.Zip(ModuleResolveEventHandlerValue, sender, e, callback, @object,
+                (ModuleResolveEventHandlerValueLambda, senderLambda, eLambda, callbackLambda, @objectLambda) =>
+                    ModuleResolveEventHandlerValueLambda.BeginInvoke(senderLambda, eLambda, callbackLambda,
+                        @objectLambda));
         }
 
 
-        public static IObservable<System.Reflection.Module> EndInvoke(this IObservable<System.Reflection.ModuleResolveEventHandler> ModuleResolveEventHandlerValue, IObservable<System.IAsyncResult> result)
+        public static IObservable<System.Reflection.Module> EndInvoke(
+            this IObservable<System.Reflection.ModuleResolveEventHandler> ModuleResolveEventHandlerValue,
+            IObservable<System.IAsyncResult> result)
         {
-            return Observable.Zip(ModuleResolveEventHandlerValue, result, (ModuleResolveEventHandlerValueLambda, resultLambda) => ModuleResolveEventHandlerValueLambda.EndInvoke(resultLambda));
+            return Observable.Zip(ModuleResolveEventHandlerValue, result,
+                (ModuleResolveEventHandlerValueLambda, resultLambda) =>
+                    ModuleResolveEventHandlerValueLambda.EndInvoke(resultLambda));
         }
-
     }
 }

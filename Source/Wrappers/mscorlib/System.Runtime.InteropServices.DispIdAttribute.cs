@@ -8,11 +8,11 @@ namespace System.Runtime.InteropServices
 {
     public static class __DispIdAttribute
     {
-        
-        public static IObservable<System.Int32> get_Value(this IObservable<System.Runtime.InteropServices.DispIdAttribute> DispIdAttributeValue)
+        public static IObservable<System.Int32> get_Value(
+            this IObservable<System.Runtime.InteropServices.DispIdAttribute> DispIdAttributeValue)
         {
-            return Observable.Select(DispIdAttributeValue, (DispIdAttributeValueLambda) => DispIdAttributeValueLambda.Value);
+            return Observable.Select(DispIdAttributeValue,
+                (DispIdAttributeValueLambda) => DispIdAttributeValueLambda.Value);
         }
-
     }
 }

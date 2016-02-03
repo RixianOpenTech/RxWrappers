@@ -8,11 +8,11 @@ namespace System.Reflection
 {
     public static class __AssemblyCultureAttribute
     {
-        
-        public static IObservable<System.String> get_Culture(this IObservable<System.Reflection.AssemblyCultureAttribute> AssemblyCultureAttributeValue)
+        public static IObservable<System.String> get_Culture(
+            this IObservable<System.Reflection.AssemblyCultureAttribute> AssemblyCultureAttributeValue)
         {
-            return Observable.Select(AssemblyCultureAttributeValue, (AssemblyCultureAttributeValueLambda) => AssemblyCultureAttributeValueLambda.Culture);
+            return Observable.Select(AssemblyCultureAttributeValue,
+                (AssemblyCultureAttributeValueLambda) => AssemblyCultureAttributeValueLambda.Culture);
         }
-
     }
 }

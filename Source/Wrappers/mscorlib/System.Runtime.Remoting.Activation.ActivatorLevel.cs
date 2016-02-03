@@ -8,6 +8,5 @@ namespace System.Runtime.Remoting.Activation
 {
     public static class __ActivatorLevel
     {
-        
     }
 }

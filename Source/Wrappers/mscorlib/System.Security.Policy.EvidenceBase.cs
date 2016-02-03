@@ -8,11 +8,10 @@ namespace System.Security.Policy
 {
     public static class __EvidenceBase
     {
-        
-        public static IObservable<System.Security.Policy.EvidenceBase> Clone(this IObservable<System.Security.Policy.EvidenceBase> EvidenceBaseValue)
+        public static IObservable<System.Security.Policy.EvidenceBase> Clone(
+            this IObservable<System.Security.Policy.EvidenceBase> EvidenceBaseValue)
         {
             return Observable.Select(EvidenceBaseValue, (EvidenceBaseValueLambda) => EvidenceBaseValueLambda.Clone());
         }
-
     }
 }

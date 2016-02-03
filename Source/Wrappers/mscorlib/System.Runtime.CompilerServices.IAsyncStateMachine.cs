@@ -8,17 +8,22 @@ namespace System.Runtime.CompilerServices
 {
     public static class __IAsyncStateMachine
     {
-        
-        public static IObservable<System.Reactive.Unit> MoveNext(this IObservable<System.Runtime.CompilerServices.IAsyncStateMachine> IAsyncStateMachineValue)
+        public static IObservable<System.Reactive.Unit> MoveNext(
+            this IObservable<System.Runtime.CompilerServices.IAsyncStateMachine> IAsyncStateMachineValue)
         {
-            return Observable.Do(IAsyncStateMachineValue, (IAsyncStateMachineValueLambda) => IAsyncStateMachineValueLambda.MoveNext()).ToUnit();
+            return
+                Observable.Do(IAsyncStateMachineValue,
+                    (IAsyncStateMachineValueLambda) => IAsyncStateMachineValueLambda.MoveNext()).ToUnit();
         }
 
 
-        public static IObservable<System.Reactive.Unit> SetStateMachine(this IObservable<System.Runtime.CompilerServices.IAsyncStateMachine> IAsyncStateMachineValue, IObservable<System.Runtime.CompilerServices.IAsyncStateMachine> stateMachine)
+        public static IObservable<System.Reactive.Unit> SetStateMachine(
+            this IObservable<System.Runtime.CompilerServices.IAsyncStateMachine> IAsyncStateMachineValue,
+            IObservable<System.Runtime.CompilerServices.IAsyncStateMachine> stateMachine)
         {
-            return ObservableExt.ZipExecute(IAsyncStateMachineValue, stateMachine, (IAsyncStateMachineValueLambda, stateMachineLambda) => IAsyncStateMachineValueLambda.SetStateMachine(stateMachineLambda));
+            return ObservableExt.ZipExecute(IAsyncStateMachineValue, stateMachine,
+                (IAsyncStateMachineValueLambda, stateMachineLambda) =>
+                    IAsyncStateMachineValueLambda.SetStateMachine(stateMachineLambda));
         }
-
     }
 }

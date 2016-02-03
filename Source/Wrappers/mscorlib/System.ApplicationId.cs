@@ -8,7 +8,6 @@ namespace System
 {
     public static class __ApplicationId
     {
-        
         public static IObservable<System.ApplicationId> Copy(this IObservable<System.ApplicationId> ApplicationIdValue)
         {
             return Observable.Select(ApplicationIdValue, (ApplicationIdValueLambda) => ApplicationIdValueLambda.Copy());
@@ -17,25 +16,31 @@ namespace System
 
         public static IObservable<System.String> ToString(this IObservable<System.ApplicationId> ApplicationIdValue)
         {
-            return Observable.Select(ApplicationIdValue, (ApplicationIdValueLambda) => ApplicationIdValueLambda.ToString());
+            return Observable.Select(ApplicationIdValue,
+                (ApplicationIdValueLambda) => ApplicationIdValueLambda.ToString());
         }
 
 
-        public static IObservable<System.Boolean> Equals(this IObservable<System.ApplicationId> ApplicationIdValue, IObservable<System.Object> o)
+        public static IObservable<System.Boolean> Equals(this IObservable<System.ApplicationId> ApplicationIdValue,
+            IObservable<System.Object> o)
         {
-            return Observable.Zip(ApplicationIdValue, o, (ApplicationIdValueLambda, oLambda) => ApplicationIdValueLambda.Equals(oLambda));
+            return Observable.Zip(ApplicationIdValue, o,
+                (ApplicationIdValueLambda, oLambda) => ApplicationIdValueLambda.Equals(oLambda));
         }
 
 
         public static IObservable<System.Int32> GetHashCode(this IObservable<System.ApplicationId> ApplicationIdValue)
         {
-            return Observable.Select(ApplicationIdValue, (ApplicationIdValueLambda) => ApplicationIdValueLambda.GetHashCode());
+            return Observable.Select(ApplicationIdValue,
+                (ApplicationIdValueLambda) => ApplicationIdValueLambda.GetHashCode());
         }
 
 
-        public static IObservable<System.Byte[]> get_PublicKeyToken(this IObservable<System.ApplicationId> ApplicationIdValue)
+        public static IObservable<System.Byte[]> get_PublicKeyToken(
+            this IObservable<System.ApplicationId> ApplicationIdValue)
         {
-            return Observable.Select(ApplicationIdValue, (ApplicationIdValueLambda) => ApplicationIdValueLambda.PublicKeyToken);
+            return Observable.Select(ApplicationIdValue,
+                (ApplicationIdValueLambda) => ApplicationIdValueLambda.PublicKeyToken);
         }
 
 
@@ -51,9 +56,11 @@ namespace System
         }
 
 
-        public static IObservable<System.String> get_ProcessorArchitecture(this IObservable<System.ApplicationId> ApplicationIdValue)
+        public static IObservable<System.String> get_ProcessorArchitecture(
+            this IObservable<System.ApplicationId> ApplicationIdValue)
         {
-            return Observable.Select(ApplicationIdValue, (ApplicationIdValueLambda) => ApplicationIdValueLambda.ProcessorArchitecture);
+            return Observable.Select(ApplicationIdValue,
+                (ApplicationIdValueLambda) => ApplicationIdValueLambda.ProcessorArchitecture);
         }
 
 
@@ -61,6 +68,5 @@ namespace System
         {
             return Observable.Select(ApplicationIdValue, (ApplicationIdValueLambda) => ApplicationIdValueLambda.Culture);
         }
-
     }
 }

@@ -8,6 +8,5 @@ namespace System.Runtime.Serialization
 {
     public static class __OnDeserializedAttribute
     {
-        
     }
 }

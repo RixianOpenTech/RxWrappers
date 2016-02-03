@@ -8,26 +8,35 @@ namespace System.Runtime.Remoting
 {
     public static class __ObjRef
     {
-        
-        public static IObservable<System.Object> GetRealObject(this IObservable<System.Runtime.Remoting.ObjRef> ObjRefValue, IObservable<System.Runtime.Serialization.StreamingContext> context)
+        public static IObservable<System.Object> GetRealObject(
+            this IObservable<System.Runtime.Remoting.ObjRef> ObjRefValue,
+            IObservable<System.Runtime.Serialization.StreamingContext> context)
         {
-            return Observable.Zip(ObjRefValue, context, (ObjRefValueLambda, contextLambda) => ObjRefValueLambda.GetRealObject(contextLambda));
+            return Observable.Zip(ObjRefValue, context,
+                (ObjRefValueLambda, contextLambda) => ObjRefValueLambda.GetRealObject(contextLambda));
         }
 
 
-        public static IObservable<System.Reactive.Unit> GetObjectData(this IObservable<System.Runtime.Remoting.ObjRef> ObjRefValue, IObservable<System.Runtime.Serialization.SerializationInfo> info, IObservable<System.Runtime.Serialization.StreamingContext> context)
+        public static IObservable<System.Reactive.Unit> GetObjectData(
+            this IObservable<System.Runtime.Remoting.ObjRef> ObjRefValue,
+            IObservable<System.Runtime.Serialization.SerializationInfo> info,
+            IObservable<System.Runtime.Serialization.StreamingContext> context)
         {
-            return ObservableExt.ZipExecute(ObjRefValue, info, context, (ObjRefValueLambda, infoLambda, contextLambda) => ObjRefValueLambda.GetObjectData(infoLambda, contextLambda));
+            return ObservableExt.ZipExecute(ObjRefValue, info, context,
+                (ObjRefValueLambda, infoLambda, contextLambda) =>
+                    ObjRefValueLambda.GetObjectData(infoLambda, contextLambda));
         }
 
 
-        public static IObservable<System.Boolean> IsFromThisProcess(this IObservable<System.Runtime.Remoting.ObjRef> ObjRefValue)
+        public static IObservable<System.Boolean> IsFromThisProcess(
+            this IObservable<System.Runtime.Remoting.ObjRef> ObjRefValue)
         {
             return Observable.Select(ObjRefValue, (ObjRefValueLambda) => ObjRefValueLambda.IsFromThisProcess());
         }
 
 
-        public static IObservable<System.Boolean> IsFromThisAppDomain(this IObservable<System.Runtime.Remoting.ObjRef> ObjRefValue)
+        public static IObservable<System.Boolean> IsFromThisAppDomain(
+            this IObservable<System.Runtime.Remoting.ObjRef> ObjRefValue)
         {
             return Observable.Select(ObjRefValue, (ObjRefValueLambda) => ObjRefValueLambda.IsFromThisAppDomain());
         }
@@ -39,46 +48,59 @@ namespace System.Runtime.Remoting
         }
 
 
-        public static IObservable<System.Runtime.Remoting.IRemotingTypeInfo> get_TypeInfo(this IObservable<System.Runtime.Remoting.ObjRef> ObjRefValue)
+        public static IObservable<System.Runtime.Remoting.IRemotingTypeInfo> get_TypeInfo(
+            this IObservable<System.Runtime.Remoting.ObjRef> ObjRefValue)
         {
             return Observable.Select(ObjRefValue, (ObjRefValueLambda) => ObjRefValueLambda.TypeInfo);
         }
 
 
-        public static IObservable<System.Runtime.Remoting.IEnvoyInfo> get_EnvoyInfo(this IObservable<System.Runtime.Remoting.ObjRef> ObjRefValue)
+        public static IObservable<System.Runtime.Remoting.IEnvoyInfo> get_EnvoyInfo(
+            this IObservable<System.Runtime.Remoting.ObjRef> ObjRefValue)
         {
             return Observable.Select(ObjRefValue, (ObjRefValueLambda) => ObjRefValueLambda.EnvoyInfo);
         }
 
 
-        public static IObservable<System.Runtime.Remoting.IChannelInfo> get_ChannelInfo(this IObservable<System.Runtime.Remoting.ObjRef> ObjRefValue)
+        public static IObservable<System.Runtime.Remoting.IChannelInfo> get_ChannelInfo(
+            this IObservable<System.Runtime.Remoting.ObjRef> ObjRefValue)
         {
             return Observable.Select(ObjRefValue, (ObjRefValueLambda) => ObjRefValueLambda.ChannelInfo);
         }
 
 
-        public static IObservable<System.Reactive.Unit> set_URI(this IObservable<System.Runtime.Remoting.ObjRef> ObjRefValue, IObservable<System.String> value)
+        public static IObservable<System.Reactive.Unit> set_URI(
+            this IObservable<System.Runtime.Remoting.ObjRef> ObjRefValue, IObservable<System.String> value)
         {
-            return ObservableExt.ZipExecute(ObjRefValue, value, (ObjRefValueLambda, valueLambda) => ObjRefValueLambda.URI = valueLambda);
+            return ObservableExt.ZipExecute(ObjRefValue, value,
+                (ObjRefValueLambda, valueLambda) => ObjRefValueLambda.URI = valueLambda);
         }
 
 
-        public static IObservable<System.Reactive.Unit> set_TypeInfo(this IObservable<System.Runtime.Remoting.ObjRef> ObjRefValue, IObservable<System.Runtime.Remoting.IRemotingTypeInfo> value)
+        public static IObservable<System.Reactive.Unit> set_TypeInfo(
+            this IObservable<System.Runtime.Remoting.ObjRef> ObjRefValue,
+            IObservable<System.Runtime.Remoting.IRemotingTypeInfo> value)
         {
-            return ObservableExt.ZipExecute(ObjRefValue, value, (ObjRefValueLambda, valueLambda) => ObjRefValueLambda.TypeInfo = valueLambda);
+            return ObservableExt.ZipExecute(ObjRefValue, value,
+                (ObjRefValueLambda, valueLambda) => ObjRefValueLambda.TypeInfo = valueLambda);
         }
 
 
-        public static IObservable<System.Reactive.Unit> set_EnvoyInfo(this IObservable<System.Runtime.Remoting.ObjRef> ObjRefValue, IObservable<System.Runtime.Remoting.IEnvoyInfo> value)
+        public static IObservable<System.Reactive.Unit> set_EnvoyInfo(
+            this IObservable<System.Runtime.Remoting.ObjRef> ObjRefValue,
+            IObservable<System.Runtime.Remoting.IEnvoyInfo> value)
         {
-            return ObservableExt.ZipExecute(ObjRefValue, value, (ObjRefValueLambda, valueLambda) => ObjRefValueLambda.EnvoyInfo = valueLambda);
+            return ObservableExt.ZipExecute(ObjRefValue, value,
+                (ObjRefValueLambda, valueLambda) => ObjRefValueLambda.EnvoyInfo = valueLambda);
         }
 
 
-        public static IObservable<System.Reactive.Unit> set_ChannelInfo(this IObservable<System.Runtime.Remoting.ObjRef> ObjRefValue, IObservable<System.Runtime.Remoting.IChannelInfo> value)
+        public static IObservable<System.Reactive.Unit> set_ChannelInfo(
+            this IObservable<System.Runtime.Remoting.ObjRef> ObjRefValue,
+            IObservable<System.Runtime.Remoting.IChannelInfo> value)
         {
-            return ObservableExt.ZipExecute(ObjRefValue, value, (ObjRefValueLambda, valueLambda) => ObjRefValueLambda.ChannelInfo = valueLambda);
+            return ObservableExt.ZipExecute(ObjRefValue, value,
+                (ObjRefValueLambda, valueLambda) => ObjRefValueLambda.ChannelInfo = valueLambda);
         }
-
     }
 }

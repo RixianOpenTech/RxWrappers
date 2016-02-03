@@ -8,10 +8,13 @@ namespace System.Collections
 {
     public static class __CaseInsensitiveComparer
     {
-        
-        public static IObservable<System.Int32> Compare(this IObservable<System.Collections.CaseInsensitiveComparer> CaseInsensitiveComparerValue, IObservable<System.Object> a, IObservable<System.Object> b)
+        public static IObservable<System.Int32> Compare(
+            this IObservable<System.Collections.CaseInsensitiveComparer> CaseInsensitiveComparerValue,
+            IObservable<System.Object> a, IObservable<System.Object> b)
         {
-            return Observable.Zip(CaseInsensitiveComparerValue, a, b, (CaseInsensitiveComparerValueLambda, aLambda, bLambda) => CaseInsensitiveComparerValueLambda.Compare(aLambda, bLambda));
+            return Observable.Zip(CaseInsensitiveComparerValue, a, b,
+                (CaseInsensitiveComparerValueLambda, aLambda, bLambda) =>
+                    CaseInsensitiveComparerValueLambda.Compare(aLambda, bLambda));
         }
 
 
@@ -25,6 +28,5 @@ namespace System.Collections
         {
             return ObservableExt.Factory(() => System.Collections.CaseInsensitiveComparer.DefaultInvariant);
         }
-
     }
 }

@@ -8,29 +8,45 @@ namespace System.Threading.Tasks
 {
     public static class __ConcurrentExclusiveSchedulerPair
     {
-        
-        public static IObservable<System.Reactive.Unit> Complete(this IObservable<System.Threading.Tasks.ConcurrentExclusiveSchedulerPair> ConcurrentExclusiveSchedulerPairValue)
+        public static IObservable<System.Reactive.Unit> Complete(
+            this IObservable<System.Threading.Tasks.ConcurrentExclusiveSchedulerPair>
+                ConcurrentExclusiveSchedulerPairValue)
         {
-            return Observable.Do(ConcurrentExclusiveSchedulerPairValue, (ConcurrentExclusiveSchedulerPairValueLambda) => ConcurrentExclusiveSchedulerPairValueLambda.Complete()).ToUnit();
+            return
+                Observable.Do(ConcurrentExclusiveSchedulerPairValue,
+                    (ConcurrentExclusiveSchedulerPairValueLambda) =>
+                        ConcurrentExclusiveSchedulerPairValueLambda.Complete()).ToUnit();
         }
 
 
-        public static IObservable<System.Reactive.Unit> get_Completion(this IObservable<System.Threading.Tasks.ConcurrentExclusiveSchedulerPair> ConcurrentExclusiveSchedulerPairValue)
+        public static IObservable<System.Reactive.Unit> get_Completion(
+            this IObservable<System.Threading.Tasks.ConcurrentExclusiveSchedulerPair>
+                ConcurrentExclusiveSchedulerPairValue)
         {
-            return Observable.Select(ConcurrentExclusiveSchedulerPairValue, (ConcurrentExclusiveSchedulerPairValueLambda) => ConcurrentExclusiveSchedulerPairValueLambda.Completion.ToObservable()).Flatten().ToUnit();
+            return
+                Observable.Select(ConcurrentExclusiveSchedulerPairValue,
+                    (ConcurrentExclusiveSchedulerPairValueLambda) =>
+                        ConcurrentExclusiveSchedulerPairValueLambda.Completion.ToObservable()).Flatten().ToUnit();
         }
 
 
-        public static IObservable<System.Threading.Tasks.TaskScheduler> get_ConcurrentScheduler(this IObservable<System.Threading.Tasks.ConcurrentExclusiveSchedulerPair> ConcurrentExclusiveSchedulerPairValue)
+        public static IObservable<System.Threading.Tasks.TaskScheduler> get_ConcurrentScheduler(
+            this IObservable<System.Threading.Tasks.ConcurrentExclusiveSchedulerPair>
+                ConcurrentExclusiveSchedulerPairValue)
         {
-            return Observable.Select(ConcurrentExclusiveSchedulerPairValue, (ConcurrentExclusiveSchedulerPairValueLambda) => ConcurrentExclusiveSchedulerPairValueLambda.ConcurrentScheduler);
+            return Observable.Select(ConcurrentExclusiveSchedulerPairValue,
+                (ConcurrentExclusiveSchedulerPairValueLambda) =>
+                    ConcurrentExclusiveSchedulerPairValueLambda.ConcurrentScheduler);
         }
 
 
-        public static IObservable<System.Threading.Tasks.TaskScheduler> get_ExclusiveScheduler(this IObservable<System.Threading.Tasks.ConcurrentExclusiveSchedulerPair> ConcurrentExclusiveSchedulerPairValue)
+        public static IObservable<System.Threading.Tasks.TaskScheduler> get_ExclusiveScheduler(
+            this IObservable<System.Threading.Tasks.ConcurrentExclusiveSchedulerPair>
+                ConcurrentExclusiveSchedulerPairValue)
         {
-            return Observable.Select(ConcurrentExclusiveSchedulerPairValue, (ConcurrentExclusiveSchedulerPairValueLambda) => ConcurrentExclusiveSchedulerPairValueLambda.ExclusiveScheduler);
+            return Observable.Select(ConcurrentExclusiveSchedulerPairValue,
+                (ConcurrentExclusiveSchedulerPairValueLambda) =>
+                    ConcurrentExclusiveSchedulerPairValueLambda.ExclusiveScheduler);
         }
-
     }
 }

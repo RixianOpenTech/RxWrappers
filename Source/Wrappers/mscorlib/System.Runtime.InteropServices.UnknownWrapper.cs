@@ -8,11 +8,11 @@ namespace System.Runtime.InteropServices
 {
     public static class __UnknownWrapper
     {
-        
-        public static IObservable<System.Object> get_WrappedObject(this IObservable<System.Runtime.InteropServices.UnknownWrapper> UnknownWrapperValue)
+        public static IObservable<System.Object> get_WrappedObject(
+            this IObservable<System.Runtime.InteropServices.UnknownWrapper> UnknownWrapperValue)
         {
-            return Observable.Select(UnknownWrapperValue, (UnknownWrapperValueLambda) => UnknownWrapperValueLambda.WrappedObject);
+            return Observable.Select(UnknownWrapperValue,
+                (UnknownWrapperValueLambda) => UnknownWrapperValueLambda.WrappedObject);
         }
-
     }
 }

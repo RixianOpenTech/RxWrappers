@@ -8,35 +8,51 @@ namespace System.Security.Permissions
 {
     public static class __FileDialogPermissionAttribute
     {
-        
-        public static IObservable<System.Security.IPermission> CreatePermission(this IObservable<System.Security.Permissions.FileDialogPermissionAttribute> FileDialogPermissionAttributeValue)
+        public static IObservable<System.Security.IPermission> CreatePermission(
+            this IObservable<System.Security.Permissions.FileDialogPermissionAttribute>
+                FileDialogPermissionAttributeValue)
         {
-            return Observable.Select(FileDialogPermissionAttributeValue, (FileDialogPermissionAttributeValueLambda) => FileDialogPermissionAttributeValueLambda.CreatePermission());
+            return Observable.Select(FileDialogPermissionAttributeValue,
+                (FileDialogPermissionAttributeValueLambda) =>
+                    FileDialogPermissionAttributeValueLambda.CreatePermission());
         }
 
 
-        public static IObservable<System.Boolean> get_Open(this IObservable<System.Security.Permissions.FileDialogPermissionAttribute> FileDialogPermissionAttributeValue)
+        public static IObservable<System.Boolean> get_Open(
+            this IObservable<System.Security.Permissions.FileDialogPermissionAttribute>
+                FileDialogPermissionAttributeValue)
         {
-            return Observable.Select(FileDialogPermissionAttributeValue, (FileDialogPermissionAttributeValueLambda) => FileDialogPermissionAttributeValueLambda.Open);
+            return Observable.Select(FileDialogPermissionAttributeValue,
+                (FileDialogPermissionAttributeValueLambda) => FileDialogPermissionAttributeValueLambda.Open);
         }
 
 
-        public static IObservable<System.Boolean> get_Save(this IObservable<System.Security.Permissions.FileDialogPermissionAttribute> FileDialogPermissionAttributeValue)
+        public static IObservable<System.Boolean> get_Save(
+            this IObservable<System.Security.Permissions.FileDialogPermissionAttribute>
+                FileDialogPermissionAttributeValue)
         {
-            return Observable.Select(FileDialogPermissionAttributeValue, (FileDialogPermissionAttributeValueLambda) => FileDialogPermissionAttributeValueLambda.Save);
+            return Observable.Select(FileDialogPermissionAttributeValue,
+                (FileDialogPermissionAttributeValueLambda) => FileDialogPermissionAttributeValueLambda.Save);
         }
 
 
-        public static IObservable<System.Reactive.Unit> set_Open(this IObservable<System.Security.Permissions.FileDialogPermissionAttribute> FileDialogPermissionAttributeValue, IObservable<System.Boolean> value)
+        public static IObservable<System.Reactive.Unit> set_Open(
+            this IObservable<System.Security.Permissions.FileDialogPermissionAttribute>
+                FileDialogPermissionAttributeValue, IObservable<System.Boolean> value)
         {
-            return ObservableExt.ZipExecute(FileDialogPermissionAttributeValue, value, (FileDialogPermissionAttributeValueLambda, valueLambda) => FileDialogPermissionAttributeValueLambda.Open = valueLambda);
+            return ObservableExt.ZipExecute(FileDialogPermissionAttributeValue, value,
+                (FileDialogPermissionAttributeValueLambda, valueLambda) =>
+                    FileDialogPermissionAttributeValueLambda.Open = valueLambda);
         }
 
 
-        public static IObservable<System.Reactive.Unit> set_Save(this IObservable<System.Security.Permissions.FileDialogPermissionAttribute> FileDialogPermissionAttributeValue, IObservable<System.Boolean> value)
+        public static IObservable<System.Reactive.Unit> set_Save(
+            this IObservable<System.Security.Permissions.FileDialogPermissionAttribute>
+                FileDialogPermissionAttributeValue, IObservable<System.Boolean> value)
         {
-            return ObservableExt.ZipExecute(FileDialogPermissionAttributeValue, value, (FileDialogPermissionAttributeValueLambda, valueLambda) => FileDialogPermissionAttributeValueLambda.Save = valueLambda);
+            return ObservableExt.ZipExecute(FileDialogPermissionAttributeValue, value,
+                (FileDialogPermissionAttributeValueLambda, valueLambda) =>
+                    FileDialogPermissionAttributeValueLambda.Save = valueLambda);
         }
-
     }
 }

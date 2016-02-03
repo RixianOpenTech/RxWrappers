@@ -8,34 +8,52 @@ namespace System.IO
 {
     public static class __Stream
     {
-        
-        public static IObservable<System.Reactive.Unit> CopyToAsync(this IObservable<System.IO.Stream> StreamValue, IObservable<System.IO.Stream> destination)
+        public static IObservable<System.Reactive.Unit> CopyToAsync(this IObservable<System.IO.Stream> StreamValue,
+            IObservable<System.IO.Stream> destination)
         {
-            return Observable.Zip(StreamValue, destination, (StreamValueLambda, destinationLambda) => StreamValueLambda.CopyToAsync(destinationLambda).ToObservable()).Flatten();
+            return
+                Observable.Zip(StreamValue, destination,
+                    (StreamValueLambda, destinationLambda) =>
+                        StreamValueLambda.CopyToAsync(destinationLambda).ToObservable()).Flatten();
         }
 
 
-        public static IObservable<System.Reactive.Unit> CopyToAsync(this IObservable<System.IO.Stream> StreamValue, IObservable<System.IO.Stream> destination, IObservable<System.Int32> bufferSize)
+        public static IObservable<System.Reactive.Unit> CopyToAsync(this IObservable<System.IO.Stream> StreamValue,
+            IObservable<System.IO.Stream> destination, IObservable<System.Int32> bufferSize)
         {
-            return Observable.Zip(StreamValue, destination, bufferSize, (StreamValueLambda, destinationLambda, bufferSizeLambda) => StreamValueLambda.CopyToAsync(destinationLambda, bufferSizeLambda).ToObservable()).Flatten();
+            return
+                Observable.Zip(StreamValue, destination, bufferSize,
+                    (StreamValueLambda, destinationLambda, bufferSizeLambda) =>
+                        StreamValueLambda.CopyToAsync(destinationLambda, bufferSizeLambda).ToObservable()).Flatten();
         }
 
 
-        public static IObservable<System.Reactive.Unit> CopyToAsync(this IObservable<System.IO.Stream> StreamValue, IObservable<System.IO.Stream> destination, IObservable<System.Int32> bufferSize, IObservable<System.Threading.CancellationToken> cancellationToken)
+        public static IObservable<System.Reactive.Unit> CopyToAsync(this IObservable<System.IO.Stream> StreamValue,
+            IObservable<System.IO.Stream> destination, IObservable<System.Int32> bufferSize,
+            IObservable<System.Threading.CancellationToken> cancellationToken)
         {
-            return Observable.Zip(StreamValue, destination, bufferSize, cancellationToken, (StreamValueLambda, destinationLambda, bufferSizeLambda, cancellationTokenLambda) => StreamValueLambda.CopyToAsync(destinationLambda, bufferSizeLambda, cancellationTokenLambda).ToObservable()).Flatten();
+            return
+                Observable.Zip(StreamValue, destination, bufferSize, cancellationToken,
+                    (StreamValueLambda, destinationLambda, bufferSizeLambda, cancellationTokenLambda) =>
+                        StreamValueLambda.CopyToAsync(destinationLambda, bufferSizeLambda, cancellationTokenLambda)
+                            .ToObservable()).Flatten();
         }
 
 
-        public static IObservable<System.Reactive.Unit> CopyTo(this IObservable<System.IO.Stream> StreamValue, IObservable<System.IO.Stream> destination)
+        public static IObservable<System.Reactive.Unit> CopyTo(this IObservable<System.IO.Stream> StreamValue,
+            IObservable<System.IO.Stream> destination)
         {
-            return ObservableExt.ZipExecute(StreamValue, destination, (StreamValueLambda, destinationLambda) => StreamValueLambda.CopyTo(destinationLambda));
+            return ObservableExt.ZipExecute(StreamValue, destination,
+                (StreamValueLambda, destinationLambda) => StreamValueLambda.CopyTo(destinationLambda));
         }
 
 
-        public static IObservable<System.Reactive.Unit> CopyTo(this IObservable<System.IO.Stream> StreamValue, IObservable<System.IO.Stream> destination, IObservable<System.Int32> bufferSize)
+        public static IObservable<System.Reactive.Unit> CopyTo(this IObservable<System.IO.Stream> StreamValue,
+            IObservable<System.IO.Stream> destination, IObservable<System.Int32> bufferSize)
         {
-            return ObservableExt.ZipExecute(StreamValue, destination, bufferSize, (StreamValueLambda, destinationLambda, bufferSizeLambda) => StreamValueLambda.CopyTo(destinationLambda, bufferSizeLambda));
+            return ObservableExt.ZipExecute(StreamValue, destination, bufferSize,
+                (StreamValueLambda, destinationLambda, bufferSizeLambda) =>
+                    StreamValueLambda.CopyTo(destinationLambda, bufferSizeLambda));
         }
 
 
@@ -59,79 +77,125 @@ namespace System.IO
 
         public static IObservable<System.Reactive.Unit> FlushAsync(this IObservable<System.IO.Stream> StreamValue)
         {
-            return Observable.Select(StreamValue, (StreamValueLambda) => StreamValueLambda.FlushAsync().ToObservable()).Flatten().ToUnit();
+            return
+                Observable.Select(StreamValue, (StreamValueLambda) => StreamValueLambda.FlushAsync().ToObservable())
+                    .Flatten()
+                    .ToUnit();
         }
 
 
-        public static IObservable<System.Reactive.Unit> FlushAsync(this IObservable<System.IO.Stream> StreamValue, IObservable<System.Threading.CancellationToken> cancellationToken)
+        public static IObservable<System.Reactive.Unit> FlushAsync(this IObservable<System.IO.Stream> StreamValue,
+            IObservable<System.Threading.CancellationToken> cancellationToken)
         {
-            return Observable.Zip(StreamValue, cancellationToken, (StreamValueLambda, cancellationTokenLambda) => StreamValueLambda.FlushAsync(cancellationTokenLambda).ToObservable()).Flatten();
+            return
+                Observable.Zip(StreamValue, cancellationToken,
+                    (StreamValueLambda, cancellationTokenLambda) =>
+                        StreamValueLambda.FlushAsync(cancellationTokenLambda).ToObservable()).Flatten();
         }
 
 
-        public static IObservable<System.IAsyncResult> BeginRead(this IObservable<System.IO.Stream> StreamValue, IObservable<System.Byte[]> buffer, IObservable<System.Int32> offset, IObservable<System.Int32> count, IObservable<System.AsyncCallback> callback, IObservable<System.Object> state)
+        public static IObservable<System.IAsyncResult> BeginRead(this IObservable<System.IO.Stream> StreamValue,
+            IObservable<System.Byte[]> buffer, IObservable<System.Int32> offset, IObservable<System.Int32> count,
+            IObservable<System.AsyncCallback> callback, IObservable<System.Object> state)
         {
-            return Observable.Zip(StreamValue, buffer, offset, count, callback, state, (StreamValueLambda, bufferLambda, offsetLambda, countLambda, callbackLambda, stateLambda) => StreamValueLambda.BeginRead(bufferLambda, offsetLambda, countLambda, callbackLambda, stateLambda));
+            return Observable.Zip(StreamValue, buffer, offset, count, callback, state,
+                (StreamValueLambda, bufferLambda, offsetLambda, countLambda, callbackLambda, stateLambda) =>
+                    StreamValueLambda.BeginRead(bufferLambda, offsetLambda, countLambda, callbackLambda, stateLambda));
         }
 
 
-        public static IObservable<System.Int32> EndRead(this IObservable<System.IO.Stream> StreamValue, IObservable<System.IAsyncResult> asyncResult)
+        public static IObservable<System.Int32> EndRead(this IObservable<System.IO.Stream> StreamValue,
+            IObservable<System.IAsyncResult> asyncResult)
         {
-            return Observable.Zip(StreamValue, asyncResult, (StreamValueLambda, asyncResultLambda) => StreamValueLambda.EndRead(asyncResultLambda));
+            return Observable.Zip(StreamValue, asyncResult,
+                (StreamValueLambda, asyncResultLambda) => StreamValueLambda.EndRead(asyncResultLambda));
         }
 
 
-        public static IObservable<System.Int32> ReadAsync(this IObservable<System.IO.Stream> StreamValue, IObservable<System.Byte[]> buffer, IObservable<System.Int32> offset, IObservable<System.Int32> count)
+        public static IObservable<System.Int32> ReadAsync(this IObservable<System.IO.Stream> StreamValue,
+            IObservable<System.Byte[]> buffer, IObservable<System.Int32> offset, IObservable<System.Int32> count)
         {
-            return Observable.Zip(StreamValue, buffer, offset, count, (StreamValueLambda, bufferLambda, offsetLambda, countLambda) => StreamValueLambda.ReadAsync(bufferLambda, offsetLambda, countLambda).ToObservable()).Flatten();
+            return
+                Observable.Zip(StreamValue, buffer, offset, count,
+                    (StreamValueLambda, bufferLambda, offsetLambda, countLambda) =>
+                        StreamValueLambda.ReadAsync(bufferLambda, offsetLambda, countLambda).ToObservable()).Flatten();
         }
 
 
-        public static IObservable<System.Int32> ReadAsync(this IObservable<System.IO.Stream> StreamValue, IObservable<System.Byte[]> buffer, IObservable<System.Int32> offset, IObservable<System.Int32> count, IObservable<System.Threading.CancellationToken> cancellationToken)
+        public static IObservable<System.Int32> ReadAsync(this IObservable<System.IO.Stream> StreamValue,
+            IObservable<System.Byte[]> buffer, IObservable<System.Int32> offset, IObservable<System.Int32> count,
+            IObservable<System.Threading.CancellationToken> cancellationToken)
         {
-            return Observable.Zip(StreamValue, buffer, offset, count, cancellationToken, (StreamValueLambda, bufferLambda, offsetLambda, countLambda, cancellationTokenLambda) => StreamValueLambda.ReadAsync(bufferLambda, offsetLambda, countLambda, cancellationTokenLambda).ToObservable()).Flatten();
+            return
+                Observable.Zip(StreamValue, buffer, offset, count, cancellationToken,
+                    (StreamValueLambda, bufferLambda, offsetLambda, countLambda, cancellationTokenLambda) =>
+                        StreamValueLambda.ReadAsync(bufferLambda, offsetLambda, countLambda, cancellationTokenLambda)
+                            .ToObservable()).Flatten();
         }
 
 
-        public static IObservable<System.IAsyncResult> BeginWrite(this IObservable<System.IO.Stream> StreamValue, IObservable<System.Byte[]> buffer, IObservable<System.Int32> offset, IObservable<System.Int32> count, IObservable<System.AsyncCallback> callback, IObservable<System.Object> state)
+        public static IObservable<System.IAsyncResult> BeginWrite(this IObservable<System.IO.Stream> StreamValue,
+            IObservable<System.Byte[]> buffer, IObservable<System.Int32> offset, IObservable<System.Int32> count,
+            IObservable<System.AsyncCallback> callback, IObservable<System.Object> state)
         {
-            return Observable.Zip(StreamValue, buffer, offset, count, callback, state, (StreamValueLambda, bufferLambda, offsetLambda, countLambda, callbackLambda, stateLambda) => StreamValueLambda.BeginWrite(bufferLambda, offsetLambda, countLambda, callbackLambda, stateLambda));
+            return Observable.Zip(StreamValue, buffer, offset, count, callback, state,
+                (StreamValueLambda, bufferLambda, offsetLambda, countLambda, callbackLambda, stateLambda) =>
+                    StreamValueLambda.BeginWrite(bufferLambda, offsetLambda, countLambda, callbackLambda, stateLambda));
         }
 
 
-        public static IObservable<System.Reactive.Unit> EndWrite(this IObservable<System.IO.Stream> StreamValue, IObservable<System.IAsyncResult> asyncResult)
+        public static IObservable<System.Reactive.Unit> EndWrite(this IObservable<System.IO.Stream> StreamValue,
+            IObservable<System.IAsyncResult> asyncResult)
         {
-            return ObservableExt.ZipExecute(StreamValue, asyncResult, (StreamValueLambda, asyncResultLambda) => StreamValueLambda.EndWrite(asyncResultLambda));
+            return ObservableExt.ZipExecute(StreamValue, asyncResult,
+                (StreamValueLambda, asyncResultLambda) => StreamValueLambda.EndWrite(asyncResultLambda));
         }
 
 
-        public static IObservable<System.Reactive.Unit> WriteAsync(this IObservable<System.IO.Stream> StreamValue, IObservable<System.Byte[]> buffer, IObservable<System.Int32> offset, IObservable<System.Int32> count)
+        public static IObservable<System.Reactive.Unit> WriteAsync(this IObservable<System.IO.Stream> StreamValue,
+            IObservable<System.Byte[]> buffer, IObservable<System.Int32> offset, IObservable<System.Int32> count)
         {
-            return Observable.Zip(StreamValue, buffer, offset, count, (StreamValueLambda, bufferLambda, offsetLambda, countLambda) => StreamValueLambda.WriteAsync(bufferLambda, offsetLambda, countLambda).ToObservable()).Flatten();
+            return
+                Observable.Zip(StreamValue, buffer, offset, count,
+                    (StreamValueLambda, bufferLambda, offsetLambda, countLambda) =>
+                        StreamValueLambda.WriteAsync(bufferLambda, offsetLambda, countLambda).ToObservable()).Flatten();
         }
 
 
-        public static IObservable<System.Reactive.Unit> WriteAsync(this IObservable<System.IO.Stream> StreamValue, IObservable<System.Byte[]> buffer, IObservable<System.Int32> offset, IObservable<System.Int32> count, IObservable<System.Threading.CancellationToken> cancellationToken)
+        public static IObservable<System.Reactive.Unit> WriteAsync(this IObservable<System.IO.Stream> StreamValue,
+            IObservable<System.Byte[]> buffer, IObservable<System.Int32> offset, IObservable<System.Int32> count,
+            IObservable<System.Threading.CancellationToken> cancellationToken)
         {
-            return Observable.Zip(StreamValue, buffer, offset, count, cancellationToken, (StreamValueLambda, bufferLambda, offsetLambda, countLambda, cancellationTokenLambda) => StreamValueLambda.WriteAsync(bufferLambda, offsetLambda, countLambda, cancellationTokenLambda).ToObservable()).Flatten();
+            return
+                Observable.Zip(StreamValue, buffer, offset, count, cancellationToken,
+                    (StreamValueLambda, bufferLambda, offsetLambda, countLambda, cancellationTokenLambda) =>
+                        StreamValueLambda.WriteAsync(bufferLambda, offsetLambda, countLambda, cancellationTokenLambda)
+                            .ToObservable()).Flatten();
         }
 
 
-        public static IObservable<System.Int64> Seek(this IObservable<System.IO.Stream> StreamValue, IObservable<System.Int64> offset, IObservable<System.IO.SeekOrigin> origin)
+        public static IObservable<System.Int64> Seek(this IObservable<System.IO.Stream> StreamValue,
+            IObservable<System.Int64> offset, IObservable<System.IO.SeekOrigin> origin)
         {
-            return Observable.Zip(StreamValue, offset, origin, (StreamValueLambda, offsetLambda, originLambda) => StreamValueLambda.Seek(offsetLambda, originLambda));
+            return Observable.Zip(StreamValue, offset, origin,
+                (StreamValueLambda, offsetLambda, originLambda) => StreamValueLambda.Seek(offsetLambda, originLambda));
         }
 
 
-        public static IObservable<System.Reactive.Unit> SetLength(this IObservable<System.IO.Stream> StreamValue, IObservable<System.Int64> value)
+        public static IObservable<System.Reactive.Unit> SetLength(this IObservable<System.IO.Stream> StreamValue,
+            IObservable<System.Int64> value)
         {
-            return ObservableExt.ZipExecute(StreamValue, value, (StreamValueLambda, valueLambda) => StreamValueLambda.SetLength(valueLambda));
+            return ObservableExt.ZipExecute(StreamValue, value,
+                (StreamValueLambda, valueLambda) => StreamValueLambda.SetLength(valueLambda));
         }
 
 
-        public static IObservable<int> Read(this IObservable<System.IO.Stream> StreamValue, IObservable<System.Byte[]> buffer, IObservable<System.Int32> offset, IObservable<System.Int32> count)
+        public static IObservable<int> Read(this IObservable<System.IO.Stream> StreamValue,
+            IObservable<System.Byte[]> buffer, IObservable<System.Int32> offset, IObservable<System.Int32> count)
         {
-            return Observable.Zip(StreamValue, buffer, offset, count, (StreamValueLambda, bufferLambda, offsetLambda, countLambda) => StreamValueLambda.Read(bufferLambda, offsetLambda, countLambda));
+            return Observable.Zip(StreamValue, buffer, offset, count,
+                (StreamValueLambda, bufferLambda, offsetLambda, countLambda) =>
+                    StreamValueLambda.Read(bufferLambda, offsetLambda, countLambda));
         }
 
 
@@ -141,15 +205,20 @@ namespace System.IO
         }
 
 
-        public static IObservable<System.Reactive.Unit> Write(this IObservable<System.IO.Stream> StreamValue, IObservable<System.Byte[]> buffer, IObservable<System.Int32> offset, IObservable<System.Int32> count)
+        public static IObservable<System.Reactive.Unit> Write(this IObservable<System.IO.Stream> StreamValue,
+            IObservable<System.Byte[]> buffer, IObservable<System.Int32> offset, IObservable<System.Int32> count)
         {
-            return ObservableExt.ZipExecute(StreamValue, buffer, offset, count, (StreamValueLambda, bufferLambda, offsetLambda, countLambda) => StreamValueLambda.Write(bufferLambda, offsetLambda, countLambda));
+            return ObservableExt.ZipExecute(StreamValue, buffer, offset, count,
+                (StreamValueLambda, bufferLambda, offsetLambda, countLambda) =>
+                    StreamValueLambda.Write(bufferLambda, offsetLambda, countLambda));
         }
 
 
-        public static IObservable<System.Reactive.Unit> WriteByte(this IObservable<System.IO.Stream> StreamValue, IObservable<System.Byte> value)
+        public static IObservable<System.Reactive.Unit> WriteByte(this IObservable<System.IO.Stream> StreamValue,
+            IObservable<System.Byte> value)
         {
-            return ObservableExt.ZipExecute(StreamValue, value, (StreamValueLambda, valueLambda) => StreamValueLambda.WriteByte(valueLambda));
+            return ObservableExt.ZipExecute(StreamValue, value,
+                (StreamValueLambda, valueLambda) => StreamValueLambda.WriteByte(valueLambda));
         }
 
 
@@ -207,22 +276,27 @@ namespace System.IO
         }
 
 
-        public static IObservable<System.Reactive.Unit> set_Position(this IObservable<System.IO.Stream> StreamValue, IObservable<System.Int64> value)
+        public static IObservable<System.Reactive.Unit> set_Position(this IObservable<System.IO.Stream> StreamValue,
+            IObservable<System.Int64> value)
         {
-            return ObservableExt.ZipExecute(StreamValue, value, (StreamValueLambda, valueLambda) => StreamValueLambda.Position = valueLambda);
+            return ObservableExt.ZipExecute(StreamValue, value,
+                (StreamValueLambda, valueLambda) => StreamValueLambda.Position = valueLambda);
         }
 
 
-        public static IObservable<System.Reactive.Unit> set_ReadTimeout(this IObservable<System.IO.Stream> StreamValue, IObservable<System.Int32> value)
+        public static IObservable<System.Reactive.Unit> set_ReadTimeout(this IObservable<System.IO.Stream> StreamValue,
+            IObservable<System.Int32> value)
         {
-            return ObservableExt.ZipExecute(StreamValue, value, (StreamValueLambda, valueLambda) => StreamValueLambda.ReadTimeout = valueLambda);
+            return ObservableExt.ZipExecute(StreamValue, value,
+                (StreamValueLambda, valueLambda) => StreamValueLambda.ReadTimeout = valueLambda);
         }
 
 
-        public static IObservable<System.Reactive.Unit> set_WriteTimeout(this IObservable<System.IO.Stream> StreamValue, IObservable<System.Int32> value)
+        public static IObservable<System.Reactive.Unit> set_WriteTimeout(this IObservable<System.IO.Stream> StreamValue,
+            IObservable<System.Int32> value)
         {
-            return ObservableExt.ZipExecute(StreamValue, value, (StreamValueLambda, valueLambda) => StreamValueLambda.WriteTimeout = valueLambda);
+            return ObservableExt.ZipExecute(StreamValue, value,
+                (StreamValueLambda, valueLambda) => StreamValueLambda.WriteTimeout = valueLambda);
         }
-
     }
 }

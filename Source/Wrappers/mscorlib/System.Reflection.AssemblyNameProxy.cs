@@ -8,11 +8,13 @@ namespace System.Reflection
 {
     public static class __AssemblyNameProxy
     {
-        
-        public static IObservable<System.Reflection.AssemblyName> GetAssemblyName(this IObservable<System.Reflection.AssemblyNameProxy> AssemblyNameProxyValue, IObservable<System.String> assemblyFile)
+        public static IObservable<System.Reflection.AssemblyName> GetAssemblyName(
+            this IObservable<System.Reflection.AssemblyNameProxy> AssemblyNameProxyValue,
+            IObservable<System.String> assemblyFile)
         {
-            return Observable.Zip(AssemblyNameProxyValue, assemblyFile, (AssemblyNameProxyValueLambda, assemblyFileLambda) => AssemblyNameProxyValueLambda.GetAssemblyName(assemblyFileLambda));
+            return Observable.Zip(AssemblyNameProxyValue, assemblyFile,
+                (AssemblyNameProxyValueLambda, assemblyFileLambda) =>
+                    AssemblyNameProxyValueLambda.GetAssemblyName(assemblyFileLambda));
         }
-
     }
 }

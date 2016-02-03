@@ -8,6 +8,5 @@ namespace System.IO.IsolatedStorage
 {
     public static class __IsolatedStorageException
     {
-        
     }
 }

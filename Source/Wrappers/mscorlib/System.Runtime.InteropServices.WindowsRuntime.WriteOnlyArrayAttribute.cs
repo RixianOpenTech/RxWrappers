@@ -8,6 +8,5 @@ namespace System.Runtime.InteropServices.WindowsRuntime
 {
     public static class __WriteOnlyArrayAttribute
     {
-        
     }
 }

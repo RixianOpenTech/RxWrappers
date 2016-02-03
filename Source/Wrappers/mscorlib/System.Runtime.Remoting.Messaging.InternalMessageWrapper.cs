@@ -8,6 +8,5 @@ namespace System.Runtime.Remoting.Messaging
 {
     public static class __InternalMessageWrapper
     {
-        
     }
 }

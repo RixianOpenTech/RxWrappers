@@ -8,6 +8,5 @@ namespace System.Collections.Concurrent
 {
     public static class __EnumerablePartitionerOptions
     {
-        
     }
 }

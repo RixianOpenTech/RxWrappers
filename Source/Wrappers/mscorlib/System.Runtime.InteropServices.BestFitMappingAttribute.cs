@@ -8,11 +8,11 @@ namespace System.Runtime.InteropServices
 {
     public static class __BestFitMappingAttribute
     {
-        
-        public static IObservable<System.Boolean> get_BestFitMapping(this IObservable<System.Runtime.InteropServices.BestFitMappingAttribute> BestFitMappingAttributeValue)
+        public static IObservable<System.Boolean> get_BestFitMapping(
+            this IObservable<System.Runtime.InteropServices.BestFitMappingAttribute> BestFitMappingAttributeValue)
         {
-            return Observable.Select(BestFitMappingAttributeValue, (BestFitMappingAttributeValueLambda) => BestFitMappingAttributeValueLambda.BestFitMapping);
+            return Observable.Select(BestFitMappingAttributeValue,
+                (BestFitMappingAttributeValueLambda) => BestFitMappingAttributeValueLambda.BestFitMapping);
         }
-
     }
 }

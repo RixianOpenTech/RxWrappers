@@ -8,7 +8,6 @@ namespace System.IO
 {
     public static class __TextWriter
     {
-        
         public static IObservable<System.Reactive.Unit> Close(this IObservable<System.IO.TextWriter> TextWriterValue)
         {
             return Observable.Do(TextWriterValue, (TextWriterValueLambda) => TextWriterValueLambda.Close()).ToUnit();
@@ -33,105 +32,144 @@ namespace System.IO
         }
 
 
-        public static IObservable<System.Reactive.Unit> Write(this IObservable<System.IO.TextWriter> TextWriterValue, IObservable<System.Char> value)
+        public static IObservable<System.Reactive.Unit> Write(this IObservable<System.IO.TextWriter> TextWriterValue,
+            IObservable<System.Char> value)
         {
-            return ObservableExt.ZipExecute(TextWriterValue, value, (TextWriterValueLambda, valueLambda) => TextWriterValueLambda.Write(valueLambda));
+            return ObservableExt.ZipExecute(TextWriterValue, value,
+                (TextWriterValueLambda, valueLambda) => TextWriterValueLambda.Write(valueLambda));
         }
 
 
-        public static IObservable<System.Reactive.Unit> Write(this IObservable<System.IO.TextWriter> TextWriterValue, IObservable<System.Char[]> buffer)
+        public static IObservable<System.Reactive.Unit> Write(this IObservable<System.IO.TextWriter> TextWriterValue,
+            IObservable<System.Char[]> buffer)
         {
-            return ObservableExt.ZipExecute(TextWriterValue, buffer, (TextWriterValueLambda, bufferLambda) => TextWriterValueLambda.Write(bufferLambda));
+            return ObservableExt.ZipExecute(TextWriterValue, buffer,
+                (TextWriterValueLambda, bufferLambda) => TextWriterValueLambda.Write(bufferLambda));
         }
 
 
-        public static IObservable<System.Reactive.Unit> Write(this IObservable<System.IO.TextWriter> TextWriterValue, IObservable<System.Char[]> buffer, IObservable<System.Int32> index, IObservable<System.Int32> count)
+        public static IObservable<System.Reactive.Unit> Write(this IObservable<System.IO.TextWriter> TextWriterValue,
+            IObservable<System.Char[]> buffer, IObservable<System.Int32> index, IObservable<System.Int32> count)
         {
-            return ObservableExt.ZipExecute(TextWriterValue, buffer, index, count, (TextWriterValueLambda, bufferLambda, indexLambda, countLambda) => TextWriterValueLambda.Write(bufferLambda, indexLambda, countLambda));
+            return ObservableExt.ZipExecute(TextWriterValue, buffer, index, count,
+                (TextWriterValueLambda, bufferLambda, indexLambda, countLambda) =>
+                    TextWriterValueLambda.Write(bufferLambda, indexLambda, countLambda));
         }
 
 
-        public static IObservable<System.Reactive.Unit> Write(this IObservable<System.IO.TextWriter> TextWriterValue, IObservable<System.Boolean> value)
+        public static IObservable<System.Reactive.Unit> Write(this IObservable<System.IO.TextWriter> TextWriterValue,
+            IObservable<System.Boolean> value)
         {
-            return ObservableExt.ZipExecute(TextWriterValue, value, (TextWriterValueLambda, valueLambda) => TextWriterValueLambda.Write(valueLambda));
+            return ObservableExt.ZipExecute(TextWriterValue, value,
+                (TextWriterValueLambda, valueLambda) => TextWriterValueLambda.Write(valueLambda));
         }
 
 
-        public static IObservable<System.Reactive.Unit> Write(this IObservable<System.IO.TextWriter> TextWriterValue, IObservable<System.Int32> value)
+        public static IObservable<System.Reactive.Unit> Write(this IObservable<System.IO.TextWriter> TextWriterValue,
+            IObservable<System.Int32> value)
         {
-            return ObservableExt.ZipExecute(TextWriterValue, value, (TextWriterValueLambda, valueLambda) => TextWriterValueLambda.Write(valueLambda));
+            return ObservableExt.ZipExecute(TextWriterValue, value,
+                (TextWriterValueLambda, valueLambda) => TextWriterValueLambda.Write(valueLambda));
         }
 
 
-        public static IObservable<System.Reactive.Unit> Write(this IObservable<System.IO.TextWriter> TextWriterValue, IObservable<System.UInt32> value)
+        public static IObservable<System.Reactive.Unit> Write(this IObservable<System.IO.TextWriter> TextWriterValue,
+            IObservable<System.UInt32> value)
         {
-            return ObservableExt.ZipExecute(TextWriterValue, value, (TextWriterValueLambda, valueLambda) => TextWriterValueLambda.Write(valueLambda));
+            return ObservableExt.ZipExecute(TextWriterValue, value,
+                (TextWriterValueLambda, valueLambda) => TextWriterValueLambda.Write(valueLambda));
         }
 
 
-        public static IObservable<System.Reactive.Unit> Write(this IObservable<System.IO.TextWriter> TextWriterValue, IObservable<System.Int64> value)
+        public static IObservable<System.Reactive.Unit> Write(this IObservable<System.IO.TextWriter> TextWriterValue,
+            IObservable<System.Int64> value)
         {
-            return ObservableExt.ZipExecute(TextWriterValue, value, (TextWriterValueLambda, valueLambda) => TextWriterValueLambda.Write(valueLambda));
+            return ObservableExt.ZipExecute(TextWriterValue, value,
+                (TextWriterValueLambda, valueLambda) => TextWriterValueLambda.Write(valueLambda));
         }
 
 
-        public static IObservable<System.Reactive.Unit> Write(this IObservable<System.IO.TextWriter> TextWriterValue, IObservable<System.UInt64> value)
+        public static IObservable<System.Reactive.Unit> Write(this IObservable<System.IO.TextWriter> TextWriterValue,
+            IObservable<System.UInt64> value)
         {
-            return ObservableExt.ZipExecute(TextWriterValue, value, (TextWriterValueLambda, valueLambda) => TextWriterValueLambda.Write(valueLambda));
+            return ObservableExt.ZipExecute(TextWriterValue, value,
+                (TextWriterValueLambda, valueLambda) => TextWriterValueLambda.Write(valueLambda));
         }
 
 
-        public static IObservable<System.Reactive.Unit> Write(this IObservable<System.IO.TextWriter> TextWriterValue, IObservable<System.Single> value)
+        public static IObservable<System.Reactive.Unit> Write(this IObservable<System.IO.TextWriter> TextWriterValue,
+            IObservable<System.Single> value)
         {
-            return ObservableExt.ZipExecute(TextWriterValue, value, (TextWriterValueLambda, valueLambda) => TextWriterValueLambda.Write(valueLambda));
+            return ObservableExt.ZipExecute(TextWriterValue, value,
+                (TextWriterValueLambda, valueLambda) => TextWriterValueLambda.Write(valueLambda));
         }
 
 
-        public static IObservable<System.Reactive.Unit> Write(this IObservable<System.IO.TextWriter> TextWriterValue, IObservable<System.Double> value)
+        public static IObservable<System.Reactive.Unit> Write(this IObservable<System.IO.TextWriter> TextWriterValue,
+            IObservable<System.Double> value)
         {
-            return ObservableExt.ZipExecute(TextWriterValue, value, (TextWriterValueLambda, valueLambda) => TextWriterValueLambda.Write(valueLambda));
+            return ObservableExt.ZipExecute(TextWriterValue, value,
+                (TextWriterValueLambda, valueLambda) => TextWriterValueLambda.Write(valueLambda));
         }
 
 
-        public static IObservable<System.Reactive.Unit> Write(this IObservable<System.IO.TextWriter> TextWriterValue, IObservable<System.Decimal> value)
+        public static IObservable<System.Reactive.Unit> Write(this IObservable<System.IO.TextWriter> TextWriterValue,
+            IObservable<System.Decimal> value)
         {
-            return ObservableExt.ZipExecute(TextWriterValue, value, (TextWriterValueLambda, valueLambda) => TextWriterValueLambda.Write(valueLambda));
+            return ObservableExt.ZipExecute(TextWriterValue, value,
+                (TextWriterValueLambda, valueLambda) => TextWriterValueLambda.Write(valueLambda));
         }
 
 
-        public static IObservable<System.Reactive.Unit> Write(this IObservable<System.IO.TextWriter> TextWriterValue, IObservable<System.String> value)
+        public static IObservable<System.Reactive.Unit> Write(this IObservable<System.IO.TextWriter> TextWriterValue,
+            IObservable<System.String> value)
         {
-            return ObservableExt.ZipExecute(TextWriterValue, value, (TextWriterValueLambda, valueLambda) => TextWriterValueLambda.Write(valueLambda));
+            return ObservableExt.ZipExecute(TextWriterValue, value,
+                (TextWriterValueLambda, valueLambda) => TextWriterValueLambda.Write(valueLambda));
         }
 
 
-        public static IObservable<System.Reactive.Unit> Write(this IObservable<System.IO.TextWriter> TextWriterValue, IObservable<System.Object> value)
+        public static IObservable<System.Reactive.Unit> Write(this IObservable<System.IO.TextWriter> TextWriterValue,
+            IObservable<System.Object> value)
         {
-            return ObservableExt.ZipExecute(TextWriterValue, value, (TextWriterValueLambda, valueLambda) => TextWriterValueLambda.Write(valueLambda));
+            return ObservableExt.ZipExecute(TextWriterValue, value,
+                (TextWriterValueLambda, valueLambda) => TextWriterValueLambda.Write(valueLambda));
         }
 
 
-        public static IObservable<System.Reactive.Unit> Write(this IObservable<System.IO.TextWriter> TextWriterValue, IObservable<System.String> format, IObservable<System.Object> arg0)
+        public static IObservable<System.Reactive.Unit> Write(this IObservable<System.IO.TextWriter> TextWriterValue,
+            IObservable<System.String> format, IObservable<System.Object> arg0)
         {
-            return ObservableExt.ZipExecute(TextWriterValue, format, arg0, (TextWriterValueLambda, formatLambda, arg0Lambda) => TextWriterValueLambda.Write(formatLambda, arg0Lambda));
+            return ObservableExt.ZipExecute(TextWriterValue, format, arg0,
+                (TextWriterValueLambda, formatLambda, arg0Lambda) =>
+                    TextWriterValueLambda.Write(formatLambda, arg0Lambda));
         }
 
 
-        public static IObservable<System.Reactive.Unit> Write(this IObservable<System.IO.TextWriter> TextWriterValue, IObservable<System.String> format, IObservable<System.Object> arg0, IObservable<System.Object> arg1)
+        public static IObservable<System.Reactive.Unit> Write(this IObservable<System.IO.TextWriter> TextWriterValue,
+            IObservable<System.String> format, IObservable<System.Object> arg0, IObservable<System.Object> arg1)
         {
-            return ObservableExt.ZipExecute(TextWriterValue, format, arg0, arg1, (TextWriterValueLambda, formatLambda, arg0Lambda, arg1Lambda) => TextWriterValueLambda.Write(formatLambda, arg0Lambda, arg1Lambda));
+            return ObservableExt.ZipExecute(TextWriterValue, format, arg0, arg1,
+                (TextWriterValueLambda, formatLambda, arg0Lambda, arg1Lambda) =>
+                    TextWriterValueLambda.Write(formatLambda, arg0Lambda, arg1Lambda));
         }
 
 
-        public static IObservable<System.Reactive.Unit> Write(this IObservable<System.IO.TextWriter> TextWriterValue, IObservable<System.String> format, IObservable<System.Object> arg0, IObservable<System.Object> arg1, IObservable<System.Object> arg2)
+        public static IObservable<System.Reactive.Unit> Write(this IObservable<System.IO.TextWriter> TextWriterValue,
+            IObservable<System.String> format, IObservable<System.Object> arg0, IObservable<System.Object> arg1,
+            IObservable<System.Object> arg2)
         {
-            return ObservableExt.ZipExecute(TextWriterValue, format, arg0, arg1, arg2, (TextWriterValueLambda, formatLambda, arg0Lambda, arg1Lambda, arg2Lambda) => TextWriterValueLambda.Write(formatLambda, arg0Lambda, arg1Lambda, arg2Lambda));
+            return ObservableExt.ZipExecute(TextWriterValue, format, arg0, arg1, arg2,
+                (TextWriterValueLambda, formatLambda, arg0Lambda, arg1Lambda, arg2Lambda) =>
+                    TextWriterValueLambda.Write(formatLambda, arg0Lambda, arg1Lambda, arg2Lambda));
         }
 
 
-        public static IObservable<System.Reactive.Unit> Write(this IObservable<System.IO.TextWriter> TextWriterValue, IObservable<System.String> format, IObservable<System.Object[]> arg)
+        public static IObservable<System.Reactive.Unit> Write(this IObservable<System.IO.TextWriter> TextWriterValue,
+            IObservable<System.String> format, IObservable<System.Object[]> arg)
         {
-            return ObservableExt.ZipExecute(TextWriterValue, format, arg, (TextWriterValueLambda, formatLambda, argLambda) => TextWriterValueLambda.Write(formatLambda, argLambda));
+            return ObservableExt.ZipExecute(TextWriterValue, format, arg,
+                (TextWriterValueLambda, formatLambda, argLambda) => TextWriterValueLambda.Write(formatLambda, argLambda));
         }
 
 
@@ -141,175 +179,263 @@ namespace System.IO
         }
 
 
-        public static IObservable<System.Reactive.Unit> WriteLine(this IObservable<System.IO.TextWriter> TextWriterValue, IObservable<System.Char> value)
+        public static IObservable<System.Reactive.Unit> WriteLine(
+            this IObservable<System.IO.TextWriter> TextWriterValue, IObservable<System.Char> value)
         {
-            return ObservableExt.ZipExecute(TextWriterValue, value, (TextWriterValueLambda, valueLambda) => TextWriterValueLambda.WriteLine(valueLambda));
+            return ObservableExt.ZipExecute(TextWriterValue, value,
+                (TextWriterValueLambda, valueLambda) => TextWriterValueLambda.WriteLine(valueLambda));
         }
 
 
-        public static IObservable<System.Reactive.Unit> WriteLine(this IObservable<System.IO.TextWriter> TextWriterValue, IObservable<System.Char[]> buffer)
+        public static IObservable<System.Reactive.Unit> WriteLine(
+            this IObservable<System.IO.TextWriter> TextWriterValue, IObservable<System.Char[]> buffer)
         {
-            return ObservableExt.ZipExecute(TextWriterValue, buffer, (TextWriterValueLambda, bufferLambda) => TextWriterValueLambda.WriteLine(bufferLambda));
+            return ObservableExt.ZipExecute(TextWriterValue, buffer,
+                (TextWriterValueLambda, bufferLambda) => TextWriterValueLambda.WriteLine(bufferLambda));
         }
 
 
-        public static IObservable<System.Reactive.Unit> WriteLine(this IObservable<System.IO.TextWriter> TextWriterValue, IObservable<System.Char[]> buffer, IObservable<System.Int32> index, IObservable<System.Int32> count)
+        public static IObservable<System.Reactive.Unit> WriteLine(
+            this IObservable<System.IO.TextWriter> TextWriterValue, IObservable<System.Char[]> buffer,
+            IObservable<System.Int32> index, IObservable<System.Int32> count)
         {
-            return ObservableExt.ZipExecute(TextWriterValue, buffer, index, count, (TextWriterValueLambda, bufferLambda, indexLambda, countLambda) => TextWriterValueLambda.WriteLine(bufferLambda, indexLambda, countLambda));
+            return ObservableExt.ZipExecute(TextWriterValue, buffer, index, count,
+                (TextWriterValueLambda, bufferLambda, indexLambda, countLambda) =>
+                    TextWriterValueLambda.WriteLine(bufferLambda, indexLambda, countLambda));
         }
 
 
-        public static IObservable<System.Reactive.Unit> WriteLine(this IObservable<System.IO.TextWriter> TextWriterValue, IObservable<System.Boolean> value)
+        public static IObservable<System.Reactive.Unit> WriteLine(
+            this IObservable<System.IO.TextWriter> TextWriterValue, IObservable<System.Boolean> value)
         {
-            return ObservableExt.ZipExecute(TextWriterValue, value, (TextWriterValueLambda, valueLambda) => TextWriterValueLambda.WriteLine(valueLambda));
+            return ObservableExt.ZipExecute(TextWriterValue, value,
+                (TextWriterValueLambda, valueLambda) => TextWriterValueLambda.WriteLine(valueLambda));
         }
 
 
-        public static IObservable<System.Reactive.Unit> WriteLine(this IObservable<System.IO.TextWriter> TextWriterValue, IObservable<System.Int32> value)
+        public static IObservable<System.Reactive.Unit> WriteLine(
+            this IObservable<System.IO.TextWriter> TextWriterValue, IObservable<System.Int32> value)
         {
-            return ObservableExt.ZipExecute(TextWriterValue, value, (TextWriterValueLambda, valueLambda) => TextWriterValueLambda.WriteLine(valueLambda));
+            return ObservableExt.ZipExecute(TextWriterValue, value,
+                (TextWriterValueLambda, valueLambda) => TextWriterValueLambda.WriteLine(valueLambda));
         }
 
 
-        public static IObservable<System.Reactive.Unit> WriteLine(this IObservable<System.IO.TextWriter> TextWriterValue, IObservable<System.UInt32> value)
+        public static IObservable<System.Reactive.Unit> WriteLine(
+            this IObservable<System.IO.TextWriter> TextWriterValue, IObservable<System.UInt32> value)
         {
-            return ObservableExt.ZipExecute(TextWriterValue, value, (TextWriterValueLambda, valueLambda) => TextWriterValueLambda.WriteLine(valueLambda));
+            return ObservableExt.ZipExecute(TextWriterValue, value,
+                (TextWriterValueLambda, valueLambda) => TextWriterValueLambda.WriteLine(valueLambda));
         }
 
 
-        public static IObservable<System.Reactive.Unit> WriteLine(this IObservable<System.IO.TextWriter> TextWriterValue, IObservable<System.Int64> value)
+        public static IObservable<System.Reactive.Unit> WriteLine(
+            this IObservable<System.IO.TextWriter> TextWriterValue, IObservable<System.Int64> value)
         {
-            return ObservableExt.ZipExecute(TextWriterValue, value, (TextWriterValueLambda, valueLambda) => TextWriterValueLambda.WriteLine(valueLambda));
+            return ObservableExt.ZipExecute(TextWriterValue, value,
+                (TextWriterValueLambda, valueLambda) => TextWriterValueLambda.WriteLine(valueLambda));
         }
 
 
-        public static IObservable<System.Reactive.Unit> WriteLine(this IObservable<System.IO.TextWriter> TextWriterValue, IObservable<System.UInt64> value)
+        public static IObservable<System.Reactive.Unit> WriteLine(
+            this IObservable<System.IO.TextWriter> TextWriterValue, IObservable<System.UInt64> value)
         {
-            return ObservableExt.ZipExecute(TextWriterValue, value, (TextWriterValueLambda, valueLambda) => TextWriterValueLambda.WriteLine(valueLambda));
+            return ObservableExt.ZipExecute(TextWriterValue, value,
+                (TextWriterValueLambda, valueLambda) => TextWriterValueLambda.WriteLine(valueLambda));
         }
 
 
-        public static IObservable<System.Reactive.Unit> WriteLine(this IObservable<System.IO.TextWriter> TextWriterValue, IObservable<System.Single> value)
+        public static IObservable<System.Reactive.Unit> WriteLine(
+            this IObservable<System.IO.TextWriter> TextWriterValue, IObservable<System.Single> value)
         {
-            return ObservableExt.ZipExecute(TextWriterValue, value, (TextWriterValueLambda, valueLambda) => TextWriterValueLambda.WriteLine(valueLambda));
+            return ObservableExt.ZipExecute(TextWriterValue, value,
+                (TextWriterValueLambda, valueLambda) => TextWriterValueLambda.WriteLine(valueLambda));
         }
 
 
-        public static IObservable<System.Reactive.Unit> WriteLine(this IObservable<System.IO.TextWriter> TextWriterValue, IObservable<System.Double> value)
+        public static IObservable<System.Reactive.Unit> WriteLine(
+            this IObservable<System.IO.TextWriter> TextWriterValue, IObservable<System.Double> value)
         {
-            return ObservableExt.ZipExecute(TextWriterValue, value, (TextWriterValueLambda, valueLambda) => TextWriterValueLambda.WriteLine(valueLambda));
+            return ObservableExt.ZipExecute(TextWriterValue, value,
+                (TextWriterValueLambda, valueLambda) => TextWriterValueLambda.WriteLine(valueLambda));
         }
 
 
-        public static IObservable<System.Reactive.Unit> WriteLine(this IObservable<System.IO.TextWriter> TextWriterValue, IObservable<System.Decimal> value)
+        public static IObservable<System.Reactive.Unit> WriteLine(
+            this IObservable<System.IO.TextWriter> TextWriterValue, IObservable<System.Decimal> value)
         {
-            return ObservableExt.ZipExecute(TextWriterValue, value, (TextWriterValueLambda, valueLambda) => TextWriterValueLambda.WriteLine(valueLambda));
+            return ObservableExt.ZipExecute(TextWriterValue, value,
+                (TextWriterValueLambda, valueLambda) => TextWriterValueLambda.WriteLine(valueLambda));
         }
 
 
-        public static IObservable<System.Reactive.Unit> WriteLine(this IObservable<System.IO.TextWriter> TextWriterValue, IObservable<System.String> value)
+        public static IObservable<System.Reactive.Unit> WriteLine(
+            this IObservable<System.IO.TextWriter> TextWriterValue, IObservable<System.String> value)
         {
-            return ObservableExt.ZipExecute(TextWriterValue, value, (TextWriterValueLambda, valueLambda) => TextWriterValueLambda.WriteLine(valueLambda));
+            return ObservableExt.ZipExecute(TextWriterValue, value,
+                (TextWriterValueLambda, valueLambda) => TextWriterValueLambda.WriteLine(valueLambda));
         }
 
 
-        public static IObservable<System.Reactive.Unit> WriteLine(this IObservable<System.IO.TextWriter> TextWriterValue, IObservable<System.Object> value)
+        public static IObservable<System.Reactive.Unit> WriteLine(
+            this IObservable<System.IO.TextWriter> TextWriterValue, IObservable<System.Object> value)
         {
-            return ObservableExt.ZipExecute(TextWriterValue, value, (TextWriterValueLambda, valueLambda) => TextWriterValueLambda.WriteLine(valueLambda));
+            return ObservableExt.ZipExecute(TextWriterValue, value,
+                (TextWriterValueLambda, valueLambda) => TextWriterValueLambda.WriteLine(valueLambda));
         }
 
 
-        public static IObservable<System.Reactive.Unit> WriteLine(this IObservable<System.IO.TextWriter> TextWriterValue, IObservable<System.String> format, IObservable<System.Object> arg0)
+        public static IObservable<System.Reactive.Unit> WriteLine(
+            this IObservable<System.IO.TextWriter> TextWriterValue, IObservable<System.String> format,
+            IObservable<System.Object> arg0)
         {
-            return ObservableExt.ZipExecute(TextWriterValue, format, arg0, (TextWriterValueLambda, formatLambda, arg0Lambda) => TextWriterValueLambda.WriteLine(formatLambda, arg0Lambda));
+            return ObservableExt.ZipExecute(TextWriterValue, format, arg0,
+                (TextWriterValueLambda, formatLambda, arg0Lambda) =>
+                    TextWriterValueLambda.WriteLine(formatLambda, arg0Lambda));
         }
 
 
-        public static IObservable<System.Reactive.Unit> WriteLine(this IObservable<System.IO.TextWriter> TextWriterValue, IObservable<System.String> format, IObservable<System.Object> arg0, IObservable<System.Object> arg1)
+        public static IObservable<System.Reactive.Unit> WriteLine(
+            this IObservable<System.IO.TextWriter> TextWriterValue, IObservable<System.String> format,
+            IObservable<System.Object> arg0, IObservable<System.Object> arg1)
         {
-            return ObservableExt.ZipExecute(TextWriterValue, format, arg0, arg1, (TextWriterValueLambda, formatLambda, arg0Lambda, arg1Lambda) => TextWriterValueLambda.WriteLine(formatLambda, arg0Lambda, arg1Lambda));
+            return ObservableExt.ZipExecute(TextWriterValue, format, arg0, arg1,
+                (TextWriterValueLambda, formatLambda, arg0Lambda, arg1Lambda) =>
+                    TextWriterValueLambda.WriteLine(formatLambda, arg0Lambda, arg1Lambda));
         }
 
 
-        public static IObservable<System.Reactive.Unit> WriteLine(this IObservable<System.IO.TextWriter> TextWriterValue, IObservable<System.String> format, IObservable<System.Object> arg0, IObservable<System.Object> arg1, IObservable<System.Object> arg2)
+        public static IObservable<System.Reactive.Unit> WriteLine(
+            this IObservable<System.IO.TextWriter> TextWriterValue, IObservable<System.String> format,
+            IObservable<System.Object> arg0, IObservable<System.Object> arg1, IObservable<System.Object> arg2)
         {
-            return ObservableExt.ZipExecute(TextWriterValue, format, arg0, arg1, arg2, (TextWriterValueLambda, formatLambda, arg0Lambda, arg1Lambda, arg2Lambda) => TextWriterValueLambda.WriteLine(formatLambda, arg0Lambda, arg1Lambda, arg2Lambda));
+            return ObservableExt.ZipExecute(TextWriterValue, format, arg0, arg1, arg2,
+                (TextWriterValueLambda, formatLambda, arg0Lambda, arg1Lambda, arg2Lambda) =>
+                    TextWriterValueLambda.WriteLine(formatLambda, arg0Lambda, arg1Lambda, arg2Lambda));
         }
 
 
-        public static IObservable<System.Reactive.Unit> WriteLine(this IObservable<System.IO.TextWriter> TextWriterValue, IObservable<System.String> format, IObservable<System.Object[]> arg)
+        public static IObservable<System.Reactive.Unit> WriteLine(
+            this IObservable<System.IO.TextWriter> TextWriterValue, IObservable<System.String> format,
+            IObservable<System.Object[]> arg)
         {
-            return ObservableExt.ZipExecute(TextWriterValue, format, arg, (TextWriterValueLambda, formatLambda, argLambda) => TextWriterValueLambda.WriteLine(formatLambda, argLambda));
+            return ObservableExt.ZipExecute(TextWriterValue, format, arg,
+                (TextWriterValueLambda, formatLambda, argLambda) =>
+                    TextWriterValueLambda.WriteLine(formatLambda, argLambda));
         }
 
 
-        public static IObservable<System.Reactive.Unit> WriteAsync(this IObservable<System.IO.TextWriter> TextWriterValue, IObservable<System.Char> value)
+        public static IObservable<System.Reactive.Unit> WriteAsync(
+            this IObservable<System.IO.TextWriter> TextWriterValue, IObservable<System.Char> value)
         {
-            return Observable.Zip(TextWriterValue, value, (TextWriterValueLambda, valueLambda) => TextWriterValueLambda.WriteAsync(valueLambda).ToObservable()).Flatten();
+            return
+                Observable.Zip(TextWriterValue, value,
+                    (TextWriterValueLambda, valueLambda) => TextWriterValueLambda.WriteAsync(valueLambda).ToObservable())
+                    .Flatten();
         }
 
 
-        public static IObservable<System.Reactive.Unit> WriteAsync(this IObservable<System.IO.TextWriter> TextWriterValue, IObservable<System.String> value)
+        public static IObservable<System.Reactive.Unit> WriteAsync(
+            this IObservable<System.IO.TextWriter> TextWriterValue, IObservable<System.String> value)
         {
-            return Observable.Zip(TextWriterValue, value, (TextWriterValueLambda, valueLambda) => TextWriterValueLambda.WriteAsync(valueLambda).ToObservable()).Flatten();
+            return
+                Observable.Zip(TextWriterValue, value,
+                    (TextWriterValueLambda, valueLambda) => TextWriterValueLambda.WriteAsync(valueLambda).ToObservable())
+                    .Flatten();
         }
 
 
-        public static IObservable<System.Reactive.Unit> WriteAsync(this IObservable<System.IO.TextWriter> TextWriterValue, IObservable<System.Char[]> buffer)
+        public static IObservable<System.Reactive.Unit> WriteAsync(
+            this IObservable<System.IO.TextWriter> TextWriterValue, IObservable<System.Char[]> buffer)
         {
-            return Observable.Zip(TextWriterValue, buffer, (TextWriterValueLambda, bufferLambda) => TextWriterValueLambda.WriteAsync(bufferLambda).ToObservable()).Flatten();
+            return
+                Observable.Zip(TextWriterValue, buffer,
+                    (TextWriterValueLambda, bufferLambda) =>
+                        TextWriterValueLambda.WriteAsync(bufferLambda).ToObservable()).Flatten();
         }
 
 
-        public static IObservable<System.Reactive.Unit> WriteAsync(this IObservable<System.IO.TextWriter> TextWriterValue, IObservable<System.Char[]> buffer, IObservable<System.Int32> index, IObservable<System.Int32> count)
+        public static IObservable<System.Reactive.Unit> WriteAsync(
+            this IObservable<System.IO.TextWriter> TextWriterValue, IObservable<System.Char[]> buffer,
+            IObservable<System.Int32> index, IObservable<System.Int32> count)
         {
-            return Observable.Zip(TextWriterValue, buffer, index, count, (TextWriterValueLambda, bufferLambda, indexLambda, countLambda) => TextWriterValueLambda.WriteAsync(bufferLambda, indexLambda, countLambda).ToObservable()).Flatten();
+            return
+                Observable.Zip(TextWriterValue, buffer, index, count,
+                    (TextWriterValueLambda, bufferLambda, indexLambda, countLambda) =>
+                        TextWriterValueLambda.WriteAsync(bufferLambda, indexLambda, countLambda).ToObservable())
+                    .Flatten();
         }
 
 
-        public static IObservable<System.Reactive.Unit> WriteLineAsync(this IObservable<System.IO.TextWriter> TextWriterValue, IObservable<System.Char> value)
+        public static IObservable<System.Reactive.Unit> WriteLineAsync(
+            this IObservable<System.IO.TextWriter> TextWriterValue, IObservable<System.Char> value)
         {
-            return Observable.Zip(TextWriterValue, value, (TextWriterValueLambda, valueLambda) => TextWriterValueLambda.WriteLineAsync(valueLambda).ToObservable()).Flatten();
+            return
+                Observable.Zip(TextWriterValue, value,
+                    (TextWriterValueLambda, valueLambda) =>
+                        TextWriterValueLambda.WriteLineAsync(valueLambda).ToObservable()).Flatten();
         }
 
 
-        public static IObservable<System.Reactive.Unit> WriteLineAsync(this IObservable<System.IO.TextWriter> TextWriterValue, IObservable<System.String> value)
+        public static IObservable<System.Reactive.Unit> WriteLineAsync(
+            this IObservable<System.IO.TextWriter> TextWriterValue, IObservable<System.String> value)
         {
-            return Observable.Zip(TextWriterValue, value, (TextWriterValueLambda, valueLambda) => TextWriterValueLambda.WriteLineAsync(valueLambda).ToObservable()).Flatten();
+            return
+                Observable.Zip(TextWriterValue, value,
+                    (TextWriterValueLambda, valueLambda) =>
+                        TextWriterValueLambda.WriteLineAsync(valueLambda).ToObservable()).Flatten();
         }
 
 
-        public static IObservable<System.Reactive.Unit> WriteLineAsync(this IObservable<System.IO.TextWriter> TextWriterValue, IObservable<System.Char[]> buffer)
+        public static IObservable<System.Reactive.Unit> WriteLineAsync(
+            this IObservable<System.IO.TextWriter> TextWriterValue, IObservable<System.Char[]> buffer)
         {
-            return Observable.Zip(TextWriterValue, buffer, (TextWriterValueLambda, bufferLambda) => TextWriterValueLambda.WriteLineAsync(bufferLambda).ToObservable()).Flatten();
+            return
+                Observable.Zip(TextWriterValue, buffer,
+                    (TextWriterValueLambda, bufferLambda) =>
+                        TextWriterValueLambda.WriteLineAsync(bufferLambda).ToObservable()).Flatten();
         }
 
 
-        public static IObservable<System.Reactive.Unit> WriteLineAsync(this IObservable<System.IO.TextWriter> TextWriterValue, IObservable<System.Char[]> buffer, IObservable<System.Int32> index, IObservable<System.Int32> count)
+        public static IObservable<System.Reactive.Unit> WriteLineAsync(
+            this IObservable<System.IO.TextWriter> TextWriterValue, IObservable<System.Char[]> buffer,
+            IObservable<System.Int32> index, IObservable<System.Int32> count)
         {
-            return Observable.Zip(TextWriterValue, buffer, index, count, (TextWriterValueLambda, bufferLambda, indexLambda, countLambda) => TextWriterValueLambda.WriteLineAsync(bufferLambda, indexLambda, countLambda).ToObservable()).Flatten();
+            return
+                Observable.Zip(TextWriterValue, buffer, index, count,
+                    (TextWriterValueLambda, bufferLambda, indexLambda, countLambda) =>
+                        TextWriterValueLambda.WriteLineAsync(bufferLambda, indexLambda, countLambda).ToObservable())
+                    .Flatten();
         }
 
 
-        public static IObservable<System.Reactive.Unit> WriteLineAsync(this IObservable<System.IO.TextWriter> TextWriterValue)
+        public static IObservable<System.Reactive.Unit> WriteLineAsync(
+            this IObservable<System.IO.TextWriter> TextWriterValue)
         {
-            return Observable.Select(TextWriterValue, (TextWriterValueLambda) => TextWriterValueLambda.WriteLineAsync().ToObservable()).Flatten().ToUnit();
+            return
+                Observable.Select(TextWriterValue,
+                    (TextWriterValueLambda) => TextWriterValueLambda.WriteLineAsync().ToObservable()).Flatten().ToUnit();
         }
 
 
-        public static IObservable<System.Reactive.Unit> FlushAsync(this IObservable<System.IO.TextWriter> TextWriterValue)
+        public static IObservable<System.Reactive.Unit> FlushAsync(
+            this IObservable<System.IO.TextWriter> TextWriterValue)
         {
-            return Observable.Select(TextWriterValue, (TextWriterValueLambda) => TextWriterValueLambda.FlushAsync().ToObservable()).Flatten().ToUnit();
+            return
+                Observable.Select(TextWriterValue,
+                    (TextWriterValueLambda) => TextWriterValueLambda.FlushAsync().ToObservable()).Flatten().ToUnit();
         }
 
 
-        public static IObservable<System.IFormatProvider> get_FormatProvider(this IObservable<System.IO.TextWriter> TextWriterValue)
+        public static IObservable<System.IFormatProvider> get_FormatProvider(
+            this IObservable<System.IO.TextWriter> TextWriterValue)
         {
             return Observable.Select(TextWriterValue, (TextWriterValueLambda) => TextWriterValueLambda.FormatProvider);
         }
 
 
-        public static IObservable<System.Text.Encoding> get_Encoding(this IObservable<System.IO.TextWriter> TextWriterValue)
+        public static IObservable<System.Text.Encoding> get_Encoding(
+            this IObservable<System.IO.TextWriter> TextWriterValue)
         {
             return Observable.Select(TextWriterValue, (TextWriterValueLambda) => TextWriterValueLambda.Encoding);
         }
@@ -321,10 +447,11 @@ namespace System.IO
         }
 
 
-        public static IObservable<System.Reactive.Unit> set_NewLine(this IObservable<System.IO.TextWriter> TextWriterValue, IObservable<System.String> value)
+        public static IObservable<System.Reactive.Unit> set_NewLine(
+            this IObservable<System.IO.TextWriter> TextWriterValue, IObservable<System.String> value)
         {
-            return ObservableExt.ZipExecute(TextWriterValue, value, (TextWriterValueLambda, valueLambda) => TextWriterValueLambda.NewLine = valueLambda);
+            return ObservableExt.ZipExecute(TextWriterValue, value,
+                (TextWriterValueLambda, valueLambda) => TextWriterValueLambda.NewLine = valueLambda);
         }
-
     }
 }

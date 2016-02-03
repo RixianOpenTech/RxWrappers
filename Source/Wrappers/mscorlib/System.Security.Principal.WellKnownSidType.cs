@@ -8,6 +8,5 @@ namespace System.Security.Principal
 {
     public static class __WellKnownSidType
     {
-        
     }
 }

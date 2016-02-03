@@ -8,6 +8,5 @@ namespace System.Resources
 {
     public static class __MissingManifestResourceException
     {
-        
     }
 }

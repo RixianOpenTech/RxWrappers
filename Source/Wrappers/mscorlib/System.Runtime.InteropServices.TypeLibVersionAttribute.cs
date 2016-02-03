@@ -8,17 +8,19 @@ namespace System.Runtime.InteropServices
 {
     public static class __TypeLibVersionAttribute
     {
-        
-        public static IObservable<System.Int32> get_MajorVersion(this IObservable<System.Runtime.InteropServices.TypeLibVersionAttribute> TypeLibVersionAttributeValue)
+        public static IObservable<System.Int32> get_MajorVersion(
+            this IObservable<System.Runtime.InteropServices.TypeLibVersionAttribute> TypeLibVersionAttributeValue)
         {
-            return Observable.Select(TypeLibVersionAttributeValue, (TypeLibVersionAttributeValueLambda) => TypeLibVersionAttributeValueLambda.MajorVersion);
+            return Observable.Select(TypeLibVersionAttributeValue,
+                (TypeLibVersionAttributeValueLambda) => TypeLibVersionAttributeValueLambda.MajorVersion);
         }
 
 
-        public static IObservable<System.Int32> get_MinorVersion(this IObservable<System.Runtime.InteropServices.TypeLibVersionAttribute> TypeLibVersionAttributeValue)
+        public static IObservable<System.Int32> get_MinorVersion(
+            this IObservable<System.Runtime.InteropServices.TypeLibVersionAttribute> TypeLibVersionAttributeValue)
         {
-            return Observable.Select(TypeLibVersionAttributeValue, (TypeLibVersionAttributeValueLambda) => TypeLibVersionAttributeValueLambda.MinorVersion);
+            return Observable.Select(TypeLibVersionAttributeValue,
+                (TypeLibVersionAttributeValueLambda) => TypeLibVersionAttributeValueLambda.MinorVersion);
         }
-
     }
 }

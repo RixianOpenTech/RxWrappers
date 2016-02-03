@@ -8,11 +8,11 @@ namespace System.Threading
 {
     public static class __ThreadAbortException
     {
-        
-        public static IObservable<System.Object> get_ExceptionState(this IObservable<System.Threading.ThreadAbortException> ThreadAbortExceptionValue)
+        public static IObservable<System.Object> get_ExceptionState(
+            this IObservable<System.Threading.ThreadAbortException> ThreadAbortExceptionValue)
         {
-            return Observable.Select(ThreadAbortExceptionValue, (ThreadAbortExceptionValueLambda) => ThreadAbortExceptionValueLambda.ExceptionState);
+            return Observable.Select(ThreadAbortExceptionValue,
+                (ThreadAbortExceptionValueLambda) => ThreadAbortExceptionValueLambda.ExceptionState);
         }
-
     }
 }

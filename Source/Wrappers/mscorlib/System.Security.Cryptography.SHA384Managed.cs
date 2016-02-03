@@ -8,11 +8,12 @@ namespace System.Security.Cryptography
 {
     public static class __SHA384Managed
     {
-        
-        public static IObservable<System.Reactive.Unit> Initialize(this IObservable<System.Security.Cryptography.SHA384Managed> SHA384ManagedValue)
+        public static IObservable<System.Reactive.Unit> Initialize(
+            this IObservable<System.Security.Cryptography.SHA384Managed> SHA384ManagedValue)
         {
-            return Observable.Do(SHA384ManagedValue, (SHA384ManagedValueLambda) => SHA384ManagedValueLambda.Initialize()).ToUnit();
+            return
+                Observable.Do(SHA384ManagedValue, (SHA384ManagedValueLambda) => SHA384ManagedValueLambda.Initialize())
+                    .ToUnit();
         }
-
     }
 }

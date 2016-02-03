@@ -8,11 +8,10 @@ namespace System.Runtime.InteropServices
 {
     public static class __COMException
     {
-        
-        public static IObservable<System.String> ToString(this IObservable<System.Runtime.InteropServices.COMException> COMExceptionValue)
+        public static IObservable<System.String> ToString(
+            this IObservable<System.Runtime.InteropServices.COMException> COMExceptionValue)
         {
             return Observable.Select(COMExceptionValue, (COMExceptionValueLambda) => COMExceptionValueLambda.ToString());
         }
-
     }
 }

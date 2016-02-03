@@ -8,35 +8,43 @@ namespace System.Security.Principal
 {
     public static class __GenericIdentity
     {
-        
-        public static IObservable<System.Security.Claims.ClaimsIdentity> Clone(this IObservable<System.Security.Principal.GenericIdentity> GenericIdentityValue)
+        public static IObservable<System.Security.Claims.ClaimsIdentity> Clone(
+            this IObservable<System.Security.Principal.GenericIdentity> GenericIdentityValue)
         {
-            return Observable.Select(GenericIdentityValue, (GenericIdentityValueLambda) => GenericIdentityValueLambda.Clone());
+            return Observable.Select(GenericIdentityValue,
+                (GenericIdentityValueLambda) => GenericIdentityValueLambda.Clone());
         }
 
 
-        public static IObservable<System.Collections.Generic.IEnumerable<System.Security.Claims.Claim>> get_Claims(this IObservable<System.Security.Principal.GenericIdentity> GenericIdentityValue)
+        public static IObservable<System.Collections.Generic.IEnumerable<System.Security.Claims.Claim>> get_Claims(
+            this IObservable<System.Security.Principal.GenericIdentity> GenericIdentityValue)
         {
-            return Observable.Select(GenericIdentityValue, (GenericIdentityValueLambda) => GenericIdentityValueLambda.Claims);
+            return Observable.Select(GenericIdentityValue,
+                (GenericIdentityValueLambda) => GenericIdentityValueLambda.Claims);
         }
 
 
-        public static IObservable<System.String> get_Name(this IObservable<System.Security.Principal.GenericIdentity> GenericIdentityValue)
+        public static IObservable<System.String> get_Name(
+            this IObservable<System.Security.Principal.GenericIdentity> GenericIdentityValue)
         {
-            return Observable.Select(GenericIdentityValue, (GenericIdentityValueLambda) => GenericIdentityValueLambda.Name);
+            return Observable.Select(GenericIdentityValue,
+                (GenericIdentityValueLambda) => GenericIdentityValueLambda.Name);
         }
 
 
-        public static IObservable<System.String> get_AuthenticationType(this IObservable<System.Security.Principal.GenericIdentity> GenericIdentityValue)
+        public static IObservable<System.String> get_AuthenticationType(
+            this IObservable<System.Security.Principal.GenericIdentity> GenericIdentityValue)
         {
-            return Observable.Select(GenericIdentityValue, (GenericIdentityValueLambda) => GenericIdentityValueLambda.AuthenticationType);
+            return Observable.Select(GenericIdentityValue,
+                (GenericIdentityValueLambda) => GenericIdentityValueLambda.AuthenticationType);
         }
 
 
-        public static IObservable<System.Boolean> get_IsAuthenticated(this IObservable<System.Security.Principal.GenericIdentity> GenericIdentityValue)
+        public static IObservable<System.Boolean> get_IsAuthenticated(
+            this IObservable<System.Security.Principal.GenericIdentity> GenericIdentityValue)
         {
-            return Observable.Select(GenericIdentityValue, (GenericIdentityValueLambda) => GenericIdentityValueLambda.IsAuthenticated);
+            return Observable.Select(GenericIdentityValue,
+                (GenericIdentityValueLambda) => GenericIdentityValueLambda.IsAuthenticated);
         }
-
     }
 }

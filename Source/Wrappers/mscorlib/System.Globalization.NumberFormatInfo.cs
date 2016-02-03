@@ -8,26 +8,34 @@ namespace System.Globalization
 {
     public static class __NumberFormatInfo
     {
-        
-        public static IObservable<System.Globalization.NumberFormatInfo> GetInstance(IObservable<System.IFormatProvider> formatProvider)
+        public static IObservable<System.Globalization.NumberFormatInfo> GetInstance(
+            IObservable<System.IFormatProvider> formatProvider)
         {
-            return Observable.Select(formatProvider, (formatProviderLambda) => System.Globalization.NumberFormatInfo.GetInstance(formatProviderLambda));
+            return Observable.Select(formatProvider,
+                (formatProviderLambda) => System.Globalization.NumberFormatInfo.GetInstance(formatProviderLambda));
         }
 
 
-        public static IObservable<System.Object> Clone(this IObservable<System.Globalization.NumberFormatInfo> NumberFormatInfoValue)
+        public static IObservable<System.Object> Clone(
+            this IObservable<System.Globalization.NumberFormatInfo> NumberFormatInfoValue)
         {
-            return Observable.Select(NumberFormatInfoValue, (NumberFormatInfoValueLambda) => NumberFormatInfoValueLambda.Clone());
+            return Observable.Select(NumberFormatInfoValue,
+                (NumberFormatInfoValueLambda) => NumberFormatInfoValueLambda.Clone());
         }
 
 
-        public static IObservable<System.Object> GetFormat(this IObservable<System.Globalization.NumberFormatInfo> NumberFormatInfoValue, IObservable<System.Type> formatType)
+        public static IObservable<System.Object> GetFormat(
+            this IObservable<System.Globalization.NumberFormatInfo> NumberFormatInfoValue,
+            IObservable<System.Type> formatType)
         {
-            return Observable.Zip(NumberFormatInfoValue, formatType, (NumberFormatInfoValueLambda, formatTypeLambda) => NumberFormatInfoValueLambda.GetFormat(formatTypeLambda));
+            return Observable.Zip(NumberFormatInfoValue, formatType,
+                (NumberFormatInfoValueLambda, formatTypeLambda) =>
+                    NumberFormatInfoValueLambda.GetFormat(formatTypeLambda));
         }
 
 
-        public static IObservable<System.Globalization.NumberFormatInfo> ReadOnly(IObservable<System.Globalization.NumberFormatInfo> nfi)
+        public static IObservable<System.Globalization.NumberFormatInfo> ReadOnly(
+            IObservable<System.Globalization.NumberFormatInfo> nfi)
         {
             return Observable.Select(nfi, (nfiLambda) => System.Globalization.NumberFormatInfo.ReadOnly(nfiLambda));
         }
@@ -39,51 +47,67 @@ namespace System.Globalization
         }
 
 
-        public static IObservable<System.Int32> get_CurrencyDecimalDigits(this IObservable<System.Globalization.NumberFormatInfo> NumberFormatInfoValue)
+        public static IObservable<System.Int32> get_CurrencyDecimalDigits(
+            this IObservable<System.Globalization.NumberFormatInfo> NumberFormatInfoValue)
         {
-            return Observable.Select(NumberFormatInfoValue, (NumberFormatInfoValueLambda) => NumberFormatInfoValueLambda.CurrencyDecimalDigits);
+            return Observable.Select(NumberFormatInfoValue,
+                (NumberFormatInfoValueLambda) => NumberFormatInfoValueLambda.CurrencyDecimalDigits);
         }
 
 
-        public static IObservable<System.String> get_CurrencyDecimalSeparator(this IObservable<System.Globalization.NumberFormatInfo> NumberFormatInfoValue)
+        public static IObservable<System.String> get_CurrencyDecimalSeparator(
+            this IObservable<System.Globalization.NumberFormatInfo> NumberFormatInfoValue)
         {
-            return Observable.Select(NumberFormatInfoValue, (NumberFormatInfoValueLambda) => NumberFormatInfoValueLambda.CurrencyDecimalSeparator);
+            return Observable.Select(NumberFormatInfoValue,
+                (NumberFormatInfoValueLambda) => NumberFormatInfoValueLambda.CurrencyDecimalSeparator);
         }
 
 
-        public static IObservable<System.Boolean> get_IsReadOnly(this IObservable<System.Globalization.NumberFormatInfo> NumberFormatInfoValue)
+        public static IObservable<System.Boolean> get_IsReadOnly(
+            this IObservable<System.Globalization.NumberFormatInfo> NumberFormatInfoValue)
         {
-            return Observable.Select(NumberFormatInfoValue, (NumberFormatInfoValueLambda) => NumberFormatInfoValueLambda.IsReadOnly);
+            return Observable.Select(NumberFormatInfoValue,
+                (NumberFormatInfoValueLambda) => NumberFormatInfoValueLambda.IsReadOnly);
         }
 
 
-        public static IObservable<System.Int32[]> get_CurrencyGroupSizes(this IObservable<System.Globalization.NumberFormatInfo> NumberFormatInfoValue)
+        public static IObservable<System.Int32[]> get_CurrencyGroupSizes(
+            this IObservable<System.Globalization.NumberFormatInfo> NumberFormatInfoValue)
         {
-            return Observable.Select(NumberFormatInfoValue, (NumberFormatInfoValueLambda) => NumberFormatInfoValueLambda.CurrencyGroupSizes);
+            return Observable.Select(NumberFormatInfoValue,
+                (NumberFormatInfoValueLambda) => NumberFormatInfoValueLambda.CurrencyGroupSizes);
         }
 
 
-        public static IObservable<System.Int32[]> get_NumberGroupSizes(this IObservable<System.Globalization.NumberFormatInfo> NumberFormatInfoValue)
+        public static IObservable<System.Int32[]> get_NumberGroupSizes(
+            this IObservable<System.Globalization.NumberFormatInfo> NumberFormatInfoValue)
         {
-            return Observable.Select(NumberFormatInfoValue, (NumberFormatInfoValueLambda) => NumberFormatInfoValueLambda.NumberGroupSizes);
+            return Observable.Select(NumberFormatInfoValue,
+                (NumberFormatInfoValueLambda) => NumberFormatInfoValueLambda.NumberGroupSizes);
         }
 
 
-        public static IObservable<System.Int32[]> get_PercentGroupSizes(this IObservable<System.Globalization.NumberFormatInfo> NumberFormatInfoValue)
+        public static IObservable<System.Int32[]> get_PercentGroupSizes(
+            this IObservable<System.Globalization.NumberFormatInfo> NumberFormatInfoValue)
         {
-            return Observable.Select(NumberFormatInfoValue, (NumberFormatInfoValueLambda) => NumberFormatInfoValueLambda.PercentGroupSizes);
+            return Observable.Select(NumberFormatInfoValue,
+                (NumberFormatInfoValueLambda) => NumberFormatInfoValueLambda.PercentGroupSizes);
         }
 
 
-        public static IObservable<System.String> get_CurrencyGroupSeparator(this IObservable<System.Globalization.NumberFormatInfo> NumberFormatInfoValue)
+        public static IObservable<System.String> get_CurrencyGroupSeparator(
+            this IObservable<System.Globalization.NumberFormatInfo> NumberFormatInfoValue)
         {
-            return Observable.Select(NumberFormatInfoValue, (NumberFormatInfoValueLambda) => NumberFormatInfoValueLambda.CurrencyGroupSeparator);
+            return Observable.Select(NumberFormatInfoValue,
+                (NumberFormatInfoValueLambda) => NumberFormatInfoValueLambda.CurrencyGroupSeparator);
         }
 
 
-        public static IObservable<System.String> get_CurrencySymbol(this IObservable<System.Globalization.NumberFormatInfo> NumberFormatInfoValue)
+        public static IObservable<System.String> get_CurrencySymbol(
+            this IObservable<System.Globalization.NumberFormatInfo> NumberFormatInfoValue)
         {
-            return Observable.Select(NumberFormatInfoValue, (NumberFormatInfoValueLambda) => NumberFormatInfoValueLambda.CurrencySymbol);
+            return Observable.Select(NumberFormatInfoValue,
+                (NumberFormatInfoValueLambda) => NumberFormatInfoValueLambda.CurrencySymbol);
         }
 
 
@@ -93,286 +117,425 @@ namespace System.Globalization
         }
 
 
-        public static IObservable<System.String> get_NaNSymbol(this IObservable<System.Globalization.NumberFormatInfo> NumberFormatInfoValue)
+        public static IObservable<System.String> get_NaNSymbol(
+            this IObservable<System.Globalization.NumberFormatInfo> NumberFormatInfoValue)
         {
-            return Observable.Select(NumberFormatInfoValue, (NumberFormatInfoValueLambda) => NumberFormatInfoValueLambda.NaNSymbol);
+            return Observable.Select(NumberFormatInfoValue,
+                (NumberFormatInfoValueLambda) => NumberFormatInfoValueLambda.NaNSymbol);
         }
 
 
-        public static IObservable<System.Int32> get_CurrencyNegativePattern(this IObservable<System.Globalization.NumberFormatInfo> NumberFormatInfoValue)
+        public static IObservable<System.Int32> get_CurrencyNegativePattern(
+            this IObservable<System.Globalization.NumberFormatInfo> NumberFormatInfoValue)
         {
-            return Observable.Select(NumberFormatInfoValue, (NumberFormatInfoValueLambda) => NumberFormatInfoValueLambda.CurrencyNegativePattern);
+            return Observable.Select(NumberFormatInfoValue,
+                (NumberFormatInfoValueLambda) => NumberFormatInfoValueLambda.CurrencyNegativePattern);
         }
 
 
-        public static IObservable<System.Int32> get_NumberNegativePattern(this IObservable<System.Globalization.NumberFormatInfo> NumberFormatInfoValue)
+        public static IObservable<System.Int32> get_NumberNegativePattern(
+            this IObservable<System.Globalization.NumberFormatInfo> NumberFormatInfoValue)
         {
-            return Observable.Select(NumberFormatInfoValue, (NumberFormatInfoValueLambda) => NumberFormatInfoValueLambda.NumberNegativePattern);
+            return Observable.Select(NumberFormatInfoValue,
+                (NumberFormatInfoValueLambda) => NumberFormatInfoValueLambda.NumberNegativePattern);
         }
 
 
-        public static IObservable<System.Int32> get_PercentPositivePattern(this IObservable<System.Globalization.NumberFormatInfo> NumberFormatInfoValue)
+        public static IObservable<System.Int32> get_PercentPositivePattern(
+            this IObservable<System.Globalization.NumberFormatInfo> NumberFormatInfoValue)
         {
-            return Observable.Select(NumberFormatInfoValue, (NumberFormatInfoValueLambda) => NumberFormatInfoValueLambda.PercentPositivePattern);
+            return Observable.Select(NumberFormatInfoValue,
+                (NumberFormatInfoValueLambda) => NumberFormatInfoValueLambda.PercentPositivePattern);
         }
 
 
-        public static IObservable<System.Int32> get_PercentNegativePattern(this IObservable<System.Globalization.NumberFormatInfo> NumberFormatInfoValue)
+        public static IObservable<System.Int32> get_PercentNegativePattern(
+            this IObservable<System.Globalization.NumberFormatInfo> NumberFormatInfoValue)
         {
-            return Observable.Select(NumberFormatInfoValue, (NumberFormatInfoValueLambda) => NumberFormatInfoValueLambda.PercentNegativePattern);
+            return Observable.Select(NumberFormatInfoValue,
+                (NumberFormatInfoValueLambda) => NumberFormatInfoValueLambda.PercentNegativePattern);
         }
 
 
-        public static IObservable<System.String> get_NegativeInfinitySymbol(this IObservable<System.Globalization.NumberFormatInfo> NumberFormatInfoValue)
+        public static IObservable<System.String> get_NegativeInfinitySymbol(
+            this IObservable<System.Globalization.NumberFormatInfo> NumberFormatInfoValue)
         {
-            return Observable.Select(NumberFormatInfoValue, (NumberFormatInfoValueLambda) => NumberFormatInfoValueLambda.NegativeInfinitySymbol);
+            return Observable.Select(NumberFormatInfoValue,
+                (NumberFormatInfoValueLambda) => NumberFormatInfoValueLambda.NegativeInfinitySymbol);
         }
 
 
-        public static IObservable<System.String> get_NegativeSign(this IObservable<System.Globalization.NumberFormatInfo> NumberFormatInfoValue)
+        public static IObservable<System.String> get_NegativeSign(
+            this IObservable<System.Globalization.NumberFormatInfo> NumberFormatInfoValue)
         {
-            return Observable.Select(NumberFormatInfoValue, (NumberFormatInfoValueLambda) => NumberFormatInfoValueLambda.NegativeSign);
+            return Observable.Select(NumberFormatInfoValue,
+                (NumberFormatInfoValueLambda) => NumberFormatInfoValueLambda.NegativeSign);
         }
 
 
-        public static IObservable<System.Int32> get_NumberDecimalDigits(this IObservable<System.Globalization.NumberFormatInfo> NumberFormatInfoValue)
+        public static IObservable<System.Int32> get_NumberDecimalDigits(
+            this IObservable<System.Globalization.NumberFormatInfo> NumberFormatInfoValue)
         {
-            return Observable.Select(NumberFormatInfoValue, (NumberFormatInfoValueLambda) => NumberFormatInfoValueLambda.NumberDecimalDigits);
+            return Observable.Select(NumberFormatInfoValue,
+                (NumberFormatInfoValueLambda) => NumberFormatInfoValueLambda.NumberDecimalDigits);
         }
 
 
-        public static IObservable<System.String> get_NumberDecimalSeparator(this IObservable<System.Globalization.NumberFormatInfo> NumberFormatInfoValue)
+        public static IObservable<System.String> get_NumberDecimalSeparator(
+            this IObservable<System.Globalization.NumberFormatInfo> NumberFormatInfoValue)
         {
-            return Observable.Select(NumberFormatInfoValue, (NumberFormatInfoValueLambda) => NumberFormatInfoValueLambda.NumberDecimalSeparator);
+            return Observable.Select(NumberFormatInfoValue,
+                (NumberFormatInfoValueLambda) => NumberFormatInfoValueLambda.NumberDecimalSeparator);
         }
 
 
-        public static IObservable<System.String> get_NumberGroupSeparator(this IObservable<System.Globalization.NumberFormatInfo> NumberFormatInfoValue)
+        public static IObservable<System.String> get_NumberGroupSeparator(
+            this IObservable<System.Globalization.NumberFormatInfo> NumberFormatInfoValue)
         {
-            return Observable.Select(NumberFormatInfoValue, (NumberFormatInfoValueLambda) => NumberFormatInfoValueLambda.NumberGroupSeparator);
+            return Observable.Select(NumberFormatInfoValue,
+                (NumberFormatInfoValueLambda) => NumberFormatInfoValueLambda.NumberGroupSeparator);
         }
 
 
-        public static IObservable<System.Int32> get_CurrencyPositivePattern(this IObservable<System.Globalization.NumberFormatInfo> NumberFormatInfoValue)
+        public static IObservable<System.Int32> get_CurrencyPositivePattern(
+            this IObservable<System.Globalization.NumberFormatInfo> NumberFormatInfoValue)
         {
-            return Observable.Select(NumberFormatInfoValue, (NumberFormatInfoValueLambda) => NumberFormatInfoValueLambda.CurrencyPositivePattern);
+            return Observable.Select(NumberFormatInfoValue,
+                (NumberFormatInfoValueLambda) => NumberFormatInfoValueLambda.CurrencyPositivePattern);
         }
 
 
-        public static IObservable<System.String> get_PositiveInfinitySymbol(this IObservable<System.Globalization.NumberFormatInfo> NumberFormatInfoValue)
+        public static IObservable<System.String> get_PositiveInfinitySymbol(
+            this IObservable<System.Globalization.NumberFormatInfo> NumberFormatInfoValue)
         {
-            return Observable.Select(NumberFormatInfoValue, (NumberFormatInfoValueLambda) => NumberFormatInfoValueLambda.PositiveInfinitySymbol);
+            return Observable.Select(NumberFormatInfoValue,
+                (NumberFormatInfoValueLambda) => NumberFormatInfoValueLambda.PositiveInfinitySymbol);
         }
 
 
-        public static IObservable<System.String> get_PositiveSign(this IObservable<System.Globalization.NumberFormatInfo> NumberFormatInfoValue)
+        public static IObservable<System.String> get_PositiveSign(
+            this IObservable<System.Globalization.NumberFormatInfo> NumberFormatInfoValue)
         {
-            return Observable.Select(NumberFormatInfoValue, (NumberFormatInfoValueLambda) => NumberFormatInfoValueLambda.PositiveSign);
+            return Observable.Select(NumberFormatInfoValue,
+                (NumberFormatInfoValueLambda) => NumberFormatInfoValueLambda.PositiveSign);
         }
 
 
-        public static IObservable<System.Int32> get_PercentDecimalDigits(this IObservable<System.Globalization.NumberFormatInfo> NumberFormatInfoValue)
+        public static IObservable<System.Int32> get_PercentDecimalDigits(
+            this IObservable<System.Globalization.NumberFormatInfo> NumberFormatInfoValue)
         {
-            return Observable.Select(NumberFormatInfoValue, (NumberFormatInfoValueLambda) => NumberFormatInfoValueLambda.PercentDecimalDigits);
+            return Observable.Select(NumberFormatInfoValue,
+                (NumberFormatInfoValueLambda) => NumberFormatInfoValueLambda.PercentDecimalDigits);
         }
 
 
-        public static IObservable<System.String> get_PercentDecimalSeparator(this IObservable<System.Globalization.NumberFormatInfo> NumberFormatInfoValue)
+        public static IObservable<System.String> get_PercentDecimalSeparator(
+            this IObservable<System.Globalization.NumberFormatInfo> NumberFormatInfoValue)
         {
-            return Observable.Select(NumberFormatInfoValue, (NumberFormatInfoValueLambda) => NumberFormatInfoValueLambda.PercentDecimalSeparator);
+            return Observable.Select(NumberFormatInfoValue,
+                (NumberFormatInfoValueLambda) => NumberFormatInfoValueLambda.PercentDecimalSeparator);
         }
 
 
-        public static IObservable<System.String> get_PercentGroupSeparator(this IObservable<System.Globalization.NumberFormatInfo> NumberFormatInfoValue)
+        public static IObservable<System.String> get_PercentGroupSeparator(
+            this IObservable<System.Globalization.NumberFormatInfo> NumberFormatInfoValue)
         {
-            return Observable.Select(NumberFormatInfoValue, (NumberFormatInfoValueLambda) => NumberFormatInfoValueLambda.PercentGroupSeparator);
+            return Observable.Select(NumberFormatInfoValue,
+                (NumberFormatInfoValueLambda) => NumberFormatInfoValueLambda.PercentGroupSeparator);
         }
 
 
-        public static IObservable<System.String> get_PercentSymbol(this IObservable<System.Globalization.NumberFormatInfo> NumberFormatInfoValue)
+        public static IObservable<System.String> get_PercentSymbol(
+            this IObservable<System.Globalization.NumberFormatInfo> NumberFormatInfoValue)
         {
-            return Observable.Select(NumberFormatInfoValue, (NumberFormatInfoValueLambda) => NumberFormatInfoValueLambda.PercentSymbol);
+            return Observable.Select(NumberFormatInfoValue,
+                (NumberFormatInfoValueLambda) => NumberFormatInfoValueLambda.PercentSymbol);
         }
 
 
-        public static IObservable<System.String> get_PerMilleSymbol(this IObservable<System.Globalization.NumberFormatInfo> NumberFormatInfoValue)
+        public static IObservable<System.String> get_PerMilleSymbol(
+            this IObservable<System.Globalization.NumberFormatInfo> NumberFormatInfoValue)
         {
-            return Observable.Select(NumberFormatInfoValue, (NumberFormatInfoValueLambda) => NumberFormatInfoValueLambda.PerMilleSymbol);
+            return Observable.Select(NumberFormatInfoValue,
+                (NumberFormatInfoValueLambda) => NumberFormatInfoValueLambda.PerMilleSymbol);
         }
 
 
-        public static IObservable<System.String[]> get_NativeDigits(this IObservable<System.Globalization.NumberFormatInfo> NumberFormatInfoValue)
+        public static IObservable<System.String[]> get_NativeDigits(
+            this IObservable<System.Globalization.NumberFormatInfo> NumberFormatInfoValue)
         {
-            return Observable.Select(NumberFormatInfoValue, (NumberFormatInfoValueLambda) => NumberFormatInfoValueLambda.NativeDigits);
+            return Observable.Select(NumberFormatInfoValue,
+                (NumberFormatInfoValueLambda) => NumberFormatInfoValueLambda.NativeDigits);
         }
 
 
-        public static IObservable<System.Globalization.DigitShapes> get_DigitSubstitution(this IObservable<System.Globalization.NumberFormatInfo> NumberFormatInfoValue)
+        public static IObservable<System.Globalization.DigitShapes> get_DigitSubstitution(
+            this IObservable<System.Globalization.NumberFormatInfo> NumberFormatInfoValue)
         {
-            return Observable.Select(NumberFormatInfoValue, (NumberFormatInfoValueLambda) => NumberFormatInfoValueLambda.DigitSubstitution);
+            return Observable.Select(NumberFormatInfoValue,
+                (NumberFormatInfoValueLambda) => NumberFormatInfoValueLambda.DigitSubstitution);
         }
 
 
-        public static IObservable<System.Reactive.Unit> set_CurrencyDecimalDigits(this IObservable<System.Globalization.NumberFormatInfo> NumberFormatInfoValue, IObservable<System.Int32> value)
+        public static IObservable<System.Reactive.Unit> set_CurrencyDecimalDigits(
+            this IObservable<System.Globalization.NumberFormatInfo> NumberFormatInfoValue,
+            IObservable<System.Int32> value)
         {
-            return ObservableExt.ZipExecute(NumberFormatInfoValue, value, (NumberFormatInfoValueLambda, valueLambda) => NumberFormatInfoValueLambda.CurrencyDecimalDigits = valueLambda);
+            return ObservableExt.ZipExecute(NumberFormatInfoValue, value,
+                (NumberFormatInfoValueLambda, valueLambda) =>
+                    NumberFormatInfoValueLambda.CurrencyDecimalDigits = valueLambda);
         }
 
 
-        public static IObservable<System.Reactive.Unit> set_CurrencyDecimalSeparator(this IObservable<System.Globalization.NumberFormatInfo> NumberFormatInfoValue, IObservable<System.String> value)
+        public static IObservable<System.Reactive.Unit> set_CurrencyDecimalSeparator(
+            this IObservable<System.Globalization.NumberFormatInfo> NumberFormatInfoValue,
+            IObservable<System.String> value)
         {
-            return ObservableExt.ZipExecute(NumberFormatInfoValue, value, (NumberFormatInfoValueLambda, valueLambda) => NumberFormatInfoValueLambda.CurrencyDecimalSeparator = valueLambda);
+            return ObservableExt.ZipExecute(NumberFormatInfoValue, value,
+                (NumberFormatInfoValueLambda, valueLambda) =>
+                    NumberFormatInfoValueLambda.CurrencyDecimalSeparator = valueLambda);
         }
 
 
-        public static IObservable<System.Reactive.Unit> set_CurrencyGroupSizes(this IObservable<System.Globalization.NumberFormatInfo> NumberFormatInfoValue, IObservable<System.Int32[]> value)
+        public static IObservable<System.Reactive.Unit> set_CurrencyGroupSizes(
+            this IObservable<System.Globalization.NumberFormatInfo> NumberFormatInfoValue,
+            IObservable<System.Int32[]> value)
         {
-            return ObservableExt.ZipExecute(NumberFormatInfoValue, value, (NumberFormatInfoValueLambda, valueLambda) => NumberFormatInfoValueLambda.CurrencyGroupSizes = valueLambda);
+            return ObservableExt.ZipExecute(NumberFormatInfoValue, value,
+                (NumberFormatInfoValueLambda, valueLambda) =>
+                    NumberFormatInfoValueLambda.CurrencyGroupSizes = valueLambda);
         }
 
 
-        public static IObservable<System.Reactive.Unit> set_NumberGroupSizes(this IObservable<System.Globalization.NumberFormatInfo> NumberFormatInfoValue, IObservable<System.Int32[]> value)
+        public static IObservable<System.Reactive.Unit> set_NumberGroupSizes(
+            this IObservable<System.Globalization.NumberFormatInfo> NumberFormatInfoValue,
+            IObservable<System.Int32[]> value)
         {
-            return ObservableExt.ZipExecute(NumberFormatInfoValue, value, (NumberFormatInfoValueLambda, valueLambda) => NumberFormatInfoValueLambda.NumberGroupSizes = valueLambda);
+            return ObservableExt.ZipExecute(NumberFormatInfoValue, value,
+                (NumberFormatInfoValueLambda, valueLambda) => NumberFormatInfoValueLambda.NumberGroupSizes = valueLambda);
         }
 
 
-        public static IObservable<System.Reactive.Unit> set_PercentGroupSizes(this IObservable<System.Globalization.NumberFormatInfo> NumberFormatInfoValue, IObservable<System.Int32[]> value)
+        public static IObservable<System.Reactive.Unit> set_PercentGroupSizes(
+            this IObservable<System.Globalization.NumberFormatInfo> NumberFormatInfoValue,
+            IObservable<System.Int32[]> value)
         {
-            return ObservableExt.ZipExecute(NumberFormatInfoValue, value, (NumberFormatInfoValueLambda, valueLambda) => NumberFormatInfoValueLambda.PercentGroupSizes = valueLambda);
+            return ObservableExt.ZipExecute(NumberFormatInfoValue, value,
+                (NumberFormatInfoValueLambda, valueLambda) =>
+                    NumberFormatInfoValueLambda.PercentGroupSizes = valueLambda);
         }
 
 
-        public static IObservable<System.Reactive.Unit> set_CurrencyGroupSeparator(this IObservable<System.Globalization.NumberFormatInfo> NumberFormatInfoValue, IObservable<System.String> value)
+        public static IObservable<System.Reactive.Unit> set_CurrencyGroupSeparator(
+            this IObservable<System.Globalization.NumberFormatInfo> NumberFormatInfoValue,
+            IObservable<System.String> value)
         {
-            return ObservableExt.ZipExecute(NumberFormatInfoValue, value, (NumberFormatInfoValueLambda, valueLambda) => NumberFormatInfoValueLambda.CurrencyGroupSeparator = valueLambda);
+            return ObservableExt.ZipExecute(NumberFormatInfoValue, value,
+                (NumberFormatInfoValueLambda, valueLambda) =>
+                    NumberFormatInfoValueLambda.CurrencyGroupSeparator = valueLambda);
         }
 
 
-        public static IObservable<System.Reactive.Unit> set_CurrencySymbol(this IObservable<System.Globalization.NumberFormatInfo> NumberFormatInfoValue, IObservable<System.String> value)
+        public static IObservable<System.Reactive.Unit> set_CurrencySymbol(
+            this IObservable<System.Globalization.NumberFormatInfo> NumberFormatInfoValue,
+            IObservable<System.String> value)
         {
-            return ObservableExt.ZipExecute(NumberFormatInfoValue, value, (NumberFormatInfoValueLambda, valueLambda) => NumberFormatInfoValueLambda.CurrencySymbol = valueLambda);
+            return ObservableExt.ZipExecute(NumberFormatInfoValue, value,
+                (NumberFormatInfoValueLambda, valueLambda) => NumberFormatInfoValueLambda.CurrencySymbol = valueLambda);
         }
 
 
-        public static IObservable<System.Reactive.Unit> set_NaNSymbol(this IObservable<System.Globalization.NumberFormatInfo> NumberFormatInfoValue, IObservable<System.String> value)
+        public static IObservable<System.Reactive.Unit> set_NaNSymbol(
+            this IObservable<System.Globalization.NumberFormatInfo> NumberFormatInfoValue,
+            IObservable<System.String> value)
         {
-            return ObservableExt.ZipExecute(NumberFormatInfoValue, value, (NumberFormatInfoValueLambda, valueLambda) => NumberFormatInfoValueLambda.NaNSymbol = valueLambda);
+            return ObservableExt.ZipExecute(NumberFormatInfoValue, value,
+                (NumberFormatInfoValueLambda, valueLambda) => NumberFormatInfoValueLambda.NaNSymbol = valueLambda);
         }
 
 
-        public static IObservable<System.Reactive.Unit> set_CurrencyNegativePattern(this IObservable<System.Globalization.NumberFormatInfo> NumberFormatInfoValue, IObservable<System.Int32> value)
+        public static IObservable<System.Reactive.Unit> set_CurrencyNegativePattern(
+            this IObservable<System.Globalization.NumberFormatInfo> NumberFormatInfoValue,
+            IObservable<System.Int32> value)
         {
-            return ObservableExt.ZipExecute(NumberFormatInfoValue, value, (NumberFormatInfoValueLambda, valueLambda) => NumberFormatInfoValueLambda.CurrencyNegativePattern = valueLambda);
+            return ObservableExt.ZipExecute(NumberFormatInfoValue, value,
+                (NumberFormatInfoValueLambda, valueLambda) =>
+                    NumberFormatInfoValueLambda.CurrencyNegativePattern = valueLambda);
         }
 
 
-        public static IObservable<System.Reactive.Unit> set_NumberNegativePattern(this IObservable<System.Globalization.NumberFormatInfo> NumberFormatInfoValue, IObservable<System.Int32> value)
+        public static IObservable<System.Reactive.Unit> set_NumberNegativePattern(
+            this IObservable<System.Globalization.NumberFormatInfo> NumberFormatInfoValue,
+            IObservable<System.Int32> value)
         {
-            return ObservableExt.ZipExecute(NumberFormatInfoValue, value, (NumberFormatInfoValueLambda, valueLambda) => NumberFormatInfoValueLambda.NumberNegativePattern = valueLambda);
+            return ObservableExt.ZipExecute(NumberFormatInfoValue, value,
+                (NumberFormatInfoValueLambda, valueLambda) =>
+                    NumberFormatInfoValueLambda.NumberNegativePattern = valueLambda);
         }
 
 
-        public static IObservable<System.Reactive.Unit> set_PercentPositivePattern(this IObservable<System.Globalization.NumberFormatInfo> NumberFormatInfoValue, IObservable<System.Int32> value)
+        public static IObservable<System.Reactive.Unit> set_PercentPositivePattern(
+            this IObservable<System.Globalization.NumberFormatInfo> NumberFormatInfoValue,
+            IObservable<System.Int32> value)
         {
-            return ObservableExt.ZipExecute(NumberFormatInfoValue, value, (NumberFormatInfoValueLambda, valueLambda) => NumberFormatInfoValueLambda.PercentPositivePattern = valueLambda);
+            return ObservableExt.ZipExecute(NumberFormatInfoValue, value,
+                (NumberFormatInfoValueLambda, valueLambda) =>
+                    NumberFormatInfoValueLambda.PercentPositivePattern = valueLambda);
         }
 
 
-        public static IObservable<System.Reactive.Unit> set_PercentNegativePattern(this IObservable<System.Globalization.NumberFormatInfo> NumberFormatInfoValue, IObservable<System.Int32> value)
+        public static IObservable<System.Reactive.Unit> set_PercentNegativePattern(
+            this IObservable<System.Globalization.NumberFormatInfo> NumberFormatInfoValue,
+            IObservable<System.Int32> value)
         {
-            return ObservableExt.ZipExecute(NumberFormatInfoValue, value, (NumberFormatInfoValueLambda, valueLambda) => NumberFormatInfoValueLambda.PercentNegativePattern = valueLambda);
+            return ObservableExt.ZipExecute(NumberFormatInfoValue, value,
+                (NumberFormatInfoValueLambda, valueLambda) =>
+                    NumberFormatInfoValueLambda.PercentNegativePattern = valueLambda);
         }
 
 
-        public static IObservable<System.Reactive.Unit> set_NegativeInfinitySymbol(this IObservable<System.Globalization.NumberFormatInfo> NumberFormatInfoValue, IObservable<System.String> value)
+        public static IObservable<System.Reactive.Unit> set_NegativeInfinitySymbol(
+            this IObservable<System.Globalization.NumberFormatInfo> NumberFormatInfoValue,
+            IObservable<System.String> value)
         {
-            return ObservableExt.ZipExecute(NumberFormatInfoValue, value, (NumberFormatInfoValueLambda, valueLambda) => NumberFormatInfoValueLambda.NegativeInfinitySymbol = valueLambda);
+            return ObservableExt.ZipExecute(NumberFormatInfoValue, value,
+                (NumberFormatInfoValueLambda, valueLambda) =>
+                    NumberFormatInfoValueLambda.NegativeInfinitySymbol = valueLambda);
         }
 
 
-        public static IObservable<System.Reactive.Unit> set_NegativeSign(this IObservable<System.Globalization.NumberFormatInfo> NumberFormatInfoValue, IObservable<System.String> value)
+        public static IObservable<System.Reactive.Unit> set_NegativeSign(
+            this IObservable<System.Globalization.NumberFormatInfo> NumberFormatInfoValue,
+            IObservable<System.String> value)
         {
-            return ObservableExt.ZipExecute(NumberFormatInfoValue, value, (NumberFormatInfoValueLambda, valueLambda) => NumberFormatInfoValueLambda.NegativeSign = valueLambda);
+            return ObservableExt.ZipExecute(NumberFormatInfoValue, value,
+                (NumberFormatInfoValueLambda, valueLambda) => NumberFormatInfoValueLambda.NegativeSign = valueLambda);
         }
 
 
-        public static IObservable<System.Reactive.Unit> set_NumberDecimalDigits(this IObservable<System.Globalization.NumberFormatInfo> NumberFormatInfoValue, IObservable<System.Int32> value)
+        public static IObservable<System.Reactive.Unit> set_NumberDecimalDigits(
+            this IObservable<System.Globalization.NumberFormatInfo> NumberFormatInfoValue,
+            IObservable<System.Int32> value)
         {
-            return ObservableExt.ZipExecute(NumberFormatInfoValue, value, (NumberFormatInfoValueLambda, valueLambda) => NumberFormatInfoValueLambda.NumberDecimalDigits = valueLambda);
+            return ObservableExt.ZipExecute(NumberFormatInfoValue, value,
+                (NumberFormatInfoValueLambda, valueLambda) =>
+                    NumberFormatInfoValueLambda.NumberDecimalDigits = valueLambda);
         }
 
 
-        public static IObservable<System.Reactive.Unit> set_NumberDecimalSeparator(this IObservable<System.Globalization.NumberFormatInfo> NumberFormatInfoValue, IObservable<System.String> value)
+        public static IObservable<System.Reactive.Unit> set_NumberDecimalSeparator(
+            this IObservable<System.Globalization.NumberFormatInfo> NumberFormatInfoValue,
+            IObservable<System.String> value)
         {
-            return ObservableExt.ZipExecute(NumberFormatInfoValue, value, (NumberFormatInfoValueLambda, valueLambda) => NumberFormatInfoValueLambda.NumberDecimalSeparator = valueLambda);
+            return ObservableExt.ZipExecute(NumberFormatInfoValue, value,
+                (NumberFormatInfoValueLambda, valueLambda) =>
+                    NumberFormatInfoValueLambda.NumberDecimalSeparator = valueLambda);
         }
 
 
-        public static IObservable<System.Reactive.Unit> set_NumberGroupSeparator(this IObservable<System.Globalization.NumberFormatInfo> NumberFormatInfoValue, IObservable<System.String> value)
+        public static IObservable<System.Reactive.Unit> set_NumberGroupSeparator(
+            this IObservable<System.Globalization.NumberFormatInfo> NumberFormatInfoValue,
+            IObservable<System.String> value)
         {
-            return ObservableExt.ZipExecute(NumberFormatInfoValue, value, (NumberFormatInfoValueLambda, valueLambda) => NumberFormatInfoValueLambda.NumberGroupSeparator = valueLambda);
+            return ObservableExt.ZipExecute(NumberFormatInfoValue, value,
+                (NumberFormatInfoValueLambda, valueLambda) =>
+                    NumberFormatInfoValueLambda.NumberGroupSeparator = valueLambda);
         }
 
 
-        public static IObservable<System.Reactive.Unit> set_CurrencyPositivePattern(this IObservable<System.Globalization.NumberFormatInfo> NumberFormatInfoValue, IObservable<System.Int32> value)
+        public static IObservable<System.Reactive.Unit> set_CurrencyPositivePattern(
+            this IObservable<System.Globalization.NumberFormatInfo> NumberFormatInfoValue,
+            IObservable<System.Int32> value)
         {
-            return ObservableExt.ZipExecute(NumberFormatInfoValue, value, (NumberFormatInfoValueLambda, valueLambda) => NumberFormatInfoValueLambda.CurrencyPositivePattern = valueLambda);
+            return ObservableExt.ZipExecute(NumberFormatInfoValue, value,
+                (NumberFormatInfoValueLambda, valueLambda) =>
+                    NumberFormatInfoValueLambda.CurrencyPositivePattern = valueLambda);
         }
 
 
-        public static IObservable<System.Reactive.Unit> set_PositiveInfinitySymbol(this IObservable<System.Globalization.NumberFormatInfo> NumberFormatInfoValue, IObservable<System.String> value)
+        public static IObservable<System.Reactive.Unit> set_PositiveInfinitySymbol(
+            this IObservable<System.Globalization.NumberFormatInfo> NumberFormatInfoValue,
+            IObservable<System.String> value)
         {
-            return ObservableExt.ZipExecute(NumberFormatInfoValue, value, (NumberFormatInfoValueLambda, valueLambda) => NumberFormatInfoValueLambda.PositiveInfinitySymbol = valueLambda);
+            return ObservableExt.ZipExecute(NumberFormatInfoValue, value,
+                (NumberFormatInfoValueLambda, valueLambda) =>
+                    NumberFormatInfoValueLambda.PositiveInfinitySymbol = valueLambda);
         }
 
 
-        public static IObservable<System.Reactive.Unit> set_PositiveSign(this IObservable<System.Globalization.NumberFormatInfo> NumberFormatInfoValue, IObservable<System.String> value)
+        public static IObservable<System.Reactive.Unit> set_PositiveSign(
+            this IObservable<System.Globalization.NumberFormatInfo> NumberFormatInfoValue,
+            IObservable<System.String> value)
         {
-            return ObservableExt.ZipExecute(NumberFormatInfoValue, value, (NumberFormatInfoValueLambda, valueLambda) => NumberFormatInfoValueLambda.PositiveSign = valueLambda);
+            return ObservableExt.ZipExecute(NumberFormatInfoValue, value,
+                (NumberFormatInfoValueLambda, valueLambda) => NumberFormatInfoValueLambda.PositiveSign = valueLambda);
         }
 
 
-        public static IObservable<System.Reactive.Unit> set_PercentDecimalDigits(this IObservable<System.Globalization.NumberFormatInfo> NumberFormatInfoValue, IObservable<System.Int32> value)
+        public static IObservable<System.Reactive.Unit> set_PercentDecimalDigits(
+            this IObservable<System.Globalization.NumberFormatInfo> NumberFormatInfoValue,
+            IObservable<System.Int32> value)
         {
-            return ObservableExt.ZipExecute(NumberFormatInfoValue, value, (NumberFormatInfoValueLambda, valueLambda) => NumberFormatInfoValueLambda.PercentDecimalDigits = valueLambda);
+            return ObservableExt.ZipExecute(NumberFormatInfoValue, value,
+                (NumberFormatInfoValueLambda, valueLambda) =>
+                    NumberFormatInfoValueLambda.PercentDecimalDigits = valueLambda);
         }
 
 
-        public static IObservable<System.Reactive.Unit> set_PercentDecimalSeparator(this IObservable<System.Globalization.NumberFormatInfo> NumberFormatInfoValue, IObservable<System.String> value)
+        public static IObservable<System.Reactive.Unit> set_PercentDecimalSeparator(
+            this IObservable<System.Globalization.NumberFormatInfo> NumberFormatInfoValue,
+            IObservable<System.String> value)
         {
-            return ObservableExt.ZipExecute(NumberFormatInfoValue, value, (NumberFormatInfoValueLambda, valueLambda) => NumberFormatInfoValueLambda.PercentDecimalSeparator = valueLambda);
+            return ObservableExt.ZipExecute(NumberFormatInfoValue, value,
+                (NumberFormatInfoValueLambda, valueLambda) =>
+                    NumberFormatInfoValueLambda.PercentDecimalSeparator = valueLambda);
         }
 
 
-        public static IObservable<System.Reactive.Unit> set_PercentGroupSeparator(this IObservable<System.Globalization.NumberFormatInfo> NumberFormatInfoValue, IObservable<System.String> value)
+        public static IObservable<System.Reactive.Unit> set_PercentGroupSeparator(
+            this IObservable<System.Globalization.NumberFormatInfo> NumberFormatInfoValue,
+            IObservable<System.String> value)
         {
-            return ObservableExt.ZipExecute(NumberFormatInfoValue, value, (NumberFormatInfoValueLambda, valueLambda) => NumberFormatInfoValueLambda.PercentGroupSeparator = valueLambda);
+            return ObservableExt.ZipExecute(NumberFormatInfoValue, value,
+                (NumberFormatInfoValueLambda, valueLambda) =>
+                    NumberFormatInfoValueLambda.PercentGroupSeparator = valueLambda);
         }
 
 
-        public static IObservable<System.Reactive.Unit> set_PercentSymbol(this IObservable<System.Globalization.NumberFormatInfo> NumberFormatInfoValue, IObservable<System.String> value)
+        public static IObservable<System.Reactive.Unit> set_PercentSymbol(
+            this IObservable<System.Globalization.NumberFormatInfo> NumberFormatInfoValue,
+            IObservable<System.String> value)
         {
-            return ObservableExt.ZipExecute(NumberFormatInfoValue, value, (NumberFormatInfoValueLambda, valueLambda) => NumberFormatInfoValueLambda.PercentSymbol = valueLambda);
+            return ObservableExt.ZipExecute(NumberFormatInfoValue, value,
+                (NumberFormatInfoValueLambda, valueLambda) => NumberFormatInfoValueLambda.PercentSymbol = valueLambda);
         }
 
 
-        public static IObservable<System.Reactive.Unit> set_PerMilleSymbol(this IObservable<System.Globalization.NumberFormatInfo> NumberFormatInfoValue, IObservable<System.String> value)
+        public static IObservable<System.Reactive.Unit> set_PerMilleSymbol(
+            this IObservable<System.Globalization.NumberFormatInfo> NumberFormatInfoValue,
+            IObservable<System.String> value)
         {
-            return ObservableExt.ZipExecute(NumberFormatInfoValue, value, (NumberFormatInfoValueLambda, valueLambda) => NumberFormatInfoValueLambda.PerMilleSymbol = valueLambda);
+            return ObservableExt.ZipExecute(NumberFormatInfoValue, value,
+                (NumberFormatInfoValueLambda, valueLambda) => NumberFormatInfoValueLambda.PerMilleSymbol = valueLambda);
         }
 
 
-        public static IObservable<System.Reactive.Unit> set_NativeDigits(this IObservable<System.Globalization.NumberFormatInfo> NumberFormatInfoValue, IObservable<System.String[]> value)
+        public static IObservable<System.Reactive.Unit> set_NativeDigits(
+            this IObservable<System.Globalization.NumberFormatInfo> NumberFormatInfoValue,
+            IObservable<System.String[]> value)
         {
-            return ObservableExt.ZipExecute(NumberFormatInfoValue, value, (NumberFormatInfoValueLambda, valueLambda) => NumberFormatInfoValueLambda.NativeDigits = valueLambda);
+            return ObservableExt.ZipExecute(NumberFormatInfoValue, value,
+                (NumberFormatInfoValueLambda, valueLambda) => NumberFormatInfoValueLambda.NativeDigits = valueLambda);
         }
 
 
-        public static IObservable<System.Reactive.Unit> set_DigitSubstitution(this IObservable<System.Globalization.NumberFormatInfo> NumberFormatInfoValue, IObservable<System.Globalization.DigitShapes> value)
+        public static IObservable<System.Reactive.Unit> set_DigitSubstitution(
+            this IObservable<System.Globalization.NumberFormatInfo> NumberFormatInfoValue,
+            IObservable<System.Globalization.DigitShapes> value)
         {
-            return ObservableExt.ZipExecute(NumberFormatInfoValue, value, (NumberFormatInfoValueLambda, valueLambda) => NumberFormatInfoValueLambda.DigitSubstitution = valueLambda);
+            return ObservableExt.ZipExecute(NumberFormatInfoValue, value,
+                (NumberFormatInfoValueLambda, valueLambda) =>
+                    NumberFormatInfoValueLambda.DigitSubstitution = valueLambda);
         }
-
     }
 }

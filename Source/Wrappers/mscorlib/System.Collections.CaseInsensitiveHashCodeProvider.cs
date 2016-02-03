@@ -8,10 +8,13 @@ namespace System.Collections
 {
     public static class __CaseInsensitiveHashCodeProvider
     {
-        
-        public static IObservable<System.Int32> GetHashCode(this IObservable<System.Collections.CaseInsensitiveHashCodeProvider> CaseInsensitiveHashCodeProviderValue, IObservable<System.Object> obj)
+        public static IObservable<System.Int32> GetHashCode(
+            this IObservable<System.Collections.CaseInsensitiveHashCodeProvider> CaseInsensitiveHashCodeProviderValue,
+            IObservable<System.Object> obj)
         {
-            return Observable.Zip(CaseInsensitiveHashCodeProviderValue, obj, (CaseInsensitiveHashCodeProviderValueLambda, objLambda) => CaseInsensitiveHashCodeProviderValueLambda.GetHashCode(objLambda));
+            return Observable.Zip(CaseInsensitiveHashCodeProviderValue, obj,
+                (CaseInsensitiveHashCodeProviderValueLambda, objLambda) =>
+                    CaseInsensitiveHashCodeProviderValueLambda.GetHashCode(objLambda));
         }
 
 
@@ -25,6 +28,5 @@ namespace System.Collections
         {
             return ObservableExt.Factory(() => System.Collections.CaseInsensitiveHashCodeProvider.DefaultInvariant);
         }
-
     }
 }

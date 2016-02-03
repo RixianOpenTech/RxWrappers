@@ -8,11 +8,11 @@ namespace System.Runtime
 {
     public static class __TargetedPatchingOptOutAttribute
     {
-        
-        public static IObservable<System.String> get_Reason(this IObservable<System.Runtime.TargetedPatchingOptOutAttribute> TargetedPatchingOptOutAttributeValue)
+        public static IObservable<System.String> get_Reason(
+            this IObservable<System.Runtime.TargetedPatchingOptOutAttribute> TargetedPatchingOptOutAttributeValue)
         {
-            return Observable.Select(TargetedPatchingOptOutAttributeValue, (TargetedPatchingOptOutAttributeValueLambda) => TargetedPatchingOptOutAttributeValueLambda.Reason);
+            return Observable.Select(TargetedPatchingOptOutAttributeValue,
+                (TargetedPatchingOptOutAttributeValueLambda) => TargetedPatchingOptOutAttributeValueLambda.Reason);
         }
-
     }
 }

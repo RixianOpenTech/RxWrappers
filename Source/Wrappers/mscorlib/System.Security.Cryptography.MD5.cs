@@ -8,7 +8,6 @@ namespace System.Security.Cryptography
 {
     public static class __MD5
     {
-        
         public static IObservable<System.Security.Cryptography.MD5> Create()
         {
             return ObservableExt.Factory(() => System.Security.Cryptography.MD5.Create());
@@ -19,6 +18,5 @@ namespace System.Security.Cryptography
         {
             return Observable.Select(algName, (algNameLambda) => System.Security.Cryptography.MD5.Create(algNameLambda));
         }
-
     }
 }

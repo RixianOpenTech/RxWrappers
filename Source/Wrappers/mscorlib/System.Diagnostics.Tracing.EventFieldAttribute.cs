@@ -8,29 +8,37 @@ namespace System.Diagnostics.Tracing
 {
     public static class __EventFieldAttribute
     {
-        
-        public static IObservable<System.Diagnostics.Tracing.EventFieldTags> get_Tags(this IObservable<System.Diagnostics.Tracing.EventFieldAttribute> EventFieldAttributeValue)
+        public static IObservable<System.Diagnostics.Tracing.EventFieldTags> get_Tags(
+            this IObservable<System.Diagnostics.Tracing.EventFieldAttribute> EventFieldAttributeValue)
         {
-            return Observable.Select(EventFieldAttributeValue, (EventFieldAttributeValueLambda) => EventFieldAttributeValueLambda.Tags);
+            return Observable.Select(EventFieldAttributeValue,
+                (EventFieldAttributeValueLambda) => EventFieldAttributeValueLambda.Tags);
         }
 
 
-        public static IObservable<System.Diagnostics.Tracing.EventFieldFormat> get_Format(this IObservable<System.Diagnostics.Tracing.EventFieldAttribute> EventFieldAttributeValue)
+        public static IObservable<System.Diagnostics.Tracing.EventFieldFormat> get_Format(
+            this IObservable<System.Diagnostics.Tracing.EventFieldAttribute> EventFieldAttributeValue)
         {
-            return Observable.Select(EventFieldAttributeValue, (EventFieldAttributeValueLambda) => EventFieldAttributeValueLambda.Format);
+            return Observable.Select(EventFieldAttributeValue,
+                (EventFieldAttributeValueLambda) => EventFieldAttributeValueLambda.Format);
         }
 
 
-        public static IObservable<System.Reactive.Unit> set_Tags(this IObservable<System.Diagnostics.Tracing.EventFieldAttribute> EventFieldAttributeValue, IObservable<System.Diagnostics.Tracing.EventFieldTags> value)
+        public static IObservable<System.Reactive.Unit> set_Tags(
+            this IObservable<System.Diagnostics.Tracing.EventFieldAttribute> EventFieldAttributeValue,
+            IObservable<System.Diagnostics.Tracing.EventFieldTags> value)
         {
-            return ObservableExt.ZipExecute(EventFieldAttributeValue, value, (EventFieldAttributeValueLambda, valueLambda) => EventFieldAttributeValueLambda.Tags = valueLambda);
+            return ObservableExt.ZipExecute(EventFieldAttributeValue, value,
+                (EventFieldAttributeValueLambda, valueLambda) => EventFieldAttributeValueLambda.Tags = valueLambda);
         }
 
 
-        public static IObservable<System.Reactive.Unit> set_Format(this IObservable<System.Diagnostics.Tracing.EventFieldAttribute> EventFieldAttributeValue, IObservable<System.Diagnostics.Tracing.EventFieldFormat> value)
+        public static IObservable<System.Reactive.Unit> set_Format(
+            this IObservable<System.Diagnostics.Tracing.EventFieldAttribute> EventFieldAttributeValue,
+            IObservable<System.Diagnostics.Tracing.EventFieldFormat> value)
         {
-            return ObservableExt.ZipExecute(EventFieldAttributeValue, value, (EventFieldAttributeValueLambda, valueLambda) => EventFieldAttributeValueLambda.Format = valueLambda);
+            return ObservableExt.ZipExecute(EventFieldAttributeValue, value,
+                (EventFieldAttributeValueLambda, valueLambda) => EventFieldAttributeValueLambda.Format = valueLambda);
         }
-
     }
 }

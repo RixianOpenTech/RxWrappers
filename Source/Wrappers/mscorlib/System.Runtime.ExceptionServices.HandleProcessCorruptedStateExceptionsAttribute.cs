@@ -8,6 +8,5 @@ namespace System.Runtime.ExceptionServices
 {
     public static class __HandleProcessCorruptedStateExceptionsAttribute
     {
-        
     }
 }

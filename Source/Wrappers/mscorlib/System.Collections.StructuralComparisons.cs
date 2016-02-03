@@ -8,7 +8,6 @@ namespace System.Collections
 {
     public static class __StructuralComparisons
     {
-        
         public static IObservable<System.Collections.IComparer> get_StructuralComparer()
         {
             return ObservableExt.Factory(() => System.Collections.StructuralComparisons.StructuralComparer);
@@ -19,6 +18,5 @@ namespace System.Collections
         {
             return ObservableExt.Factory(() => System.Collections.StructuralComparisons.StructuralEqualityComparer);
         }
-
     }
 }

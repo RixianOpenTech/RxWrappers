@@ -8,6 +8,5 @@ namespace System.Security.AccessControl
 {
     public static class __AceQualifier
     {
-        
     }
 }

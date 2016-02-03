@@ -8,17 +8,20 @@ namespace System.Resources
 {
     public static class __IResourceReader
     {
-        
-        public static IObservable<System.Reactive.Unit> Close(this IObservable<System.Resources.IResourceReader> IResourceReaderValue)
+        public static IObservable<System.Reactive.Unit> Close(
+            this IObservable<System.Resources.IResourceReader> IResourceReaderValue)
         {
-            return Observable.Do(IResourceReaderValue, (IResourceReaderValueLambda) => IResourceReaderValueLambda.Close()).ToUnit();
+            return
+                Observable.Do(IResourceReaderValue, (IResourceReaderValueLambda) => IResourceReaderValueLambda.Close())
+                    .ToUnit();
         }
 
 
-        public static IObservable<System.Collections.IDictionaryEnumerator> GetEnumerator(this IObservable<System.Resources.IResourceReader> IResourceReaderValue)
+        public static IObservable<System.Collections.IDictionaryEnumerator> GetEnumerator(
+            this IObservable<System.Resources.IResourceReader> IResourceReaderValue)
         {
-            return Observable.Select(IResourceReaderValue, (IResourceReaderValueLambda) => IResourceReaderValueLambda.GetEnumerator());
+            return Observable.Select(IResourceReaderValue,
+                (IResourceReaderValueLambda) => IResourceReaderValueLambda.GetEnumerator());
         }
-
     }
 }

@@ -8,7 +8,6 @@ namespace System.Runtime
 {
     public static class __GCSettings
     {
-        
         public static IObservable<System.Runtime.GCLatencyMode> get_LatencyMode()
         {
             return ObservableExt.Factory(() => System.Runtime.GCSettings.LatencyMode);
@@ -33,10 +32,12 @@ namespace System.Runtime
         }
 
 
-        public static IObservable<System.Reactive.Unit> set_LargeObjectHeapCompactionMode(IObservable<System.Runtime.GCLargeObjectHeapCompactionMode> value)
+        public static IObservable<System.Reactive.Unit> set_LargeObjectHeapCompactionMode(
+            IObservable<System.Runtime.GCLargeObjectHeapCompactionMode> value)
         {
-            return Observable.Do(value, (valueLambda) => System.Runtime.GCSettings.LargeObjectHeapCompactionMode = valueLambda).ToUnit();
+            return
+                Observable.Do(value,
+                    (valueLambda) => System.Runtime.GCSettings.LargeObjectHeapCompactionMode = valueLambda).ToUnit();
         }
-
     }
 }

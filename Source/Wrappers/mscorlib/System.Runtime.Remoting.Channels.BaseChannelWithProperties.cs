@@ -8,11 +8,11 @@ namespace System.Runtime.Remoting.Channels
 {
     public static class __BaseChannelWithProperties
     {
-        
-        public static IObservable<System.Collections.IDictionary> get_Properties(this IObservable<System.Runtime.Remoting.Channels.BaseChannelWithProperties> BaseChannelWithPropertiesValue)
+        public static IObservable<System.Collections.IDictionary> get_Properties(
+            this IObservable<System.Runtime.Remoting.Channels.BaseChannelWithProperties> BaseChannelWithPropertiesValue)
         {
-            return Observable.Select(BaseChannelWithPropertiesValue, (BaseChannelWithPropertiesValueLambda) => BaseChannelWithPropertiesValueLambda.Properties);
+            return Observable.Select(BaseChannelWithPropertiesValue,
+                (BaseChannelWithPropertiesValueLambda) => BaseChannelWithPropertiesValueLambda.Properties);
         }
-
     }
 }

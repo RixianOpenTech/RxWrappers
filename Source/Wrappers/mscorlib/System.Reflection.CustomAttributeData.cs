@@ -8,71 +8,92 @@ namespace System.Reflection
 {
     public static class __CustomAttributeData
     {
-        
-        public static IObservable<System.Collections.Generic.IList<System.Reflection.CustomAttributeData>> GetCustomAttributes(IObservable<System.Reflection.MemberInfo> target)
+        public static IObservable<System.Collections.Generic.IList<System.Reflection.CustomAttributeData>>
+            GetCustomAttributes(IObservable<System.Reflection.MemberInfo> target)
         {
-            return Observable.Select(target, (targetLambda) => System.Reflection.CustomAttributeData.GetCustomAttributes(targetLambda));
+            return Observable.Select(target,
+                (targetLambda) => System.Reflection.CustomAttributeData.GetCustomAttributes(targetLambda));
         }
 
 
-        public static IObservable<System.Collections.Generic.IList<System.Reflection.CustomAttributeData>> GetCustomAttributes(IObservable<System.Reflection.Module> target)
+        public static IObservable<System.Collections.Generic.IList<System.Reflection.CustomAttributeData>>
+            GetCustomAttributes(IObservable<System.Reflection.Module> target)
         {
-            return Observable.Select(target, (targetLambda) => System.Reflection.CustomAttributeData.GetCustomAttributes(targetLambda));
+            return Observable.Select(target,
+                (targetLambda) => System.Reflection.CustomAttributeData.GetCustomAttributes(targetLambda));
         }
 
 
-        public static IObservable<System.Collections.Generic.IList<System.Reflection.CustomAttributeData>> GetCustomAttributes(IObservable<System.Reflection.Assembly> target)
+        public static IObservable<System.Collections.Generic.IList<System.Reflection.CustomAttributeData>>
+            GetCustomAttributes(IObservable<System.Reflection.Assembly> target)
         {
-            return Observable.Select(target, (targetLambda) => System.Reflection.CustomAttributeData.GetCustomAttributes(targetLambda));
+            return Observable.Select(target,
+                (targetLambda) => System.Reflection.CustomAttributeData.GetCustomAttributes(targetLambda));
         }
 
 
-        public static IObservable<System.Collections.Generic.IList<System.Reflection.CustomAttributeData>> GetCustomAttributes(IObservable<System.Reflection.ParameterInfo> target)
+        public static IObservable<System.Collections.Generic.IList<System.Reflection.CustomAttributeData>>
+            GetCustomAttributes(IObservable<System.Reflection.ParameterInfo> target)
         {
-            return Observable.Select(target, (targetLambda) => System.Reflection.CustomAttributeData.GetCustomAttributes(targetLambda));
+            return Observable.Select(target,
+                (targetLambda) => System.Reflection.CustomAttributeData.GetCustomAttributes(targetLambda));
         }
 
 
-        public static IObservable<System.String> ToString(this IObservable<System.Reflection.CustomAttributeData> CustomAttributeDataValue)
+        public static IObservable<System.String> ToString(
+            this IObservable<System.Reflection.CustomAttributeData> CustomAttributeDataValue)
         {
-            return Observable.Select(CustomAttributeDataValue, (CustomAttributeDataValueLambda) => CustomAttributeDataValueLambda.ToString());
+            return Observable.Select(CustomAttributeDataValue,
+                (CustomAttributeDataValueLambda) => CustomAttributeDataValueLambda.ToString());
         }
 
 
-        public static IObservable<System.Int32> GetHashCode(this IObservable<System.Reflection.CustomAttributeData> CustomAttributeDataValue)
+        public static IObservable<System.Int32> GetHashCode(
+            this IObservable<System.Reflection.CustomAttributeData> CustomAttributeDataValue)
         {
-            return Observable.Select(CustomAttributeDataValue, (CustomAttributeDataValueLambda) => CustomAttributeDataValueLambda.GetHashCode());
+            return Observable.Select(CustomAttributeDataValue,
+                (CustomAttributeDataValueLambda) => CustomAttributeDataValueLambda.GetHashCode());
         }
 
 
-        public static IObservable<System.Boolean> Equals(this IObservable<System.Reflection.CustomAttributeData> CustomAttributeDataValue, IObservable<System.Object> obj)
+        public static IObservable<System.Boolean> Equals(
+            this IObservable<System.Reflection.CustomAttributeData> CustomAttributeDataValue,
+            IObservable<System.Object> obj)
         {
-            return Observable.Zip(CustomAttributeDataValue, obj, (CustomAttributeDataValueLambda, objLambda) => CustomAttributeDataValueLambda.Equals(objLambda));
+            return Observable.Zip(CustomAttributeDataValue, obj,
+                (CustomAttributeDataValueLambda, objLambda) => CustomAttributeDataValueLambda.Equals(objLambda));
         }
 
 
-        public static IObservable<System.Type> get_AttributeType(this IObservable<System.Reflection.CustomAttributeData> CustomAttributeDataValue)
+        public static IObservable<System.Type> get_AttributeType(
+            this IObservable<System.Reflection.CustomAttributeData> CustomAttributeDataValue)
         {
-            return Observable.Select(CustomAttributeDataValue, (CustomAttributeDataValueLambda) => CustomAttributeDataValueLambda.AttributeType);
+            return Observable.Select(CustomAttributeDataValue,
+                (CustomAttributeDataValueLambda) => CustomAttributeDataValueLambda.AttributeType);
         }
 
 
-        public static IObservable<System.Reflection.ConstructorInfo> get_Constructor(this IObservable<System.Reflection.CustomAttributeData> CustomAttributeDataValue)
+        public static IObservable<System.Reflection.ConstructorInfo> get_Constructor(
+            this IObservable<System.Reflection.CustomAttributeData> CustomAttributeDataValue)
         {
-            return Observable.Select(CustomAttributeDataValue, (CustomAttributeDataValueLambda) => CustomAttributeDataValueLambda.Constructor);
+            return Observable.Select(CustomAttributeDataValue,
+                (CustomAttributeDataValueLambda) => CustomAttributeDataValueLambda.Constructor);
         }
 
 
-        public static IObservable<System.Collections.Generic.IList<System.Reflection.CustomAttributeTypedArgument>> get_ConstructorArguments(this IObservable<System.Reflection.CustomAttributeData> CustomAttributeDataValue)
+        public static IObservable<System.Collections.Generic.IList<System.Reflection.CustomAttributeTypedArgument>>
+            get_ConstructorArguments(this IObservable<System.Reflection.CustomAttributeData> CustomAttributeDataValue)
         {
-            return Observable.Select(CustomAttributeDataValue, (CustomAttributeDataValueLambda) => CustomAttributeDataValueLambda.ConstructorArguments);
+            return Observable.Select(CustomAttributeDataValue,
+                (CustomAttributeDataValueLambda) => CustomAttributeDataValueLambda.ConstructorArguments);
         }
 
 
-        public static IObservable<System.Collections.Generic.IList<System.Reflection.CustomAttributeNamedArgument>> get_NamedArguments(this IObservable<System.Reflection.CustomAttributeData> CustomAttributeDataValue)
+        public static IObservable<System.Collections.Generic.IList<System.Reflection.CustomAttributeNamedArgument>>
+            get_NamedArguments(this IObservable<System.Reflection.CustomAttributeData> CustomAttributeDataValue)
         {
-            return Observable.Select(CustomAttributeDataValue, (CustomAttributeDataValueLambda) => CustomAttributeDataValueLambda.NamedArguments);
+            return Observable.Select(CustomAttributeDataValue,
+                (CustomAttributeDataValueLambda) => CustomAttributeDataValueLambda.NamedArguments);
         }
-
     }
 }

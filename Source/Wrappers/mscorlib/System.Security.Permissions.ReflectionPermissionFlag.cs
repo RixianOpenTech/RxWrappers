@@ -8,6 +8,5 @@ namespace System.Security.Permissions
 {
     public static class __ReflectionPermissionFlag
     {
-        
     }
 }

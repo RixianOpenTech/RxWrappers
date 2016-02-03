@@ -8,16 +8,19 @@ namespace System.Globalization
 {
     public static class __SortKey
     {
-        
-        public static IObservable<System.Int32> Compare(IObservable<System.Globalization.SortKey> sortkey1, IObservable<System.Globalization.SortKey> sortkey2)
+        public static IObservable<System.Int32> Compare(IObservable<System.Globalization.SortKey> sortkey1,
+            IObservable<System.Globalization.SortKey> sortkey2)
         {
-            return Observable.Zip(sortkey1, sortkey2, (sortkey1Lambda, sortkey2Lambda) => System.Globalization.SortKey.Compare(sortkey1Lambda, sortkey2Lambda));
+            return Observable.Zip(sortkey1, sortkey2,
+                (sortkey1Lambda, sortkey2Lambda) => System.Globalization.SortKey.Compare(sortkey1Lambda, sortkey2Lambda));
         }
 
 
-        public static IObservable<System.Boolean> Equals(this IObservable<System.Globalization.SortKey> SortKeyValue, IObservable<System.Object> value)
+        public static IObservable<System.Boolean> Equals(this IObservable<System.Globalization.SortKey> SortKeyValue,
+            IObservable<System.Object> value)
         {
-            return Observable.Zip(SortKeyValue, value, (SortKeyValueLambda, valueLambda) => SortKeyValueLambda.Equals(valueLambda));
+            return Observable.Zip(SortKeyValue, value,
+                (SortKeyValueLambda, valueLambda) => SortKeyValueLambda.Equals(valueLambda));
         }
 
 
@@ -33,7 +36,8 @@ namespace System.Globalization
         }
 
 
-        public static IObservable<System.String> get_OriginalString(this IObservable<System.Globalization.SortKey> SortKeyValue)
+        public static IObservable<System.String> get_OriginalString(
+            this IObservable<System.Globalization.SortKey> SortKeyValue)
         {
             return Observable.Select(SortKeyValue, (SortKeyValueLambda) => SortKeyValueLambda.OriginalString);
         }
@@ -43,6 +47,5 @@ namespace System.Globalization
         {
             return Observable.Select(SortKeyValue, (SortKeyValueLambda) => SortKeyValueLambda.KeyData);
         }
-
     }
 }

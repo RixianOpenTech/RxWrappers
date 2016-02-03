@@ -8,11 +8,10 @@ namespace System.Security.AccessControl
 {
     public static class __AccessRule
     {
-        
-        public static IObservable<System.Security.AccessControl.AccessControlType> get_AccessControlType(this IObservable<System.Security.AccessControl.AccessRule> AccessRuleValue)
+        public static IObservable<System.Security.AccessControl.AccessControlType> get_AccessControlType(
+            this IObservable<System.Security.AccessControl.AccessRule> AccessRuleValue)
         {
             return Observable.Select(AccessRuleValue, (AccessRuleValueLambda) => AccessRuleValueLambda.AccessControlType);
         }
-
     }
 }

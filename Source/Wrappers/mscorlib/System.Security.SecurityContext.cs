@@ -8,16 +8,21 @@ namespace System.Security
 {
     public static class __SecurityContext
     {
-        
-        public static IObservable<System.Reactive.Unit> Run(IObservable<System.Security.SecurityContext> securityContext, IObservable<System.Threading.ContextCallback> callback, IObservable<System.Object> state)
+        public static IObservable<System.Reactive.Unit> Run(
+            IObservable<System.Security.SecurityContext> securityContext,
+            IObservable<System.Threading.ContextCallback> callback, IObservable<System.Object> state)
         {
-            return ObservableExt.ZipExecute(securityContext, callback, state, (securityContextLambda, callbackLambda, stateLambda) => System.Security.SecurityContext.Run(securityContextLambda, callbackLambda, stateLambda));
+            return ObservableExt.ZipExecute(securityContext, callback, state,
+                (securityContextLambda, callbackLambda, stateLambda) =>
+                    System.Security.SecurityContext.Run(securityContextLambda, callbackLambda, stateLambda));
         }
 
 
-        public static IObservable<System.Security.SecurityContext> CreateCopy(this IObservable<System.Security.SecurityContext> SecurityContextValue)
+        public static IObservable<System.Security.SecurityContext> CreateCopy(
+            this IObservable<System.Security.SecurityContext> SecurityContextValue)
         {
-            return Observable.Select(SecurityContextValue, (SecurityContextValueLambda) => SecurityContextValueLambda.CreateCopy());
+            return Observable.Select(SecurityContextValue,
+                (SecurityContextValueLambda) => SecurityContextValueLambda.CreateCopy());
         }
 
 
@@ -27,9 +32,12 @@ namespace System.Security
         }
 
 
-        public static IObservable<System.Reactive.Unit> Dispose(this IObservable<System.Security.SecurityContext> SecurityContextValue)
+        public static IObservable<System.Reactive.Unit> Dispose(
+            this IObservable<System.Security.SecurityContext> SecurityContextValue)
         {
-            return Observable.Do(SecurityContextValue, (SecurityContextValueLambda) => SecurityContextValueLambda.Dispose()).ToUnit();
+            return
+                Observable.Do(SecurityContextValue, (SecurityContextValueLambda) => SecurityContextValueLambda.Dispose())
+                    .ToUnit();
         }
 
 
@@ -61,6 +69,5 @@ namespace System.Security
         {
             return ObservableExt.Factory(() => System.Security.SecurityContext.IsWindowsIdentityFlowSuppressed());
         }
-
     }
 }

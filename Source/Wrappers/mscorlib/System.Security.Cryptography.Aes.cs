@@ -8,7 +8,6 @@ namespace System.Security.Cryptography
 {
     public static class __Aes
     {
-        
         public static IObservable<System.Security.Cryptography.Aes> Create()
         {
             return ObservableExt.Factory(() => System.Security.Cryptography.Aes.Create());
@@ -17,8 +16,8 @@ namespace System.Security.Cryptography
 
         public static IObservable<System.Security.Cryptography.Aes> Create(IObservable<System.String> algorithmName)
         {
-            return Observable.Select(algorithmName, (algorithmNameLambda) => System.Security.Cryptography.Aes.Create(algorithmNameLambda));
+            return Observable.Select(algorithmName,
+                (algorithmNameLambda) => System.Security.Cryptography.Aes.Create(algorithmNameLambda));
         }
-
     }
 }

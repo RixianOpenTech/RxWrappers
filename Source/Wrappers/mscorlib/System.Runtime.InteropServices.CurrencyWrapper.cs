@@ -8,11 +8,11 @@ namespace System.Runtime.InteropServices
 {
     public static class __CurrencyWrapper
     {
-        
-        public static IObservable<System.Decimal> get_WrappedObject(this IObservable<System.Runtime.InteropServices.CurrencyWrapper> CurrencyWrapperValue)
+        public static IObservable<System.Decimal> get_WrappedObject(
+            this IObservable<System.Runtime.InteropServices.CurrencyWrapper> CurrencyWrapperValue)
         {
-            return Observable.Select(CurrencyWrapperValue, (CurrencyWrapperValueLambda) => CurrencyWrapperValueLambda.WrappedObject);
+            return Observable.Select(CurrencyWrapperValue,
+                (CurrencyWrapperValueLambda) => CurrencyWrapperValueLambda.WrappedObject);
         }
-
     }
 }

@@ -8,11 +8,11 @@ namespace System.Reflection
 {
     public static class __StrongNameKeyPair
     {
-        
-        public static IObservable<System.Byte[]> get_PublicKey(this IObservable<System.Reflection.StrongNameKeyPair> StrongNameKeyPairValue)
+        public static IObservable<System.Byte[]> get_PublicKey(
+            this IObservable<System.Reflection.StrongNameKeyPair> StrongNameKeyPairValue)
         {
-            return Observable.Select(StrongNameKeyPairValue, (StrongNameKeyPairValueLambda) => StrongNameKeyPairValueLambda.PublicKey);
+            return Observable.Select(StrongNameKeyPairValue,
+                (StrongNameKeyPairValueLambda) => StrongNameKeyPairValueLambda.PublicKey);
         }
-
     }
 }

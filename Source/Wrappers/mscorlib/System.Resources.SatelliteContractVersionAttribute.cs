@@ -8,11 +8,11 @@ namespace System.Resources
 {
     public static class __SatelliteContractVersionAttribute
     {
-        
-        public static IObservable<System.String> get_Version(this IObservable<System.Resources.SatelliteContractVersionAttribute> SatelliteContractVersionAttributeValue)
+        public static IObservable<System.String> get_Version(
+            this IObservable<System.Resources.SatelliteContractVersionAttribute> SatelliteContractVersionAttributeValue)
         {
-            return Observable.Select(SatelliteContractVersionAttributeValue, (SatelliteContractVersionAttributeValueLambda) => SatelliteContractVersionAttributeValueLambda.Version);
+            return Observable.Select(SatelliteContractVersionAttributeValue,
+                (SatelliteContractVersionAttributeValueLambda) => SatelliteContractVersionAttributeValueLambda.Version);
         }
-
     }
 }

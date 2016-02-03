@@ -8,7 +8,6 @@ namespace System
 {
     public static class __Boolean
     {
-        
         public static IObservable<System.Int32> GetHashCode(this IObservable<System.Boolean> BooleanValue)
         {
             return Observable.Select(BooleanValue, (BooleanValueLambda) => BooleanValueLambda.GetHashCode());
@@ -21,33 +20,43 @@ namespace System
         }
 
 
-        public static IObservable<System.String> ToString(this IObservable<System.Boolean> BooleanValue, IObservable<System.IFormatProvider> provider)
+        public static IObservable<System.String> ToString(this IObservable<System.Boolean> BooleanValue,
+            IObservable<System.IFormatProvider> provider)
         {
-            return Observable.Zip(BooleanValue, provider, (BooleanValueLambda, providerLambda) => BooleanValueLambda.ToString(providerLambda));
+            return Observable.Zip(BooleanValue, provider,
+                (BooleanValueLambda, providerLambda) => BooleanValueLambda.ToString(providerLambda));
         }
 
 
-        public static IObservable<System.Boolean> Equals(this IObservable<System.Boolean> BooleanValue, IObservable<System.Object> obj)
+        public static IObservable<System.Boolean> Equals(this IObservable<System.Boolean> BooleanValue,
+            IObservable<System.Object> obj)
         {
-            return Observable.Zip(BooleanValue, obj, (BooleanValueLambda, objLambda) => BooleanValueLambda.Equals(objLambda));
+            return Observable.Zip(BooleanValue, obj,
+                (BooleanValueLambda, objLambda) => BooleanValueLambda.Equals(objLambda));
         }
 
 
-        public static IObservable<System.Boolean> Equals(this IObservable<System.Boolean> BooleanValue, IObservable<System.Boolean> obj)
+        public static IObservable<System.Boolean> Equals(this IObservable<System.Boolean> BooleanValue,
+            IObservable<System.Boolean> obj)
         {
-            return Observable.Zip(BooleanValue, obj, (BooleanValueLambda, objLambda) => BooleanValueLambda.Equals(objLambda));
+            return Observable.Zip(BooleanValue, obj,
+                (BooleanValueLambda, objLambda) => BooleanValueLambda.Equals(objLambda));
         }
 
 
-        public static IObservable<System.Int32> CompareTo(this IObservable<System.Boolean> BooleanValue, IObservable<System.Object> obj)
+        public static IObservable<System.Int32> CompareTo(this IObservable<System.Boolean> BooleanValue,
+            IObservable<System.Object> obj)
         {
-            return Observable.Zip(BooleanValue, obj, (BooleanValueLambda, objLambda) => BooleanValueLambda.CompareTo(objLambda));
+            return Observable.Zip(BooleanValue, obj,
+                (BooleanValueLambda, objLambda) => BooleanValueLambda.CompareTo(objLambda));
         }
 
 
-        public static IObservable<System.Int32> CompareTo(this IObservable<System.Boolean> BooleanValue, IObservable<System.Boolean> value)
+        public static IObservable<System.Int32> CompareTo(this IObservable<System.Boolean> BooleanValue,
+            IObservable<System.Boolean> value)
         {
-            return Observable.Zip(BooleanValue, value, (BooleanValueLambda, valueLambda) => BooleanValueLambda.CompareTo(valueLambda));
+            return Observable.Zip(BooleanValue, value,
+                (BooleanValueLambda, valueLambda) => BooleanValueLambda.CompareTo(valueLambda));
         }
 
 
@@ -59,11 +68,12 @@ namespace System
 
         public static IObservable<Tuple<System.Boolean, System.Boolean>> TryParse(IObservable<System.String> value)
         {
-            return Observable.Select(value, (valueLambda) => {
-System.Boolean resultOutput = default(System.Boolean);
-var result = System.Boolean.TryParse(valueLambda, out resultOutput);
-return Tuple.Create(result, resultOutput);
-});
+            return Observable.Select(value, (valueLambda) =>
+            {
+                System.Boolean resultOutput = default(System.Boolean);
+                var result = System.Boolean.TryParse(valueLambda, out resultOutput);
+                return Tuple.Create(result, resultOutput);
+            });
         }
 
 
@@ -71,6 +81,5 @@ return Tuple.Create(result, resultOutput);
         {
             return Observable.Select(BooleanValue, (BooleanValueLambda) => BooleanValueLambda.GetTypeCode());
         }
-
     }
 }

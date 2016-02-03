@@ -8,16 +8,21 @@ namespace System.IO
 {
     public static class __MemoryStream
     {
-        
         public static IObservable<System.Reactive.Unit> Flush(this IObservable<System.IO.MemoryStream> MemoryStreamValue)
         {
-            return Observable.Do(MemoryStreamValue, (MemoryStreamValueLambda) => MemoryStreamValueLambda.Flush()).ToUnit();
+            return
+                Observable.Do(MemoryStreamValue, (MemoryStreamValueLambda) => MemoryStreamValueLambda.Flush()).ToUnit();
         }
 
 
-        public static IObservable<System.Reactive.Unit> FlushAsync(this IObservable<System.IO.MemoryStream> MemoryStreamValue, IObservable<System.Threading.CancellationToken> cancellationToken)
+        public static IObservable<System.Reactive.Unit> FlushAsync(
+            this IObservable<System.IO.MemoryStream> MemoryStreamValue,
+            IObservable<System.Threading.CancellationToken> cancellationToken)
         {
-            return Observable.Zip(MemoryStreamValue, cancellationToken, (MemoryStreamValueLambda, cancellationTokenLambda) => MemoryStreamValueLambda.FlushAsync(cancellationTokenLambda).ToObservable()).Flatten();
+            return
+                Observable.Zip(MemoryStreamValue, cancellationToken,
+                    (MemoryStreamValueLambda, cancellationTokenLambda) =>
+                        MemoryStreamValueLambda.FlushAsync(cancellationTokenLambda).ToObservable()).Flatten();
         }
 
 
@@ -27,25 +32,36 @@ namespace System.IO
         }
 
 
-        public static IObservable<Tuple<System.Boolean, System.ArraySegment<System.Byte>>> TryGetBuffer(this IObservable<System.IO.MemoryStream> MemoryStreamValue)
+        public static IObservable<Tuple<System.Boolean, System.ArraySegment<System.Byte>>> TryGetBuffer(
+            this IObservable<System.IO.MemoryStream> MemoryStreamValue)
         {
-            return Observable.Select(MemoryStreamValue, (MemoryStreamValueLambda) => {
-System.ArraySegment<System.Byte> bufferOutput = default(System.ArraySegment<System.Byte>);
-var result = MemoryStreamValueLambda.TryGetBuffer(out bufferOutput);
-return Tuple.Create(result, bufferOutput);
-});
+            return Observable.Select(MemoryStreamValue, (MemoryStreamValueLambda) =>
+            {
+                System.ArraySegment<System.Byte> bufferOutput = default(System.ArraySegment<System.Byte>);
+                var result = MemoryStreamValueLambda.TryGetBuffer(out bufferOutput);
+                return Tuple.Create(result, bufferOutput);
+            });
         }
 
 
-        public static IObservable<int> Read(this IObservable<System.IO.MemoryStream> MemoryStreamValue, IObservable<System.Byte[]> buffer, IObservable<System.Int32> offset, IObservable<System.Int32> count)
+        public static IObservable<int> Read(this IObservable<System.IO.MemoryStream> MemoryStreamValue,
+            IObservable<System.Byte[]> buffer, IObservable<System.Int32> offset, IObservable<System.Int32> count)
         {
-            return Observable.Zip(MemoryStreamValue, buffer, offset, count, (MemoryStreamValueLambda, bufferLambda, offsetLambda, countLambda) => MemoryStreamValueLambda.Read(bufferLambda, offsetLambda, countLambda));
+            return Observable.Zip(MemoryStreamValue, buffer, offset, count,
+                (MemoryStreamValueLambda, bufferLambda, offsetLambda, countLambda) =>
+                    MemoryStreamValueLambda.Read(bufferLambda, offsetLambda, countLambda));
         }
 
 
-        public static IObservable<System.Int32> ReadAsync(this IObservable<System.IO.MemoryStream> MemoryStreamValue, IObservable<System.Byte[]> buffer, IObservable<System.Int32> offset, IObservable<System.Int32> count, IObservable<System.Threading.CancellationToken> cancellationToken)
+        public static IObservable<System.Int32> ReadAsync(this IObservable<System.IO.MemoryStream> MemoryStreamValue,
+            IObservable<System.Byte[]> buffer, IObservable<System.Int32> offset, IObservable<System.Int32> count,
+            IObservable<System.Threading.CancellationToken> cancellationToken)
         {
-            return Observable.Zip(MemoryStreamValue, buffer, offset, count, cancellationToken, (MemoryStreamValueLambda, bufferLambda, offsetLambda, countLambda, cancellationTokenLambda) => MemoryStreamValueLambda.ReadAsync(bufferLambda, offsetLambda, countLambda, cancellationTokenLambda).ToObservable()).Flatten();
+            return
+                Observable.Zip(MemoryStreamValue, buffer, offset, count, cancellationToken,
+                    (MemoryStreamValueLambda, bufferLambda, offsetLambda, countLambda, cancellationTokenLambda) =>
+                        MemoryStreamValueLambda.ReadAsync(bufferLambda, offsetLambda, countLambda,
+                            cancellationTokenLambda).ToObservable()).Flatten();
         }
 
 
@@ -55,21 +71,32 @@ return Tuple.Create(result, bufferOutput);
         }
 
 
-        public static IObservable<System.Reactive.Unit> CopyToAsync(this IObservable<System.IO.MemoryStream> MemoryStreamValue, IObservable<System.IO.Stream> destination, IObservable<System.Int32> bufferSize, IObservable<System.Threading.CancellationToken> cancellationToken)
+        public static IObservable<System.Reactive.Unit> CopyToAsync(
+            this IObservable<System.IO.MemoryStream> MemoryStreamValue, IObservable<System.IO.Stream> destination,
+            IObservable<System.Int32> bufferSize, IObservable<System.Threading.CancellationToken> cancellationToken)
         {
-            return Observable.Zip(MemoryStreamValue, destination, bufferSize, cancellationToken, (MemoryStreamValueLambda, destinationLambda, bufferSizeLambda, cancellationTokenLambda) => MemoryStreamValueLambda.CopyToAsync(destinationLambda, bufferSizeLambda, cancellationTokenLambda).ToObservable()).Flatten();
+            return
+                Observable.Zip(MemoryStreamValue, destination, bufferSize, cancellationToken,
+                    (MemoryStreamValueLambda, destinationLambda, bufferSizeLambda, cancellationTokenLambda) =>
+                        MemoryStreamValueLambda.CopyToAsync(destinationLambda, bufferSizeLambda, cancellationTokenLambda)
+                            .ToObservable()).Flatten();
         }
 
 
-        public static IObservable<System.Int64> Seek(this IObservable<System.IO.MemoryStream> MemoryStreamValue, IObservable<System.Int64> offset, IObservable<System.IO.SeekOrigin> loc)
+        public static IObservable<System.Int64> Seek(this IObservable<System.IO.MemoryStream> MemoryStreamValue,
+            IObservable<System.Int64> offset, IObservable<System.IO.SeekOrigin> loc)
         {
-            return Observable.Zip(MemoryStreamValue, offset, loc, (MemoryStreamValueLambda, offsetLambda, locLambda) => MemoryStreamValueLambda.Seek(offsetLambda, locLambda));
+            return Observable.Zip(MemoryStreamValue, offset, loc,
+                (MemoryStreamValueLambda, offsetLambda, locLambda) =>
+                    MemoryStreamValueLambda.Seek(offsetLambda, locLambda));
         }
 
 
-        public static IObservable<System.Reactive.Unit> SetLength(this IObservable<System.IO.MemoryStream> MemoryStreamValue, IObservable<System.Int64> value)
+        public static IObservable<System.Reactive.Unit> SetLength(
+            this IObservable<System.IO.MemoryStream> MemoryStreamValue, IObservable<System.Int64> value)
         {
-            return ObservableExt.ZipExecute(MemoryStreamValue, value, (MemoryStreamValueLambda, valueLambda) => MemoryStreamValueLambda.SetLength(valueLambda));
+            return ObservableExt.ZipExecute(MemoryStreamValue, value,
+                (MemoryStreamValueLambda, valueLambda) => MemoryStreamValueLambda.SetLength(valueLambda));
         }
 
 
@@ -79,27 +106,42 @@ return Tuple.Create(result, bufferOutput);
         }
 
 
-        public static IObservable<System.Reactive.Unit> Write(this IObservable<System.IO.MemoryStream> MemoryStreamValue, IObservable<System.Byte[]> buffer, IObservable<System.Int32> offset, IObservable<System.Int32> count)
+        public static IObservable<System.Reactive.Unit> Write(
+            this IObservable<System.IO.MemoryStream> MemoryStreamValue, IObservable<System.Byte[]> buffer,
+            IObservable<System.Int32> offset, IObservable<System.Int32> count)
         {
-            return ObservableExt.ZipExecute(MemoryStreamValue, buffer, offset, count, (MemoryStreamValueLambda, bufferLambda, offsetLambda, countLambda) => MemoryStreamValueLambda.Write(bufferLambda, offsetLambda, countLambda));
+            return ObservableExt.ZipExecute(MemoryStreamValue, buffer, offset, count,
+                (MemoryStreamValueLambda, bufferLambda, offsetLambda, countLambda) =>
+                    MemoryStreamValueLambda.Write(bufferLambda, offsetLambda, countLambda));
         }
 
 
-        public static IObservable<System.Reactive.Unit> WriteAsync(this IObservable<System.IO.MemoryStream> MemoryStreamValue, IObservable<System.Byte[]> buffer, IObservable<System.Int32> offset, IObservable<System.Int32> count, IObservable<System.Threading.CancellationToken> cancellationToken)
+        public static IObservable<System.Reactive.Unit> WriteAsync(
+            this IObservable<System.IO.MemoryStream> MemoryStreamValue, IObservable<System.Byte[]> buffer,
+            IObservable<System.Int32> offset, IObservable<System.Int32> count,
+            IObservable<System.Threading.CancellationToken> cancellationToken)
         {
-            return Observable.Zip(MemoryStreamValue, buffer, offset, count, cancellationToken, (MemoryStreamValueLambda, bufferLambda, offsetLambda, countLambda, cancellationTokenLambda) => MemoryStreamValueLambda.WriteAsync(bufferLambda, offsetLambda, countLambda, cancellationTokenLambda).ToObservable()).Flatten();
+            return
+                Observable.Zip(MemoryStreamValue, buffer, offset, count, cancellationToken,
+                    (MemoryStreamValueLambda, bufferLambda, offsetLambda, countLambda, cancellationTokenLambda) =>
+                        MemoryStreamValueLambda.WriteAsync(bufferLambda, offsetLambda, countLambda,
+                            cancellationTokenLambda).ToObservable()).Flatten();
         }
 
 
-        public static IObservable<System.Reactive.Unit> WriteByte(this IObservable<System.IO.MemoryStream> MemoryStreamValue, IObservable<System.Byte> value)
+        public static IObservable<System.Reactive.Unit> WriteByte(
+            this IObservable<System.IO.MemoryStream> MemoryStreamValue, IObservable<System.Byte> value)
         {
-            return ObservableExt.ZipExecute(MemoryStreamValue, value, (MemoryStreamValueLambda, valueLambda) => MemoryStreamValueLambda.WriteByte(valueLambda));
+            return ObservableExt.ZipExecute(MemoryStreamValue, value,
+                (MemoryStreamValueLambda, valueLambda) => MemoryStreamValueLambda.WriteByte(valueLambda));
         }
 
 
-        public static IObservable<System.Reactive.Unit> WriteTo(this IObservable<System.IO.MemoryStream> MemoryStreamValue, IObservable<System.IO.Stream> stream)
+        public static IObservable<System.Reactive.Unit> WriteTo(
+            this IObservable<System.IO.MemoryStream> MemoryStreamValue, IObservable<System.IO.Stream> stream)
         {
-            return ObservableExt.ZipExecute(MemoryStreamValue, stream, (MemoryStreamValueLambda, streamLambda) => MemoryStreamValueLambda.WriteTo(streamLambda));
+            return ObservableExt.ZipExecute(MemoryStreamValue, stream,
+                (MemoryStreamValueLambda, streamLambda) => MemoryStreamValueLambda.WriteTo(streamLambda));
         }
 
 
@@ -115,7 +157,8 @@ return Tuple.Create(result, bufferOutput);
         }
 
 
-        public static IObservable<System.Boolean> get_CanWrite(this IObservable<System.IO.MemoryStream> MemoryStreamValue)
+        public static IObservable<System.Boolean> get_CanWrite(
+            this IObservable<System.IO.MemoryStream> MemoryStreamValue)
         {
             return Observable.Select(MemoryStreamValue, (MemoryStreamValueLambda) => MemoryStreamValueLambda.CanWrite);
         }
@@ -139,16 +182,19 @@ return Tuple.Create(result, bufferOutput);
         }
 
 
-        public static IObservable<System.Reactive.Unit> set_Capacity(this IObservable<System.IO.MemoryStream> MemoryStreamValue, IObservable<System.Int32> value)
+        public static IObservable<System.Reactive.Unit> set_Capacity(
+            this IObservable<System.IO.MemoryStream> MemoryStreamValue, IObservable<System.Int32> value)
         {
-            return ObservableExt.ZipExecute(MemoryStreamValue, value, (MemoryStreamValueLambda, valueLambda) => MemoryStreamValueLambda.Capacity = valueLambda);
+            return ObservableExt.ZipExecute(MemoryStreamValue, value,
+                (MemoryStreamValueLambda, valueLambda) => MemoryStreamValueLambda.Capacity = valueLambda);
         }
 
 
-        public static IObservable<System.Reactive.Unit> set_Position(this IObservable<System.IO.MemoryStream> MemoryStreamValue, IObservable<System.Int64> value)
+        public static IObservable<System.Reactive.Unit> set_Position(
+            this IObservable<System.IO.MemoryStream> MemoryStreamValue, IObservable<System.Int64> value)
         {
-            return ObservableExt.ZipExecute(MemoryStreamValue, value, (MemoryStreamValueLambda, valueLambda) => MemoryStreamValueLambda.Position = valueLambda);
+            return ObservableExt.ZipExecute(MemoryStreamValue, value,
+                (MemoryStreamValueLambda, valueLambda) => MemoryStreamValueLambda.Position = valueLambda);
         }
-
     }
 }

@@ -8,11 +8,11 @@ namespace System.Diagnostics
 {
     public static class __ConditionalAttribute
     {
-        
-        public static IObservable<System.String> get_ConditionString(this IObservable<System.Diagnostics.ConditionalAttribute> ConditionalAttributeValue)
+        public static IObservable<System.String> get_ConditionString(
+            this IObservable<System.Diagnostics.ConditionalAttribute> ConditionalAttributeValue)
         {
-            return Observable.Select(ConditionalAttributeValue, (ConditionalAttributeValueLambda) => ConditionalAttributeValueLambda.ConditionString);
+            return Observable.Select(ConditionalAttributeValue,
+                (ConditionalAttributeValueLambda) => ConditionalAttributeValueLambda.ConditionString);
         }
-
     }
 }

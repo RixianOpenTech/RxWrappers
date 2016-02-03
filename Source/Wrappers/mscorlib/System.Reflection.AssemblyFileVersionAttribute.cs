@@ -8,11 +8,11 @@ namespace System.Reflection
 {
     public static class __AssemblyFileVersionAttribute
     {
-        
-        public static IObservable<System.String> get_Version(this IObservable<System.Reflection.AssemblyFileVersionAttribute> AssemblyFileVersionAttributeValue)
+        public static IObservable<System.String> get_Version(
+            this IObservable<System.Reflection.AssemblyFileVersionAttribute> AssemblyFileVersionAttributeValue)
         {
-            return Observable.Select(AssemblyFileVersionAttributeValue, (AssemblyFileVersionAttributeValueLambda) => AssemblyFileVersionAttributeValueLambda.Version);
+            return Observable.Select(AssemblyFileVersionAttributeValue,
+                (AssemblyFileVersionAttributeValueLambda) => AssemblyFileVersionAttributeValueLambda.Version);
         }
-
     }
 }

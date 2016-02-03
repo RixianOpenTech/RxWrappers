@@ -8,16 +8,17 @@ namespace System.Threading.Tasks
 {
     public static class __TaskScheduler
     {
-        
         public static IObservable<System.Threading.Tasks.TaskScheduler> FromCurrentSynchronizationContext()
         {
             return ObservableExt.Factory(() => System.Threading.Tasks.TaskScheduler.FromCurrentSynchronizationContext());
         }
 
 
-        public static IObservable<System.Int32> get_MaximumConcurrencyLevel(this IObservable<System.Threading.Tasks.TaskScheduler> TaskSchedulerValue)
+        public static IObservable<System.Int32> get_MaximumConcurrencyLevel(
+            this IObservable<System.Threading.Tasks.TaskScheduler> TaskSchedulerValue)
         {
-            return Observable.Select(TaskSchedulerValue, (TaskSchedulerValueLambda) => TaskSchedulerValueLambda.MaximumConcurrencyLevel);
+            return Observable.Select(TaskSchedulerValue,
+                (TaskSchedulerValueLambda) => TaskSchedulerValueLambda.MaximumConcurrencyLevel);
         }
 
 
@@ -33,10 +34,10 @@ namespace System.Threading.Tasks
         }
 
 
-        public static IObservable<System.Int32> get_Id(this IObservable<System.Threading.Tasks.TaskScheduler> TaskSchedulerValue)
+        public static IObservable<System.Int32> get_Id(
+            this IObservable<System.Threading.Tasks.TaskScheduler> TaskSchedulerValue)
         {
             return Observable.Select(TaskSchedulerValue, (TaskSchedulerValueLambda) => TaskSchedulerValueLambda.Id);
         }
-
     }
 }

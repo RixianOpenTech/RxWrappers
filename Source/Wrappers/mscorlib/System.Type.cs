@@ -8,16 +8,20 @@ namespace System
 {
     public static class __Type
     {
-        
-        public static IObservable<System.Type> GetType(IObservable<System.String> typeName, IObservable<System.Boolean> throwOnError, IObservable<System.Boolean> ignoreCase)
+        public static IObservable<System.Type> GetType(IObservable<System.String> typeName,
+            IObservable<System.Boolean> throwOnError, IObservable<System.Boolean> ignoreCase)
         {
-            return Observable.Zip(typeName, throwOnError, ignoreCase, (typeNameLambda, throwOnErrorLambda, ignoreCaseLambda) => System.Type.GetType(typeNameLambda, throwOnErrorLambda, ignoreCaseLambda));
+            return Observable.Zip(typeName, throwOnError, ignoreCase,
+                (typeNameLambda, throwOnErrorLambda, ignoreCaseLambda) =>
+                    System.Type.GetType(typeNameLambda, throwOnErrorLambda, ignoreCaseLambda));
         }
 
 
-        public static IObservable<System.Type> GetType(IObservable<System.String> typeName, IObservable<System.Boolean> throwOnError)
+        public static IObservable<System.Type> GetType(IObservable<System.String> typeName,
+            IObservable<System.Boolean> throwOnError)
         {
-            return Observable.Zip(typeName, throwOnError, (typeNameLambda, throwOnErrorLambda) => System.Type.GetType(typeNameLambda, throwOnErrorLambda));
+            return Observable.Zip(typeName, throwOnError,
+                (typeNameLambda, throwOnErrorLambda) => System.Type.GetType(typeNameLambda, throwOnErrorLambda));
         }
 
 
@@ -27,27 +31,46 @@ namespace System
         }
 
 
-        public static IObservable<System.Type> GetType(IObservable<System.String> typeName, IObservable<System.Func<System.Reflection.AssemblyName, System.Reflection.Assembly>> assemblyResolver, IObservable<System.Func<System.Reflection.Assembly, System.String, System.Boolean, System.Type>> typeResolver)
+        public static IObservable<System.Type> GetType(IObservable<System.String> typeName,
+            IObservable<System.Func<System.Reflection.AssemblyName, System.Reflection.Assembly>> assemblyResolver,
+            IObservable<System.Func<System.Reflection.Assembly, System.String, System.Boolean, System.Type>>
+                typeResolver)
         {
-            return Observable.Zip(typeName, assemblyResolver, typeResolver, (typeNameLambda, assemblyResolverLambda, typeResolverLambda) => System.Type.GetType(typeNameLambda, assemblyResolverLambda, typeResolverLambda));
+            return Observable.Zip(typeName, assemblyResolver, typeResolver,
+                (typeNameLambda, assemblyResolverLambda, typeResolverLambda) =>
+                    System.Type.GetType(typeNameLambda, assemblyResolverLambda, typeResolverLambda));
         }
 
 
-        public static IObservable<System.Type> GetType(IObservable<System.String> typeName, IObservable<System.Func<System.Reflection.AssemblyName, System.Reflection.Assembly>> assemblyResolver, IObservable<System.Func<System.Reflection.Assembly, System.String, System.Boolean, System.Type>> typeResolver, IObservable<System.Boolean> throwOnError)
+        public static IObservable<System.Type> GetType(IObservable<System.String> typeName,
+            IObservable<System.Func<System.Reflection.AssemblyName, System.Reflection.Assembly>> assemblyResolver,
+            IObservable<System.Func<System.Reflection.Assembly, System.String, System.Boolean, System.Type>>
+                typeResolver, IObservable<System.Boolean> throwOnError)
         {
-            return Observable.Zip(typeName, assemblyResolver, typeResolver, throwOnError, (typeNameLambda, assemblyResolverLambda, typeResolverLambda, throwOnErrorLambda) => System.Type.GetType(typeNameLambda, assemblyResolverLambda, typeResolverLambda, throwOnErrorLambda));
+            return Observable.Zip(typeName, assemblyResolver, typeResolver, throwOnError,
+                (typeNameLambda, assemblyResolverLambda, typeResolverLambda, throwOnErrorLambda) =>
+                    System.Type.GetType(typeNameLambda, assemblyResolverLambda, typeResolverLambda, throwOnErrorLambda));
         }
 
 
-        public static IObservable<System.Type> GetType(IObservable<System.String> typeName, IObservable<System.Func<System.Reflection.AssemblyName, System.Reflection.Assembly>> assemblyResolver, IObservable<System.Func<System.Reflection.Assembly, System.String, System.Boolean, System.Type>> typeResolver, IObservable<System.Boolean> throwOnError, IObservable<System.Boolean> ignoreCase)
+        public static IObservable<System.Type> GetType(IObservable<System.String> typeName,
+            IObservable<System.Func<System.Reflection.AssemblyName, System.Reflection.Assembly>> assemblyResolver,
+            IObservable<System.Func<System.Reflection.Assembly, System.String, System.Boolean, System.Type>>
+                typeResolver, IObservable<System.Boolean> throwOnError, IObservable<System.Boolean> ignoreCase)
         {
-            return Observable.Zip(typeName, assemblyResolver, typeResolver, throwOnError, ignoreCase, (typeNameLambda, assemblyResolverLambda, typeResolverLambda, throwOnErrorLambda, ignoreCaseLambda) => System.Type.GetType(typeNameLambda, assemblyResolverLambda, typeResolverLambda, throwOnErrorLambda, ignoreCaseLambda));
+            return Observable.Zip(typeName, assemblyResolver, typeResolver, throwOnError, ignoreCase,
+                (typeNameLambda, assemblyResolverLambda, typeResolverLambda, throwOnErrorLambda, ignoreCaseLambda) =>
+                    System.Type.GetType(typeNameLambda, assemblyResolverLambda, typeResolverLambda, throwOnErrorLambda,
+                        ignoreCaseLambda));
         }
 
 
-        public static IObservable<System.Type> ReflectionOnlyGetType(IObservable<System.String> typeName, IObservable<System.Boolean> throwIfNotFound, IObservable<System.Boolean> ignoreCase)
+        public static IObservable<System.Type> ReflectionOnlyGetType(IObservable<System.String> typeName,
+            IObservable<System.Boolean> throwIfNotFound, IObservable<System.Boolean> ignoreCase)
         {
-            return Observable.Zip(typeName, throwIfNotFound, ignoreCase, (typeNameLambda, throwIfNotFoundLambda, ignoreCaseLambda) => System.Type.ReflectionOnlyGetType(typeNameLambda, throwIfNotFoundLambda, ignoreCaseLambda));
+            return Observable.Zip(typeName, throwIfNotFound, ignoreCase,
+                (typeNameLambda, throwIfNotFoundLambda, ignoreCaseLambda) =>
+                    System.Type.ReflectionOnlyGetType(typeNameLambda, throwIfNotFoundLambda, ignoreCaseLambda));
         }
 
 
@@ -69,9 +92,11 @@ namespace System
         }
 
 
-        public static IObservable<System.Type> MakeArrayType(this IObservable<System.Type> TypeValue, IObservable<System.Int32> rank)
+        public static IObservable<System.Type> MakeArrayType(this IObservable<System.Type> TypeValue,
+            IObservable<System.Int32> rank)
         {
-            return Observable.Zip(TypeValue, rank, (TypeValueLambda, rankLambda) => TypeValueLambda.MakeArrayType(rankLambda));
+            return Observable.Zip(TypeValue, rank,
+                (TypeValueLambda, rankLambda) => TypeValueLambda.MakeArrayType(rankLambda));
         }
 
 
@@ -81,21 +106,28 @@ namespace System
         }
 
 
-        public static IObservable<System.Type> GetTypeFromProgID(IObservable<System.String> progID, IObservable<System.Boolean> throwOnError)
+        public static IObservable<System.Type> GetTypeFromProgID(IObservable<System.String> progID,
+            IObservable<System.Boolean> throwOnError)
         {
-            return Observable.Zip(progID, throwOnError, (progIDLambda, throwOnErrorLambda) => System.Type.GetTypeFromProgID(progIDLambda, throwOnErrorLambda));
+            return Observable.Zip(progID, throwOnError,
+                (progIDLambda, throwOnErrorLambda) => System.Type.GetTypeFromProgID(progIDLambda, throwOnErrorLambda));
         }
 
 
-        public static IObservable<System.Type> GetTypeFromProgID(IObservable<System.String> progID, IObservable<System.String> server)
+        public static IObservable<System.Type> GetTypeFromProgID(IObservable<System.String> progID,
+            IObservable<System.String> server)
         {
-            return Observable.Zip(progID, server, (progIDLambda, serverLambda) => System.Type.GetTypeFromProgID(progIDLambda, serverLambda));
+            return Observable.Zip(progID, server,
+                (progIDLambda, serverLambda) => System.Type.GetTypeFromProgID(progIDLambda, serverLambda));
         }
 
 
-        public static IObservable<System.Type> GetTypeFromProgID(IObservable<System.String> progID, IObservable<System.String> server, IObservable<System.Boolean> throwOnError)
+        public static IObservable<System.Type> GetTypeFromProgID(IObservable<System.String> progID,
+            IObservable<System.String> server, IObservable<System.Boolean> throwOnError)
         {
-            return Observable.Zip(progID, server, throwOnError, (progIDLambda, serverLambda, throwOnErrorLambda) => System.Type.GetTypeFromProgID(progIDLambda, serverLambda, throwOnErrorLambda));
+            return Observable.Zip(progID, server, throwOnError,
+                (progIDLambda, serverLambda, throwOnErrorLambda) =>
+                    System.Type.GetTypeFromProgID(progIDLambda, serverLambda, throwOnErrorLambda));
         }
 
 
@@ -105,21 +137,28 @@ namespace System
         }
 
 
-        public static IObservable<System.Type> GetTypeFromCLSID(IObservable<System.Guid> clsid, IObservable<System.Boolean> throwOnError)
+        public static IObservable<System.Type> GetTypeFromCLSID(IObservable<System.Guid> clsid,
+            IObservable<System.Boolean> throwOnError)
         {
-            return Observable.Zip(clsid, throwOnError, (clsidLambda, throwOnErrorLambda) => System.Type.GetTypeFromCLSID(clsidLambda, throwOnErrorLambda));
+            return Observable.Zip(clsid, throwOnError,
+                (clsidLambda, throwOnErrorLambda) => System.Type.GetTypeFromCLSID(clsidLambda, throwOnErrorLambda));
         }
 
 
-        public static IObservable<System.Type> GetTypeFromCLSID(IObservable<System.Guid> clsid, IObservable<System.String> server)
+        public static IObservable<System.Type> GetTypeFromCLSID(IObservable<System.Guid> clsid,
+            IObservable<System.String> server)
         {
-            return Observable.Zip(clsid, server, (clsidLambda, serverLambda) => System.Type.GetTypeFromCLSID(clsidLambda, serverLambda));
+            return Observable.Zip(clsid, server,
+                (clsidLambda, serverLambda) => System.Type.GetTypeFromCLSID(clsidLambda, serverLambda));
         }
 
 
-        public static IObservable<System.Type> GetTypeFromCLSID(IObservable<System.Guid> clsid, IObservable<System.String> server, IObservable<System.Boolean> throwOnError)
+        public static IObservable<System.Type> GetTypeFromCLSID(IObservable<System.Guid> clsid,
+            IObservable<System.String> server, IObservable<System.Boolean> throwOnError)
         {
-            return Observable.Zip(clsid, server, throwOnError, (clsidLambda, serverLambda, throwOnErrorLambda) => System.Type.GetTypeFromCLSID(clsidLambda, serverLambda, throwOnErrorLambda));
+            return Observable.Zip(clsid, server, throwOnError,
+                (clsidLambda, serverLambda, throwOnErrorLambda) =>
+                    System.Type.GetTypeFromCLSID(clsidLambda, serverLambda, throwOnErrorLambda));
         }
 
 
@@ -129,21 +168,41 @@ namespace System
         }
 
 
-        public static IObservable<System.Object> InvokeMember(this IObservable<System.Type> TypeValue, IObservable<System.String> name, IObservable<System.Reflection.BindingFlags> invokeAttr, IObservable<System.Reflection.Binder> binder, IObservable<System.Object> target, IObservable<System.Object[]> args, IObservable<System.Reflection.ParameterModifier[]> modifiers, IObservable<System.Globalization.CultureInfo> culture, IObservable<System.String[]> namedParameters)
+        public static IObservable<System.Object> InvokeMember(this IObservable<System.Type> TypeValue,
+            IObservable<System.String> name, IObservable<System.Reflection.BindingFlags> invokeAttr,
+            IObservable<System.Reflection.Binder> binder, IObservable<System.Object> target,
+            IObservable<System.Object[]> args, IObservable<System.Reflection.ParameterModifier[]> modifiers,
+            IObservable<System.Globalization.CultureInfo> culture, IObservable<System.String[]> namedParameters)
         {
-            return Observable.Zip(TypeValue, name, invokeAttr, binder, target, args, modifiers, culture, namedParameters, (TypeValueLambda, nameLambda, invokeAttrLambda, binderLambda, targetLambda, argsLambda, modifiersLambda, cultureLambda, namedParametersLambda) => TypeValueLambda.InvokeMember(nameLambda, invokeAttrLambda, binderLambda, targetLambda, argsLambda, modifiersLambda, cultureLambda, namedParametersLambda));
+            return Observable.Zip(TypeValue, name, invokeAttr, binder, target, args, modifiers, culture, namedParameters,
+                (TypeValueLambda, nameLambda, invokeAttrLambda, binderLambda, targetLambda, argsLambda, modifiersLambda,
+                    cultureLambda, namedParametersLambda) =>
+                    TypeValueLambda.InvokeMember(nameLambda, invokeAttrLambda, binderLambda, targetLambda, argsLambda,
+                        modifiersLambda, cultureLambda, namedParametersLambda));
         }
 
 
-        public static IObservable<System.Object> InvokeMember(this IObservable<System.Type> TypeValue, IObservable<System.String> name, IObservable<System.Reflection.BindingFlags> invokeAttr, IObservable<System.Reflection.Binder> binder, IObservable<System.Object> target, IObservable<System.Object[]> args, IObservable<System.Globalization.CultureInfo> culture)
+        public static IObservable<System.Object> InvokeMember(this IObservable<System.Type> TypeValue,
+            IObservable<System.String> name, IObservable<System.Reflection.BindingFlags> invokeAttr,
+            IObservable<System.Reflection.Binder> binder, IObservable<System.Object> target,
+            IObservable<System.Object[]> args, IObservable<System.Globalization.CultureInfo> culture)
         {
-            return Observable.Zip(TypeValue, name, invokeAttr, binder, target, args, culture, (TypeValueLambda, nameLambda, invokeAttrLambda, binderLambda, targetLambda, argsLambda, cultureLambda) => TypeValueLambda.InvokeMember(nameLambda, invokeAttrLambda, binderLambda, targetLambda, argsLambda, cultureLambda));
+            return Observable.Zip(TypeValue, name, invokeAttr, binder, target, args, culture,
+                (TypeValueLambda, nameLambda, invokeAttrLambda, binderLambda, targetLambda, argsLambda, cultureLambda)
+                    =>
+                    TypeValueLambda.InvokeMember(nameLambda, invokeAttrLambda, binderLambda, targetLambda, argsLambda,
+                        cultureLambda));
         }
 
 
-        public static IObservable<System.Object> InvokeMember(this IObservable<System.Type> TypeValue, IObservable<System.String> name, IObservable<System.Reflection.BindingFlags> invokeAttr, IObservable<System.Reflection.Binder> binder, IObservable<System.Object> target, IObservable<System.Object[]> args)
+        public static IObservable<System.Object> InvokeMember(this IObservable<System.Type> TypeValue,
+            IObservable<System.String> name, IObservable<System.Reflection.BindingFlags> invokeAttr,
+            IObservable<System.Reflection.Binder> binder, IObservable<System.Object> target,
+            IObservable<System.Object[]> args)
         {
-            return Observable.Zip(TypeValue, name, invokeAttr, binder, target, args, (TypeValueLambda, nameLambda, invokeAttrLambda, binderLambda, targetLambda, argsLambda) => TypeValueLambda.InvokeMember(nameLambda, invokeAttrLambda, binderLambda, targetLambda, argsLambda));
+            return Observable.Zip(TypeValue, name, invokeAttr, binder, target, args,
+                (TypeValueLambda, nameLambda, invokeAttrLambda, binderLambda, targetLambda, argsLambda) =>
+                    TypeValueLambda.InvokeMember(nameLambda, invokeAttrLambda, binderLambda, targetLambda, argsLambda));
         }
 
 
@@ -165,69 +224,111 @@ namespace System
         }
 
 
-        public static IObservable<System.Reflection.ConstructorInfo> GetConstructor(this IObservable<System.Type> TypeValue, IObservable<System.Reflection.BindingFlags> bindingAttr, IObservable<System.Reflection.Binder> binder, IObservable<System.Reflection.CallingConventions> callConvention, IObservable<System.Type[]> types, IObservable<System.Reflection.ParameterModifier[]> modifiers)
+        public static IObservable<System.Reflection.ConstructorInfo> GetConstructor(
+            this IObservable<System.Type> TypeValue, IObservable<System.Reflection.BindingFlags> bindingAttr,
+            IObservable<System.Reflection.Binder> binder,
+            IObservable<System.Reflection.CallingConventions> callConvention, IObservable<System.Type[]> types,
+            IObservable<System.Reflection.ParameterModifier[]> modifiers)
         {
-            return Observable.Zip(TypeValue, bindingAttr, binder, callConvention, types, modifiers, (TypeValueLambda, bindingAttrLambda, binderLambda, callConventionLambda, typesLambda, modifiersLambda) => TypeValueLambda.GetConstructor(bindingAttrLambda, binderLambda, callConventionLambda, typesLambda, modifiersLambda));
+            return Observable.Zip(TypeValue, bindingAttr, binder, callConvention, types, modifiers,
+                (TypeValueLambda, bindingAttrLambda, binderLambda, callConventionLambda, typesLambda, modifiersLambda)
+                    =>
+                    TypeValueLambda.GetConstructor(bindingAttrLambda, binderLambda, callConventionLambda, typesLambda,
+                        modifiersLambda));
         }
 
 
-        public static IObservable<System.Reflection.ConstructorInfo> GetConstructor(this IObservable<System.Type> TypeValue, IObservable<System.Reflection.BindingFlags> bindingAttr, IObservable<System.Reflection.Binder> binder, IObservable<System.Type[]> types, IObservable<System.Reflection.ParameterModifier[]> modifiers)
+        public static IObservable<System.Reflection.ConstructorInfo> GetConstructor(
+            this IObservable<System.Type> TypeValue, IObservable<System.Reflection.BindingFlags> bindingAttr,
+            IObservable<System.Reflection.Binder> binder, IObservable<System.Type[]> types,
+            IObservable<System.Reflection.ParameterModifier[]> modifiers)
         {
-            return Observable.Zip(TypeValue, bindingAttr, binder, types, modifiers, (TypeValueLambda, bindingAttrLambda, binderLambda, typesLambda, modifiersLambda) => TypeValueLambda.GetConstructor(bindingAttrLambda, binderLambda, typesLambda, modifiersLambda));
+            return Observable.Zip(TypeValue, bindingAttr, binder, types, modifiers,
+                (TypeValueLambda, bindingAttrLambda, binderLambda, typesLambda, modifiersLambda) =>
+                    TypeValueLambda.GetConstructor(bindingAttrLambda, binderLambda, typesLambda, modifiersLambda));
         }
 
 
-        public static IObservable<System.Reflection.ConstructorInfo> GetConstructor(this IObservable<System.Type> TypeValue, IObservable<System.Type[]> types)
+        public static IObservable<System.Reflection.ConstructorInfo> GetConstructor(
+            this IObservable<System.Type> TypeValue, IObservable<System.Type[]> types)
         {
-            return Observable.Zip(TypeValue, types, (TypeValueLambda, typesLambda) => TypeValueLambda.GetConstructor(typesLambda));
+            return Observable.Zip(TypeValue, types,
+                (TypeValueLambda, typesLambda) => TypeValueLambda.GetConstructor(typesLambda));
         }
 
 
-        public static IObservable<System.Reflection.ConstructorInfo[]> GetConstructors(this IObservable<System.Type> TypeValue)
+        public static IObservable<System.Reflection.ConstructorInfo[]> GetConstructors(
+            this IObservable<System.Type> TypeValue)
         {
             return Observable.Select(TypeValue, (TypeValueLambda) => TypeValueLambda.GetConstructors());
         }
 
 
-        public static IObservable<System.Reflection.ConstructorInfo[]> GetConstructors(this IObservable<System.Type> TypeValue, IObservable<System.Reflection.BindingFlags> bindingAttr)
+        public static IObservable<System.Reflection.ConstructorInfo[]> GetConstructors(
+            this IObservable<System.Type> TypeValue, IObservable<System.Reflection.BindingFlags> bindingAttr)
         {
-            return Observable.Zip(TypeValue, bindingAttr, (TypeValueLambda, bindingAttrLambda) => TypeValueLambda.GetConstructors(bindingAttrLambda));
+            return Observable.Zip(TypeValue, bindingAttr,
+                (TypeValueLambda, bindingAttrLambda) => TypeValueLambda.GetConstructors(bindingAttrLambda));
         }
 
 
-        public static IObservable<System.Reflection.MethodInfo> GetMethod(this IObservable<System.Type> TypeValue, IObservable<System.String> name, IObservable<System.Reflection.BindingFlags> bindingAttr, IObservable<System.Reflection.Binder> binder, IObservable<System.Reflection.CallingConventions> callConvention, IObservable<System.Type[]> types, IObservable<System.Reflection.ParameterModifier[]> modifiers)
+        public static IObservable<System.Reflection.MethodInfo> GetMethod(this IObservable<System.Type> TypeValue,
+            IObservable<System.String> name, IObservable<System.Reflection.BindingFlags> bindingAttr,
+            IObservable<System.Reflection.Binder> binder,
+            IObservable<System.Reflection.CallingConventions> callConvention, IObservable<System.Type[]> types,
+            IObservable<System.Reflection.ParameterModifier[]> modifiers)
         {
-            return Observable.Zip(TypeValue, name, bindingAttr, binder, callConvention, types, modifiers, (TypeValueLambda, nameLambda, bindingAttrLambda, binderLambda, callConventionLambda, typesLambda, modifiersLambda) => TypeValueLambda.GetMethod(nameLambda, bindingAttrLambda, binderLambda, callConventionLambda, typesLambda, modifiersLambda));
+            return Observable.Zip(TypeValue, name, bindingAttr, binder, callConvention, types, modifiers,
+                (TypeValueLambda, nameLambda, bindingAttrLambda, binderLambda, callConventionLambda, typesLambda,
+                    modifiersLambda) =>
+                    TypeValueLambda.GetMethod(nameLambda, bindingAttrLambda, binderLambda, callConventionLambda,
+                        typesLambda, modifiersLambda));
         }
 
 
-        public static IObservable<System.Reflection.MethodInfo> GetMethod(this IObservable<System.Type> TypeValue, IObservable<System.String> name, IObservable<System.Reflection.BindingFlags> bindingAttr, IObservable<System.Reflection.Binder> binder, IObservable<System.Type[]> types, IObservable<System.Reflection.ParameterModifier[]> modifiers)
+        public static IObservable<System.Reflection.MethodInfo> GetMethod(this IObservable<System.Type> TypeValue,
+            IObservable<System.String> name, IObservable<System.Reflection.BindingFlags> bindingAttr,
+            IObservable<System.Reflection.Binder> binder, IObservable<System.Type[]> types,
+            IObservable<System.Reflection.ParameterModifier[]> modifiers)
         {
-            return Observable.Zip(TypeValue, name, bindingAttr, binder, types, modifiers, (TypeValueLambda, nameLambda, bindingAttrLambda, binderLambda, typesLambda, modifiersLambda) => TypeValueLambda.GetMethod(nameLambda, bindingAttrLambda, binderLambda, typesLambda, modifiersLambda));
+            return Observable.Zip(TypeValue, name, bindingAttr, binder, types, modifiers,
+                (TypeValueLambda, nameLambda, bindingAttrLambda, binderLambda, typesLambda, modifiersLambda) =>
+                    TypeValueLambda.GetMethod(nameLambda, bindingAttrLambda, binderLambda, typesLambda, modifiersLambda));
         }
 
 
-        public static IObservable<System.Reflection.MethodInfo> GetMethod(this IObservable<System.Type> TypeValue, IObservable<System.String> name, IObservable<System.Type[]> types, IObservable<System.Reflection.ParameterModifier[]> modifiers)
+        public static IObservable<System.Reflection.MethodInfo> GetMethod(this IObservable<System.Type> TypeValue,
+            IObservable<System.String> name, IObservable<System.Type[]> types,
+            IObservable<System.Reflection.ParameterModifier[]> modifiers)
         {
-            return Observable.Zip(TypeValue, name, types, modifiers, (TypeValueLambda, nameLambda, typesLambda, modifiersLambda) => TypeValueLambda.GetMethod(nameLambda, typesLambda, modifiersLambda));
+            return Observable.Zip(TypeValue, name, types, modifiers,
+                (TypeValueLambda, nameLambda, typesLambda, modifiersLambda) =>
+                    TypeValueLambda.GetMethod(nameLambda, typesLambda, modifiersLambda));
         }
 
 
-        public static IObservable<System.Reflection.MethodInfo> GetMethod(this IObservable<System.Type> TypeValue, IObservable<System.String> name, IObservable<System.Type[]> types)
+        public static IObservable<System.Reflection.MethodInfo> GetMethod(this IObservable<System.Type> TypeValue,
+            IObservable<System.String> name, IObservable<System.Type[]> types)
         {
-            return Observable.Zip(TypeValue, name, types, (TypeValueLambda, nameLambda, typesLambda) => TypeValueLambda.GetMethod(nameLambda, typesLambda));
+            return Observable.Zip(TypeValue, name, types,
+                (TypeValueLambda, nameLambda, typesLambda) => TypeValueLambda.GetMethod(nameLambda, typesLambda));
         }
 
 
-        public static IObservable<System.Reflection.MethodInfo> GetMethod(this IObservable<System.Type> TypeValue, IObservable<System.String> name, IObservable<System.Reflection.BindingFlags> bindingAttr)
+        public static IObservable<System.Reflection.MethodInfo> GetMethod(this IObservable<System.Type> TypeValue,
+            IObservable<System.String> name, IObservable<System.Reflection.BindingFlags> bindingAttr)
         {
-            return Observable.Zip(TypeValue, name, bindingAttr, (TypeValueLambda, nameLambda, bindingAttrLambda) => TypeValueLambda.GetMethod(nameLambda, bindingAttrLambda));
+            return Observable.Zip(TypeValue, name, bindingAttr,
+                (TypeValueLambda, nameLambda, bindingAttrLambda) =>
+                    TypeValueLambda.GetMethod(nameLambda, bindingAttrLambda));
         }
 
 
-        public static IObservable<System.Reflection.MethodInfo> GetMethod(this IObservable<System.Type> TypeValue, IObservable<System.String> name)
+        public static IObservable<System.Reflection.MethodInfo> GetMethod(this IObservable<System.Type> TypeValue,
+            IObservable<System.String> name)
         {
-            return Observable.Zip(TypeValue, name, (TypeValueLambda, nameLambda) => TypeValueLambda.GetMethod(nameLambda));
+            return Observable.Zip(TypeValue, name,
+                (TypeValueLambda, nameLambda) => TypeValueLambda.GetMethod(nameLambda));
         }
 
 
@@ -237,19 +338,25 @@ namespace System
         }
 
 
-        public static IObservable<System.Reflection.MethodInfo[]> GetMethods(this IObservable<System.Type> TypeValue, IObservable<System.Reflection.BindingFlags> bindingAttr)
+        public static IObservable<System.Reflection.MethodInfo[]> GetMethods(this IObservable<System.Type> TypeValue,
+            IObservable<System.Reflection.BindingFlags> bindingAttr)
         {
-            return Observable.Zip(TypeValue, bindingAttr, (TypeValueLambda, bindingAttrLambda) => TypeValueLambda.GetMethods(bindingAttrLambda));
+            return Observable.Zip(TypeValue, bindingAttr,
+                (TypeValueLambda, bindingAttrLambda) => TypeValueLambda.GetMethods(bindingAttrLambda));
         }
 
 
-        public static IObservable<System.Reflection.FieldInfo> GetField(this IObservable<System.Type> TypeValue, IObservable<System.String> name, IObservable<System.Reflection.BindingFlags> bindingAttr)
+        public static IObservable<System.Reflection.FieldInfo> GetField(this IObservable<System.Type> TypeValue,
+            IObservable<System.String> name, IObservable<System.Reflection.BindingFlags> bindingAttr)
         {
-            return Observable.Zip(TypeValue, name, bindingAttr, (TypeValueLambda, nameLambda, bindingAttrLambda) => TypeValueLambda.GetField(nameLambda, bindingAttrLambda));
+            return Observable.Zip(TypeValue, name, bindingAttr,
+                (TypeValueLambda, nameLambda, bindingAttrLambda) =>
+                    TypeValueLambda.GetField(nameLambda, bindingAttrLambda));
         }
 
 
-        public static IObservable<System.Reflection.FieldInfo> GetField(this IObservable<System.Type> TypeValue, IObservable<System.String> name)
+        public static IObservable<System.Reflection.FieldInfo> GetField(this IObservable<System.Type> TypeValue,
+            IObservable<System.String> name)
         {
             return Observable.Zip(TypeValue, name, (TypeValueLambda, nameLambda) => TypeValueLambda.GetField(nameLambda));
         }
@@ -261,21 +368,28 @@ namespace System
         }
 
 
-        public static IObservable<System.Reflection.FieldInfo[]> GetFields(this IObservable<System.Type> TypeValue, IObservable<System.Reflection.BindingFlags> bindingAttr)
+        public static IObservable<System.Reflection.FieldInfo[]> GetFields(this IObservable<System.Type> TypeValue,
+            IObservable<System.Reflection.BindingFlags> bindingAttr)
         {
-            return Observable.Zip(TypeValue, bindingAttr, (TypeValueLambda, bindingAttrLambda) => TypeValueLambda.GetFields(bindingAttrLambda));
+            return Observable.Zip(TypeValue, bindingAttr,
+                (TypeValueLambda, bindingAttrLambda) => TypeValueLambda.GetFields(bindingAttrLambda));
         }
 
 
-        public static IObservable<System.Type> GetInterface(this IObservable<System.Type> TypeValue, IObservable<System.String> name)
+        public static IObservable<System.Type> GetInterface(this IObservable<System.Type> TypeValue,
+            IObservable<System.String> name)
         {
-            return Observable.Zip(TypeValue, name, (TypeValueLambda, nameLambda) => TypeValueLambda.GetInterface(nameLambda));
+            return Observable.Zip(TypeValue, name,
+                (TypeValueLambda, nameLambda) => TypeValueLambda.GetInterface(nameLambda));
         }
 
 
-        public static IObservable<System.Type> GetInterface(this IObservable<System.Type> TypeValue, IObservable<System.String> name, IObservable<System.Boolean> ignoreCase)
+        public static IObservable<System.Type> GetInterface(this IObservable<System.Type> TypeValue,
+            IObservable<System.String> name, IObservable<System.Boolean> ignoreCase)
         {
-            return Observable.Zip(TypeValue, name, ignoreCase, (TypeValueLambda, nameLambda, ignoreCaseLambda) => TypeValueLambda.GetInterface(nameLambda, ignoreCaseLambda));
+            return Observable.Zip(TypeValue, name, ignoreCase,
+                (TypeValueLambda, nameLambda, ignoreCaseLambda) =>
+                    TypeValueLambda.GetInterface(nameLambda, ignoreCaseLambda));
         }
 
 
@@ -285,21 +399,28 @@ namespace System
         }
 
 
-        public static IObservable<System.Type[]> FindInterfaces(this IObservable<System.Type> TypeValue, IObservable<System.Reflection.TypeFilter> filter, IObservable<System.Object> filterCriteria)
+        public static IObservable<System.Type[]> FindInterfaces(this IObservable<System.Type> TypeValue,
+            IObservable<System.Reflection.TypeFilter> filter, IObservable<System.Object> filterCriteria)
         {
-            return Observable.Zip(TypeValue, filter, filterCriteria, (TypeValueLambda, filterLambda, filterCriteriaLambda) => TypeValueLambda.FindInterfaces(filterLambda, filterCriteriaLambda));
+            return Observable.Zip(TypeValue, filter, filterCriteria,
+                (TypeValueLambda, filterLambda, filterCriteriaLambda) =>
+                    TypeValueLambda.FindInterfaces(filterLambda, filterCriteriaLambda));
         }
 
 
-        public static IObservable<System.Reflection.EventInfo> GetEvent(this IObservable<System.Type> TypeValue, IObservable<System.String> name)
+        public static IObservable<System.Reflection.EventInfo> GetEvent(this IObservable<System.Type> TypeValue,
+            IObservable<System.String> name)
         {
             return Observable.Zip(TypeValue, name, (TypeValueLambda, nameLambda) => TypeValueLambda.GetEvent(nameLambda));
         }
 
 
-        public static IObservable<System.Reflection.EventInfo> GetEvent(this IObservable<System.Type> TypeValue, IObservable<System.String> name, IObservable<System.Reflection.BindingFlags> bindingAttr)
+        public static IObservable<System.Reflection.EventInfo> GetEvent(this IObservable<System.Type> TypeValue,
+            IObservable<System.String> name, IObservable<System.Reflection.BindingFlags> bindingAttr)
         {
-            return Observable.Zip(TypeValue, name, bindingAttr, (TypeValueLambda, nameLambda, bindingAttrLambda) => TypeValueLambda.GetEvent(nameLambda, bindingAttrLambda));
+            return Observable.Zip(TypeValue, name, bindingAttr,
+                (TypeValueLambda, nameLambda, bindingAttrLambda) =>
+                    TypeValueLambda.GetEvent(nameLambda, bindingAttrLambda));
         }
 
 
@@ -309,61 +430,90 @@ namespace System
         }
 
 
-        public static IObservable<System.Reflection.EventInfo[]> GetEvents(this IObservable<System.Type> TypeValue, IObservable<System.Reflection.BindingFlags> bindingAttr)
+        public static IObservable<System.Reflection.EventInfo[]> GetEvents(this IObservable<System.Type> TypeValue,
+            IObservable<System.Reflection.BindingFlags> bindingAttr)
         {
-            return Observable.Zip(TypeValue, bindingAttr, (TypeValueLambda, bindingAttrLambda) => TypeValueLambda.GetEvents(bindingAttrLambda));
+            return Observable.Zip(TypeValue, bindingAttr,
+                (TypeValueLambda, bindingAttrLambda) => TypeValueLambda.GetEvents(bindingAttrLambda));
         }
 
 
-        public static IObservable<System.Reflection.PropertyInfo> GetProperty(this IObservable<System.Type> TypeValue, IObservable<System.String> name, IObservable<System.Reflection.BindingFlags> bindingAttr, IObservable<System.Reflection.Binder> binder, IObservable<System.Type> returnType, IObservable<System.Type[]> types, IObservable<System.Reflection.ParameterModifier[]> modifiers)
+        public static IObservable<System.Reflection.PropertyInfo> GetProperty(this IObservable<System.Type> TypeValue,
+            IObservable<System.String> name, IObservable<System.Reflection.BindingFlags> bindingAttr,
+            IObservable<System.Reflection.Binder> binder, IObservable<System.Type> returnType,
+            IObservable<System.Type[]> types, IObservable<System.Reflection.ParameterModifier[]> modifiers)
         {
-            return Observable.Zip(TypeValue, name, bindingAttr, binder, returnType, types, modifiers, (TypeValueLambda, nameLambda, bindingAttrLambda, binderLambda, returnTypeLambda, typesLambda, modifiersLambda) => TypeValueLambda.GetProperty(nameLambda, bindingAttrLambda, binderLambda, returnTypeLambda, typesLambda, modifiersLambda));
+            return Observable.Zip(TypeValue, name, bindingAttr, binder, returnType, types, modifiers,
+                (TypeValueLambda, nameLambda, bindingAttrLambda, binderLambda, returnTypeLambda, typesLambda,
+                    modifiersLambda) =>
+                    TypeValueLambda.GetProperty(nameLambda, bindingAttrLambda, binderLambda, returnTypeLambda,
+                        typesLambda, modifiersLambda));
         }
 
 
-        public static IObservable<System.Reflection.PropertyInfo> GetProperty(this IObservable<System.Type> TypeValue, IObservable<System.String> name, IObservable<System.Type> returnType, IObservable<System.Type[]> types, IObservable<System.Reflection.ParameterModifier[]> modifiers)
+        public static IObservable<System.Reflection.PropertyInfo> GetProperty(this IObservable<System.Type> TypeValue,
+            IObservable<System.String> name, IObservable<System.Type> returnType, IObservable<System.Type[]> types,
+            IObservable<System.Reflection.ParameterModifier[]> modifiers)
         {
-            return Observable.Zip(TypeValue, name, returnType, types, modifiers, (TypeValueLambda, nameLambda, returnTypeLambda, typesLambda, modifiersLambda) => TypeValueLambda.GetProperty(nameLambda, returnTypeLambda, typesLambda, modifiersLambda));
+            return Observable.Zip(TypeValue, name, returnType, types, modifiers,
+                (TypeValueLambda, nameLambda, returnTypeLambda, typesLambda, modifiersLambda) =>
+                    TypeValueLambda.GetProperty(nameLambda, returnTypeLambda, typesLambda, modifiersLambda));
         }
 
 
-        public static IObservable<System.Reflection.PropertyInfo> GetProperty(this IObservable<System.Type> TypeValue, IObservable<System.String> name, IObservable<System.Reflection.BindingFlags> bindingAttr)
+        public static IObservable<System.Reflection.PropertyInfo> GetProperty(this IObservable<System.Type> TypeValue,
+            IObservable<System.String> name, IObservable<System.Reflection.BindingFlags> bindingAttr)
         {
-            return Observable.Zip(TypeValue, name, bindingAttr, (TypeValueLambda, nameLambda, bindingAttrLambda) => TypeValueLambda.GetProperty(nameLambda, bindingAttrLambda));
+            return Observable.Zip(TypeValue, name, bindingAttr,
+                (TypeValueLambda, nameLambda, bindingAttrLambda) =>
+                    TypeValueLambda.GetProperty(nameLambda, bindingAttrLambda));
         }
 
 
-        public static IObservable<System.Reflection.PropertyInfo> GetProperty(this IObservable<System.Type> TypeValue, IObservable<System.String> name, IObservable<System.Type> returnType, IObservable<System.Type[]> types)
+        public static IObservable<System.Reflection.PropertyInfo> GetProperty(this IObservable<System.Type> TypeValue,
+            IObservable<System.String> name, IObservable<System.Type> returnType, IObservable<System.Type[]> types)
         {
-            return Observable.Zip(TypeValue, name, returnType, types, (TypeValueLambda, nameLambda, returnTypeLambda, typesLambda) => TypeValueLambda.GetProperty(nameLambda, returnTypeLambda, typesLambda));
+            return Observable.Zip(TypeValue, name, returnType, types,
+                (TypeValueLambda, nameLambda, returnTypeLambda, typesLambda) =>
+                    TypeValueLambda.GetProperty(nameLambda, returnTypeLambda, typesLambda));
         }
 
 
-        public static IObservable<System.Reflection.PropertyInfo> GetProperty(this IObservable<System.Type> TypeValue, IObservable<System.String> name, IObservable<System.Type[]> types)
+        public static IObservable<System.Reflection.PropertyInfo> GetProperty(this IObservable<System.Type> TypeValue,
+            IObservable<System.String> name, IObservable<System.Type[]> types)
         {
-            return Observable.Zip(TypeValue, name, types, (TypeValueLambda, nameLambda, typesLambda) => TypeValueLambda.GetProperty(nameLambda, typesLambda));
+            return Observable.Zip(TypeValue, name, types,
+                (TypeValueLambda, nameLambda, typesLambda) => TypeValueLambda.GetProperty(nameLambda, typesLambda));
         }
 
 
-        public static IObservable<System.Reflection.PropertyInfo> GetProperty(this IObservable<System.Type> TypeValue, IObservable<System.String> name, IObservable<System.Type> returnType)
+        public static IObservable<System.Reflection.PropertyInfo> GetProperty(this IObservable<System.Type> TypeValue,
+            IObservable<System.String> name, IObservable<System.Type> returnType)
         {
-            return Observable.Zip(TypeValue, name, returnType, (TypeValueLambda, nameLambda, returnTypeLambda) => TypeValueLambda.GetProperty(nameLambda, returnTypeLambda));
+            return Observable.Zip(TypeValue, name, returnType,
+                (TypeValueLambda, nameLambda, returnTypeLambda) =>
+                    TypeValueLambda.GetProperty(nameLambda, returnTypeLambda));
         }
 
 
-        public static IObservable<System.Reflection.PropertyInfo> GetProperty(this IObservable<System.Type> TypeValue, IObservable<System.String> name)
+        public static IObservable<System.Reflection.PropertyInfo> GetProperty(this IObservable<System.Type> TypeValue,
+            IObservable<System.String> name)
         {
-            return Observable.Zip(TypeValue, name, (TypeValueLambda, nameLambda) => TypeValueLambda.GetProperty(nameLambda));
+            return Observable.Zip(TypeValue, name,
+                (TypeValueLambda, nameLambda) => TypeValueLambda.GetProperty(nameLambda));
         }
 
 
-        public static IObservable<System.Reflection.PropertyInfo[]> GetProperties(this IObservable<System.Type> TypeValue, IObservable<System.Reflection.BindingFlags> bindingAttr)
+        public static IObservable<System.Reflection.PropertyInfo[]> GetProperties(
+            this IObservable<System.Type> TypeValue, IObservable<System.Reflection.BindingFlags> bindingAttr)
         {
-            return Observable.Zip(TypeValue, bindingAttr, (TypeValueLambda, bindingAttrLambda) => TypeValueLambda.GetProperties(bindingAttrLambda));
+            return Observable.Zip(TypeValue, bindingAttr,
+                (TypeValueLambda, bindingAttrLambda) => TypeValueLambda.GetProperties(bindingAttrLambda));
         }
 
 
-        public static IObservable<System.Reflection.PropertyInfo[]> GetProperties(this IObservable<System.Type> TypeValue)
+        public static IObservable<System.Reflection.PropertyInfo[]> GetProperties(
+            this IObservable<System.Type> TypeValue)
         {
             return Observable.Select(TypeValue, (TypeValueLambda) => TypeValueLambda.GetProperties());
         }
@@ -375,39 +525,55 @@ namespace System
         }
 
 
-        public static IObservable<System.Type[]> GetNestedTypes(this IObservable<System.Type> TypeValue, IObservable<System.Reflection.BindingFlags> bindingAttr)
+        public static IObservable<System.Type[]> GetNestedTypes(this IObservable<System.Type> TypeValue,
+            IObservable<System.Reflection.BindingFlags> bindingAttr)
         {
-            return Observable.Zip(TypeValue, bindingAttr, (TypeValueLambda, bindingAttrLambda) => TypeValueLambda.GetNestedTypes(bindingAttrLambda));
+            return Observable.Zip(TypeValue, bindingAttr,
+                (TypeValueLambda, bindingAttrLambda) => TypeValueLambda.GetNestedTypes(bindingAttrLambda));
         }
 
 
-        public static IObservable<System.Type> GetNestedType(this IObservable<System.Type> TypeValue, IObservable<System.String> name)
+        public static IObservable<System.Type> GetNestedType(this IObservable<System.Type> TypeValue,
+            IObservable<System.String> name)
         {
-            return Observable.Zip(TypeValue, name, (TypeValueLambda, nameLambda) => TypeValueLambda.GetNestedType(nameLambda));
+            return Observable.Zip(TypeValue, name,
+                (TypeValueLambda, nameLambda) => TypeValueLambda.GetNestedType(nameLambda));
         }
 
 
-        public static IObservable<System.Type> GetNestedType(this IObservable<System.Type> TypeValue, IObservable<System.String> name, IObservable<System.Reflection.BindingFlags> bindingAttr)
+        public static IObservable<System.Type> GetNestedType(this IObservable<System.Type> TypeValue,
+            IObservable<System.String> name, IObservable<System.Reflection.BindingFlags> bindingAttr)
         {
-            return Observable.Zip(TypeValue, name, bindingAttr, (TypeValueLambda, nameLambda, bindingAttrLambda) => TypeValueLambda.GetNestedType(nameLambda, bindingAttrLambda));
+            return Observable.Zip(TypeValue, name, bindingAttr,
+                (TypeValueLambda, nameLambda, bindingAttrLambda) =>
+                    TypeValueLambda.GetNestedType(nameLambda, bindingAttrLambda));
         }
 
 
-        public static IObservable<System.Reflection.MemberInfo[]> GetMember(this IObservable<System.Type> TypeValue, IObservable<System.String> name)
+        public static IObservable<System.Reflection.MemberInfo[]> GetMember(this IObservable<System.Type> TypeValue,
+            IObservable<System.String> name)
         {
-            return Observable.Zip(TypeValue, name, (TypeValueLambda, nameLambda) => TypeValueLambda.GetMember(nameLambda));
+            return Observable.Zip(TypeValue, name,
+                (TypeValueLambda, nameLambda) => TypeValueLambda.GetMember(nameLambda));
         }
 
 
-        public static IObservable<System.Reflection.MemberInfo[]> GetMember(this IObservable<System.Type> TypeValue, IObservable<System.String> name, IObservable<System.Reflection.BindingFlags> bindingAttr)
+        public static IObservable<System.Reflection.MemberInfo[]> GetMember(this IObservable<System.Type> TypeValue,
+            IObservable<System.String> name, IObservable<System.Reflection.BindingFlags> bindingAttr)
         {
-            return Observable.Zip(TypeValue, name, bindingAttr, (TypeValueLambda, nameLambda, bindingAttrLambda) => TypeValueLambda.GetMember(nameLambda, bindingAttrLambda));
+            return Observable.Zip(TypeValue, name, bindingAttr,
+                (TypeValueLambda, nameLambda, bindingAttrLambda) =>
+                    TypeValueLambda.GetMember(nameLambda, bindingAttrLambda));
         }
 
 
-        public static IObservable<System.Reflection.MemberInfo[]> GetMember(this IObservable<System.Type> TypeValue, IObservable<System.String> name, IObservable<System.Reflection.MemberTypes> type, IObservable<System.Reflection.BindingFlags> bindingAttr)
+        public static IObservable<System.Reflection.MemberInfo[]> GetMember(this IObservable<System.Type> TypeValue,
+            IObservable<System.String> name, IObservable<System.Reflection.MemberTypes> type,
+            IObservable<System.Reflection.BindingFlags> bindingAttr)
         {
-            return Observable.Zip(TypeValue, name, type, bindingAttr, (TypeValueLambda, nameLambda, typeLambda, bindingAttrLambda) => TypeValueLambda.GetMember(nameLambda, typeLambda, bindingAttrLambda));
+            return Observable.Zip(TypeValue, name, type, bindingAttr,
+                (TypeValueLambda, nameLambda, typeLambda, bindingAttrLambda) =>
+                    TypeValueLambda.GetMember(nameLambda, typeLambda, bindingAttrLambda));
         }
 
 
@@ -417,21 +583,29 @@ namespace System
         }
 
 
-        public static IObservable<System.Reflection.MemberInfo[]> GetMembers(this IObservable<System.Type> TypeValue, IObservable<System.Reflection.BindingFlags> bindingAttr)
+        public static IObservable<System.Reflection.MemberInfo[]> GetMembers(this IObservable<System.Type> TypeValue,
+            IObservable<System.Reflection.BindingFlags> bindingAttr)
         {
-            return Observable.Zip(TypeValue, bindingAttr, (TypeValueLambda, bindingAttrLambda) => TypeValueLambda.GetMembers(bindingAttrLambda));
+            return Observable.Zip(TypeValue, bindingAttr,
+                (TypeValueLambda, bindingAttrLambda) => TypeValueLambda.GetMembers(bindingAttrLambda));
         }
 
 
-        public static IObservable<System.Reflection.MemberInfo[]> GetDefaultMembers(this IObservable<System.Type> TypeValue)
+        public static IObservable<System.Reflection.MemberInfo[]> GetDefaultMembers(
+            this IObservable<System.Type> TypeValue)
         {
             return Observable.Select(TypeValue, (TypeValueLambda) => TypeValueLambda.GetDefaultMembers());
         }
 
 
-        public static IObservable<System.Reflection.MemberInfo[]> FindMembers(this IObservable<System.Type> TypeValue, IObservable<System.Reflection.MemberTypes> memberType, IObservable<System.Reflection.BindingFlags> bindingAttr, IObservable<System.Reflection.MemberFilter> filter, IObservable<System.Object> filterCriteria)
+        public static IObservable<System.Reflection.MemberInfo[]> FindMembers(this IObservable<System.Type> TypeValue,
+            IObservable<System.Reflection.MemberTypes> memberType,
+            IObservable<System.Reflection.BindingFlags> bindingAttr, IObservable<System.Reflection.MemberFilter> filter,
+            IObservable<System.Object> filterCriteria)
         {
-            return Observable.Zip(TypeValue, memberType, bindingAttr, filter, filterCriteria, (TypeValueLambda, memberTypeLambda, bindingAttrLambda, filterLambda, filterCriteriaLambda) => TypeValueLambda.FindMembers(memberTypeLambda, bindingAttrLambda, filterLambda, filterCriteriaLambda));
+            return Observable.Zip(TypeValue, memberType, bindingAttr, filter, filterCriteria,
+                (TypeValueLambda, memberTypeLambda, bindingAttrLambda, filterLambda, filterCriteriaLambda) =>
+                    TypeValueLambda.FindMembers(memberTypeLambda, bindingAttrLambda, filterLambda, filterCriteriaLambda));
         }
 
 
@@ -441,9 +615,11 @@ namespace System
         }
 
 
-        public static IObservable<System.Type> MakeGenericType(this IObservable<System.Type> TypeValue, IObservable<System.Type[]> typeArguments)
+        public static IObservable<System.Type> MakeGenericType(this IObservable<System.Type> TypeValue,
+            IObservable<System.Type[]> typeArguments)
         {
-            return Observable.Zip(TypeValue, typeArguments, (TypeValueLambda, typeArgumentsLambda) => TypeValueLambda.MakeGenericType(typeArgumentsLambda));
+            return Observable.Zip(TypeValue, typeArguments,
+                (TypeValueLambda, typeArgumentsLambda) => TypeValueLambda.MakeGenericType(typeArgumentsLambda));
         }
 
 
@@ -483,39 +659,48 @@ namespace System
         }
 
 
-        public static IObservable<System.Boolean> IsEnumDefined(this IObservable<System.Type> TypeValue, IObservable<System.Object> value)
+        public static IObservable<System.Boolean> IsEnumDefined(this IObservable<System.Type> TypeValue,
+            IObservable<System.Object> value)
         {
-            return Observable.Zip(TypeValue, value, (TypeValueLambda, valueLambda) => TypeValueLambda.IsEnumDefined(valueLambda));
+            return Observable.Zip(TypeValue, value,
+                (TypeValueLambda, valueLambda) => TypeValueLambda.IsEnumDefined(valueLambda));
         }
 
 
-        public static IObservable<System.String> GetEnumName(this IObservable<System.Type> TypeValue, IObservable<System.Object> value)
+        public static IObservable<System.String> GetEnumName(this IObservable<System.Type> TypeValue,
+            IObservable<System.Object> value)
         {
-            return Observable.Zip(TypeValue, value, (TypeValueLambda, valueLambda) => TypeValueLambda.GetEnumName(valueLambda));
+            return Observable.Zip(TypeValue, value,
+                (TypeValueLambda, valueLambda) => TypeValueLambda.GetEnumName(valueLambda));
         }
 
 
-        public static IObservable<System.Boolean> IsSubclassOf(this IObservable<System.Type> TypeValue, IObservable<System.Type> c)
+        public static IObservable<System.Boolean> IsSubclassOf(this IObservable<System.Type> TypeValue,
+            IObservable<System.Type> c)
         {
             return Observable.Zip(TypeValue, c, (TypeValueLambda, cLambda) => TypeValueLambda.IsSubclassOf(cLambda));
         }
 
 
-        public static IObservable<System.Boolean> IsInstanceOfType(this IObservable<System.Type> TypeValue, IObservable<System.Object> o)
+        public static IObservable<System.Boolean> IsInstanceOfType(this IObservable<System.Type> TypeValue,
+            IObservable<System.Object> o)
         {
             return Observable.Zip(TypeValue, o, (TypeValueLambda, oLambda) => TypeValueLambda.IsInstanceOfType(oLambda));
         }
 
 
-        public static IObservable<System.Boolean> IsAssignableFrom(this IObservable<System.Type> TypeValue, IObservable<System.Type> c)
+        public static IObservable<System.Boolean> IsAssignableFrom(this IObservable<System.Type> TypeValue,
+            IObservable<System.Type> c)
         {
             return Observable.Zip(TypeValue, c, (TypeValueLambda, cLambda) => TypeValueLambda.IsAssignableFrom(cLambda));
         }
 
 
-        public static IObservable<System.Boolean> IsEquivalentTo(this IObservable<System.Type> TypeValue, IObservable<System.Type> other)
+        public static IObservable<System.Boolean> IsEquivalentTo(this IObservable<System.Type> TypeValue,
+            IObservable<System.Type> other)
         {
-            return Observable.Zip(TypeValue, other, (TypeValueLambda, otherLambda) => TypeValueLambda.IsEquivalentTo(otherLambda));
+            return Observable.Zip(TypeValue, other,
+                (TypeValueLambda, otherLambda) => TypeValueLambda.IsEquivalentTo(otherLambda));
         }
 
 
@@ -531,13 +716,15 @@ namespace System
         }
 
 
-        public static IObservable<System.Boolean> Equals(this IObservable<System.Type> TypeValue, IObservable<System.Object> o)
+        public static IObservable<System.Boolean> Equals(this IObservable<System.Type> TypeValue,
+            IObservable<System.Object> o)
         {
             return Observable.Zip(TypeValue, o, (TypeValueLambda, oLambda) => TypeValueLambda.Equals(oLambda));
         }
 
 
-        public static IObservable<System.Boolean> Equals(this IObservable<System.Type> TypeValue, IObservable<System.Type> o)
+        public static IObservable<System.Boolean> Equals(this IObservable<System.Type> TypeValue,
+            IObservable<System.Type> o)
         {
             return Observable.Zip(TypeValue, o, (TypeValueLambda, oLambda) => TypeValueLambda.Equals(oLambda));
         }
@@ -549,9 +736,11 @@ namespace System
         }
 
 
-        public static IObservable<System.Reflection.InterfaceMapping> GetInterfaceMap(this IObservable<System.Type> TypeValue, IObservable<System.Type> interfaceType)
+        public static IObservable<System.Reflection.InterfaceMapping> GetInterfaceMap(
+            this IObservable<System.Type> TypeValue, IObservable<System.Type> interfaceType)
         {
-            return Observable.Zip(TypeValue, interfaceType, (TypeValueLambda, interfaceTypeLambda) => TypeValueLambda.GetInterfaceMap(interfaceTypeLambda));
+            return Observable.Zip(TypeValue, interfaceType,
+                (TypeValueLambda, interfaceTypeLambda) => TypeValueLambda.GetInterfaceMap(interfaceTypeLambda));
         }
 
 
@@ -573,7 +762,8 @@ namespace System
         }
 
 
-        public static IObservable<System.Reflection.MethodBase> get_DeclaringMethod(this IObservable<System.Type> TypeValue)
+        public static IObservable<System.Reflection.MethodBase> get_DeclaringMethod(
+            this IObservable<System.Type> TypeValue)
         {
             return Observable.Select(TypeValue, (TypeValueLambda) => TypeValueLambda.DeclaringMethod);
         }
@@ -585,7 +775,8 @@ namespace System
         }
 
 
-        public static IObservable<System.Runtime.InteropServices.StructLayoutAttribute> get_StructLayoutAttribute(this IObservable<System.Type> TypeValue)
+        public static IObservable<System.Runtime.InteropServices.StructLayoutAttribute> get_StructLayoutAttribute(
+            this IObservable<System.Type> TypeValue)
         {
             return Observable.Select(TypeValue, (TypeValueLambda) => TypeValueLambda.StructLayoutAttribute);
         }
@@ -645,7 +836,8 @@ namespace System
         }
 
 
-        public static IObservable<System.Reflection.ConstructorInfo> get_TypeInitializer(this IObservable<System.Type> TypeValue)
+        public static IObservable<System.Reflection.ConstructorInfo> get_TypeInitializer(
+            this IObservable<System.Type> TypeValue)
         {
             return Observable.Select(TypeValue, (TypeValueLambda) => TypeValueLambda.TypeInitializer);
         }
@@ -657,13 +849,15 @@ namespace System
         }
 
 
-        public static IObservable<System.Reflection.TypeAttributes> get_Attributes(this IObservable<System.Type> TypeValue)
+        public static IObservable<System.Reflection.TypeAttributes> get_Attributes(
+            this IObservable<System.Type> TypeValue)
         {
             return Observable.Select(TypeValue, (TypeValueLambda) => TypeValueLambda.Attributes);
         }
 
 
-        public static IObservable<System.Reflection.GenericParameterAttributes> get_GenericParameterAttributes(this IObservable<System.Type> TypeValue)
+        public static IObservable<System.Reflection.GenericParameterAttributes> get_GenericParameterAttributes(
+            this IObservable<System.Type> TypeValue)
         {
             return Observable.Select(TypeValue, (TypeValueLambda) => TypeValueLambda.GenericParameterAttributes);
         }
@@ -925,6 +1119,5 @@ namespace System
         {
             return Observable.Select(TypeValue, (TypeValueLambda) => TypeValueLambda.UnderlyingSystemType);
         }
-
     }
 }

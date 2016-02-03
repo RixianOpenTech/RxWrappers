@@ -8,11 +8,11 @@ namespace System.Runtime.Remoting.Messaging
 {
     public static class __ConstructionResponse
     {
-        
-        public static IObservable<System.Collections.IDictionary> get_Properties(this IObservable<System.Runtime.Remoting.Messaging.ConstructionResponse> ConstructionResponseValue)
+        public static IObservable<System.Collections.IDictionary> get_Properties(
+            this IObservable<System.Runtime.Remoting.Messaging.ConstructionResponse> ConstructionResponseValue)
         {
-            return Observable.Select(ConstructionResponseValue, (ConstructionResponseValueLambda) => ConstructionResponseValueLambda.Properties);
+            return Observable.Select(ConstructionResponseValue,
+                (ConstructionResponseValueLambda) => ConstructionResponseValueLambda.Properties);
         }
-
     }
 }

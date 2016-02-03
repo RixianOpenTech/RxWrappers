@@ -8,41 +8,55 @@ namespace System.Runtime.Remoting.Metadata.W3cXsd2001
 {
     public static class __SoapNonNegativeInteger
     {
-        
-        public static IObservable<System.String> GetXsdType(this IObservable<System.Runtime.Remoting.Metadata.W3cXsd2001.SoapNonNegativeInteger> SoapNonNegativeIntegerValue)
+        public static IObservable<System.String> GetXsdType(
+            this IObservable<System.Runtime.Remoting.Metadata.W3cXsd2001.SoapNonNegativeInteger>
+                SoapNonNegativeIntegerValue)
         {
-            return Observable.Select(SoapNonNegativeIntegerValue, (SoapNonNegativeIntegerValueLambda) => SoapNonNegativeIntegerValueLambda.GetXsdType());
+            return Observable.Select(SoapNonNegativeIntegerValue,
+                (SoapNonNegativeIntegerValueLambda) => SoapNonNegativeIntegerValueLambda.GetXsdType());
         }
 
 
-        public static IObservable<System.String> ToString(this IObservable<System.Runtime.Remoting.Metadata.W3cXsd2001.SoapNonNegativeInteger> SoapNonNegativeIntegerValue)
+        public static IObservable<System.String> ToString(
+            this IObservable<System.Runtime.Remoting.Metadata.W3cXsd2001.SoapNonNegativeInteger>
+                SoapNonNegativeIntegerValue)
         {
-            return Observable.Select(SoapNonNegativeIntegerValue, (SoapNonNegativeIntegerValueLambda) => SoapNonNegativeIntegerValueLambda.ToString());
+            return Observable.Select(SoapNonNegativeIntegerValue,
+                (SoapNonNegativeIntegerValueLambda) => SoapNonNegativeIntegerValueLambda.ToString());
         }
 
 
-        public static IObservable<System.Runtime.Remoting.Metadata.W3cXsd2001.SoapNonNegativeInteger> Parse(IObservable<System.String> value)
+        public static IObservable<System.Runtime.Remoting.Metadata.W3cXsd2001.SoapNonNegativeInteger> Parse(
+            IObservable<System.String> value)
         {
-            return Observable.Select(value, (valueLambda) => System.Runtime.Remoting.Metadata.W3cXsd2001.SoapNonNegativeInteger.Parse(valueLambda));
+            return Observable.Select(value,
+                (valueLambda) => System.Runtime.Remoting.Metadata.W3cXsd2001.SoapNonNegativeInteger.Parse(valueLambda));
         }
 
 
         public static IObservable<System.String> get_XsdType()
         {
-            return ObservableExt.Factory(() => System.Runtime.Remoting.Metadata.W3cXsd2001.SoapNonNegativeInteger.XsdType);
+            return
+                ObservableExt.Factory(() => System.Runtime.Remoting.Metadata.W3cXsd2001.SoapNonNegativeInteger.XsdType);
         }
 
 
-        public static IObservable<System.Decimal> get_Value(this IObservable<System.Runtime.Remoting.Metadata.W3cXsd2001.SoapNonNegativeInteger> SoapNonNegativeIntegerValue)
+        public static IObservable<System.Decimal> get_Value(
+            this IObservable<System.Runtime.Remoting.Metadata.W3cXsd2001.SoapNonNegativeInteger>
+                SoapNonNegativeIntegerValue)
         {
-            return Observable.Select(SoapNonNegativeIntegerValue, (SoapNonNegativeIntegerValueLambda) => SoapNonNegativeIntegerValueLambda.Value);
+            return Observable.Select(SoapNonNegativeIntegerValue,
+                (SoapNonNegativeIntegerValueLambda) => SoapNonNegativeIntegerValueLambda.Value);
         }
 
 
-        public static IObservable<System.Reactive.Unit> set_Value(this IObservable<System.Runtime.Remoting.Metadata.W3cXsd2001.SoapNonNegativeInteger> SoapNonNegativeIntegerValue, IObservable<System.Decimal> value)
+        public static IObservable<System.Reactive.Unit> set_Value(
+            this IObservable<System.Runtime.Remoting.Metadata.W3cXsd2001.SoapNonNegativeInteger>
+                SoapNonNegativeIntegerValue, IObservable<System.Decimal> value)
         {
-            return ObservableExt.ZipExecute(SoapNonNegativeIntegerValue, value, (SoapNonNegativeIntegerValueLambda, valueLambda) => SoapNonNegativeIntegerValueLambda.Value = valueLambda);
+            return ObservableExt.ZipExecute(SoapNonNegativeIntegerValue, value,
+                (SoapNonNegativeIntegerValueLambda, valueLambda) =>
+                    SoapNonNegativeIntegerValueLambda.Value = valueLambda);
         }
-
     }
 }

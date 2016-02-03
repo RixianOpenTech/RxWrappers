@@ -8,34 +8,43 @@ namespace System.Threading
 {
     public static class __Timer
     {
-        
-        public static IObservable<System.Boolean> Change(this IObservable<System.Threading.Timer> TimerValue, IObservable<System.Int32> dueTime, IObservable<System.Int32> period)
+        public static IObservable<System.Boolean> Change(this IObservable<System.Threading.Timer> TimerValue,
+            IObservable<System.Int32> dueTime, IObservable<System.Int32> period)
         {
-            return Observable.Zip(TimerValue, dueTime, period, (TimerValueLambda, dueTimeLambda, periodLambda) => TimerValueLambda.Change(dueTimeLambda, periodLambda));
+            return Observable.Zip(TimerValue, dueTime, period,
+                (TimerValueLambda, dueTimeLambda, periodLambda) => TimerValueLambda.Change(dueTimeLambda, periodLambda));
         }
 
 
-        public static IObservable<System.Boolean> Change(this IObservable<System.Threading.Timer> TimerValue, IObservable<System.TimeSpan> dueTime, IObservable<System.TimeSpan> period)
+        public static IObservable<System.Boolean> Change(this IObservable<System.Threading.Timer> TimerValue,
+            IObservable<System.TimeSpan> dueTime, IObservable<System.TimeSpan> period)
         {
-            return Observable.Zip(TimerValue, dueTime, period, (TimerValueLambda, dueTimeLambda, periodLambda) => TimerValueLambda.Change(dueTimeLambda, periodLambda));
+            return Observable.Zip(TimerValue, dueTime, period,
+                (TimerValueLambda, dueTimeLambda, periodLambda) => TimerValueLambda.Change(dueTimeLambda, periodLambda));
         }
 
 
-        public static IObservable<System.Boolean> Change(this IObservable<System.Threading.Timer> TimerValue, IObservable<System.UInt32> dueTime, IObservable<System.UInt32> period)
+        public static IObservable<System.Boolean> Change(this IObservable<System.Threading.Timer> TimerValue,
+            IObservable<System.UInt32> dueTime, IObservable<System.UInt32> period)
         {
-            return Observable.Zip(TimerValue, dueTime, period, (TimerValueLambda, dueTimeLambda, periodLambda) => TimerValueLambda.Change(dueTimeLambda, periodLambda));
+            return Observable.Zip(TimerValue, dueTime, period,
+                (TimerValueLambda, dueTimeLambda, periodLambda) => TimerValueLambda.Change(dueTimeLambda, periodLambda));
         }
 
 
-        public static IObservable<System.Boolean> Change(this IObservable<System.Threading.Timer> TimerValue, IObservable<System.Int64> dueTime, IObservable<System.Int64> period)
+        public static IObservable<System.Boolean> Change(this IObservable<System.Threading.Timer> TimerValue,
+            IObservable<System.Int64> dueTime, IObservable<System.Int64> period)
         {
-            return Observable.Zip(TimerValue, dueTime, period, (TimerValueLambda, dueTimeLambda, periodLambda) => TimerValueLambda.Change(dueTimeLambda, periodLambda));
+            return Observable.Zip(TimerValue, dueTime, period,
+                (TimerValueLambda, dueTimeLambda, periodLambda) => TimerValueLambda.Change(dueTimeLambda, periodLambda));
         }
 
 
-        public static IObservable<System.Boolean> Dispose(this IObservable<System.Threading.Timer> TimerValue, IObservable<System.Threading.WaitHandle> notifyObject)
+        public static IObservable<System.Boolean> Dispose(this IObservable<System.Threading.Timer> TimerValue,
+            IObservable<System.Threading.WaitHandle> notifyObject)
         {
-            return Observable.Zip(TimerValue, notifyObject, (TimerValueLambda, notifyObjectLambda) => TimerValueLambda.Dispose(notifyObjectLambda));
+            return Observable.Zip(TimerValue, notifyObject,
+                (TimerValueLambda, notifyObjectLambda) => TimerValueLambda.Dispose(notifyObjectLambda));
         }
 
 
@@ -43,6 +52,5 @@ namespace System.Threading
         {
             return Observable.Do(TimerValue, (TimerValueLambda) => TimerValueLambda.Dispose()).ToUnit();
         }
-
     }
 }

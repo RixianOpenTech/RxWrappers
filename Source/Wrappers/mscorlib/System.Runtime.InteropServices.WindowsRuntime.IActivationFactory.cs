@@ -8,11 +8,11 @@ namespace System.Runtime.InteropServices.WindowsRuntime
 {
     public static class __IActivationFactory
     {
-        
-        public static IObservable<System.Object> ActivateInstance(this IObservable<System.Runtime.InteropServices.WindowsRuntime.IActivationFactory> IActivationFactoryValue)
+        public static IObservable<System.Object> ActivateInstance(
+            this IObservable<System.Runtime.InteropServices.WindowsRuntime.IActivationFactory> IActivationFactoryValue)
         {
-            return Observable.Select(IActivationFactoryValue, (IActivationFactoryValueLambda) => IActivationFactoryValueLambda.ActivateInstance());
+            return Observable.Select(IActivationFactoryValue,
+                (IActivationFactoryValueLambda) => IActivationFactoryValueLambda.ActivateInstance());
         }
-
     }
 }

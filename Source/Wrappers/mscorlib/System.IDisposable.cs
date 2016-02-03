@@ -8,11 +8,10 @@ namespace System
 {
     public static class __IDisposable
     {
-        
         public static IObservable<System.Reactive.Unit> Dispose(this IObservable<System.IDisposable> IDisposableValue)
         {
-            return Observable.Do(IDisposableValue, (IDisposableValueLambda) => IDisposableValueLambda.Dispose()).ToUnit();
+            return
+                Observable.Do(IDisposableValue, (IDisposableValueLambda) => IDisposableValueLambda.Dispose()).ToUnit();
         }
-
     }
 }

@@ -8,47 +8,60 @@ namespace System
 {
     public static class __FormattableString
     {
-        
-        public static IObservable<System.Object[]> GetArguments(this IObservable<System.FormattableString> FormattableStringValue)
+        public static IObservable<System.Object[]> GetArguments(
+            this IObservable<System.FormattableString> FormattableStringValue)
         {
-            return Observable.Select(FormattableStringValue, (FormattableStringValueLambda) => FormattableStringValueLambda.GetArguments());
+            return Observable.Select(FormattableStringValue,
+                (FormattableStringValueLambda) => FormattableStringValueLambda.GetArguments());
         }
 
 
-        public static IObservable<System.Object> GetArgument(this IObservable<System.FormattableString> FormattableStringValue, IObservable<System.Int32> index)
+        public static IObservable<System.Object> GetArgument(
+            this IObservable<System.FormattableString> FormattableStringValue, IObservable<System.Int32> index)
         {
-            return Observable.Zip(FormattableStringValue, index, (FormattableStringValueLambda, indexLambda) => FormattableStringValueLambda.GetArgument(indexLambda));
+            return Observable.Zip(FormattableStringValue, index,
+                (FormattableStringValueLambda, indexLambda) => FormattableStringValueLambda.GetArgument(indexLambda));
         }
 
 
-        public static IObservable<System.String> ToString(this IObservable<System.FormattableString> FormattableStringValue, IObservable<System.IFormatProvider> formatProvider)
+        public static IObservable<System.String> ToString(
+            this IObservable<System.FormattableString> FormattableStringValue,
+            IObservable<System.IFormatProvider> formatProvider)
         {
-            return Observable.Zip(FormattableStringValue, formatProvider, (FormattableStringValueLambda, formatProviderLambda) => FormattableStringValueLambda.ToString(formatProviderLambda));
+            return Observable.Zip(FormattableStringValue, formatProvider,
+                (FormattableStringValueLambda, formatProviderLambda) =>
+                    FormattableStringValueLambda.ToString(formatProviderLambda));
         }
 
 
         public static IObservable<System.String> Invariant(IObservable<System.FormattableString> formattable)
         {
-            return Observable.Select(formattable, (formattableLambda) => System.FormattableString.Invariant(formattableLambda));
+            return Observable.Select(formattable,
+                (formattableLambda) => System.FormattableString.Invariant(formattableLambda));
         }
 
 
-        public static IObservable<System.String> ToString(this IObservable<System.FormattableString> FormattableStringValue)
+        public static IObservable<System.String> ToString(
+            this IObservable<System.FormattableString> FormattableStringValue)
         {
-            return Observable.Select(FormattableStringValue, (FormattableStringValueLambda) => FormattableStringValueLambda.ToString());
+            return Observable.Select(FormattableStringValue,
+                (FormattableStringValueLambda) => FormattableStringValueLambda.ToString());
         }
 
 
-        public static IObservable<System.String> get_Format(this IObservable<System.FormattableString> FormattableStringValue)
+        public static IObservable<System.String> get_Format(
+            this IObservable<System.FormattableString> FormattableStringValue)
         {
-            return Observable.Select(FormattableStringValue, (FormattableStringValueLambda) => FormattableStringValueLambda.Format);
+            return Observable.Select(FormattableStringValue,
+                (FormattableStringValueLambda) => FormattableStringValueLambda.Format);
         }
 
 
-        public static IObservable<System.Int32> get_ArgumentCount(this IObservable<System.FormattableString> FormattableStringValue)
+        public static IObservable<System.Int32> get_ArgumentCount(
+            this IObservable<System.FormattableString> FormattableStringValue)
         {
-            return Observable.Select(FormattableStringValue, (FormattableStringValueLambda) => FormattableStringValueLambda.ArgumentCount);
+            return Observable.Select(FormattableStringValue,
+                (FormattableStringValueLambda) => FormattableStringValueLambda.ArgumentCount);
         }
-
     }
 }

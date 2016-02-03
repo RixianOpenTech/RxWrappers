@@ -8,11 +8,11 @@ namespace System.Security.AccessControl
 {
     public static class __CryptoKeyAuditRule
     {
-        
-        public static IObservable<System.Security.AccessControl.CryptoKeyRights> get_CryptoKeyRights(this IObservable<System.Security.AccessControl.CryptoKeyAuditRule> CryptoKeyAuditRuleValue)
+        public static IObservable<System.Security.AccessControl.CryptoKeyRights> get_CryptoKeyRights(
+            this IObservable<System.Security.AccessControl.CryptoKeyAuditRule> CryptoKeyAuditRuleValue)
         {
-            return Observable.Select(CryptoKeyAuditRuleValue, (CryptoKeyAuditRuleValueLambda) => CryptoKeyAuditRuleValueLambda.CryptoKeyRights);
+            return Observable.Select(CryptoKeyAuditRuleValue,
+                (CryptoKeyAuditRuleValueLambda) => CryptoKeyAuditRuleValueLambda.CryptoKeyRights);
         }
-
     }
 }

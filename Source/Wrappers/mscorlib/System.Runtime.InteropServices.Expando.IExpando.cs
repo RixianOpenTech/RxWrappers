@@ -8,29 +8,40 @@ namespace System.Runtime.InteropServices.Expando
 {
     public static class __IExpando
     {
-        
-        public static IObservable<System.Reflection.FieldInfo> AddField(this IObservable<System.Runtime.InteropServices.Expando.IExpando> IExpandoValue, IObservable<System.String> name)
+        public static IObservable<System.Reflection.FieldInfo> AddField(
+            this IObservable<System.Runtime.InteropServices.Expando.IExpando> IExpandoValue,
+            IObservable<System.String> name)
         {
-            return Observable.Zip(IExpandoValue, name, (IExpandoValueLambda, nameLambda) => IExpandoValueLambda.AddField(nameLambda));
+            return Observable.Zip(IExpandoValue, name,
+                (IExpandoValueLambda, nameLambda) => IExpandoValueLambda.AddField(nameLambda));
         }
 
 
-        public static IObservable<System.Reflection.PropertyInfo> AddProperty(this IObservable<System.Runtime.InteropServices.Expando.IExpando> IExpandoValue, IObservable<System.String> name)
+        public static IObservable<System.Reflection.PropertyInfo> AddProperty(
+            this IObservable<System.Runtime.InteropServices.Expando.IExpando> IExpandoValue,
+            IObservable<System.String> name)
         {
-            return Observable.Zip(IExpandoValue, name, (IExpandoValueLambda, nameLambda) => IExpandoValueLambda.AddProperty(nameLambda));
+            return Observable.Zip(IExpandoValue, name,
+                (IExpandoValueLambda, nameLambda) => IExpandoValueLambda.AddProperty(nameLambda));
         }
 
 
-        public static IObservable<System.Reflection.MethodInfo> AddMethod(this IObservable<System.Runtime.InteropServices.Expando.IExpando> IExpandoValue, IObservable<System.String> name, IObservable<System.Delegate> method)
+        public static IObservable<System.Reflection.MethodInfo> AddMethod(
+            this IObservable<System.Runtime.InteropServices.Expando.IExpando> IExpandoValue,
+            IObservable<System.String> name, IObservable<System.Delegate> method)
         {
-            return Observable.Zip(IExpandoValue, name, method, (IExpandoValueLambda, nameLambda, methodLambda) => IExpandoValueLambda.AddMethod(nameLambda, methodLambda));
+            return Observable.Zip(IExpandoValue, name, method,
+                (IExpandoValueLambda, nameLambda, methodLambda) =>
+                    IExpandoValueLambda.AddMethod(nameLambda, methodLambda));
         }
 
 
-        public static IObservable<System.Reactive.Unit> RemoveMember(this IObservable<System.Runtime.InteropServices.Expando.IExpando> IExpandoValue, IObservable<System.Reflection.MemberInfo> m)
+        public static IObservable<System.Reactive.Unit> RemoveMember(
+            this IObservable<System.Runtime.InteropServices.Expando.IExpando> IExpandoValue,
+            IObservable<System.Reflection.MemberInfo> m)
         {
-            return ObservableExt.ZipExecute(IExpandoValue, m, (IExpandoValueLambda, mLambda) => IExpandoValueLambda.RemoveMember(mLambda));
+            return ObservableExt.ZipExecute(IExpandoValue, m,
+                (IExpandoValueLambda, mLambda) => IExpandoValueLambda.RemoveMember(mLambda));
         }
-
     }
 }

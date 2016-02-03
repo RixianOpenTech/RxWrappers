@@ -8,11 +8,13 @@ namespace System.Runtime.InteropServices
 {
     public static class __DefaultDllImportSearchPathsAttribute
     {
-        
-        public static IObservable<System.Runtime.InteropServices.DllImportSearchPath> get_Paths(this IObservable<System.Runtime.InteropServices.DefaultDllImportSearchPathsAttribute> DefaultDllImportSearchPathsAttributeValue)
+        public static IObservable<System.Runtime.InteropServices.DllImportSearchPath> get_Paths(
+            this IObservable<System.Runtime.InteropServices.DefaultDllImportSearchPathsAttribute>
+                DefaultDllImportSearchPathsAttributeValue)
         {
-            return Observable.Select(DefaultDllImportSearchPathsAttributeValue, (DefaultDllImportSearchPathsAttributeValueLambda) => DefaultDllImportSearchPathsAttributeValueLambda.Paths);
+            return Observable.Select(DefaultDllImportSearchPathsAttributeValue,
+                (DefaultDllImportSearchPathsAttributeValueLambda) =>
+                    DefaultDllImportSearchPathsAttributeValueLambda.Paths);
         }
-
     }
 }

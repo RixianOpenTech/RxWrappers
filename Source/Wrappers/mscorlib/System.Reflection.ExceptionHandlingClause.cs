@@ -8,53 +8,67 @@ namespace System.Reflection
 {
     public static class __ExceptionHandlingClause
     {
-        
-        public static IObservable<System.String> ToString(this IObservable<System.Reflection.ExceptionHandlingClause> ExceptionHandlingClauseValue)
+        public static IObservable<System.String> ToString(
+            this IObservable<System.Reflection.ExceptionHandlingClause> ExceptionHandlingClauseValue)
         {
-            return Observable.Select(ExceptionHandlingClauseValue, (ExceptionHandlingClauseValueLambda) => ExceptionHandlingClauseValueLambda.ToString());
+            return Observable.Select(ExceptionHandlingClauseValue,
+                (ExceptionHandlingClauseValueLambda) => ExceptionHandlingClauseValueLambda.ToString());
         }
 
 
-        public static IObservable<System.Reflection.ExceptionHandlingClauseOptions> get_Flags(this IObservable<System.Reflection.ExceptionHandlingClause> ExceptionHandlingClauseValue)
+        public static IObservable<System.Reflection.ExceptionHandlingClauseOptions> get_Flags(
+            this IObservable<System.Reflection.ExceptionHandlingClause> ExceptionHandlingClauseValue)
         {
-            return Observable.Select(ExceptionHandlingClauseValue, (ExceptionHandlingClauseValueLambda) => ExceptionHandlingClauseValueLambda.Flags);
+            return Observable.Select(ExceptionHandlingClauseValue,
+                (ExceptionHandlingClauseValueLambda) => ExceptionHandlingClauseValueLambda.Flags);
         }
 
 
-        public static IObservable<System.Int32> get_TryOffset(this IObservable<System.Reflection.ExceptionHandlingClause> ExceptionHandlingClauseValue)
+        public static IObservable<System.Int32> get_TryOffset(
+            this IObservable<System.Reflection.ExceptionHandlingClause> ExceptionHandlingClauseValue)
         {
-            return Observable.Select(ExceptionHandlingClauseValue, (ExceptionHandlingClauseValueLambda) => ExceptionHandlingClauseValueLambda.TryOffset);
+            return Observable.Select(ExceptionHandlingClauseValue,
+                (ExceptionHandlingClauseValueLambda) => ExceptionHandlingClauseValueLambda.TryOffset);
         }
 
 
-        public static IObservable<System.Int32> get_TryLength(this IObservable<System.Reflection.ExceptionHandlingClause> ExceptionHandlingClauseValue)
+        public static IObservable<System.Int32> get_TryLength(
+            this IObservable<System.Reflection.ExceptionHandlingClause> ExceptionHandlingClauseValue)
         {
-            return Observable.Select(ExceptionHandlingClauseValue, (ExceptionHandlingClauseValueLambda) => ExceptionHandlingClauseValueLambda.TryLength);
+            return Observable.Select(ExceptionHandlingClauseValue,
+                (ExceptionHandlingClauseValueLambda) => ExceptionHandlingClauseValueLambda.TryLength);
         }
 
 
-        public static IObservable<System.Int32> get_HandlerOffset(this IObservable<System.Reflection.ExceptionHandlingClause> ExceptionHandlingClauseValue)
+        public static IObservable<System.Int32> get_HandlerOffset(
+            this IObservable<System.Reflection.ExceptionHandlingClause> ExceptionHandlingClauseValue)
         {
-            return Observable.Select(ExceptionHandlingClauseValue, (ExceptionHandlingClauseValueLambda) => ExceptionHandlingClauseValueLambda.HandlerOffset);
+            return Observable.Select(ExceptionHandlingClauseValue,
+                (ExceptionHandlingClauseValueLambda) => ExceptionHandlingClauseValueLambda.HandlerOffset);
         }
 
 
-        public static IObservable<System.Int32> get_HandlerLength(this IObservable<System.Reflection.ExceptionHandlingClause> ExceptionHandlingClauseValue)
+        public static IObservable<System.Int32> get_HandlerLength(
+            this IObservable<System.Reflection.ExceptionHandlingClause> ExceptionHandlingClauseValue)
         {
-            return Observable.Select(ExceptionHandlingClauseValue, (ExceptionHandlingClauseValueLambda) => ExceptionHandlingClauseValueLambda.HandlerLength);
+            return Observable.Select(ExceptionHandlingClauseValue,
+                (ExceptionHandlingClauseValueLambda) => ExceptionHandlingClauseValueLambda.HandlerLength);
         }
 
 
-        public static IObservable<System.Int32> get_FilterOffset(this IObservable<System.Reflection.ExceptionHandlingClause> ExceptionHandlingClauseValue)
+        public static IObservable<System.Int32> get_FilterOffset(
+            this IObservable<System.Reflection.ExceptionHandlingClause> ExceptionHandlingClauseValue)
         {
-            return Observable.Select(ExceptionHandlingClauseValue, (ExceptionHandlingClauseValueLambda) => ExceptionHandlingClauseValueLambda.FilterOffset);
+            return Observable.Select(ExceptionHandlingClauseValue,
+                (ExceptionHandlingClauseValueLambda) => ExceptionHandlingClauseValueLambda.FilterOffset);
         }
 
 
-        public static IObservable<System.Type> get_CatchType(this IObservable<System.Reflection.ExceptionHandlingClause> ExceptionHandlingClauseValue)
+        public static IObservable<System.Type> get_CatchType(
+            this IObservable<System.Reflection.ExceptionHandlingClause> ExceptionHandlingClauseValue)
         {
-            return Observable.Select(ExceptionHandlingClauseValue, (ExceptionHandlingClauseValueLambda) => ExceptionHandlingClauseValueLambda.CatchType);
+            return Observable.Select(ExceptionHandlingClauseValue,
+                (ExceptionHandlingClauseValueLambda) => ExceptionHandlingClauseValueLambda.CatchType);
         }
-
     }
 }

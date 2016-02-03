@@ -8,77 +8,105 @@ namespace System.Security.Permissions
 {
     public static class __PermissionSetAttribute
     {
-        
-        public static IObservable<System.Security.IPermission> CreatePermission(this IObservable<System.Security.Permissions.PermissionSetAttribute> PermissionSetAttributeValue)
+        public static IObservable<System.Security.IPermission> CreatePermission(
+            this IObservable<System.Security.Permissions.PermissionSetAttribute> PermissionSetAttributeValue)
         {
-            return Observable.Select(PermissionSetAttributeValue, (PermissionSetAttributeValueLambda) => PermissionSetAttributeValueLambda.CreatePermission());
+            return Observable.Select(PermissionSetAttributeValue,
+                (PermissionSetAttributeValueLambda) => PermissionSetAttributeValueLambda.CreatePermission());
         }
 
 
-        public static IObservable<System.Security.PermissionSet> CreatePermissionSet(this IObservable<System.Security.Permissions.PermissionSetAttribute> PermissionSetAttributeValue)
+        public static IObservable<System.Security.PermissionSet> CreatePermissionSet(
+            this IObservable<System.Security.Permissions.PermissionSetAttribute> PermissionSetAttributeValue)
         {
-            return Observable.Select(PermissionSetAttributeValue, (PermissionSetAttributeValueLambda) => PermissionSetAttributeValueLambda.CreatePermissionSet());
+            return Observable.Select(PermissionSetAttributeValue,
+                (PermissionSetAttributeValueLambda) => PermissionSetAttributeValueLambda.CreatePermissionSet());
         }
 
 
-        public static IObservable<System.String> get_File(this IObservable<System.Security.Permissions.PermissionSetAttribute> PermissionSetAttributeValue)
+        public static IObservable<System.String> get_File(
+            this IObservable<System.Security.Permissions.PermissionSetAttribute> PermissionSetAttributeValue)
         {
-            return Observable.Select(PermissionSetAttributeValue, (PermissionSetAttributeValueLambda) => PermissionSetAttributeValueLambda.File);
+            return Observable.Select(PermissionSetAttributeValue,
+                (PermissionSetAttributeValueLambda) => PermissionSetAttributeValueLambda.File);
         }
 
 
-        public static IObservable<System.Boolean> get_UnicodeEncoded(this IObservable<System.Security.Permissions.PermissionSetAttribute> PermissionSetAttributeValue)
+        public static IObservable<System.Boolean> get_UnicodeEncoded(
+            this IObservable<System.Security.Permissions.PermissionSetAttribute> PermissionSetAttributeValue)
         {
-            return Observable.Select(PermissionSetAttributeValue, (PermissionSetAttributeValueLambda) => PermissionSetAttributeValueLambda.UnicodeEncoded);
+            return Observable.Select(PermissionSetAttributeValue,
+                (PermissionSetAttributeValueLambda) => PermissionSetAttributeValueLambda.UnicodeEncoded);
         }
 
 
-        public static IObservable<System.String> get_Name(this IObservable<System.Security.Permissions.PermissionSetAttribute> PermissionSetAttributeValue)
+        public static IObservable<System.String> get_Name(
+            this IObservable<System.Security.Permissions.PermissionSetAttribute> PermissionSetAttributeValue)
         {
-            return Observable.Select(PermissionSetAttributeValue, (PermissionSetAttributeValueLambda) => PermissionSetAttributeValueLambda.Name);
+            return Observable.Select(PermissionSetAttributeValue,
+                (PermissionSetAttributeValueLambda) => PermissionSetAttributeValueLambda.Name);
         }
 
 
-        public static IObservable<System.String> get_XML(this IObservable<System.Security.Permissions.PermissionSetAttribute> PermissionSetAttributeValue)
+        public static IObservable<System.String> get_XML(
+            this IObservable<System.Security.Permissions.PermissionSetAttribute> PermissionSetAttributeValue)
         {
-            return Observable.Select(PermissionSetAttributeValue, (PermissionSetAttributeValueLambda) => PermissionSetAttributeValueLambda.XML);
+            return Observable.Select(PermissionSetAttributeValue,
+                (PermissionSetAttributeValueLambda) => PermissionSetAttributeValueLambda.XML);
         }
 
 
-        public static IObservable<System.String> get_Hex(this IObservable<System.Security.Permissions.PermissionSetAttribute> PermissionSetAttributeValue)
+        public static IObservable<System.String> get_Hex(
+            this IObservable<System.Security.Permissions.PermissionSetAttribute> PermissionSetAttributeValue)
         {
-            return Observable.Select(PermissionSetAttributeValue, (PermissionSetAttributeValueLambda) => PermissionSetAttributeValueLambda.Hex);
+            return Observable.Select(PermissionSetAttributeValue,
+                (PermissionSetAttributeValueLambda) => PermissionSetAttributeValueLambda.Hex);
         }
 
 
-        public static IObservable<System.Reactive.Unit> set_File(this IObservable<System.Security.Permissions.PermissionSetAttribute> PermissionSetAttributeValue, IObservable<System.String> value)
+        public static IObservable<System.Reactive.Unit> set_File(
+            this IObservable<System.Security.Permissions.PermissionSetAttribute> PermissionSetAttributeValue,
+            IObservable<System.String> value)
         {
-            return ObservableExt.ZipExecute(PermissionSetAttributeValue, value, (PermissionSetAttributeValueLambda, valueLambda) => PermissionSetAttributeValueLambda.File = valueLambda);
+            return ObservableExt.ZipExecute(PermissionSetAttributeValue, value,
+                (PermissionSetAttributeValueLambda, valueLambda) => PermissionSetAttributeValueLambda.File = valueLambda);
         }
 
 
-        public static IObservable<System.Reactive.Unit> set_UnicodeEncoded(this IObservable<System.Security.Permissions.PermissionSetAttribute> PermissionSetAttributeValue, IObservable<System.Boolean> value)
+        public static IObservable<System.Reactive.Unit> set_UnicodeEncoded(
+            this IObservable<System.Security.Permissions.PermissionSetAttribute> PermissionSetAttributeValue,
+            IObservable<System.Boolean> value)
         {
-            return ObservableExt.ZipExecute(PermissionSetAttributeValue, value, (PermissionSetAttributeValueLambda, valueLambda) => PermissionSetAttributeValueLambda.UnicodeEncoded = valueLambda);
+            return ObservableExt.ZipExecute(PermissionSetAttributeValue, value,
+                (PermissionSetAttributeValueLambda, valueLambda) =>
+                    PermissionSetAttributeValueLambda.UnicodeEncoded = valueLambda);
         }
 
 
-        public static IObservable<System.Reactive.Unit> set_Name(this IObservable<System.Security.Permissions.PermissionSetAttribute> PermissionSetAttributeValue, IObservable<System.String> value)
+        public static IObservable<System.Reactive.Unit> set_Name(
+            this IObservable<System.Security.Permissions.PermissionSetAttribute> PermissionSetAttributeValue,
+            IObservable<System.String> value)
         {
-            return ObservableExt.ZipExecute(PermissionSetAttributeValue, value, (PermissionSetAttributeValueLambda, valueLambda) => PermissionSetAttributeValueLambda.Name = valueLambda);
+            return ObservableExt.ZipExecute(PermissionSetAttributeValue, value,
+                (PermissionSetAttributeValueLambda, valueLambda) => PermissionSetAttributeValueLambda.Name = valueLambda);
         }
 
 
-        public static IObservable<System.Reactive.Unit> set_XML(this IObservable<System.Security.Permissions.PermissionSetAttribute> PermissionSetAttributeValue, IObservable<System.String> value)
+        public static IObservable<System.Reactive.Unit> set_XML(
+            this IObservable<System.Security.Permissions.PermissionSetAttribute> PermissionSetAttributeValue,
+            IObservable<System.String> value)
         {
-            return ObservableExt.ZipExecute(PermissionSetAttributeValue, value, (PermissionSetAttributeValueLambda, valueLambda) => PermissionSetAttributeValueLambda.XML = valueLambda);
+            return ObservableExt.ZipExecute(PermissionSetAttributeValue, value,
+                (PermissionSetAttributeValueLambda, valueLambda) => PermissionSetAttributeValueLambda.XML = valueLambda);
         }
 
 
-        public static IObservable<System.Reactive.Unit> set_Hex(this IObservable<System.Security.Permissions.PermissionSetAttribute> PermissionSetAttributeValue, IObservable<System.String> value)
+        public static IObservable<System.Reactive.Unit> set_Hex(
+            this IObservable<System.Security.Permissions.PermissionSetAttribute> PermissionSetAttributeValue,
+            IObservable<System.String> value)
         {
-            return ObservableExt.ZipExecute(PermissionSetAttributeValue, value, (PermissionSetAttributeValueLambda, valueLambda) => PermissionSetAttributeValueLambda.Hex = valueLambda);
+            return ObservableExt.ZipExecute(PermissionSetAttributeValue, value,
+                (PermissionSetAttributeValueLambda, valueLambda) => PermissionSetAttributeValueLambda.Hex = valueLambda);
         }
-
     }
 }

@@ -8,11 +8,13 @@ namespace System.Security.Permissions
 {
     public static class __IsolatedStorageFilePermissionAttribute
     {
-        
-        public static IObservable<System.Security.IPermission> CreatePermission(this IObservable<System.Security.Permissions.IsolatedStorageFilePermissionAttribute> IsolatedStorageFilePermissionAttributeValue)
+        public static IObservable<System.Security.IPermission> CreatePermission(
+            this IObservable<System.Security.Permissions.IsolatedStorageFilePermissionAttribute>
+                IsolatedStorageFilePermissionAttributeValue)
         {
-            return Observable.Select(IsolatedStorageFilePermissionAttributeValue, (IsolatedStorageFilePermissionAttributeValueLambda) => IsolatedStorageFilePermissionAttributeValueLambda.CreatePermission());
+            return Observable.Select(IsolatedStorageFilePermissionAttributeValue,
+                (IsolatedStorageFilePermissionAttributeValueLambda) =>
+                    IsolatedStorageFilePermissionAttributeValueLambda.CreatePermission());
         }
-
     }
 }

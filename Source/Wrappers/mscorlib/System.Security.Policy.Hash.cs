@@ -8,7 +8,6 @@ namespace System.Security.Policy
 {
     public static class __Hash
     {
-        
         public static IObservable<System.Security.Policy.Hash> CreateSHA1(IObservable<System.Byte[]> sha1)
         {
             return Observable.Select(sha1, (sha1Lambda) => System.Security.Policy.Hash.CreateSHA1(sha1Lambda));
@@ -27,21 +26,28 @@ namespace System.Security.Policy
         }
 
 
-        public static IObservable<System.Security.Policy.EvidenceBase> Clone(this IObservable<System.Security.Policy.Hash> HashValue)
+        public static IObservable<System.Security.Policy.EvidenceBase> Clone(
+            this IObservable<System.Security.Policy.Hash> HashValue)
         {
             return Observable.Select(HashValue, (HashValueLambda) => HashValueLambda.Clone());
         }
 
 
-        public static IObservable<System.Reactive.Unit> GetObjectData(this IObservable<System.Security.Policy.Hash> HashValue, IObservable<System.Runtime.Serialization.SerializationInfo> info, IObservable<System.Runtime.Serialization.StreamingContext> context)
+        public static IObservable<System.Reactive.Unit> GetObjectData(
+            this IObservable<System.Security.Policy.Hash> HashValue,
+            IObservable<System.Runtime.Serialization.SerializationInfo> info,
+            IObservable<System.Runtime.Serialization.StreamingContext> context)
         {
-            return ObservableExt.ZipExecute(HashValue, info, context, (HashValueLambda, infoLambda, contextLambda) => HashValueLambda.GetObjectData(infoLambda, contextLambda));
+            return ObservableExt.ZipExecute(HashValue, info, context,
+                (HashValueLambda, infoLambda, contextLambda) => HashValueLambda.GetObjectData(infoLambda, contextLambda));
         }
 
 
-        public static IObservable<System.Byte[]> GenerateHash(this IObservable<System.Security.Policy.Hash> HashValue, IObservable<System.Security.Cryptography.HashAlgorithm> hashAlg)
+        public static IObservable<System.Byte[]> GenerateHash(this IObservable<System.Security.Policy.Hash> HashValue,
+            IObservable<System.Security.Cryptography.HashAlgorithm> hashAlg)
         {
-            return Observable.Zip(HashValue, hashAlg, (HashValueLambda, hashAlgLambda) => HashValueLambda.GenerateHash(hashAlgLambda));
+            return Observable.Zip(HashValue, hashAlg,
+                (HashValueLambda, hashAlgLambda) => HashValueLambda.GenerateHash(hashAlgLambda));
         }
 
 
@@ -67,6 +73,5 @@ namespace System.Security.Policy
         {
             return Observable.Select(HashValue, (HashValueLambda) => HashValueLambda.MD5);
         }
-
     }
 }

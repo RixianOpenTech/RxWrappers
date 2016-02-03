@@ -8,22 +8,30 @@ namespace System.Threading
 {
     public static class __CompressedStack
     {
-        
         public static IObservable<System.Threading.CompressedStack> Capture()
         {
             return ObservableExt.Factory(() => System.Threading.CompressedStack.Capture());
         }
 
 
-        public static IObservable<System.Reactive.Unit> Run(IObservable<System.Threading.CompressedStack> compressedStack, IObservable<System.Threading.ContextCallback> callback, IObservable<System.Object> state)
+        public static IObservable<System.Reactive.Unit> Run(
+            IObservable<System.Threading.CompressedStack> compressedStack,
+            IObservable<System.Threading.ContextCallback> callback, IObservable<System.Object> state)
         {
-            return ObservableExt.ZipExecute(compressedStack, callback, state, (compressedStackLambda, callbackLambda, stateLambda) => System.Threading.CompressedStack.Run(compressedStackLambda, callbackLambda, stateLambda));
+            return ObservableExt.ZipExecute(compressedStack, callback, state,
+                (compressedStackLambda, callbackLambda, stateLambda) =>
+                    System.Threading.CompressedStack.Run(compressedStackLambda, callbackLambda, stateLambda));
         }
 
 
-        public static IObservable<System.Reactive.Unit> GetObjectData(this IObservable<System.Threading.CompressedStack> CompressedStackValue, IObservable<System.Runtime.Serialization.SerializationInfo> info, IObservable<System.Runtime.Serialization.StreamingContext> context)
+        public static IObservable<System.Reactive.Unit> GetObjectData(
+            this IObservable<System.Threading.CompressedStack> CompressedStackValue,
+            IObservable<System.Runtime.Serialization.SerializationInfo> info,
+            IObservable<System.Runtime.Serialization.StreamingContext> context)
         {
-            return ObservableExt.ZipExecute(CompressedStackValue, info, context, (CompressedStackValueLambda, infoLambda, contextLambda) => CompressedStackValueLambda.GetObjectData(infoLambda, contextLambda));
+            return ObservableExt.ZipExecute(CompressedStackValue, info, context,
+                (CompressedStackValueLambda, infoLambda, contextLambda) =>
+                    CompressedStackValueLambda.GetObjectData(infoLambda, contextLambda));
         }
 
 
@@ -33,10 +41,11 @@ namespace System.Threading
         }
 
 
-        public static IObservable<System.Threading.CompressedStack> CreateCopy(this IObservable<System.Threading.CompressedStack> CompressedStackValue)
+        public static IObservable<System.Threading.CompressedStack> CreateCopy(
+            this IObservable<System.Threading.CompressedStack> CompressedStackValue)
         {
-            return Observable.Select(CompressedStackValue, (CompressedStackValueLambda) => CompressedStackValueLambda.CreateCopy());
+            return Observable.Select(CompressedStackValue,
+                (CompressedStackValueLambda) => CompressedStackValueLambda.CreateCopy());
         }
-
     }
 }

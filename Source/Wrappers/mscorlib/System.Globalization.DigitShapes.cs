@@ -8,6 +8,5 @@ namespace System.Globalization
 {
     public static class __DigitShapes
     {
-        
     }
 }

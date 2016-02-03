@@ -8,11 +8,11 @@ namespace System.Collections
 {
     public static class __IEnumerable
     {
-        
-        public static IObservable<System.Collections.IEnumerator> GetEnumerator(this IObservable<System.Collections.IEnumerable> IEnumerableValue)
+        public static IObservable<System.Collections.IEnumerator> GetEnumerator(
+            this IObservable<System.Collections.IEnumerable> IEnumerableValue)
         {
-            return Observable.Select(IEnumerableValue, (IEnumerableValueLambda) => IEnumerableValueLambda.GetEnumerator());
+            return Observable.Select(IEnumerableValue,
+                (IEnumerableValueLambda) => IEnumerableValueLambda.GetEnumerator());
         }
-
     }
 }

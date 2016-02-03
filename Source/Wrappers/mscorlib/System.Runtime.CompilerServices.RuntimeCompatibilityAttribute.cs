@@ -8,17 +8,23 @@ namespace System.Runtime.CompilerServices
 {
     public static class __RuntimeCompatibilityAttribute
     {
-        
-        public static IObservable<System.Boolean> get_WrapNonExceptionThrows(this IObservable<System.Runtime.CompilerServices.RuntimeCompatibilityAttribute> RuntimeCompatibilityAttributeValue)
+        public static IObservable<System.Boolean> get_WrapNonExceptionThrows(
+            this IObservable<System.Runtime.CompilerServices.RuntimeCompatibilityAttribute>
+                RuntimeCompatibilityAttributeValue)
         {
-            return Observable.Select(RuntimeCompatibilityAttributeValue, (RuntimeCompatibilityAttributeValueLambda) => RuntimeCompatibilityAttributeValueLambda.WrapNonExceptionThrows);
+            return Observable.Select(RuntimeCompatibilityAttributeValue,
+                (RuntimeCompatibilityAttributeValueLambda) =>
+                    RuntimeCompatibilityAttributeValueLambda.WrapNonExceptionThrows);
         }
 
 
-        public static IObservable<System.Reactive.Unit> set_WrapNonExceptionThrows(this IObservable<System.Runtime.CompilerServices.RuntimeCompatibilityAttribute> RuntimeCompatibilityAttributeValue, IObservable<System.Boolean> value)
+        public static IObservable<System.Reactive.Unit> set_WrapNonExceptionThrows(
+            this IObservable<System.Runtime.CompilerServices.RuntimeCompatibilityAttribute>
+                RuntimeCompatibilityAttributeValue, IObservable<System.Boolean> value)
         {
-            return ObservableExt.ZipExecute(RuntimeCompatibilityAttributeValue, value, (RuntimeCompatibilityAttributeValueLambda, valueLambda) => RuntimeCompatibilityAttributeValueLambda.WrapNonExceptionThrows = valueLambda);
+            return ObservableExt.ZipExecute(RuntimeCompatibilityAttributeValue, value,
+                (RuntimeCompatibilityAttributeValueLambda, valueLambda) =>
+                    RuntimeCompatibilityAttributeValueLambda.WrapNonExceptionThrows = valueLambda);
         }
-
     }
 }

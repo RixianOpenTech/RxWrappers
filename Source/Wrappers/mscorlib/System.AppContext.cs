@@ -8,20 +8,23 @@ namespace System
 {
     public static class __AppContext
     {
-        
-        public static IObservable<Tuple<System.Boolean, System.Boolean>> TryGetSwitch(IObservable<System.String> switchName)
+        public static IObservable<Tuple<System.Boolean, System.Boolean>> TryGetSwitch(
+            IObservable<System.String> switchName)
         {
-            return Observable.Select(switchName, (switchNameLambda) => {
-System.Boolean isEnabledOutput = default(System.Boolean);
-var result = System.AppContext.TryGetSwitch(switchNameLambda, out isEnabledOutput);
-return Tuple.Create(result, isEnabledOutput);
-});
+            return Observable.Select(switchName, (switchNameLambda) =>
+            {
+                System.Boolean isEnabledOutput = default(System.Boolean);
+                var result = System.AppContext.TryGetSwitch(switchNameLambda, out isEnabledOutput);
+                return Tuple.Create(result, isEnabledOutput);
+            });
         }
 
 
-        public static IObservable<System.Reactive.Unit> SetSwitch(IObservable<System.String> switchName, IObservable<System.Boolean> isEnabled)
+        public static IObservable<System.Reactive.Unit> SetSwitch(IObservable<System.String> switchName,
+            IObservable<System.Boolean> isEnabled)
         {
-            return ObservableExt.ZipExecute(switchName, isEnabled, (switchNameLambda, isEnabledLambda) => System.AppContext.SetSwitch(switchNameLambda, isEnabledLambda));
+            return ObservableExt.ZipExecute(switchName, isEnabled,
+                (switchNameLambda, isEnabledLambda) => System.AppContext.SetSwitch(switchNameLambda, isEnabledLambda));
         }
 
 
@@ -29,6 +32,5 @@ return Tuple.Create(result, isEnabledOutput);
         {
             return ObservableExt.Factory(() => System.AppContext.BaseDirectory);
         }
-
     }
 }

@@ -8,34 +8,39 @@ namespace System
 {
     public static class __Char
     {
-        
         public static IObservable<System.Int32> GetHashCode(this IObservable<System.Char> CharValue)
         {
             return Observable.Select(CharValue, (CharValueLambda) => CharValueLambda.GetHashCode());
         }
 
 
-        public static IObservable<System.Boolean> Equals(this IObservable<System.Char> CharValue, IObservable<System.Object> obj)
+        public static IObservable<System.Boolean> Equals(this IObservable<System.Char> CharValue,
+            IObservable<System.Object> obj)
         {
             return Observable.Zip(CharValue, obj, (CharValueLambda, objLambda) => CharValueLambda.Equals(objLambda));
         }
 
 
-        public static IObservable<System.Boolean> Equals(this IObservable<System.Char> CharValue, IObservable<System.Char> obj)
+        public static IObservable<System.Boolean> Equals(this IObservable<System.Char> CharValue,
+            IObservable<System.Char> obj)
         {
             return Observable.Zip(CharValue, obj, (CharValueLambda, objLambda) => CharValueLambda.Equals(objLambda));
         }
 
 
-        public static IObservable<System.Int32> CompareTo(this IObservable<System.Char> CharValue, IObservable<System.Object> value)
+        public static IObservable<System.Int32> CompareTo(this IObservable<System.Char> CharValue,
+            IObservable<System.Object> value)
         {
-            return Observable.Zip(CharValue, value, (CharValueLambda, valueLambda) => CharValueLambda.CompareTo(valueLambda));
+            return Observable.Zip(CharValue, value,
+                (CharValueLambda, valueLambda) => CharValueLambda.CompareTo(valueLambda));
         }
 
 
-        public static IObservable<System.Int32> CompareTo(this IObservable<System.Char> CharValue, IObservable<System.Char> value)
+        public static IObservable<System.Int32> CompareTo(this IObservable<System.Char> CharValue,
+            IObservable<System.Char> value)
         {
-            return Observable.Zip(CharValue, value, (CharValueLambda, valueLambda) => CharValueLambda.CompareTo(valueLambda));
+            return Observable.Zip(CharValue, value,
+                (CharValueLambda, valueLambda) => CharValueLambda.CompareTo(valueLambda));
         }
 
 
@@ -45,9 +50,11 @@ namespace System
         }
 
 
-        public static IObservable<System.String> ToString(this IObservable<System.Char> CharValue, IObservable<System.IFormatProvider> provider)
+        public static IObservable<System.String> ToString(this IObservable<System.Char> CharValue,
+            IObservable<System.IFormatProvider> provider)
         {
-            return Observable.Zip(CharValue, provider, (CharValueLambda, providerLambda) => CharValueLambda.ToString(providerLambda));
+            return Observable.Zip(CharValue, provider,
+                (CharValueLambda, providerLambda) => CharValueLambda.ToString(providerLambda));
         }
 
 
@@ -59,11 +66,12 @@ namespace System
 
         public static IObservable<Tuple<System.Boolean, System.Char>> TryParse(IObservable<System.String> s)
         {
-            return Observable.Select(s, (sLambda) => {
-System.Char resultOutput = default(System.Char);
-var result = System.Char.TryParse(sLambda, out resultOutput);
-return Tuple.Create(result, resultOutput);
-});
+            return Observable.Select(s, (sLambda) =>
+            {
+                System.Char resultOutput = default(System.Char);
+                var result = System.Char.TryParse(sLambda, out resultOutput);
+                return Tuple.Create(result, resultOutput);
+            });
         }
 
 
@@ -109,7 +117,8 @@ return Tuple.Create(result, resultOutput);
         }
 
 
-        public static IObservable<System.Char> ToUpper(IObservable<System.Char> c, IObservable<System.Globalization.CultureInfo> culture)
+        public static IObservable<System.Char> ToUpper(IObservable<System.Char> c,
+            IObservable<System.Globalization.CultureInfo> culture)
         {
             return Observable.Zip(c, culture, (cLambda, cultureLambda) => System.Char.ToUpper(cLambda, cultureLambda));
         }
@@ -127,7 +136,8 @@ return Tuple.Create(result, resultOutput);
         }
 
 
-        public static IObservable<System.Char> ToLower(IObservable<System.Char> c, IObservable<System.Globalization.CultureInfo> culture)
+        public static IObservable<System.Char> ToLower(IObservable<System.Char> c,
+            IObservable<System.Globalization.CultureInfo> culture)
         {
             return Observable.Zip(c, culture, (cLambda, cultureLambda) => System.Char.ToLower(cLambda, cultureLambda));
         }
@@ -157,7 +167,8 @@ return Tuple.Create(result, resultOutput);
         }
 
 
-        public static IObservable<System.Boolean> IsControl(IObservable<System.String> s, IObservable<System.Int32> index)
+        public static IObservable<System.Boolean> IsControl(IObservable<System.String> s,
+            IObservable<System.Int32> index)
         {
             return Observable.Zip(s, index, (sLambda, indexLambda) => System.Char.IsControl(sLambda, indexLambda));
         }
@@ -175,7 +186,8 @@ return Tuple.Create(result, resultOutput);
         }
 
 
-        public static IObservable<System.Boolean> IsLetterOrDigit(IObservable<System.String> s, IObservable<System.Int32> index)
+        public static IObservable<System.Boolean> IsLetterOrDigit(IObservable<System.String> s,
+            IObservable<System.Int32> index)
         {
             return Observable.Zip(s, index, (sLambda, indexLambda) => System.Char.IsLetterOrDigit(sLambda, indexLambda));
         }
@@ -199,7 +211,8 @@ return Tuple.Create(result, resultOutput);
         }
 
 
-        public static IObservable<System.Boolean> IsPunctuation(IObservable<System.String> s, IObservable<System.Int32> index)
+        public static IObservable<System.Boolean> IsPunctuation(IObservable<System.String> s,
+            IObservable<System.Int32> index)
         {
             return Observable.Zip(s, index, (sLambda, indexLambda) => System.Char.IsPunctuation(sLambda, indexLambda));
         }
@@ -211,7 +224,8 @@ return Tuple.Create(result, resultOutput);
         }
 
 
-        public static IObservable<System.Boolean> IsSeparator(IObservable<System.String> s, IObservable<System.Int32> index)
+        public static IObservable<System.Boolean> IsSeparator(IObservable<System.String> s,
+            IObservable<System.Int32> index)
         {
             return Observable.Zip(s, index, (sLambda, indexLambda) => System.Char.IsSeparator(sLambda, indexLambda));
         }
@@ -223,7 +237,8 @@ return Tuple.Create(result, resultOutput);
         }
 
 
-        public static IObservable<System.Boolean> IsSurrogate(IObservable<System.String> s, IObservable<System.Int32> index)
+        public static IObservable<System.Boolean> IsSurrogate(IObservable<System.String> s,
+            IObservable<System.Int32> index)
         {
             return Observable.Zip(s, index, (sLambda, indexLambda) => System.Char.IsSurrogate(sLambda, indexLambda));
         }
@@ -247,7 +262,8 @@ return Tuple.Create(result, resultOutput);
         }
 
 
-        public static IObservable<System.Boolean> IsWhiteSpace(IObservable<System.String> s, IObservable<System.Int32> index)
+        public static IObservable<System.Boolean> IsWhiteSpace(IObservable<System.String> s,
+            IObservable<System.Int32> index)
         {
             return Observable.Zip(s, index, (sLambda, indexLambda) => System.Char.IsWhiteSpace(sLambda, indexLambda));
         }
@@ -259,9 +275,11 @@ return Tuple.Create(result, resultOutput);
         }
 
 
-        public static IObservable<System.Globalization.UnicodeCategory> GetUnicodeCategory(IObservable<System.String> s, IObservable<System.Int32> index)
+        public static IObservable<System.Globalization.UnicodeCategory> GetUnicodeCategory(IObservable<System.String> s,
+            IObservable<System.Int32> index)
         {
-            return Observable.Zip(s, index, (sLambda, indexLambda) => System.Char.GetUnicodeCategory(sLambda, indexLambda));
+            return Observable.Zip(s, index,
+                (sLambda, indexLambda) => System.Char.GetUnicodeCategory(sLambda, indexLambda));
         }
 
 
@@ -271,7 +289,8 @@ return Tuple.Create(result, resultOutput);
         }
 
 
-        public static IObservable<System.Double> GetNumericValue(IObservable<System.String> s, IObservable<System.Int32> index)
+        public static IObservable<System.Double> GetNumericValue(IObservable<System.String> s,
+            IObservable<System.Int32> index)
         {
             return Observable.Zip(s, index, (sLambda, indexLambda) => System.Char.GetNumericValue(sLambda, indexLambda));
         }
@@ -283,7 +302,8 @@ return Tuple.Create(result, resultOutput);
         }
 
 
-        public static IObservable<System.Boolean> IsHighSurrogate(IObservable<System.String> s, IObservable<System.Int32> index)
+        public static IObservable<System.Boolean> IsHighSurrogate(IObservable<System.String> s,
+            IObservable<System.Int32> index)
         {
             return Observable.Zip(s, index, (sLambda, indexLambda) => System.Char.IsHighSurrogate(sLambda, indexLambda));
         }
@@ -295,21 +315,26 @@ return Tuple.Create(result, resultOutput);
         }
 
 
-        public static IObservable<System.Boolean> IsLowSurrogate(IObservable<System.String> s, IObservable<System.Int32> index)
+        public static IObservable<System.Boolean> IsLowSurrogate(IObservable<System.String> s,
+            IObservable<System.Int32> index)
         {
             return Observable.Zip(s, index, (sLambda, indexLambda) => System.Char.IsLowSurrogate(sLambda, indexLambda));
         }
 
 
-        public static IObservable<System.Boolean> IsSurrogatePair(IObservable<System.String> s, IObservable<System.Int32> index)
+        public static IObservable<System.Boolean> IsSurrogatePair(IObservable<System.String> s,
+            IObservable<System.Int32> index)
         {
             return Observable.Zip(s, index, (sLambda, indexLambda) => System.Char.IsSurrogatePair(sLambda, indexLambda));
         }
 
 
-        public static IObservable<System.Boolean> IsSurrogatePair(IObservable<System.Char> highSurrogate, IObservable<System.Char> lowSurrogate)
+        public static IObservable<System.Boolean> IsSurrogatePair(IObservable<System.Char> highSurrogate,
+            IObservable<System.Char> lowSurrogate)
         {
-            return Observable.Zip(highSurrogate, lowSurrogate, (highSurrogateLambda, lowSurrogateLambda) => System.Char.IsSurrogatePair(highSurrogateLambda, lowSurrogateLambda));
+            return Observable.Zip(highSurrogate, lowSurrogate,
+                (highSurrogateLambda, lowSurrogateLambda) =>
+                    System.Char.IsSurrogatePair(highSurrogateLambda, lowSurrogateLambda));
         }
 
 
@@ -319,16 +344,19 @@ return Tuple.Create(result, resultOutput);
         }
 
 
-        public static IObservable<System.Int32> ConvertToUtf32(IObservable<System.Char> highSurrogate, IObservable<System.Char> lowSurrogate)
+        public static IObservable<System.Int32> ConvertToUtf32(IObservable<System.Char> highSurrogate,
+            IObservable<System.Char> lowSurrogate)
         {
-            return Observable.Zip(highSurrogate, lowSurrogate, (highSurrogateLambda, lowSurrogateLambda) => System.Char.ConvertToUtf32(highSurrogateLambda, lowSurrogateLambda));
+            return Observable.Zip(highSurrogate, lowSurrogate,
+                (highSurrogateLambda, lowSurrogateLambda) =>
+                    System.Char.ConvertToUtf32(highSurrogateLambda, lowSurrogateLambda));
         }
 
 
-        public static IObservable<System.Int32> ConvertToUtf32(IObservable<System.String> s, IObservable<System.Int32> index)
+        public static IObservable<System.Int32> ConvertToUtf32(IObservable<System.String> s,
+            IObservable<System.Int32> index)
         {
             return Observable.Zip(s, index, (sLambda, indexLambda) => System.Char.ConvertToUtf32(sLambda, indexLambda));
         }
-
     }
 }

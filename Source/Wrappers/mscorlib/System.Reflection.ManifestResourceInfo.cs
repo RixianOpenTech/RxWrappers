@@ -8,23 +8,27 @@ namespace System.Reflection
 {
     public static class __ManifestResourceInfo
     {
-        
-        public static IObservable<System.Reflection.Assembly> get_ReferencedAssembly(this IObservable<System.Reflection.ManifestResourceInfo> ManifestResourceInfoValue)
+        public static IObservable<System.Reflection.Assembly> get_ReferencedAssembly(
+            this IObservable<System.Reflection.ManifestResourceInfo> ManifestResourceInfoValue)
         {
-            return Observable.Select(ManifestResourceInfoValue, (ManifestResourceInfoValueLambda) => ManifestResourceInfoValueLambda.ReferencedAssembly);
+            return Observable.Select(ManifestResourceInfoValue,
+                (ManifestResourceInfoValueLambda) => ManifestResourceInfoValueLambda.ReferencedAssembly);
         }
 
 
-        public static IObservable<System.String> get_FileName(this IObservable<System.Reflection.ManifestResourceInfo> ManifestResourceInfoValue)
+        public static IObservable<System.String> get_FileName(
+            this IObservable<System.Reflection.ManifestResourceInfo> ManifestResourceInfoValue)
         {
-            return Observable.Select(ManifestResourceInfoValue, (ManifestResourceInfoValueLambda) => ManifestResourceInfoValueLambda.FileName);
+            return Observable.Select(ManifestResourceInfoValue,
+                (ManifestResourceInfoValueLambda) => ManifestResourceInfoValueLambda.FileName);
         }
 
 
-        public static IObservable<System.Reflection.ResourceLocation> get_ResourceLocation(this IObservable<System.Reflection.ManifestResourceInfo> ManifestResourceInfoValue)
+        public static IObservable<System.Reflection.ResourceLocation> get_ResourceLocation(
+            this IObservable<System.Reflection.ManifestResourceInfo> ManifestResourceInfoValue)
         {
-            return Observable.Select(ManifestResourceInfoValue, (ManifestResourceInfoValueLambda) => ManifestResourceInfoValueLambda.ResourceLocation);
+            return Observable.Select(ManifestResourceInfoValue,
+                (ManifestResourceInfoValueLambda) => ManifestResourceInfoValueLambda.ResourceLocation);
         }
-
     }
 }

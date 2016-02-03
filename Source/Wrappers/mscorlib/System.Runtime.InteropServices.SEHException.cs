@@ -8,11 +8,10 @@ namespace System.Runtime.InteropServices
 {
     public static class __SEHException
     {
-        
-        public static IObservable<System.Boolean> CanResume(this IObservable<System.Runtime.InteropServices.SEHException> SEHExceptionValue)
+        public static IObservable<System.Boolean> CanResume(
+            this IObservable<System.Runtime.InteropServices.SEHException> SEHExceptionValue)
         {
             return Observable.Select(SEHExceptionValue, (SEHExceptionValueLambda) => SEHExceptionValueLambda.CanResume());
         }
-
     }
 }

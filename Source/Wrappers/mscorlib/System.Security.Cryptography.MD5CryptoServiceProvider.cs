@@ -8,11 +8,12 @@ namespace System.Security.Cryptography
 {
     public static class __MD5CryptoServiceProvider
     {
-        
-        public static IObservable<System.Reactive.Unit> Initialize(this IObservable<System.Security.Cryptography.MD5CryptoServiceProvider> MD5CryptoServiceProviderValue)
+        public static IObservable<System.Reactive.Unit> Initialize(
+            this IObservable<System.Security.Cryptography.MD5CryptoServiceProvider> MD5CryptoServiceProviderValue)
         {
-            return Observable.Do(MD5CryptoServiceProviderValue, (MD5CryptoServiceProviderValueLambda) => MD5CryptoServiceProviderValueLambda.Initialize()).ToUnit();
+            return
+                Observable.Do(MD5CryptoServiceProviderValue,
+                    (MD5CryptoServiceProviderValueLambda) => MD5CryptoServiceProviderValueLambda.Initialize()).ToUnit();
         }
-
     }
 }

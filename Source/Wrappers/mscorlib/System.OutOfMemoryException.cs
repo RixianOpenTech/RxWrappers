@@ -8,6 +8,5 @@ namespace System
 {
     public static class __OutOfMemoryException
     {
-        
     }
 }

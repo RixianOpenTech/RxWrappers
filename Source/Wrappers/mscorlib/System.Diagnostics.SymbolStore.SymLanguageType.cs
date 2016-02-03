@@ -8,6 +8,5 @@ namespace System.Diagnostics.SymbolStore
 {
     public static class __SymLanguageType
     {
-        
     }
 }

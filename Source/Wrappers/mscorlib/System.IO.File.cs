@@ -8,7 +8,6 @@ namespace System.IO
 {
     public static class __File
     {
-        
         public static IObservable<System.IO.StreamReader> OpenText(IObservable<System.String> path)
         {
             return Observable.Select(path, (pathLambda) => System.IO.File.OpenText(pathLambda));
@@ -27,15 +26,21 @@ namespace System.IO
         }
 
 
-        public static IObservable<System.Reactive.Unit> Copy(IObservable<System.String> sourceFileName, IObservable<System.String> destFileName)
+        public static IObservable<System.Reactive.Unit> Copy(IObservable<System.String> sourceFileName,
+            IObservable<System.String> destFileName)
         {
-            return ObservableExt.ZipExecute(sourceFileName, destFileName, (sourceFileNameLambda, destFileNameLambda) => System.IO.File.Copy(sourceFileNameLambda, destFileNameLambda));
+            return ObservableExt.ZipExecute(sourceFileName, destFileName,
+                (sourceFileNameLambda, destFileNameLambda) =>
+                    System.IO.File.Copy(sourceFileNameLambda, destFileNameLambda));
         }
 
 
-        public static IObservable<System.Reactive.Unit> Copy(IObservable<System.String> sourceFileName, IObservable<System.String> destFileName, IObservable<System.Boolean> overwrite)
+        public static IObservable<System.Reactive.Unit> Copy(IObservable<System.String> sourceFileName,
+            IObservable<System.String> destFileName, IObservable<System.Boolean> overwrite)
         {
-            return ObservableExt.ZipExecute(sourceFileName, destFileName, overwrite, (sourceFileNameLambda, destFileNameLambda, overwriteLambda) => System.IO.File.Copy(sourceFileNameLambda, destFileNameLambda, overwriteLambda));
+            return ObservableExt.ZipExecute(sourceFileName, destFileName, overwrite,
+                (sourceFileNameLambda, destFileNameLambda, overwriteLambda) =>
+                    System.IO.File.Copy(sourceFileNameLambda, destFileNameLambda, overwriteLambda));
         }
 
 
@@ -45,21 +50,30 @@ namespace System.IO
         }
 
 
-        public static IObservable<System.IO.FileStream> Create(IObservable<System.String> path, IObservable<System.Int32> bufferSize)
+        public static IObservable<System.IO.FileStream> Create(IObservable<System.String> path,
+            IObservable<System.Int32> bufferSize)
         {
-            return Observable.Zip(path, bufferSize, (pathLambda, bufferSizeLambda) => System.IO.File.Create(pathLambda, bufferSizeLambda));
+            return Observable.Zip(path, bufferSize,
+                (pathLambda, bufferSizeLambda) => System.IO.File.Create(pathLambda, bufferSizeLambda));
         }
 
 
-        public static IObservable<System.IO.FileStream> Create(IObservable<System.String> path, IObservable<System.Int32> bufferSize, IObservable<System.IO.FileOptions> options)
+        public static IObservable<System.IO.FileStream> Create(IObservable<System.String> path,
+            IObservable<System.Int32> bufferSize, IObservable<System.IO.FileOptions> options)
         {
-            return Observable.Zip(path, bufferSize, options, (pathLambda, bufferSizeLambda, optionsLambda) => System.IO.File.Create(pathLambda, bufferSizeLambda, optionsLambda));
+            return Observable.Zip(path, bufferSize, options,
+                (pathLambda, bufferSizeLambda, optionsLambda) =>
+                    System.IO.File.Create(pathLambda, bufferSizeLambda, optionsLambda));
         }
 
 
-        public static IObservable<System.IO.FileStream> Create(IObservable<System.String> path, IObservable<System.Int32> bufferSize, IObservable<System.IO.FileOptions> options, IObservable<System.Security.AccessControl.FileSecurity> fileSecurity)
+        public static IObservable<System.IO.FileStream> Create(IObservable<System.String> path,
+            IObservable<System.Int32> bufferSize, IObservable<System.IO.FileOptions> options,
+            IObservable<System.Security.AccessControl.FileSecurity> fileSecurity)
         {
-            return Observable.Zip(path, bufferSize, options, fileSecurity, (pathLambda, bufferSizeLambda, optionsLambda, fileSecurityLambda) => System.IO.File.Create(pathLambda, bufferSizeLambda, optionsLambda, fileSecurityLambda));
+            return Observable.Zip(path, bufferSize, options, fileSecurity,
+                (pathLambda, bufferSizeLambda, optionsLambda, fileSecurityLambda) =>
+                    System.IO.File.Create(pathLambda, bufferSizeLambda, optionsLambda, fileSecurityLambda));
         }
 
 
@@ -87,33 +101,45 @@ namespace System.IO
         }
 
 
-        public static IObservable<System.IO.FileStream> Open(IObservable<System.String> path, IObservable<System.IO.FileMode> mode)
+        public static IObservable<System.IO.FileStream> Open(IObservable<System.String> path,
+            IObservable<System.IO.FileMode> mode)
         {
             return Observable.Zip(path, mode, (pathLambda, modeLambda) => System.IO.File.Open(pathLambda, modeLambda));
         }
 
 
-        public static IObservable<System.IO.FileStream> Open(IObservable<System.String> path, IObservable<System.IO.FileMode> mode, IObservable<System.IO.FileAccess> access)
+        public static IObservable<System.IO.FileStream> Open(IObservable<System.String> path,
+            IObservable<System.IO.FileMode> mode, IObservable<System.IO.FileAccess> access)
         {
-            return Observable.Zip(path, mode, access, (pathLambda, modeLambda, accessLambda) => System.IO.File.Open(pathLambda, modeLambda, accessLambda));
+            return Observable.Zip(path, mode, access,
+                (pathLambda, modeLambda, accessLambda) => System.IO.File.Open(pathLambda, modeLambda, accessLambda));
         }
 
 
-        public static IObservable<System.IO.FileStream> Open(IObservable<System.String> path, IObservable<System.IO.FileMode> mode, IObservable<System.IO.FileAccess> access, IObservable<System.IO.FileShare> share)
+        public static IObservable<System.IO.FileStream> Open(IObservable<System.String> path,
+            IObservable<System.IO.FileMode> mode, IObservable<System.IO.FileAccess> access,
+            IObservable<System.IO.FileShare> share)
         {
-            return Observable.Zip(path, mode, access, share, (pathLambda, modeLambda, accessLambda, shareLambda) => System.IO.File.Open(pathLambda, modeLambda, accessLambda, shareLambda));
+            return Observable.Zip(path, mode, access, share,
+                (pathLambda, modeLambda, accessLambda, shareLambda) =>
+                    System.IO.File.Open(pathLambda, modeLambda, accessLambda, shareLambda));
         }
 
 
-        public static IObservable<System.Reactive.Unit> SetCreationTime(IObservable<System.String> path, IObservable<System.DateTime> creationTime)
+        public static IObservable<System.Reactive.Unit> SetCreationTime(IObservable<System.String> path,
+            IObservable<System.DateTime> creationTime)
         {
-            return ObservableExt.ZipExecute(path, creationTime, (pathLambda, creationTimeLambda) => System.IO.File.SetCreationTime(pathLambda, creationTimeLambda));
+            return ObservableExt.ZipExecute(path, creationTime,
+                (pathLambda, creationTimeLambda) => System.IO.File.SetCreationTime(pathLambda, creationTimeLambda));
         }
 
 
-        public static IObservable<System.Reactive.Unit> SetCreationTimeUtc(IObservable<System.String> path, IObservable<System.DateTime> creationTimeUtc)
+        public static IObservable<System.Reactive.Unit> SetCreationTimeUtc(IObservable<System.String> path,
+            IObservable<System.DateTime> creationTimeUtc)
         {
-            return ObservableExt.ZipExecute(path, creationTimeUtc, (pathLambda, creationTimeUtcLambda) => System.IO.File.SetCreationTimeUtc(pathLambda, creationTimeUtcLambda));
+            return ObservableExt.ZipExecute(path, creationTimeUtc,
+                (pathLambda, creationTimeUtcLambda) =>
+                    System.IO.File.SetCreationTimeUtc(pathLambda, creationTimeUtcLambda));
         }
 
 
@@ -129,15 +155,20 @@ namespace System.IO
         }
 
 
-        public static IObservable<System.Reactive.Unit> SetLastAccessTime(IObservable<System.String> path, IObservable<System.DateTime> lastAccessTime)
+        public static IObservable<System.Reactive.Unit> SetLastAccessTime(IObservable<System.String> path,
+            IObservable<System.DateTime> lastAccessTime)
         {
-            return ObservableExt.ZipExecute(path, lastAccessTime, (pathLambda, lastAccessTimeLambda) => System.IO.File.SetLastAccessTime(pathLambda, lastAccessTimeLambda));
+            return ObservableExt.ZipExecute(path, lastAccessTime,
+                (pathLambda, lastAccessTimeLambda) => System.IO.File.SetLastAccessTime(pathLambda, lastAccessTimeLambda));
         }
 
 
-        public static IObservable<System.Reactive.Unit> SetLastAccessTimeUtc(IObservable<System.String> path, IObservable<System.DateTime> lastAccessTimeUtc)
+        public static IObservable<System.Reactive.Unit> SetLastAccessTimeUtc(IObservable<System.String> path,
+            IObservable<System.DateTime> lastAccessTimeUtc)
         {
-            return ObservableExt.ZipExecute(path, lastAccessTimeUtc, (pathLambda, lastAccessTimeUtcLambda) => System.IO.File.SetLastAccessTimeUtc(pathLambda, lastAccessTimeUtcLambda));
+            return ObservableExt.ZipExecute(path, lastAccessTimeUtc,
+                (pathLambda, lastAccessTimeUtcLambda) =>
+                    System.IO.File.SetLastAccessTimeUtc(pathLambda, lastAccessTimeUtcLambda));
         }
 
 
@@ -153,15 +184,20 @@ namespace System.IO
         }
 
 
-        public static IObservable<System.Reactive.Unit> SetLastWriteTime(IObservable<System.String> path, IObservable<System.DateTime> lastWriteTime)
+        public static IObservable<System.Reactive.Unit> SetLastWriteTime(IObservable<System.String> path,
+            IObservable<System.DateTime> lastWriteTime)
         {
-            return ObservableExt.ZipExecute(path, lastWriteTime, (pathLambda, lastWriteTimeLambda) => System.IO.File.SetLastWriteTime(pathLambda, lastWriteTimeLambda));
+            return ObservableExt.ZipExecute(path, lastWriteTime,
+                (pathLambda, lastWriteTimeLambda) => System.IO.File.SetLastWriteTime(pathLambda, lastWriteTimeLambda));
         }
 
 
-        public static IObservable<System.Reactive.Unit> SetLastWriteTimeUtc(IObservable<System.String> path, IObservable<System.DateTime> lastWriteTimeUtc)
+        public static IObservable<System.Reactive.Unit> SetLastWriteTimeUtc(IObservable<System.String> path,
+            IObservable<System.DateTime> lastWriteTimeUtc)
         {
-            return ObservableExt.ZipExecute(path, lastWriteTimeUtc, (pathLambda, lastWriteTimeUtcLambda) => System.IO.File.SetLastWriteTimeUtc(pathLambda, lastWriteTimeUtcLambda));
+            return ObservableExt.ZipExecute(path, lastWriteTimeUtc,
+                (pathLambda, lastWriteTimeUtcLambda) =>
+                    System.IO.File.SetLastWriteTimeUtc(pathLambda, lastWriteTimeUtcLambda));
         }
 
 
@@ -183,27 +219,36 @@ namespace System.IO
         }
 
 
-        public static IObservable<System.Reactive.Unit> SetAttributes(IObservable<System.String> path, IObservable<System.IO.FileAttributes> fileAttributes)
+        public static IObservable<System.Reactive.Unit> SetAttributes(IObservable<System.String> path,
+            IObservable<System.IO.FileAttributes> fileAttributes)
         {
-            return ObservableExt.ZipExecute(path, fileAttributes, (pathLambda, fileAttributesLambda) => System.IO.File.SetAttributes(pathLambda, fileAttributesLambda));
+            return ObservableExt.ZipExecute(path, fileAttributes,
+                (pathLambda, fileAttributesLambda) => System.IO.File.SetAttributes(pathLambda, fileAttributesLambda));
         }
 
 
-        public static IObservable<System.Security.AccessControl.FileSecurity> GetAccessControl(IObservable<System.String> path)
+        public static IObservable<System.Security.AccessControl.FileSecurity> GetAccessControl(
+            IObservable<System.String> path)
         {
             return Observable.Select(path, (pathLambda) => System.IO.File.GetAccessControl(pathLambda));
         }
 
 
-        public static IObservable<System.Security.AccessControl.FileSecurity> GetAccessControl(IObservable<System.String> path, IObservable<System.Security.AccessControl.AccessControlSections> includeSections)
+        public static IObservable<System.Security.AccessControl.FileSecurity> GetAccessControl(
+            IObservable<System.String> path,
+            IObservable<System.Security.AccessControl.AccessControlSections> includeSections)
         {
-            return Observable.Zip(path, includeSections, (pathLambda, includeSectionsLambda) => System.IO.File.GetAccessControl(pathLambda, includeSectionsLambda));
+            return Observable.Zip(path, includeSections,
+                (pathLambda, includeSectionsLambda) =>
+                    System.IO.File.GetAccessControl(pathLambda, includeSectionsLambda));
         }
 
 
-        public static IObservable<System.Reactive.Unit> SetAccessControl(IObservable<System.String> path, IObservable<System.Security.AccessControl.FileSecurity> fileSecurity)
+        public static IObservable<System.Reactive.Unit> SetAccessControl(IObservable<System.String> path,
+            IObservable<System.Security.AccessControl.FileSecurity> fileSecurity)
         {
-            return ObservableExt.ZipExecute(path, fileSecurity, (pathLambda, fileSecurityLambda) => System.IO.File.SetAccessControl(pathLambda, fileSecurityLambda));
+            return ObservableExt.ZipExecute(path, fileSecurity,
+                (pathLambda, fileSecurityLambda) => System.IO.File.SetAccessControl(pathLambda, fileSecurityLambda));
         }
 
 
@@ -225,21 +270,28 @@ namespace System.IO
         }
 
 
-        public static IObservable<System.String> ReadAllText(IObservable<System.String> path, IObservable<System.Text.Encoding> encoding)
+        public static IObservable<System.String> ReadAllText(IObservable<System.String> path,
+            IObservable<System.Text.Encoding> encoding)
         {
-            return Observable.Zip(path, encoding, (pathLambda, encodingLambda) => System.IO.File.ReadAllText(pathLambda, encodingLambda));
+            return Observable.Zip(path, encoding,
+                (pathLambda, encodingLambda) => System.IO.File.ReadAllText(pathLambda, encodingLambda));
         }
 
 
-        public static IObservable<System.Reactive.Unit> WriteAllText(IObservable<System.String> path, IObservable<System.String> contents)
+        public static IObservable<System.Reactive.Unit> WriteAllText(IObservable<System.String> path,
+            IObservable<System.String> contents)
         {
-            return ObservableExt.ZipExecute(path, contents, (pathLambda, contentsLambda) => System.IO.File.WriteAllText(pathLambda, contentsLambda));
+            return ObservableExt.ZipExecute(path, contents,
+                (pathLambda, contentsLambda) => System.IO.File.WriteAllText(pathLambda, contentsLambda));
         }
 
 
-        public static IObservable<System.Reactive.Unit> WriteAllText(IObservable<System.String> path, IObservable<System.String> contents, IObservable<System.Text.Encoding> encoding)
+        public static IObservable<System.Reactive.Unit> WriteAllText(IObservable<System.String> path,
+            IObservable<System.String> contents, IObservable<System.Text.Encoding> encoding)
         {
-            return ObservableExt.ZipExecute(path, contents, encoding, (pathLambda, contentsLambda, encodingLambda) => System.IO.File.WriteAllText(pathLambda, contentsLambda, encodingLambda));
+            return ObservableExt.ZipExecute(path, contents, encoding,
+                (pathLambda, contentsLambda, encodingLambda) =>
+                    System.IO.File.WriteAllText(pathLambda, contentsLambda, encodingLambda));
         }
 
 
@@ -249,9 +301,11 @@ namespace System.IO
         }
 
 
-        public static IObservable<System.Reactive.Unit> WriteAllBytes(IObservable<System.String> path, IObservable<System.Byte[]> bytes)
+        public static IObservable<System.Reactive.Unit> WriteAllBytes(IObservable<System.String> path,
+            IObservable<System.Byte[]> bytes)
         {
-            return ObservableExt.ZipExecute(path, bytes, (pathLambda, bytesLambda) => System.IO.File.WriteAllBytes(pathLambda, bytesLambda));
+            return ObservableExt.ZipExecute(path, bytes,
+                (pathLambda, bytesLambda) => System.IO.File.WriteAllBytes(pathLambda, bytesLambda));
         }
 
 
@@ -261,88 +315,128 @@ namespace System.IO
         }
 
 
-        public static IObservable<System.String[]> ReadAllLines(IObservable<System.String> path, IObservable<System.Text.Encoding> encoding)
+        public static IObservable<System.String[]> ReadAllLines(IObservable<System.String> path,
+            IObservable<System.Text.Encoding> encoding)
         {
-            return Observable.Zip(path, encoding, (pathLambda, encodingLambda) => System.IO.File.ReadAllLines(pathLambda, encodingLambda));
+            return Observable.Zip(path, encoding,
+                (pathLambda, encodingLambda) => System.IO.File.ReadAllLines(pathLambda, encodingLambda));
         }
 
 
-        public static IObservable<System.Collections.Generic.IEnumerable<System.String>> ReadLines(IObservable<System.String> path)
+        public static IObservable<System.Collections.Generic.IEnumerable<System.String>> ReadLines(
+            IObservable<System.String> path)
         {
             return Observable.Select(path, (pathLambda) => System.IO.File.ReadLines(pathLambda));
         }
 
 
-        public static IObservable<System.Collections.Generic.IEnumerable<System.String>> ReadLines(IObservable<System.String> path, IObservable<System.Text.Encoding> encoding)
+        public static IObservable<System.Collections.Generic.IEnumerable<System.String>> ReadLines(
+            IObservable<System.String> path, IObservable<System.Text.Encoding> encoding)
         {
-            return Observable.Zip(path, encoding, (pathLambda, encodingLambda) => System.IO.File.ReadLines(pathLambda, encodingLambda));
+            return Observable.Zip(path, encoding,
+                (pathLambda, encodingLambda) => System.IO.File.ReadLines(pathLambda, encodingLambda));
         }
 
 
-        public static IObservable<System.Reactive.Unit> WriteAllLines(IObservable<System.String> path, IObservable<System.String[]> contents)
+        public static IObservable<System.Reactive.Unit> WriteAllLines(IObservable<System.String> path,
+            IObservable<System.String[]> contents)
         {
-            return ObservableExt.ZipExecute(path, contents, (pathLambda, contentsLambda) => System.IO.File.WriteAllLines(pathLambda, contentsLambda));
+            return ObservableExt.ZipExecute(path, contents,
+                (pathLambda, contentsLambda) => System.IO.File.WriteAllLines(pathLambda, contentsLambda));
         }
 
 
-        public static IObservable<System.Reactive.Unit> WriteAllLines(IObservable<System.String> path, IObservable<System.String[]> contents, IObservable<System.Text.Encoding> encoding)
+        public static IObservable<System.Reactive.Unit> WriteAllLines(IObservable<System.String> path,
+            IObservable<System.String[]> contents, IObservable<System.Text.Encoding> encoding)
         {
-            return ObservableExt.ZipExecute(path, contents, encoding, (pathLambda, contentsLambda, encodingLambda) => System.IO.File.WriteAllLines(pathLambda, contentsLambda, encodingLambda));
+            return ObservableExt.ZipExecute(path, contents, encoding,
+                (pathLambda, contentsLambda, encodingLambda) =>
+                    System.IO.File.WriteAllLines(pathLambda, contentsLambda, encodingLambda));
         }
 
 
-        public static IObservable<System.Reactive.Unit> WriteAllLines(IObservable<System.String> path, IObservable<System.Collections.Generic.IEnumerable<System.String>> contents)
+        public static IObservable<System.Reactive.Unit> WriteAllLines(IObservable<System.String> path,
+            IObservable<System.Collections.Generic.IEnumerable<System.String>> contents)
         {
-            return ObservableExt.ZipExecute(path, contents, (pathLambda, contentsLambda) => System.IO.File.WriteAllLines(pathLambda, contentsLambda));
+            return ObservableExt.ZipExecute(path, contents,
+                (pathLambda, contentsLambda) => System.IO.File.WriteAllLines(pathLambda, contentsLambda));
         }
 
 
-        public static IObservable<System.Reactive.Unit> WriteAllLines(IObservable<System.String> path, IObservable<System.Collections.Generic.IEnumerable<System.String>> contents, IObservable<System.Text.Encoding> encoding)
+        public static IObservable<System.Reactive.Unit> WriteAllLines(IObservable<System.String> path,
+            IObservable<System.Collections.Generic.IEnumerable<System.String>> contents,
+            IObservable<System.Text.Encoding> encoding)
         {
-            return ObservableExt.ZipExecute(path, contents, encoding, (pathLambda, contentsLambda, encodingLambda) => System.IO.File.WriteAllLines(pathLambda, contentsLambda, encodingLambda));
+            return ObservableExt.ZipExecute(path, contents, encoding,
+                (pathLambda, contentsLambda, encodingLambda) =>
+                    System.IO.File.WriteAllLines(pathLambda, contentsLambda, encodingLambda));
         }
 
 
-        public static IObservable<System.Reactive.Unit> AppendAllText(IObservable<System.String> path, IObservable<System.String> contents)
+        public static IObservable<System.Reactive.Unit> AppendAllText(IObservable<System.String> path,
+            IObservable<System.String> contents)
         {
-            return ObservableExt.ZipExecute(path, contents, (pathLambda, contentsLambda) => System.IO.File.AppendAllText(pathLambda, contentsLambda));
+            return ObservableExt.ZipExecute(path, contents,
+                (pathLambda, contentsLambda) => System.IO.File.AppendAllText(pathLambda, contentsLambda));
         }
 
 
-        public static IObservable<System.Reactive.Unit> AppendAllText(IObservable<System.String> path, IObservable<System.String> contents, IObservable<System.Text.Encoding> encoding)
+        public static IObservable<System.Reactive.Unit> AppendAllText(IObservable<System.String> path,
+            IObservable<System.String> contents, IObservable<System.Text.Encoding> encoding)
         {
-            return ObservableExt.ZipExecute(path, contents, encoding, (pathLambda, contentsLambda, encodingLambda) => System.IO.File.AppendAllText(pathLambda, contentsLambda, encodingLambda));
+            return ObservableExt.ZipExecute(path, contents, encoding,
+                (pathLambda, contentsLambda, encodingLambda) =>
+                    System.IO.File.AppendAllText(pathLambda, contentsLambda, encodingLambda));
         }
 
 
-        public static IObservable<System.Reactive.Unit> AppendAllLines(IObservable<System.String> path, IObservable<System.Collections.Generic.IEnumerable<System.String>> contents)
+        public static IObservable<System.Reactive.Unit> AppendAllLines(IObservable<System.String> path,
+            IObservable<System.Collections.Generic.IEnumerable<System.String>> contents)
         {
-            return ObservableExt.ZipExecute(path, contents, (pathLambda, contentsLambda) => System.IO.File.AppendAllLines(pathLambda, contentsLambda));
+            return ObservableExt.ZipExecute(path, contents,
+                (pathLambda, contentsLambda) => System.IO.File.AppendAllLines(pathLambda, contentsLambda));
         }
 
 
-        public static IObservable<System.Reactive.Unit> AppendAllLines(IObservable<System.String> path, IObservable<System.Collections.Generic.IEnumerable<System.String>> contents, IObservable<System.Text.Encoding> encoding)
+        public static IObservable<System.Reactive.Unit> AppendAllLines(IObservable<System.String> path,
+            IObservable<System.Collections.Generic.IEnumerable<System.String>> contents,
+            IObservable<System.Text.Encoding> encoding)
         {
-            return ObservableExt.ZipExecute(path, contents, encoding, (pathLambda, contentsLambda, encodingLambda) => System.IO.File.AppendAllLines(pathLambda, contentsLambda, encodingLambda));
+            return ObservableExt.ZipExecute(path, contents, encoding,
+                (pathLambda, contentsLambda, encodingLambda) =>
+                    System.IO.File.AppendAllLines(pathLambda, contentsLambda, encodingLambda));
         }
 
 
-        public static IObservable<System.Reactive.Unit> Move(IObservable<System.String> sourceFileName, IObservable<System.String> destFileName)
+        public static IObservable<System.Reactive.Unit> Move(IObservable<System.String> sourceFileName,
+            IObservable<System.String> destFileName)
         {
-            return ObservableExt.ZipExecute(sourceFileName, destFileName, (sourceFileNameLambda, destFileNameLambda) => System.IO.File.Move(sourceFileNameLambda, destFileNameLambda));
+            return ObservableExt.ZipExecute(sourceFileName, destFileName,
+                (sourceFileNameLambda, destFileNameLambda) =>
+                    System.IO.File.Move(sourceFileNameLambda, destFileNameLambda));
         }
 
 
-        public static IObservable<System.Reactive.Unit> Replace(IObservable<System.String> sourceFileName, IObservable<System.String> destinationFileName, IObservable<System.String> destinationBackupFileName)
+        public static IObservable<System.Reactive.Unit> Replace(IObservable<System.String> sourceFileName,
+            IObservable<System.String> destinationFileName, IObservable<System.String> destinationBackupFileName)
         {
-            return ObservableExt.ZipExecute(sourceFileName, destinationFileName, destinationBackupFileName, (sourceFileNameLambda, destinationFileNameLambda, destinationBackupFileNameLambda) => System.IO.File.Replace(sourceFileNameLambda, destinationFileNameLambda, destinationBackupFileNameLambda));
+            return ObservableExt.ZipExecute(sourceFileName, destinationFileName, destinationBackupFileName,
+                (sourceFileNameLambda, destinationFileNameLambda, destinationBackupFileNameLambda) =>
+                    System.IO.File.Replace(sourceFileNameLambda, destinationFileNameLambda,
+                        destinationBackupFileNameLambda));
         }
 
 
-        public static IObservable<System.Reactive.Unit> Replace(IObservable<System.String> sourceFileName, IObservable<System.String> destinationFileName, IObservable<System.String> destinationBackupFileName, IObservable<System.Boolean> ignoreMetadataErrors)
+        public static IObservable<System.Reactive.Unit> Replace(IObservable<System.String> sourceFileName,
+            IObservable<System.String> destinationFileName, IObservable<System.String> destinationBackupFileName,
+            IObservable<System.Boolean> ignoreMetadataErrors)
         {
-            return ObservableExt.ZipExecute(sourceFileName, destinationFileName, destinationBackupFileName, ignoreMetadataErrors, (sourceFileNameLambda, destinationFileNameLambda, destinationBackupFileNameLambda, ignoreMetadataErrorsLambda) => System.IO.File.Replace(sourceFileNameLambda, destinationFileNameLambda, destinationBackupFileNameLambda, ignoreMetadataErrorsLambda));
+            return ObservableExt.ZipExecute(sourceFileName, destinationFileName, destinationBackupFileName,
+                ignoreMetadataErrors,
+                (sourceFileNameLambda, destinationFileNameLambda, destinationBackupFileNameLambda,
+                    ignoreMetadataErrorsLambda) =>
+                    System.IO.File.Replace(sourceFileNameLambda, destinationFileNameLambda,
+                        destinationBackupFileNameLambda, ignoreMetadataErrorsLambda));
         }
-
     }
 }

@@ -8,53 +8,74 @@ namespace System.Diagnostics
 {
     public static class __DebuggerVisualizerAttribute
     {
-        
-        public static IObservable<System.String> get_VisualizerObjectSourceTypeName(this IObservable<System.Diagnostics.DebuggerVisualizerAttribute> DebuggerVisualizerAttributeValue)
+        public static IObservable<System.String> get_VisualizerObjectSourceTypeName(
+            this IObservable<System.Diagnostics.DebuggerVisualizerAttribute> DebuggerVisualizerAttributeValue)
         {
-            return Observable.Select(DebuggerVisualizerAttributeValue, (DebuggerVisualizerAttributeValueLambda) => DebuggerVisualizerAttributeValueLambda.VisualizerObjectSourceTypeName);
+            return Observable.Select(DebuggerVisualizerAttributeValue,
+                (DebuggerVisualizerAttributeValueLambda) =>
+                    DebuggerVisualizerAttributeValueLambda.VisualizerObjectSourceTypeName);
         }
 
 
-        public static IObservable<System.String> get_VisualizerTypeName(this IObservable<System.Diagnostics.DebuggerVisualizerAttribute> DebuggerVisualizerAttributeValue)
+        public static IObservable<System.String> get_VisualizerTypeName(
+            this IObservable<System.Diagnostics.DebuggerVisualizerAttribute> DebuggerVisualizerAttributeValue)
         {
-            return Observable.Select(DebuggerVisualizerAttributeValue, (DebuggerVisualizerAttributeValueLambda) => DebuggerVisualizerAttributeValueLambda.VisualizerTypeName);
+            return Observable.Select(DebuggerVisualizerAttributeValue,
+                (DebuggerVisualizerAttributeValueLambda) => DebuggerVisualizerAttributeValueLambda.VisualizerTypeName);
         }
 
 
-        public static IObservable<System.String> get_Description(this IObservable<System.Diagnostics.DebuggerVisualizerAttribute> DebuggerVisualizerAttributeValue)
+        public static IObservable<System.String> get_Description(
+            this IObservable<System.Diagnostics.DebuggerVisualizerAttribute> DebuggerVisualizerAttributeValue)
         {
-            return Observable.Select(DebuggerVisualizerAttributeValue, (DebuggerVisualizerAttributeValueLambda) => DebuggerVisualizerAttributeValueLambda.Description);
+            return Observable.Select(DebuggerVisualizerAttributeValue,
+                (DebuggerVisualizerAttributeValueLambda) => DebuggerVisualizerAttributeValueLambda.Description);
         }
 
 
-        public static IObservable<System.Type> get_Target(this IObservable<System.Diagnostics.DebuggerVisualizerAttribute> DebuggerVisualizerAttributeValue)
+        public static IObservable<System.Type> get_Target(
+            this IObservable<System.Diagnostics.DebuggerVisualizerAttribute> DebuggerVisualizerAttributeValue)
         {
-            return Observable.Select(DebuggerVisualizerAttributeValue, (DebuggerVisualizerAttributeValueLambda) => DebuggerVisualizerAttributeValueLambda.Target);
+            return Observable.Select(DebuggerVisualizerAttributeValue,
+                (DebuggerVisualizerAttributeValueLambda) => DebuggerVisualizerAttributeValueLambda.Target);
         }
 
 
-        public static IObservable<System.String> get_TargetTypeName(this IObservable<System.Diagnostics.DebuggerVisualizerAttribute> DebuggerVisualizerAttributeValue)
+        public static IObservable<System.String> get_TargetTypeName(
+            this IObservable<System.Diagnostics.DebuggerVisualizerAttribute> DebuggerVisualizerAttributeValue)
         {
-            return Observable.Select(DebuggerVisualizerAttributeValue, (DebuggerVisualizerAttributeValueLambda) => DebuggerVisualizerAttributeValueLambda.TargetTypeName);
+            return Observable.Select(DebuggerVisualizerAttributeValue,
+                (DebuggerVisualizerAttributeValueLambda) => DebuggerVisualizerAttributeValueLambda.TargetTypeName);
         }
 
 
-        public static IObservable<System.Reactive.Unit> set_Description(this IObservable<System.Diagnostics.DebuggerVisualizerAttribute> DebuggerVisualizerAttributeValue, IObservable<System.String> value)
+        public static IObservable<System.Reactive.Unit> set_Description(
+            this IObservable<System.Diagnostics.DebuggerVisualizerAttribute> DebuggerVisualizerAttributeValue,
+            IObservable<System.String> value)
         {
-            return ObservableExt.ZipExecute(DebuggerVisualizerAttributeValue, value, (DebuggerVisualizerAttributeValueLambda, valueLambda) => DebuggerVisualizerAttributeValueLambda.Description = valueLambda);
+            return ObservableExt.ZipExecute(DebuggerVisualizerAttributeValue, value,
+                (DebuggerVisualizerAttributeValueLambda, valueLambda) =>
+                    DebuggerVisualizerAttributeValueLambda.Description = valueLambda);
         }
 
 
-        public static IObservable<System.Reactive.Unit> set_Target(this IObservable<System.Diagnostics.DebuggerVisualizerAttribute> DebuggerVisualizerAttributeValue, IObservable<System.Type> value)
+        public static IObservable<System.Reactive.Unit> set_Target(
+            this IObservable<System.Diagnostics.DebuggerVisualizerAttribute> DebuggerVisualizerAttributeValue,
+            IObservable<System.Type> value)
         {
-            return ObservableExt.ZipExecute(DebuggerVisualizerAttributeValue, value, (DebuggerVisualizerAttributeValueLambda, valueLambda) => DebuggerVisualizerAttributeValueLambda.Target = valueLambda);
+            return ObservableExt.ZipExecute(DebuggerVisualizerAttributeValue, value,
+                (DebuggerVisualizerAttributeValueLambda, valueLambda) =>
+                    DebuggerVisualizerAttributeValueLambda.Target = valueLambda);
         }
 
 
-        public static IObservable<System.Reactive.Unit> set_TargetTypeName(this IObservable<System.Diagnostics.DebuggerVisualizerAttribute> DebuggerVisualizerAttributeValue, IObservable<System.String> value)
+        public static IObservable<System.Reactive.Unit> set_TargetTypeName(
+            this IObservable<System.Diagnostics.DebuggerVisualizerAttribute> DebuggerVisualizerAttributeValue,
+            IObservable<System.String> value)
         {
-            return ObservableExt.ZipExecute(DebuggerVisualizerAttributeValue, value, (DebuggerVisualizerAttributeValueLambda, valueLambda) => DebuggerVisualizerAttributeValueLambda.TargetTypeName = valueLambda);
+            return ObservableExt.ZipExecute(DebuggerVisualizerAttributeValue, value,
+                (DebuggerVisualizerAttributeValueLambda, valueLambda) =>
+                    DebuggerVisualizerAttributeValueLambda.TargetTypeName = valueLambda);
         }
-
     }
 }

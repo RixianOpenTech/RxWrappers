@@ -8,11 +8,12 @@ namespace System.Runtime
 {
     public static class __MemoryFailPoint
     {
-        
-        public static IObservable<System.Reactive.Unit> Dispose(this IObservable<System.Runtime.MemoryFailPoint> MemoryFailPointValue)
+        public static IObservable<System.Reactive.Unit> Dispose(
+            this IObservable<System.Runtime.MemoryFailPoint> MemoryFailPointValue)
         {
-            return Observable.Do(MemoryFailPointValue, (MemoryFailPointValueLambda) => MemoryFailPointValueLambda.Dispose()).ToUnit();
+            return
+                Observable.Do(MemoryFailPointValue, (MemoryFailPointValueLambda) => MemoryFailPointValueLambda.Dispose())
+                    .ToUnit();
         }
-
     }
 }

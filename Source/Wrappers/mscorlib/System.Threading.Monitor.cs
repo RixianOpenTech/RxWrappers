@@ -8,19 +8,20 @@ namespace System.Threading
 {
     public static class __Monitor
     {
-        
         public static IObservable<System.Reactive.Unit> Enter(IObservable<System.Object> obj)
         {
             return Observable.Do(obj, (objLambda) => System.Threading.Monitor.Enter(objLambda)).ToUnit();
         }
 
 
-        public static IObservable<System.Boolean> Enter(IObservable<System.Object> obj, IObservable<System.Boolean> lockTaken)
+        public static IObservable<System.Boolean> Enter(IObservable<System.Object> obj,
+            IObservable<System.Boolean> lockTaken)
         {
-            return Observable.Zip(obj, lockTaken, (objLambda, lockTakenLambda) => {
-System.Threading.Monitor.Enter(objLambda, ref lockTakenLambda);
-return lockTakenLambda;
-});
+            return Observable.Zip(obj, lockTaken, (objLambda, lockTakenLambda) =>
+            {
+                System.Threading.Monitor.Enter(objLambda, ref lockTakenLambda);
+                return lockTakenLambda;
+            });
         }
 
 
@@ -36,42 +37,54 @@ return lockTakenLambda;
         }
 
 
-        public static IObservable<System.Boolean> TryEnter(IObservable<System.Object> obj, IObservable<System.Boolean> lockTaken)
+        public static IObservable<System.Boolean> TryEnter(IObservable<System.Object> obj,
+            IObservable<System.Boolean> lockTaken)
         {
-            return Observable.Zip(obj, lockTaken, (objLambda, lockTakenLambda) => {
-System.Threading.Monitor.TryEnter(objLambda, ref lockTakenLambda);
-return lockTakenLambda;
-});
+            return Observable.Zip(obj, lockTaken, (objLambda, lockTakenLambda) =>
+            {
+                System.Threading.Monitor.TryEnter(objLambda, ref lockTakenLambda);
+                return lockTakenLambda;
+            });
         }
 
 
-        public static IObservable<System.Boolean> TryEnter(IObservable<System.Object> obj, IObservable<System.Int32> millisecondsTimeout)
+        public static IObservable<System.Boolean> TryEnter(IObservable<System.Object> obj,
+            IObservable<System.Int32> millisecondsTimeout)
         {
-            return Observable.Zip(obj, millisecondsTimeout, (objLambda, millisecondsTimeoutLambda) => System.Threading.Monitor.TryEnter(objLambda, millisecondsTimeoutLambda));
+            return Observable.Zip(obj, millisecondsTimeout,
+                (objLambda, millisecondsTimeoutLambda) =>
+                    System.Threading.Monitor.TryEnter(objLambda, millisecondsTimeoutLambda));
         }
 
 
-        public static IObservable<System.Boolean> TryEnter(IObservable<System.Object> obj, IObservable<System.TimeSpan> timeout)
+        public static IObservable<System.Boolean> TryEnter(IObservable<System.Object> obj,
+            IObservable<System.TimeSpan> timeout)
         {
-            return Observable.Zip(obj, timeout, (objLambda, timeoutLambda) => System.Threading.Monitor.TryEnter(objLambda, timeoutLambda));
+            return Observable.Zip(obj, timeout,
+                (objLambda, timeoutLambda) => System.Threading.Monitor.TryEnter(objLambda, timeoutLambda));
         }
 
 
-        public static IObservable<System.Boolean> TryEnter(IObservable<System.Object> obj, IObservable<System.Int32> millisecondsTimeout, IObservable<System.Boolean> lockTaken)
+        public static IObservable<System.Boolean> TryEnter(IObservable<System.Object> obj,
+            IObservable<System.Int32> millisecondsTimeout, IObservable<System.Boolean> lockTaken)
         {
-            return Observable.Zip(obj, millisecondsTimeout, lockTaken, (objLambda, millisecondsTimeoutLambda, lockTakenLambda) => {
-System.Threading.Monitor.TryEnter(objLambda, millisecondsTimeoutLambda, ref lockTakenLambda);
-return lockTakenLambda;
-});
+            return Observable.Zip(obj, millisecondsTimeout, lockTaken,
+                (objLambda, millisecondsTimeoutLambda, lockTakenLambda) =>
+                {
+                    System.Threading.Monitor.TryEnter(objLambda, millisecondsTimeoutLambda, ref lockTakenLambda);
+                    return lockTakenLambda;
+                });
         }
 
 
-        public static IObservable<System.Boolean> TryEnter(IObservable<System.Object> obj, IObservable<System.TimeSpan> timeout, IObservable<System.Boolean> lockTaken)
+        public static IObservable<System.Boolean> TryEnter(IObservable<System.Object> obj,
+            IObservable<System.TimeSpan> timeout, IObservable<System.Boolean> lockTaken)
         {
-            return Observable.Zip(obj, timeout, lockTaken, (objLambda, timeoutLambda, lockTakenLambda) => {
-System.Threading.Monitor.TryEnter(objLambda, timeoutLambda, ref lockTakenLambda);
-return lockTakenLambda;
-});
+            return Observable.Zip(obj, timeout, lockTaken, (objLambda, timeoutLambda, lockTakenLambda) =>
+            {
+                System.Threading.Monitor.TryEnter(objLambda, timeoutLambda, ref lockTakenLambda);
+                return lockTakenLambda;
+            });
         }
 
 
@@ -81,27 +94,38 @@ return lockTakenLambda;
         }
 
 
-        public static IObservable<System.Boolean> Wait(IObservable<System.Object> obj, IObservable<System.Int32> millisecondsTimeout, IObservable<System.Boolean> exitContext)
+        public static IObservable<System.Boolean> Wait(IObservable<System.Object> obj,
+            IObservable<System.Int32> millisecondsTimeout, IObservable<System.Boolean> exitContext)
         {
-            return Observable.Zip(obj, millisecondsTimeout, exitContext, (objLambda, millisecondsTimeoutLambda, exitContextLambda) => System.Threading.Monitor.Wait(objLambda, millisecondsTimeoutLambda, exitContextLambda));
+            return Observable.Zip(obj, millisecondsTimeout, exitContext,
+                (objLambda, millisecondsTimeoutLambda, exitContextLambda) =>
+                    System.Threading.Monitor.Wait(objLambda, millisecondsTimeoutLambda, exitContextLambda));
         }
 
 
-        public static IObservable<System.Boolean> Wait(IObservable<System.Object> obj, IObservable<System.TimeSpan> timeout, IObservable<System.Boolean> exitContext)
+        public static IObservable<System.Boolean> Wait(IObservable<System.Object> obj,
+            IObservable<System.TimeSpan> timeout, IObservable<System.Boolean> exitContext)
         {
-            return Observable.Zip(obj, timeout, exitContext, (objLambda, timeoutLambda, exitContextLambda) => System.Threading.Monitor.Wait(objLambda, timeoutLambda, exitContextLambda));
+            return Observable.Zip(obj, timeout, exitContext,
+                (objLambda, timeoutLambda, exitContextLambda) =>
+                    System.Threading.Monitor.Wait(objLambda, timeoutLambda, exitContextLambda));
         }
 
 
-        public static IObservable<System.Boolean> Wait(IObservable<System.Object> obj, IObservable<System.Int32> millisecondsTimeout)
+        public static IObservable<System.Boolean> Wait(IObservable<System.Object> obj,
+            IObservable<System.Int32> millisecondsTimeout)
         {
-            return Observable.Zip(obj, millisecondsTimeout, (objLambda, millisecondsTimeoutLambda) => System.Threading.Monitor.Wait(objLambda, millisecondsTimeoutLambda));
+            return Observable.Zip(obj, millisecondsTimeout,
+                (objLambda, millisecondsTimeoutLambda) =>
+                    System.Threading.Monitor.Wait(objLambda, millisecondsTimeoutLambda));
         }
 
 
-        public static IObservable<System.Boolean> Wait(IObservable<System.Object> obj, IObservable<System.TimeSpan> timeout)
+        public static IObservable<System.Boolean> Wait(IObservable<System.Object> obj,
+            IObservable<System.TimeSpan> timeout)
         {
-            return Observable.Zip(obj, timeout, (objLambda, timeoutLambda) => System.Threading.Monitor.Wait(objLambda, timeoutLambda));
+            return Observable.Zip(obj, timeout,
+                (objLambda, timeoutLambda) => System.Threading.Monitor.Wait(objLambda, timeoutLambda));
         }
 
 
@@ -121,6 +145,5 @@ return lockTakenLambda;
         {
             return Observable.Do(obj, (objLambda) => System.Threading.Monitor.PulseAll(objLambda)).ToUnit();
         }
-
     }
 }

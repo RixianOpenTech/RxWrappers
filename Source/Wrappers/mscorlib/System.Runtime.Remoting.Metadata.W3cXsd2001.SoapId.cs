@@ -8,22 +8,25 @@ namespace System.Runtime.Remoting.Metadata.W3cXsd2001
 {
     public static class __SoapId
     {
-        
-        public static IObservable<System.String> GetXsdType(this IObservable<System.Runtime.Remoting.Metadata.W3cXsd2001.SoapId> SoapIdValue)
+        public static IObservable<System.String> GetXsdType(
+            this IObservable<System.Runtime.Remoting.Metadata.W3cXsd2001.SoapId> SoapIdValue)
         {
             return Observable.Select(SoapIdValue, (SoapIdValueLambda) => SoapIdValueLambda.GetXsdType());
         }
 
 
-        public static IObservable<System.String> ToString(this IObservable<System.Runtime.Remoting.Metadata.W3cXsd2001.SoapId> SoapIdValue)
+        public static IObservable<System.String> ToString(
+            this IObservable<System.Runtime.Remoting.Metadata.W3cXsd2001.SoapId> SoapIdValue)
         {
             return Observable.Select(SoapIdValue, (SoapIdValueLambda) => SoapIdValueLambda.ToString());
         }
 
 
-        public static IObservable<System.Runtime.Remoting.Metadata.W3cXsd2001.SoapId> Parse(IObservable<System.String> value)
+        public static IObservable<System.Runtime.Remoting.Metadata.W3cXsd2001.SoapId> Parse(
+            IObservable<System.String> value)
         {
-            return Observable.Select(value, (valueLambda) => System.Runtime.Remoting.Metadata.W3cXsd2001.SoapId.Parse(valueLambda));
+            return Observable.Select(value,
+                (valueLambda) => System.Runtime.Remoting.Metadata.W3cXsd2001.SoapId.Parse(valueLambda));
         }
 
 
@@ -33,16 +36,19 @@ namespace System.Runtime.Remoting.Metadata.W3cXsd2001
         }
 
 
-        public static IObservable<System.String> get_Value(this IObservable<System.Runtime.Remoting.Metadata.W3cXsd2001.SoapId> SoapIdValue)
+        public static IObservable<System.String> get_Value(
+            this IObservable<System.Runtime.Remoting.Metadata.W3cXsd2001.SoapId> SoapIdValue)
         {
             return Observable.Select(SoapIdValue, (SoapIdValueLambda) => SoapIdValueLambda.Value);
         }
 
 
-        public static IObservable<System.Reactive.Unit> set_Value(this IObservable<System.Runtime.Remoting.Metadata.W3cXsd2001.SoapId> SoapIdValue, IObservable<System.String> value)
+        public static IObservable<System.Reactive.Unit> set_Value(
+            this IObservable<System.Runtime.Remoting.Metadata.W3cXsd2001.SoapId> SoapIdValue,
+            IObservable<System.String> value)
         {
-            return ObservableExt.ZipExecute(SoapIdValue, value, (SoapIdValueLambda, valueLambda) => SoapIdValueLambda.Value = valueLambda);
+            return ObservableExt.ZipExecute(SoapIdValue, value,
+                (SoapIdValueLambda, valueLambda) => SoapIdValueLambda.Value = valueLambda);
         }
-
     }
 }

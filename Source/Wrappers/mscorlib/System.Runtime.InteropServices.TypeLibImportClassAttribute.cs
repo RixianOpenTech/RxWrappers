@@ -8,11 +8,12 @@ namespace System.Runtime.InteropServices
 {
     public static class __TypeLibImportClassAttribute
     {
-        
-        public static IObservable<System.String> get_Value(this IObservable<System.Runtime.InteropServices.TypeLibImportClassAttribute> TypeLibImportClassAttributeValue)
+        public static IObservable<System.String> get_Value(
+            this IObservable<System.Runtime.InteropServices.TypeLibImportClassAttribute>
+                TypeLibImportClassAttributeValue)
         {
-            return Observable.Select(TypeLibImportClassAttributeValue, (TypeLibImportClassAttributeValueLambda) => TypeLibImportClassAttributeValueLambda.Value);
+            return Observable.Select(TypeLibImportClassAttributeValue,
+                (TypeLibImportClassAttributeValueLambda) => TypeLibImportClassAttributeValueLambda.Value);
         }
-
     }
 }

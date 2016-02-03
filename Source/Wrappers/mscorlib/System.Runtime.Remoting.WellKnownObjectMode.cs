@@ -8,6 +8,5 @@ namespace System.Runtime.Remoting
 {
     public static class __WellKnownObjectMode
     {
-        
     }
 }

@@ -8,6 +8,5 @@ namespace System.Threading
 {
     public static class __ThreadStartException
     {
-        
     }
 }

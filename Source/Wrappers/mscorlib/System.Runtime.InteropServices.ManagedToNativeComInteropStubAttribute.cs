@@ -8,17 +8,23 @@ namespace System.Runtime.InteropServices
 {
     public static class __ManagedToNativeComInteropStubAttribute
     {
-        
-        public static IObservable<System.Type> get_ClassType(this IObservable<System.Runtime.InteropServices.ManagedToNativeComInteropStubAttribute> ManagedToNativeComInteropStubAttributeValue)
+        public static IObservable<System.Type> get_ClassType(
+            this IObservable<System.Runtime.InteropServices.ManagedToNativeComInteropStubAttribute>
+                ManagedToNativeComInteropStubAttributeValue)
         {
-            return Observable.Select(ManagedToNativeComInteropStubAttributeValue, (ManagedToNativeComInteropStubAttributeValueLambda) => ManagedToNativeComInteropStubAttributeValueLambda.ClassType);
+            return Observable.Select(ManagedToNativeComInteropStubAttributeValue,
+                (ManagedToNativeComInteropStubAttributeValueLambda) =>
+                    ManagedToNativeComInteropStubAttributeValueLambda.ClassType);
         }
 
 
-        public static IObservable<System.String> get_MethodName(this IObservable<System.Runtime.InteropServices.ManagedToNativeComInteropStubAttribute> ManagedToNativeComInteropStubAttributeValue)
+        public static IObservable<System.String> get_MethodName(
+            this IObservable<System.Runtime.InteropServices.ManagedToNativeComInteropStubAttribute>
+                ManagedToNativeComInteropStubAttributeValue)
         {
-            return Observable.Select(ManagedToNativeComInteropStubAttributeValue, (ManagedToNativeComInteropStubAttributeValueLambda) => ManagedToNativeComInteropStubAttributeValueLambda.MethodName);
+            return Observable.Select(ManagedToNativeComInteropStubAttributeValue,
+                (ManagedToNativeComInteropStubAttributeValueLambda) =>
+                    ManagedToNativeComInteropStubAttributeValueLambda.MethodName);
         }
-
     }
 }

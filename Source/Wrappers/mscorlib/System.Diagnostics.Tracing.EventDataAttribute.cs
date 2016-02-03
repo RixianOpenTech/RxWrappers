@@ -8,17 +8,20 @@ namespace System.Diagnostics.Tracing
 {
     public static class __EventDataAttribute
     {
-        
-        public static IObservable<System.String> get_Name(this IObservable<System.Diagnostics.Tracing.EventDataAttribute> EventDataAttributeValue)
+        public static IObservable<System.String> get_Name(
+            this IObservable<System.Diagnostics.Tracing.EventDataAttribute> EventDataAttributeValue)
         {
-            return Observable.Select(EventDataAttributeValue, (EventDataAttributeValueLambda) => EventDataAttributeValueLambda.Name);
+            return Observable.Select(EventDataAttributeValue,
+                (EventDataAttributeValueLambda) => EventDataAttributeValueLambda.Name);
         }
 
 
-        public static IObservable<System.Reactive.Unit> set_Name(this IObservable<System.Diagnostics.Tracing.EventDataAttribute> EventDataAttributeValue, IObservable<System.String> value)
+        public static IObservable<System.Reactive.Unit> set_Name(
+            this IObservable<System.Diagnostics.Tracing.EventDataAttribute> EventDataAttributeValue,
+            IObservable<System.String> value)
         {
-            return ObservableExt.ZipExecute(EventDataAttributeValue, value, (EventDataAttributeValueLambda, valueLambda) => EventDataAttributeValueLambda.Name = valueLambda);
+            return ObservableExt.ZipExecute(EventDataAttributeValue, value,
+                (EventDataAttributeValueLambda, valueLambda) => EventDataAttributeValueLambda.Name = valueLambda);
         }
-
     }
 }

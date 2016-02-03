@@ -8,7 +8,6 @@ namespace System.Security.Cryptography
 {
     public static class __TripleDES
     {
-        
         public static IObservable<System.Security.Cryptography.TripleDES> Create()
         {
             return ObservableExt.Factory(() => System.Security.Cryptography.TripleDES.Create());
@@ -23,20 +22,23 @@ namespace System.Security.Cryptography
 
         public static IObservable<System.Boolean> IsWeakKey(IObservable<System.Byte[]> rgbKey)
         {
-            return Observable.Select(rgbKey, (rgbKeyLambda) => System.Security.Cryptography.TripleDES.IsWeakKey(rgbKeyLambda));
+            return Observable.Select(rgbKey,
+                (rgbKeyLambda) => System.Security.Cryptography.TripleDES.IsWeakKey(rgbKeyLambda));
         }
 
 
-        public static IObservable<System.Byte[]> get_Key(this IObservable<System.Security.Cryptography.TripleDES> TripleDESValue)
+        public static IObservable<System.Byte[]> get_Key(
+            this IObservable<System.Security.Cryptography.TripleDES> TripleDESValue)
         {
             return Observable.Select(TripleDESValue, (TripleDESValueLambda) => TripleDESValueLambda.Key);
         }
 
 
-        public static IObservable<System.Reactive.Unit> set_Key(this IObservable<System.Security.Cryptography.TripleDES> TripleDESValue, IObservable<System.Byte[]> value)
+        public static IObservable<System.Reactive.Unit> set_Key(
+            this IObservable<System.Security.Cryptography.TripleDES> TripleDESValue, IObservable<System.Byte[]> value)
         {
-            return ObservableExt.ZipExecute(TripleDESValue, value, (TripleDESValueLambda, valueLambda) => TripleDESValueLambda.Key = valueLambda);
+            return ObservableExt.ZipExecute(TripleDESValue, value,
+                (TripleDESValueLambda, valueLambda) => TripleDESValueLambda.Key = valueLambda);
         }
-
     }
 }

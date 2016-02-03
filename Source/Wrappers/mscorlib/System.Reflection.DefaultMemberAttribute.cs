@@ -8,11 +8,11 @@ namespace System.Reflection
 {
     public static class __DefaultMemberAttribute
     {
-        
-        public static IObservable<System.String> get_MemberName(this IObservable<System.Reflection.DefaultMemberAttribute> DefaultMemberAttributeValue)
+        public static IObservable<System.String> get_MemberName(
+            this IObservable<System.Reflection.DefaultMemberAttribute> DefaultMemberAttributeValue)
         {
-            return Observable.Select(DefaultMemberAttributeValue, (DefaultMemberAttributeValueLambda) => DefaultMemberAttributeValueLambda.MemberName);
+            return Observable.Select(DefaultMemberAttributeValue,
+                (DefaultMemberAttributeValueLambda) => DefaultMemberAttributeValueLambda.MemberName);
         }
-
     }
 }

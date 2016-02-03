@@ -8,22 +8,29 @@ namespace System.Runtime.Serialization
 {
     public static class __SerializationBinder
     {
-        
-        public static IObservable<Tuple<System.String, System.String>> BindToName(this IObservable<System.Runtime.Serialization.SerializationBinder> SerializationBinderValue, IObservable<System.Type> serializedType)
+        public static IObservable<Tuple<System.String, System.String>> BindToName(
+            this IObservable<System.Runtime.Serialization.SerializationBinder> SerializationBinderValue,
+            IObservable<System.Type> serializedType)
         {
-            return Observable.Zip(SerializationBinderValue, serializedType, (SerializationBinderValueLambda, serializedTypeLambda) => {
-System.String assemblyNameOutput = default(System.String);
-System.String typeNameOutput = default(System.String);
-SerializationBinderValueLambda.BindToName(serializedTypeLambda, out assemblyNameOutput, out typeNameOutput);
-return Tuple.Create(assemblyNameOutput, typeNameOutput);
-});
+            return Observable.Zip(SerializationBinderValue, serializedType,
+                (SerializationBinderValueLambda, serializedTypeLambda) =>
+                {
+                    System.String assemblyNameOutput = default(System.String);
+                    System.String typeNameOutput = default(System.String);
+                    SerializationBinderValueLambda.BindToName(serializedTypeLambda, out assemblyNameOutput,
+                        out typeNameOutput);
+                    return Tuple.Create(assemblyNameOutput, typeNameOutput);
+                });
         }
 
 
-        public static IObservable<System.Type> BindToType(this IObservable<System.Runtime.Serialization.SerializationBinder> SerializationBinderValue, IObservable<System.String> assemblyName, IObservable<System.String> typeName)
+        public static IObservable<System.Type> BindToType(
+            this IObservable<System.Runtime.Serialization.SerializationBinder> SerializationBinderValue,
+            IObservable<System.String> assemblyName, IObservable<System.String> typeName)
         {
-            return Observable.Zip(SerializationBinderValue, assemblyName, typeName, (SerializationBinderValueLambda, assemblyNameLambda, typeNameLambda) => SerializationBinderValueLambda.BindToType(assemblyNameLambda, typeNameLambda));
+            return Observable.Zip(SerializationBinderValue, assemblyName, typeName,
+                (SerializationBinderValueLambda, assemblyNameLambda, typeNameLambda) =>
+                    SerializationBinderValueLambda.BindToType(assemblyNameLambda, typeNameLambda));
         }
-
     }
 }

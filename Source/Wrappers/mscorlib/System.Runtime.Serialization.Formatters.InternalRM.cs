@@ -8,10 +8,12 @@ namespace System.Runtime.Serialization.Formatters
 {
     public static class __InternalRM
     {
-        
         public static IObservable<System.Reactive.Unit> InfoSoap(IObservable<System.Object[]> messages)
         {
-            return Observable.Do(messages, (messagesLambda) => System.Runtime.Serialization.Formatters.InternalRM.InfoSoap(messagesLambda)).ToUnit();
+            return
+                Observable.Do(messages,
+                    (messagesLambda) => System.Runtime.Serialization.Formatters.InternalRM.InfoSoap(messagesLambda))
+                    .ToUnit();
         }
 
 
@@ -19,6 +21,5 @@ namespace System.Runtime.Serialization.Formatters
         {
             return ObservableExt.Factory(() => System.Runtime.Serialization.Formatters.InternalRM.SoapCheckEnabled());
         }
-
     }
 }

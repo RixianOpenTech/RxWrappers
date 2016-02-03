@@ -8,17 +8,23 @@ namespace System.Runtime.Serialization
 {
     public static class __SerializationObjectManager
     {
-        
-        public static IObservable<System.Reactive.Unit> RegisterObject(this IObservable<System.Runtime.Serialization.SerializationObjectManager> SerializationObjectManagerValue, IObservable<System.Object> obj)
+        public static IObservable<System.Reactive.Unit> RegisterObject(
+            this IObservable<System.Runtime.Serialization.SerializationObjectManager> SerializationObjectManagerValue,
+            IObservable<System.Object> obj)
         {
-            return ObservableExt.ZipExecute(SerializationObjectManagerValue, obj, (SerializationObjectManagerValueLambda, objLambda) => SerializationObjectManagerValueLambda.RegisterObject(objLambda));
+            return ObservableExt.ZipExecute(SerializationObjectManagerValue, obj,
+                (SerializationObjectManagerValueLambda, objLambda) =>
+                    SerializationObjectManagerValueLambda.RegisterObject(objLambda));
         }
 
 
-        public static IObservable<System.Reactive.Unit> RaiseOnSerializedEvent(this IObservable<System.Runtime.Serialization.SerializationObjectManager> SerializationObjectManagerValue)
+        public static IObservable<System.Reactive.Unit> RaiseOnSerializedEvent(
+            this IObservable<System.Runtime.Serialization.SerializationObjectManager> SerializationObjectManagerValue)
         {
-            return Observable.Do(SerializationObjectManagerValue, (SerializationObjectManagerValueLambda) => SerializationObjectManagerValueLambda.RaiseOnSerializedEvent()).ToUnit();
+            return
+                Observable.Do(SerializationObjectManagerValue,
+                    (SerializationObjectManagerValueLambda) =>
+                        SerializationObjectManagerValueLambda.RaiseOnSerializedEvent()).ToUnit();
         }
-
     }
 }

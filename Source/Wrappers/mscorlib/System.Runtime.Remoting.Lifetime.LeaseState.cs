@@ -8,6 +8,5 @@ namespace System.Runtime.Remoting.Lifetime
 {
     public static class __LeaseState
     {
-        
     }
 }

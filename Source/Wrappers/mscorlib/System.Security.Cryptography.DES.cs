@@ -8,7 +8,6 @@ namespace System.Security.Cryptography
 {
     public static class __DES
     {
-        
         public static IObservable<System.Security.Cryptography.DES> Create()
         {
             return ObservableExt.Factory(() => System.Security.Cryptography.DES.Create());
@@ -29,7 +28,8 @@ namespace System.Security.Cryptography
 
         public static IObservable<System.Boolean> IsSemiWeakKey(IObservable<System.Byte[]> rgbKey)
         {
-            return Observable.Select(rgbKey, (rgbKeyLambda) => System.Security.Cryptography.DES.IsSemiWeakKey(rgbKeyLambda));
+            return Observable.Select(rgbKey,
+                (rgbKeyLambda) => System.Security.Cryptography.DES.IsSemiWeakKey(rgbKeyLambda));
         }
 
 
@@ -39,10 +39,11 @@ namespace System.Security.Cryptography
         }
 
 
-        public static IObservable<System.Reactive.Unit> set_Key(this IObservable<System.Security.Cryptography.DES> DESValue, IObservable<System.Byte[]> value)
+        public static IObservable<System.Reactive.Unit> set_Key(
+            this IObservable<System.Security.Cryptography.DES> DESValue, IObservable<System.Byte[]> value)
         {
-            return ObservableExt.ZipExecute(DESValue, value, (DESValueLambda, valueLambda) => DESValueLambda.Key = valueLambda);
+            return ObservableExt.ZipExecute(DESValue, value,
+                (DESValueLambda, valueLambda) => DESValueLambda.Key = valueLambda);
         }
-
     }
 }

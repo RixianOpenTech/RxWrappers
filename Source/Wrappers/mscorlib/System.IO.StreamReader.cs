@@ -8,16 +8,19 @@ namespace System.IO
 {
     public static class __StreamReader
     {
-        
         public static IObservable<System.Reactive.Unit> Close(this IObservable<System.IO.StreamReader> StreamReaderValue)
         {
-            return Observable.Do(StreamReaderValue, (StreamReaderValueLambda) => StreamReaderValueLambda.Close()).ToUnit();
+            return
+                Observable.Do(StreamReaderValue, (StreamReaderValueLambda) => StreamReaderValueLambda.Close()).ToUnit();
         }
 
 
-        public static IObservable<System.Reactive.Unit> DiscardBufferedData(this IObservable<System.IO.StreamReader> StreamReaderValue)
+        public static IObservable<System.Reactive.Unit> DiscardBufferedData(
+            this IObservable<System.IO.StreamReader> StreamReaderValue)
         {
-            return Observable.Do(StreamReaderValue, (StreamReaderValueLambda) => StreamReaderValueLambda.DiscardBufferedData()).ToUnit();
+            return
+                Observable.Do(StreamReaderValue,
+                    (StreamReaderValueLambda) => StreamReaderValueLambda.DiscardBufferedData()).ToUnit();
         }
 
 
@@ -33,9 +36,12 @@ namespace System.IO
         }
 
 
-        public static IObservable<int> Read(this IObservable<System.IO.StreamReader> StreamReaderValue, IObservable<System.Char[]> buffer, IObservable<System.Int32> index, IObservable<System.Int32> count)
+        public static IObservable<int> Read(this IObservable<System.IO.StreamReader> StreamReaderValue,
+            IObservable<System.Char[]> buffer, IObservable<System.Int32> index, IObservable<System.Int32> count)
         {
-            return Observable.Zip(StreamReaderValue, buffer, index, count, (StreamReaderValueLambda, bufferLambda, indexLambda, countLambda) => StreamReaderValueLambda.Read(bufferLambda, indexLambda, countLambda));
+            return Observable.Zip(StreamReaderValue, buffer, index, count,
+                (StreamReaderValueLambda, bufferLambda, indexLambda, countLambda) =>
+                    StreamReaderValueLambda.Read(bufferLambda, indexLambda, countLambda));
         }
 
 
@@ -45,9 +51,12 @@ namespace System.IO
         }
 
 
-        public static IObservable<int> ReadBlock(this IObservable<System.IO.StreamReader> StreamReaderValue, IObservable<System.Char[]> buffer, IObservable<System.Int32> index, IObservable<System.Int32> count)
+        public static IObservable<int> ReadBlock(this IObservable<System.IO.StreamReader> StreamReaderValue,
+            IObservable<System.Char[]> buffer, IObservable<System.Int32> index, IObservable<System.Int32> count)
         {
-            return Observable.Zip(StreamReaderValue, buffer, index, count, (StreamReaderValueLambda, bufferLambda, indexLambda, countLambda) => StreamReaderValueLambda.ReadBlock(bufferLambda, indexLambda, countLambda));
+            return Observable.Zip(StreamReaderValue, buffer, index, count,
+                (StreamReaderValueLambda, bufferLambda, indexLambda, countLambda) =>
+                    StreamReaderValueLambda.ReadBlock(bufferLambda, indexLambda, countLambda));
         }
 
 
@@ -57,46 +66,66 @@ namespace System.IO
         }
 
 
-        public static IObservable<System.String> ReadLineAsync(this IObservable<System.IO.StreamReader> StreamReaderValue)
+        public static IObservable<System.String> ReadLineAsync(
+            this IObservable<System.IO.StreamReader> StreamReaderValue)
         {
-            return Observable.Select(StreamReaderValue, (StreamReaderValueLambda) => StreamReaderValueLambda.ReadLineAsync().ToObservable()).Flatten();
+            return
+                Observable.Select(StreamReaderValue,
+                    (StreamReaderValueLambda) => StreamReaderValueLambda.ReadLineAsync().ToObservable()).Flatten();
         }
 
 
-        public static IObservable<System.String> ReadToEndAsync(this IObservable<System.IO.StreamReader> StreamReaderValue)
+        public static IObservable<System.String> ReadToEndAsync(
+            this IObservable<System.IO.StreamReader> StreamReaderValue)
         {
-            return Observable.Select(StreamReaderValue, (StreamReaderValueLambda) => StreamReaderValueLambda.ReadToEndAsync().ToObservable()).Flatten();
+            return
+                Observable.Select(StreamReaderValue,
+                    (StreamReaderValueLambda) => StreamReaderValueLambda.ReadToEndAsync().ToObservable()).Flatten();
         }
 
 
-        public static IObservable<System.Int32> ReadAsync(this IObservable<System.IO.StreamReader> StreamReaderValue, IObservable<System.Char[]> buffer, IObservable<System.Int32> index, IObservable<System.Int32> count)
+        public static IObservable<System.Int32> ReadAsync(this IObservable<System.IO.StreamReader> StreamReaderValue,
+            IObservable<System.Char[]> buffer, IObservable<System.Int32> index, IObservable<System.Int32> count)
         {
-            return Observable.Zip(StreamReaderValue, buffer, index, count, (StreamReaderValueLambda, bufferLambda, indexLambda, countLambda) => StreamReaderValueLambda.ReadAsync(bufferLambda, indexLambda, countLambda).ToObservable()).Flatten();
+            return
+                Observable.Zip(StreamReaderValue, buffer, index, count,
+                    (StreamReaderValueLambda, bufferLambda, indexLambda, countLambda) =>
+                        StreamReaderValueLambda.ReadAsync(bufferLambda, indexLambda, countLambda).ToObservable())
+                    .Flatten();
         }
 
 
-        public static IObservable<System.Int32> ReadBlockAsync(this IObservable<System.IO.StreamReader> StreamReaderValue, IObservable<System.Char[]> buffer, IObservable<System.Int32> index, IObservable<System.Int32> count)
+        public static IObservable<System.Int32> ReadBlockAsync(
+            this IObservable<System.IO.StreamReader> StreamReaderValue, IObservable<System.Char[]> buffer,
+            IObservable<System.Int32> index, IObservable<System.Int32> count)
         {
-            return Observable.Zip(StreamReaderValue, buffer, index, count, (StreamReaderValueLambda, bufferLambda, indexLambda, countLambda) => StreamReaderValueLambda.ReadBlockAsync(bufferLambda, indexLambda, countLambda).ToObservable()).Flatten();
+            return
+                Observable.Zip(StreamReaderValue, buffer, index, count,
+                    (StreamReaderValueLambda, bufferLambda, indexLambda, countLambda) =>
+                        StreamReaderValueLambda.ReadBlockAsync(bufferLambda, indexLambda, countLambda).ToObservable())
+                    .Flatten();
         }
 
 
-        public static IObservable<System.Text.Encoding> get_CurrentEncoding(this IObservable<System.IO.StreamReader> StreamReaderValue)
+        public static IObservable<System.Text.Encoding> get_CurrentEncoding(
+            this IObservable<System.IO.StreamReader> StreamReaderValue)
         {
-            return Observable.Select(StreamReaderValue, (StreamReaderValueLambda) => StreamReaderValueLambda.CurrentEncoding);
+            return Observable.Select(StreamReaderValue,
+                (StreamReaderValueLambda) => StreamReaderValueLambda.CurrentEncoding);
         }
 
 
-        public static IObservable<System.IO.Stream> get_BaseStream(this IObservable<System.IO.StreamReader> StreamReaderValue)
+        public static IObservable<System.IO.Stream> get_BaseStream(
+            this IObservable<System.IO.StreamReader> StreamReaderValue)
         {
             return Observable.Select(StreamReaderValue, (StreamReaderValueLambda) => StreamReaderValueLambda.BaseStream);
         }
 
 
-        public static IObservable<System.Boolean> get_EndOfStream(this IObservable<System.IO.StreamReader> StreamReaderValue)
+        public static IObservable<System.Boolean> get_EndOfStream(
+            this IObservable<System.IO.StreamReader> StreamReaderValue)
         {
             return Observable.Select(StreamReaderValue, (StreamReaderValueLambda) => StreamReaderValueLambda.EndOfStream);
         }
-
     }
 }

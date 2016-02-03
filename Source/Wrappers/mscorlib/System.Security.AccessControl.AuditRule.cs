@@ -8,11 +8,10 @@ namespace System.Security.AccessControl
 {
     public static class __AuditRule
     {
-        
-        public static IObservable<System.Security.AccessControl.AuditFlags> get_AuditFlags(this IObservable<System.Security.AccessControl.AuditRule> AuditRuleValue)
+        public static IObservable<System.Security.AccessControl.AuditFlags> get_AuditFlags(
+            this IObservable<System.Security.AccessControl.AuditRule> AuditRuleValue)
         {
             return Observable.Select(AuditRuleValue, (AuditRuleValueLambda) => AuditRuleValueLambda.AuditFlags);
         }
-
     }
 }

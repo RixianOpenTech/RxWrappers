@@ -8,23 +8,28 @@ namespace System.Runtime.ExceptionServices
 {
     public static class __ExceptionDispatchInfo
     {
-        
-        public static IObservable<System.Runtime.ExceptionServices.ExceptionDispatchInfo> Capture(IObservable<System.Exception> source)
+        public static IObservable<System.Runtime.ExceptionServices.ExceptionDispatchInfo> Capture(
+            IObservable<System.Exception> source)
         {
-            return Observable.Select(source, (sourceLambda) => System.Runtime.ExceptionServices.ExceptionDispatchInfo.Capture(sourceLambda));
+            return Observable.Select(source,
+                (sourceLambda) => System.Runtime.ExceptionServices.ExceptionDispatchInfo.Capture(sourceLambda));
         }
 
 
-        public static IObservable<System.Reactive.Unit> Throw(this IObservable<System.Runtime.ExceptionServices.ExceptionDispatchInfo> ExceptionDispatchInfoValue)
+        public static IObservable<System.Reactive.Unit> Throw(
+            this IObservable<System.Runtime.ExceptionServices.ExceptionDispatchInfo> ExceptionDispatchInfoValue)
         {
-            return Observable.Do(ExceptionDispatchInfoValue, (ExceptionDispatchInfoValueLambda) => ExceptionDispatchInfoValueLambda.Throw()).ToUnit();
+            return
+                Observable.Do(ExceptionDispatchInfoValue,
+                    (ExceptionDispatchInfoValueLambda) => ExceptionDispatchInfoValueLambda.Throw()).ToUnit();
         }
 
 
-        public static IObservable<System.Exception> get_SourceException(this IObservable<System.Runtime.ExceptionServices.ExceptionDispatchInfo> ExceptionDispatchInfoValue)
+        public static IObservable<System.Exception> get_SourceException(
+            this IObservable<System.Runtime.ExceptionServices.ExceptionDispatchInfo> ExceptionDispatchInfoValue)
         {
-            return Observable.Select(ExceptionDispatchInfoValue, (ExceptionDispatchInfoValueLambda) => ExceptionDispatchInfoValueLambda.SourceException);
+            return Observable.Select(ExceptionDispatchInfoValue,
+                (ExceptionDispatchInfoValueLambda) => ExceptionDispatchInfoValueLambda.SourceException);
         }
-
     }
 }

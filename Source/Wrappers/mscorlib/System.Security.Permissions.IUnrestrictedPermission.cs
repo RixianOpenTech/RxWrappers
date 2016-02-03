@@ -8,11 +8,11 @@ namespace System.Security.Permissions
 {
     public static class __IUnrestrictedPermission
     {
-        
-        public static IObservable<System.Boolean> IsUnrestricted(this IObservable<System.Security.Permissions.IUnrestrictedPermission> IUnrestrictedPermissionValue)
+        public static IObservable<System.Boolean> IsUnrestricted(
+            this IObservable<System.Security.Permissions.IUnrestrictedPermission> IUnrestrictedPermissionValue)
         {
-            return Observable.Select(IUnrestrictedPermissionValue, (IUnrestrictedPermissionValueLambda) => IUnrestrictedPermissionValueLambda.IsUnrestricted());
+            return Observable.Select(IUnrestrictedPermissionValue,
+                (IUnrestrictedPermissionValueLambda) => IUnrestrictedPermissionValueLambda.IsUnrestricted());
         }
-
     }
 }

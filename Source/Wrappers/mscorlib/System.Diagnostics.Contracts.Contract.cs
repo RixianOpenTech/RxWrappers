@@ -8,76 +8,107 @@ namespace System.Diagnostics.Contracts
 {
     public static class __Contract
     {
-        
         public static IObservable<System.Reactive.Unit> Assume(IObservable<System.Boolean> condition)
         {
-            return Observable.Do(condition, (conditionLambda) => System.Diagnostics.Contracts.Contract.Assume(conditionLambda)).ToUnit();
+            return
+                Observable.Do(condition,
+                    (conditionLambda) => System.Diagnostics.Contracts.Contract.Assume(conditionLambda)).ToUnit();
         }
 
 
-        public static IObservable<System.Reactive.Unit> Assume(IObservable<System.Boolean> condition, IObservable<System.String> userMessage)
+        public static IObservable<System.Reactive.Unit> Assume(IObservable<System.Boolean> condition,
+            IObservable<System.String> userMessage)
         {
-            return ObservableExt.ZipExecute(condition, userMessage, (conditionLambda, userMessageLambda) => System.Diagnostics.Contracts.Contract.Assume(conditionLambda, userMessageLambda));
+            return ObservableExt.ZipExecute(condition, userMessage,
+                (conditionLambda, userMessageLambda) =>
+                    System.Diagnostics.Contracts.Contract.Assume(conditionLambda, userMessageLambda));
         }
 
 
         public static IObservable<System.Reactive.Unit> Assert(IObservable<System.Boolean> condition)
         {
-            return Observable.Do(condition, (conditionLambda) => System.Diagnostics.Contracts.Contract.Assert(conditionLambda)).ToUnit();
+            return
+                Observable.Do(condition,
+                    (conditionLambda) => System.Diagnostics.Contracts.Contract.Assert(conditionLambda)).ToUnit();
         }
 
 
-        public static IObservable<System.Reactive.Unit> Assert(IObservable<System.Boolean> condition, IObservable<System.String> userMessage)
+        public static IObservable<System.Reactive.Unit> Assert(IObservable<System.Boolean> condition,
+            IObservable<System.String> userMessage)
         {
-            return ObservableExt.ZipExecute(condition, userMessage, (conditionLambda, userMessageLambda) => System.Diagnostics.Contracts.Contract.Assert(conditionLambda, userMessageLambda));
+            return ObservableExt.ZipExecute(condition, userMessage,
+                (conditionLambda, userMessageLambda) =>
+                    System.Diagnostics.Contracts.Contract.Assert(conditionLambda, userMessageLambda));
         }
 
 
         public static IObservable<System.Reactive.Unit> Requires(IObservable<System.Boolean> condition)
         {
-            return Observable.Do(condition, (conditionLambda) => System.Diagnostics.Contracts.Contract.Requires(conditionLambda)).ToUnit();
+            return
+                Observable.Do(condition,
+                    (conditionLambda) => System.Diagnostics.Contracts.Contract.Requires(conditionLambda)).ToUnit();
         }
 
 
-        public static IObservable<System.Reactive.Unit> Requires(IObservable<System.Boolean> condition, IObservable<System.String> userMessage)
+        public static IObservable<System.Reactive.Unit> Requires(IObservable<System.Boolean> condition,
+            IObservable<System.String> userMessage)
         {
-            return ObservableExt.ZipExecute(condition, userMessage, (conditionLambda, userMessageLambda) => System.Diagnostics.Contracts.Contract.Requires(conditionLambda, userMessageLambda));
+            return ObservableExt.ZipExecute(condition, userMessage,
+                (conditionLambda, userMessageLambda) =>
+                    System.Diagnostics.Contracts.Contract.Requires(conditionLambda, userMessageLambda));
         }
 
 
         public static IObservable<System.Reactive.Unit> Requires<TException>(IObservable<System.Boolean> condition)
         {
-            return Observable.Do(condition, (conditionLambda) => System.Diagnostics.Contracts.Contract.Requires(conditionLambda)).ToUnit();
+            return
+                Observable.Do(condition,
+                    (conditionLambda) => System.Diagnostics.Contracts.Contract.Requires(conditionLambda)).ToUnit();
         }
 
 
-        public static IObservable<System.Reactive.Unit> Requires<TException>(IObservable<System.Boolean> condition, IObservable<System.String> userMessage)
+        public static IObservable<System.Reactive.Unit> Requires<TException>(IObservable<System.Boolean> condition,
+            IObservable<System.String> userMessage)
         {
-            return ObservableExt.ZipExecute(condition, userMessage, (conditionLambda, userMessageLambda) => System.Diagnostics.Contracts.Contract.Requires(conditionLambda, userMessageLambda));
+            return ObservableExt.ZipExecute(condition, userMessage,
+                (conditionLambda, userMessageLambda) =>
+                    System.Diagnostics.Contracts.Contract.Requires(conditionLambda, userMessageLambda));
         }
 
 
         public static IObservable<System.Reactive.Unit> Ensures(IObservable<System.Boolean> condition)
         {
-            return Observable.Do(condition, (conditionLambda) => System.Diagnostics.Contracts.Contract.Ensures(conditionLambda)).ToUnit();
+            return
+                Observable.Do(condition,
+                    (conditionLambda) => System.Diagnostics.Contracts.Contract.Ensures(conditionLambda)).ToUnit();
         }
 
 
-        public static IObservable<System.Reactive.Unit> Ensures(IObservable<System.Boolean> condition, IObservable<System.String> userMessage)
+        public static IObservable<System.Reactive.Unit> Ensures(IObservable<System.Boolean> condition,
+            IObservable<System.String> userMessage)
         {
-            return ObservableExt.ZipExecute(condition, userMessage, (conditionLambda, userMessageLambda) => System.Diagnostics.Contracts.Contract.Ensures(conditionLambda, userMessageLambda));
+            return ObservableExt.ZipExecute(condition, userMessage,
+                (conditionLambda, userMessageLambda) =>
+                    System.Diagnostics.Contracts.Contract.Ensures(conditionLambda, userMessageLambda));
         }
 
 
-        public static IObservable<System.Reactive.Unit> EnsuresOnThrow<TException>(IObservable<System.Boolean> condition) where TException : Exception
+        public static IObservable<System.Reactive.Unit> EnsuresOnThrow<TException>(IObservable<System.Boolean> condition)
+            where TException : Exception
         {
-            return Observable.Do(condition, (conditionLambda) => System.Diagnostics.Contracts.Contract.EnsuresOnThrow<TException>(conditionLambda)).ToUnit();
+            return
+                Observable.Do(condition,
+                    (conditionLambda) =>
+                        System.Diagnostics.Contracts.Contract.EnsuresOnThrow<TException>(conditionLambda)).ToUnit();
         }
 
 
-        public static IObservable<System.Reactive.Unit> EnsuresOnThrow<TException>(IObservable<System.Boolean> condition, IObservable<System.String> userMessage) where TException : Exception
+        public static IObservable<System.Reactive.Unit> EnsuresOnThrow<TException>(
+            IObservable<System.Boolean> condition, IObservable<System.String> userMessage) where TException : Exception
         {
-            return ObservableExt.ZipExecute(condition, userMessage, (conditionLambda, userMessageLambda) => System.Diagnostics.Contracts.Contract.EnsuresOnThrow<TException>(conditionLambda, userMessageLambda));
+            return ObservableExt.ZipExecute(condition, userMessage,
+                (conditionLambda, userMessageLambda) =>
+                    System.Diagnostics.Contracts.Contract.EnsuresOnThrow<TException>(conditionLambda, userMessageLambda));
         }
 
 
@@ -89,11 +120,12 @@ namespace System.Diagnostics.Contracts
 
         public static IObservable<Tuple<T, T>> ValueAtReturn<T>()
         {
-            return ObservableExt.Factory(() => {
-T valueOutput = default(T);
-var result = System.Diagnostics.Contracts.Contract.ValueAtReturn(out valueOutput);
-return Tuple.Create(result, valueOutput);
-});
+            return ObservableExt.Factory(() =>
+            {
+                T valueOutput = default(T);
+                var result = System.Diagnostics.Contracts.Contract.ValueAtReturn(out valueOutput);
+                return Tuple.Create(result, valueOutput);
+            });
         }
 
 
@@ -105,37 +137,54 @@ return Tuple.Create(result, valueOutput);
 
         public static IObservable<System.Reactive.Unit> Invariant(IObservable<System.Boolean> condition)
         {
-            return Observable.Do(condition, (conditionLambda) => System.Diagnostics.Contracts.Contract.Invariant(conditionLambda)).ToUnit();
+            return
+                Observable.Do(condition,
+                    (conditionLambda) => System.Diagnostics.Contracts.Contract.Invariant(conditionLambda)).ToUnit();
         }
 
 
-        public static IObservable<System.Reactive.Unit> Invariant(IObservable<System.Boolean> condition, IObservable<System.String> userMessage)
+        public static IObservable<System.Reactive.Unit> Invariant(IObservable<System.Boolean> condition,
+            IObservable<System.String> userMessage)
         {
-            return ObservableExt.ZipExecute(condition, userMessage, (conditionLambda, userMessageLambda) => System.Diagnostics.Contracts.Contract.Invariant(conditionLambda, userMessageLambda));
+            return ObservableExt.ZipExecute(condition, userMessage,
+                (conditionLambda, userMessageLambda) =>
+                    System.Diagnostics.Contracts.Contract.Invariant(conditionLambda, userMessageLambda));
         }
 
 
-        public static IObservable<System.Boolean> ForAll(IObservable<System.Int32> fromInclusive, IObservable<System.Int32> toExclusive, IObservable<System.Predicate<System.Int32>> predicate)
+        public static IObservable<System.Boolean> ForAll(IObservable<System.Int32> fromInclusive,
+            IObservable<System.Int32> toExclusive, IObservable<System.Predicate<System.Int32>> predicate)
         {
-            return Observable.Zip(fromInclusive, toExclusive, predicate, (fromInclusiveLambda, toExclusiveLambda, predicateLambda) => System.Diagnostics.Contracts.Contract.ForAll(fromInclusiveLambda, toExclusiveLambda, predicateLambda));
+            return Observable.Zip(fromInclusive, toExclusive, predicate,
+                (fromInclusiveLambda, toExclusiveLambda, predicateLambda) =>
+                    System.Diagnostics.Contracts.Contract.ForAll(fromInclusiveLambda, toExclusiveLambda, predicateLambda));
         }
 
 
-        public static IObservable<System.Boolean> ForAll<T>(IObservable<IEnumerable<T>> collection, IObservable<Predicate<T>> predicate)
+        public static IObservable<System.Boolean> ForAll<T>(IObservable<IEnumerable<T>> collection,
+            IObservable<Predicate<T>> predicate)
         {
-            return Observable.Zip(collection, predicate, (collectionLambda, predicateLambda) => System.Diagnostics.Contracts.Contract.ForAll(collectionLambda, predicateLambda));
+            return Observable.Zip(collection, predicate,
+                (collectionLambda, predicateLambda) =>
+                    System.Diagnostics.Contracts.Contract.ForAll(collectionLambda, predicateLambda));
         }
 
 
-        public static IObservable<System.Boolean> Exists(IObservable<System.Int32> fromInclusive, IObservable<System.Int32> toExclusive, IObservable<System.Predicate<System.Int32>> predicate)
+        public static IObservable<System.Boolean> Exists(IObservable<System.Int32> fromInclusive,
+            IObservable<System.Int32> toExclusive, IObservable<System.Predicate<System.Int32>> predicate)
         {
-            return Observable.Zip(fromInclusive, toExclusive, predicate, (fromInclusiveLambda, toExclusiveLambda, predicateLambda) => System.Diagnostics.Contracts.Contract.Exists(fromInclusiveLambda, toExclusiveLambda, predicateLambda));
+            return Observable.Zip(fromInclusive, toExclusive, predicate,
+                (fromInclusiveLambda, toExclusiveLambda, predicateLambda) =>
+                    System.Diagnostics.Contracts.Contract.Exists(fromInclusiveLambda, toExclusiveLambda, predicateLambda));
         }
 
 
-        public static IObservable<System.Boolean> Exists<T>(IObservable<IEnumerable<T>> collection, IObservable<Predicate<T>> predicate)
+        public static IObservable<System.Boolean> Exists<T>(IObservable<IEnumerable<T>> collection,
+            IObservable<Predicate<T>> predicate)
         {
-            return Observable.Zip(collection, predicate, (collectionLambda, predicateLambda) => System.Diagnostics.Contracts.Contract.Exists(collectionLambda, predicateLambda));
+            return Observable.Zip(collection, predicate,
+                (collectionLambda, predicateLambda) =>
+                    System.Diagnostics.Contracts.Contract.Exists(collectionLambda, predicateLambda));
         }
 
 
@@ -143,6 +192,5 @@ return Tuple.Create(result, valueOutput);
         {
             return ObservableExt.Factory(() => System.Diagnostics.Contracts.Contract.EndContractBlock());
         }
-
     }
 }

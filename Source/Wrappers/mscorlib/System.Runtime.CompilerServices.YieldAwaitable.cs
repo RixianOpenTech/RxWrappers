@@ -8,11 +8,11 @@ namespace System.Runtime.CompilerServices
 {
     public static class __YieldAwaitable
     {
-        
-        public static IObservable<System.Runtime.CompilerServices.YieldAwaitable.YieldAwaiter> GetAwaiter(this IObservable<System.Runtime.CompilerServices.YieldAwaitable> YieldAwaitableValue)
+        public static IObservable<System.Runtime.CompilerServices.YieldAwaitable.YieldAwaiter> GetAwaiter(
+            this IObservable<System.Runtime.CompilerServices.YieldAwaitable> YieldAwaitableValue)
         {
-            return Observable.Select(YieldAwaitableValue, (YieldAwaitableValueLambda) => YieldAwaitableValueLambda.GetAwaiter());
+            return Observable.Select(YieldAwaitableValue,
+                (YieldAwaitableValueLambda) => YieldAwaitableValueLambda.GetAwaiter());
         }
-
     }
 }

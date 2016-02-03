@@ -8,11 +8,11 @@ namespace System.Security.AccessControl
 {
     public static class __RegistryAccessRule
     {
-        
-        public static IObservable<System.Security.AccessControl.RegistryRights> get_RegistryRights(this IObservable<System.Security.AccessControl.RegistryAccessRule> RegistryAccessRuleValue)
+        public static IObservable<System.Security.AccessControl.RegistryRights> get_RegistryRights(
+            this IObservable<System.Security.AccessControl.RegistryAccessRule> RegistryAccessRuleValue)
         {
-            return Observable.Select(RegistryAccessRuleValue, (RegistryAccessRuleValueLambda) => RegistryAccessRuleValueLambda.RegistryRights);
+            return Observable.Select(RegistryAccessRuleValue,
+                (RegistryAccessRuleValueLambda) => RegistryAccessRuleValueLambda.RegistryRights);
         }
-
     }
 }

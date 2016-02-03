@@ -8,7 +8,6 @@ namespace System
 {
     public static class __Exception
     {
-        
         public static IObservable<System.Exception> GetBaseException(this IObservable<System.Exception> ExceptionValue)
         {
             return Observable.Select(ExceptionValue, (ExceptionValueLambda) => ExceptionValueLambda.GetBaseException());
@@ -21,9 +20,13 @@ namespace System
         }
 
 
-        public static IObservable<System.Reactive.Unit> GetObjectData(this IObservable<System.Exception> ExceptionValue, IObservable<System.Runtime.Serialization.SerializationInfo> info, IObservable<System.Runtime.Serialization.StreamingContext> context)
+        public static IObservable<System.Reactive.Unit> GetObjectData(this IObservable<System.Exception> ExceptionValue,
+            IObservable<System.Runtime.Serialization.SerializationInfo> info,
+            IObservable<System.Runtime.Serialization.StreamingContext> context)
         {
-            return ObservableExt.ZipExecute(ExceptionValue, info, context, (ExceptionValueLambda, infoLambda, contextLambda) => ExceptionValueLambda.GetObjectData(infoLambda, contextLambda));
+            return ObservableExt.ZipExecute(ExceptionValue, info, context,
+                (ExceptionValueLambda, infoLambda, contextLambda) =>
+                    ExceptionValueLambda.GetObjectData(infoLambda, contextLambda));
         }
 
 
@@ -39,7 +42,8 @@ namespace System
         }
 
 
-        public static IObservable<System.Collections.IDictionary> get_Data(this IObservable<System.Exception> ExceptionValue)
+        public static IObservable<System.Collections.IDictionary> get_Data(
+            this IObservable<System.Exception> ExceptionValue)
         {
             return Observable.Select(ExceptionValue, (ExceptionValueLambda) => ExceptionValueLambda.Data);
         }
@@ -51,7 +55,8 @@ namespace System
         }
 
 
-        public static IObservable<System.Reflection.MethodBase> get_TargetSite(this IObservable<System.Exception> ExceptionValue)
+        public static IObservable<System.Reflection.MethodBase> get_TargetSite(
+            this IObservable<System.Exception> ExceptionValue)
         {
             return Observable.Select(ExceptionValue, (ExceptionValueLambda) => ExceptionValueLambda.TargetSite);
         }
@@ -81,16 +86,19 @@ namespace System
         }
 
 
-        public static IObservable<System.Reactive.Unit> set_HelpLink(this IObservable<System.Exception> ExceptionValue, IObservable<System.String> value)
+        public static IObservable<System.Reactive.Unit> set_HelpLink(this IObservable<System.Exception> ExceptionValue,
+            IObservable<System.String> value)
         {
-            return ObservableExt.ZipExecute(ExceptionValue, value, (ExceptionValueLambda, valueLambda) => ExceptionValueLambda.HelpLink = valueLambda);
+            return ObservableExt.ZipExecute(ExceptionValue, value,
+                (ExceptionValueLambda, valueLambda) => ExceptionValueLambda.HelpLink = valueLambda);
         }
 
 
-        public static IObservable<System.Reactive.Unit> set_Source(this IObservable<System.Exception> ExceptionValue, IObservable<System.String> value)
+        public static IObservable<System.Reactive.Unit> set_Source(this IObservable<System.Exception> ExceptionValue,
+            IObservable<System.String> value)
         {
-            return ObservableExt.ZipExecute(ExceptionValue, value, (ExceptionValueLambda, valueLambda) => ExceptionValueLambda.Source = valueLambda);
+            return ObservableExt.ZipExecute(ExceptionValue, value,
+                (ExceptionValueLambda, valueLambda) => ExceptionValueLambda.Source = valueLambda);
         }
-
     }
 }

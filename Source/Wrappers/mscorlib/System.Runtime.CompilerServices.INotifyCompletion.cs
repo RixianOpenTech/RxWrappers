@@ -8,11 +8,13 @@ namespace System.Runtime.CompilerServices
 {
     public static class __INotifyCompletion
     {
-        
-        public static IObservable<System.Reactive.Unit> OnCompleted(this IObservable<System.Runtime.CompilerServices.INotifyCompletion> INotifyCompletionValue, IObservable<System.Action> continuation)
+        public static IObservable<System.Reactive.Unit> OnCompleted(
+            this IObservable<System.Runtime.CompilerServices.INotifyCompletion> INotifyCompletionValue,
+            IObservable<System.Action> continuation)
         {
-            return ObservableExt.ZipExecute(INotifyCompletionValue, continuation, (INotifyCompletionValueLambda, continuationLambda) => INotifyCompletionValueLambda.OnCompleted(continuationLambda));
+            return ObservableExt.ZipExecute(INotifyCompletionValue, continuation,
+                (INotifyCompletionValueLambda, continuationLambda) =>
+                    INotifyCompletionValueLambda.OnCompleted(continuationLambda));
         }
-
     }
 }

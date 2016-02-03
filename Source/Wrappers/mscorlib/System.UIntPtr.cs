@@ -8,10 +8,11 @@ namespace System
 {
     public static class __UIntPtr
     {
-        
-        public static IObservable<System.Boolean> Equals(this IObservable<System.UIntPtr> UIntPtrValue, IObservable<System.Object> obj)
+        public static IObservable<System.Boolean> Equals(this IObservable<System.UIntPtr> UIntPtrValue,
+            IObservable<System.Object> obj)
         {
-            return Observable.Zip(UIntPtrValue, obj, (UIntPtrValueLambda, objLambda) => UIntPtrValueLambda.Equals(objLambda));
+            return Observable.Zip(UIntPtrValue, obj,
+                (UIntPtrValueLambda, objLambda) => UIntPtrValueLambda.Equals(objLambda));
         }
 
 
@@ -39,15 +40,19 @@ namespace System
         }
 
 
-        public static IObservable<System.UIntPtr> Add(IObservable<System.UIntPtr> pointer, IObservable<System.Int32> offset)
+        public static IObservable<System.UIntPtr> Add(IObservable<System.UIntPtr> pointer,
+            IObservable<System.Int32> offset)
         {
-            return Observable.Zip(pointer, offset, (pointerLambda, offsetLambda) => System.UIntPtr.Add(pointerLambda, offsetLambda));
+            return Observable.Zip(pointer, offset,
+                (pointerLambda, offsetLambda) => System.UIntPtr.Add(pointerLambda, offsetLambda));
         }
 
 
-        public static IObservable<System.UIntPtr> Subtract(IObservable<System.UIntPtr> pointer, IObservable<System.Int32> offset)
+        public static IObservable<System.UIntPtr> Subtract(IObservable<System.UIntPtr> pointer,
+            IObservable<System.Int32> offset)
         {
-            return Observable.Zip(pointer, offset, (pointerLambda, offsetLambda) => System.UIntPtr.Subtract(pointerLambda, offsetLambda));
+            return Observable.Zip(pointer, offset,
+                (pointerLambda, offsetLambda) => System.UIntPtr.Subtract(pointerLambda, offsetLambda));
         }
 
 
@@ -55,6 +60,5 @@ namespace System
         {
             return ObservableExt.Factory(() => System.UIntPtr.Size);
         }
-
     }
 }

@@ -8,17 +8,22 @@ namespace System.Runtime.Remoting.Channels
 {
     public static class __IClientChannelSinkStack
     {
-        
-        public static IObservable<System.Reactive.Unit> Push(this IObservable<System.Runtime.Remoting.Channels.IClientChannelSinkStack> IClientChannelSinkStackValue, IObservable<System.Runtime.Remoting.Channels.IClientChannelSink> sink, IObservable<System.Object> state)
+        public static IObservable<System.Reactive.Unit> Push(
+            this IObservable<System.Runtime.Remoting.Channels.IClientChannelSinkStack> IClientChannelSinkStackValue,
+            IObservable<System.Runtime.Remoting.Channels.IClientChannelSink> sink, IObservable<System.Object> state)
         {
-            return ObservableExt.ZipExecute(IClientChannelSinkStackValue, sink, state, (IClientChannelSinkStackValueLambda, sinkLambda, stateLambda) => IClientChannelSinkStackValueLambda.Push(sinkLambda, stateLambda));
+            return ObservableExt.ZipExecute(IClientChannelSinkStackValue, sink, state,
+                (IClientChannelSinkStackValueLambda, sinkLambda, stateLambda) =>
+                    IClientChannelSinkStackValueLambda.Push(sinkLambda, stateLambda));
         }
 
 
-        public static IObservable<System.Object> Pop(this IObservable<System.Runtime.Remoting.Channels.IClientChannelSinkStack> IClientChannelSinkStackValue, IObservable<System.Runtime.Remoting.Channels.IClientChannelSink> sink)
+        public static IObservable<System.Object> Pop(
+            this IObservable<System.Runtime.Remoting.Channels.IClientChannelSinkStack> IClientChannelSinkStackValue,
+            IObservable<System.Runtime.Remoting.Channels.IClientChannelSink> sink)
         {
-            return Observable.Zip(IClientChannelSinkStackValue, sink, (IClientChannelSinkStackValueLambda, sinkLambda) => IClientChannelSinkStackValueLambda.Pop(sinkLambda));
+            return Observable.Zip(IClientChannelSinkStackValue, sink,
+                (IClientChannelSinkStackValueLambda, sinkLambda) => IClientChannelSinkStackValueLambda.Pop(sinkLambda));
         }
-
     }
 }

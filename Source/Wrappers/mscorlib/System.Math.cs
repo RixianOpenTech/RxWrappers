@@ -8,7 +8,6 @@ namespace System
 {
     public static class __Math
     {
-        
         public static IObservable<System.Double> Acos(IObservable<System.Double> d)
         {
             return Observable.Select(d, (dLambda) => System.Math.Acos(dLambda));
@@ -99,21 +98,26 @@ namespace System
         }
 
 
-        public static IObservable<System.Double> Round(IObservable<System.Double> value, IObservable<System.Int32> digits)
+        public static IObservable<System.Double> Round(IObservable<System.Double> value,
+            IObservable<System.Int32> digits)
         {
-            return Observable.Zip(value, digits, (valueLambda, digitsLambda) => System.Math.Round(valueLambda, digitsLambda));
+            return Observable.Zip(value, digits,
+                (valueLambda, digitsLambda) => System.Math.Round(valueLambda, digitsLambda));
         }
 
 
-        public static IObservable<System.Double> Round(IObservable<System.Double> value, IObservable<System.MidpointRounding> mode)
+        public static IObservable<System.Double> Round(IObservable<System.Double> value,
+            IObservable<System.MidpointRounding> mode)
         {
             return Observable.Zip(value, mode, (valueLambda, modeLambda) => System.Math.Round(valueLambda, modeLambda));
         }
 
 
-        public static IObservable<System.Double> Round(IObservable<System.Double> value, IObservable<System.Int32> digits, IObservable<System.MidpointRounding> mode)
+        public static IObservable<System.Double> Round(IObservable<System.Double> value,
+            IObservable<System.Int32> digits, IObservable<System.MidpointRounding> mode)
         {
-            return Observable.Zip(value, digits, mode, (valueLambda, digitsLambda, modeLambda) => System.Math.Round(valueLambda, digitsLambda, modeLambda));
+            return Observable.Zip(value, digits, mode,
+                (valueLambda, digitsLambda, modeLambda) => System.Math.Round(valueLambda, digitsLambda, modeLambda));
         }
 
 
@@ -123,21 +127,25 @@ namespace System
         }
 
 
-        public static IObservable<System.Decimal> Round(IObservable<System.Decimal> d, IObservable<System.Int32> decimals)
+        public static IObservable<System.Decimal> Round(IObservable<System.Decimal> d,
+            IObservable<System.Int32> decimals)
         {
             return Observable.Zip(d, decimals, (dLambda, decimalsLambda) => System.Math.Round(dLambda, decimalsLambda));
         }
 
 
-        public static IObservable<System.Decimal> Round(IObservable<System.Decimal> d, IObservable<System.MidpointRounding> mode)
+        public static IObservable<System.Decimal> Round(IObservable<System.Decimal> d,
+            IObservable<System.MidpointRounding> mode)
         {
             return Observable.Zip(d, mode, (dLambda, modeLambda) => System.Math.Round(dLambda, modeLambda));
         }
 
 
-        public static IObservable<System.Decimal> Round(IObservable<System.Decimal> d, IObservable<System.Int32> decimals, IObservable<System.MidpointRounding> mode)
+        public static IObservable<System.Decimal> Round(IObservable<System.Decimal> d,
+            IObservable<System.Int32> decimals, IObservable<System.MidpointRounding> mode)
         {
-            return Observable.Zip(d, decimals, mode, (dLambda, decimalsLambda, modeLambda) => System.Math.Round(dLambda, decimalsLambda, modeLambda));
+            return Observable.Zip(d, decimals, mode,
+                (dLambda, decimalsLambda, modeLambda) => System.Math.Round(dLambda, decimalsLambda, modeLambda));
         }
 
 
@@ -183,7 +191,8 @@ namespace System
         }
 
 
-        public static IObservable<System.Double> IEEERemainder(IObservable<System.Double> x, IObservable<System.Double> y)
+        public static IObservable<System.Double> IEEERemainder(IObservable<System.Double> x,
+            IObservable<System.Double> y)
         {
             return Observable.Zip(x, y, (xLambda, yLambda) => System.Math.IEEERemainder(xLambda, yLambda));
         }
@@ -417,24 +426,27 @@ namespace System
         }
 
 
-        public static IObservable<Tuple<System.Int32, System.Int32>> DivRem(IObservable<System.Int32> a, IObservable<System.Int32> b)
+        public static IObservable<Tuple<System.Int32, System.Int32>> DivRem(IObservable<System.Int32> a,
+            IObservable<System.Int32> b)
         {
-            return Observable.Zip(a, b, (aLambda, bLambda) => {
-System.Int32 resultOutput = default(System.Int32);
-var result = System.Math.DivRem(aLambda, bLambda, out resultOutput);
-return Tuple.Create(result, resultOutput);
-});
+            return Observable.Zip(a, b, (aLambda, bLambda) =>
+            {
+                System.Int32 resultOutput = default(System.Int32);
+                var result = System.Math.DivRem(aLambda, bLambda, out resultOutput);
+                return Tuple.Create(result, resultOutput);
+            });
         }
 
 
-        public static IObservable<Tuple<System.Int64, System.Int64>> DivRem(IObservable<System.Int64> a, IObservable<System.Int64> b)
+        public static IObservable<Tuple<System.Int64, System.Int64>> DivRem(IObservable<System.Int64> a,
+            IObservable<System.Int64> b)
         {
-            return Observable.Zip(a, b, (aLambda, bLambda) => {
-System.Int64 resultOutput = default(System.Int64);
-var result = System.Math.DivRem(aLambda, bLambda, out resultOutput);
-return Tuple.Create(result, resultOutput);
-});
+            return Observable.Zip(a, b, (aLambda, bLambda) =>
+            {
+                System.Int64 resultOutput = default(System.Int64);
+                var result = System.Math.DivRem(aLambda, bLambda, out resultOutput);
+                return Tuple.Create(result, resultOutput);
+            });
         }
-
     }
 }

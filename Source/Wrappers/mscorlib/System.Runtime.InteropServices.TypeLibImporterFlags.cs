@@ -8,6 +8,5 @@ namespace System.Runtime.InteropServices
 {
     public static class __TypeLibImporterFlags
     {
-        
     }
 }

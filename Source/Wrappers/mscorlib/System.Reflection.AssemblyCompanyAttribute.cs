@@ -8,11 +8,11 @@ namespace System.Reflection
 {
     public static class __AssemblyCompanyAttribute
     {
-        
-        public static IObservable<System.String> get_Company(this IObservable<System.Reflection.AssemblyCompanyAttribute> AssemblyCompanyAttributeValue)
+        public static IObservable<System.String> get_Company(
+            this IObservable<System.Reflection.AssemblyCompanyAttribute> AssemblyCompanyAttributeValue)
         {
-            return Observable.Select(AssemblyCompanyAttributeValue, (AssemblyCompanyAttributeValueLambda) => AssemblyCompanyAttributeValueLambda.Company);
+            return Observable.Select(AssemblyCompanyAttributeValue,
+                (AssemblyCompanyAttributeValueLambda) => AssemblyCompanyAttributeValueLambda.Company);
         }
-
     }
 }

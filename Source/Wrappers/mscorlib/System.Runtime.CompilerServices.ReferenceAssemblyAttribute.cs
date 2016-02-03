@@ -8,11 +8,11 @@ namespace System.Runtime.CompilerServices
 {
     public static class __ReferenceAssemblyAttribute
     {
-        
-        public static IObservable<System.String> get_Description(this IObservable<System.Runtime.CompilerServices.ReferenceAssemblyAttribute> ReferenceAssemblyAttributeValue)
+        public static IObservable<System.String> get_Description(
+            this IObservable<System.Runtime.CompilerServices.ReferenceAssemblyAttribute> ReferenceAssemblyAttributeValue)
         {
-            return Observable.Select(ReferenceAssemblyAttributeValue, (ReferenceAssemblyAttributeValueLambda) => ReferenceAssemblyAttributeValueLambda.Description);
+            return Observable.Select(ReferenceAssemblyAttributeValue,
+                (ReferenceAssemblyAttributeValueLambda) => ReferenceAssemblyAttributeValueLambda.Description);
         }
-
     }
 }

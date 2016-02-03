@@ -8,36 +8,44 @@ namespace System
 {
     public static class __Enum
     {
-        
-        public static IObservable<Tuple<System.Boolean, TEnum>> TryParse<TEnum>(IObservable<System.String> value) where TEnum : struct 
+        public static IObservable<Tuple<System.Boolean, TEnum>> TryParse<TEnum>(IObservable<System.String> value)
+            where TEnum : struct
         {
-            return Observable.Select(value, (valueLambda) => {
-TEnum resultOutput = default(TEnum);
-var result = System.Enum.TryParse(valueLambda, out resultOutput);
-return Tuple.Create(result, resultOutput);
-});
+            return Observable.Select(value, (valueLambda) =>
+            {
+                TEnum resultOutput = default(TEnum);
+                var result = System.Enum.TryParse(valueLambda, out resultOutput);
+                return Tuple.Create(result, resultOutput);
+            });
         }
 
 
-        public static IObservable<Tuple<System.Boolean, TEnum>> TryParse<TEnum>(IObservable<System.String> value, IObservable<System.Boolean> ignoreCase) where TEnum : struct
+        public static IObservable<Tuple<System.Boolean, TEnum>> TryParse<TEnum>(IObservable<System.String> value,
+            IObservable<System.Boolean> ignoreCase) where TEnum : struct
         {
-            return Observable.Zip(value, ignoreCase, (valueLambda, ignoreCaseLambda) => {
-TEnum resultOutput = default(TEnum);
-var result = System.Enum.TryParse(valueLambda, ignoreCaseLambda, out resultOutput);
-return Tuple.Create(result, resultOutput);
-});
+            return Observable.Zip(value, ignoreCase, (valueLambda, ignoreCaseLambda) =>
+            {
+                TEnum resultOutput = default(TEnum);
+                var result = System.Enum.TryParse(valueLambda, ignoreCaseLambda, out resultOutput);
+                return Tuple.Create(result, resultOutput);
+            });
         }
 
 
-        public static IObservable<System.Object> Parse(IObservable<System.Type> enumType, IObservable<System.String> value)
+        public static IObservable<System.Object> Parse(IObservable<System.Type> enumType,
+            IObservable<System.String> value)
         {
-            return Observable.Zip(enumType, value, (enumTypeLambda, valueLambda) => System.Enum.Parse(enumTypeLambda, valueLambda));
+            return Observable.Zip(enumType, value,
+                (enumTypeLambda, valueLambda) => System.Enum.Parse(enumTypeLambda, valueLambda));
         }
 
 
-        public static IObservable<System.Object> Parse(IObservable<System.Type> enumType, IObservable<System.String> value, IObservable<System.Boolean> ignoreCase)
+        public static IObservable<System.Object> Parse(IObservable<System.Type> enumType,
+            IObservable<System.String> value, IObservable<System.Boolean> ignoreCase)
         {
-            return Observable.Zip(enumType, value, ignoreCase, (enumTypeLambda, valueLambda, ignoreCaseLambda) => System.Enum.Parse(enumTypeLambda, valueLambda, ignoreCaseLambda));
+            return Observable.Zip(enumType, value, ignoreCase,
+                (enumTypeLambda, valueLambda, ignoreCaseLambda) =>
+                    System.Enum.Parse(enumTypeLambda, valueLambda, ignoreCaseLambda));
         }
 
 
@@ -53,9 +61,11 @@ return Tuple.Create(result, resultOutput);
         }
 
 
-        public static IObservable<System.String> GetName(IObservable<System.Type> enumType, IObservable<System.Object> value)
+        public static IObservable<System.String> GetName(IObservable<System.Type> enumType,
+            IObservable<System.Object> value)
         {
-            return Observable.Zip(enumType, value, (enumTypeLambda, valueLambda) => System.Enum.GetName(enumTypeLambda, valueLambda));
+            return Observable.Zip(enumType, value,
+                (enumTypeLambda, valueLambda) => System.Enum.GetName(enumTypeLambda, valueLambda));
         }
 
 
@@ -65,25 +75,33 @@ return Tuple.Create(result, resultOutput);
         }
 
 
-        public static IObservable<System.Object> ToObject(IObservable<System.Type> enumType, IObservable<System.Object> value)
+        public static IObservable<System.Object> ToObject(IObservable<System.Type> enumType,
+            IObservable<System.Object> value)
         {
-            return Observable.Zip(enumType, value, (enumTypeLambda, valueLambda) => System.Enum.ToObject(enumTypeLambda, valueLambda));
+            return Observable.Zip(enumType, value,
+                (enumTypeLambda, valueLambda) => System.Enum.ToObject(enumTypeLambda, valueLambda));
         }
 
 
-        public static IObservable<System.Boolean> IsDefined(IObservable<System.Type> enumType, IObservable<System.Object> value)
+        public static IObservable<System.Boolean> IsDefined(IObservable<System.Type> enumType,
+            IObservable<System.Object> value)
         {
-            return Observable.Zip(enumType, value, (enumTypeLambda, valueLambda) => System.Enum.IsDefined(enumTypeLambda, valueLambda));
+            return Observable.Zip(enumType, value,
+                (enumTypeLambda, valueLambda) => System.Enum.IsDefined(enumTypeLambda, valueLambda));
         }
 
 
-        public static IObservable<System.String> Format(IObservable<System.Type> enumType, IObservable<System.Object> value, IObservable<System.String> format)
+        public static IObservable<System.String> Format(IObservable<System.Type> enumType,
+            IObservable<System.Object> value, IObservable<System.String> format)
         {
-            return Observable.Zip(enumType, value, format, (enumTypeLambda, valueLambda, formatLambda) => System.Enum.Format(enumTypeLambda, valueLambda, formatLambda));
+            return Observable.Zip(enumType, value, format,
+                (enumTypeLambda, valueLambda, formatLambda) =>
+                    System.Enum.Format(enumTypeLambda, valueLambda, formatLambda));
         }
 
 
-        public static IObservable<System.Boolean> Equals(this IObservable<System.Enum> EnumValue, IObservable<System.Object> obj)
+        public static IObservable<System.Boolean> Equals(this IObservable<System.Enum> EnumValue,
+            IObservable<System.Object> obj)
         {
             return Observable.Zip(EnumValue, obj, (EnumValueLambda, objLambda) => EnumValueLambda.Equals(objLambda));
         }
@@ -101,31 +119,41 @@ return Tuple.Create(result, resultOutput);
         }
 
 
-        public static IObservable<System.String> ToString(this IObservable<System.Enum> EnumValue, IObservable<System.String> format, IObservable<System.IFormatProvider> provider)
+        public static IObservable<System.String> ToString(this IObservable<System.Enum> EnumValue,
+            IObservable<System.String> format, IObservable<System.IFormatProvider> provider)
         {
-            return Observable.Zip(EnumValue, format, provider, (EnumValueLambda, formatLambda, providerLambda) => EnumValueLambda.ToString(formatLambda, providerLambda));
+            return Observable.Zip(EnumValue, format, provider,
+                (EnumValueLambda, formatLambda, providerLambda) =>
+                    EnumValueLambda.ToString(formatLambda, providerLambda));
         }
 
 
-        public static IObservable<System.Int32> CompareTo(this IObservable<System.Enum> EnumValue, IObservable<System.Object> target)
+        public static IObservable<System.Int32> CompareTo(this IObservable<System.Enum> EnumValue,
+            IObservable<System.Object> target)
         {
-            return Observable.Zip(EnumValue, target, (EnumValueLambda, targetLambda) => EnumValueLambda.CompareTo(targetLambda));
+            return Observable.Zip(EnumValue, target,
+                (EnumValueLambda, targetLambda) => EnumValueLambda.CompareTo(targetLambda));
         }
 
 
-        public static IObservable<System.String> ToString(this IObservable<System.Enum> EnumValue, IObservable<System.String> format)
+        public static IObservable<System.String> ToString(this IObservable<System.Enum> EnumValue,
+            IObservable<System.String> format)
         {
-            return Observable.Zip(EnumValue, format, (EnumValueLambda, formatLambda) => EnumValueLambda.ToString(formatLambda));
+            return Observable.Zip(EnumValue, format,
+                (EnumValueLambda, formatLambda) => EnumValueLambda.ToString(formatLambda));
         }
 
 
-        public static IObservable<System.String> ToString(this IObservable<System.Enum> EnumValue, IObservable<System.IFormatProvider> provider)
+        public static IObservable<System.String> ToString(this IObservable<System.Enum> EnumValue,
+            IObservable<System.IFormatProvider> provider)
         {
-            return Observable.Zip(EnumValue, provider, (EnumValueLambda, providerLambda) => EnumValueLambda.ToString(providerLambda));
+            return Observable.Zip(EnumValue, provider,
+                (EnumValueLambda, providerLambda) => EnumValueLambda.ToString(providerLambda));
         }
 
 
-        public static IObservable<System.Boolean> HasFlag(this IObservable<System.Enum> EnumValue, IObservable<System.Enum> flag)
+        public static IObservable<System.Boolean> HasFlag(this IObservable<System.Enum> EnumValue,
+            IObservable<System.Enum> flag)
         {
             return Observable.Zip(EnumValue, flag, (EnumValueLambda, flagLambda) => EnumValueLambda.HasFlag(flagLambda));
         }
@@ -137,52 +165,67 @@ return Tuple.Create(result, resultOutput);
         }
 
 
-        public static IObservable<System.Object> ToObject(IObservable<System.Type> enumType, IObservable<System.SByte> value)
+        public static IObservable<System.Object> ToObject(IObservable<System.Type> enumType,
+            IObservable<System.SByte> value)
         {
-            return Observable.Zip(enumType, value, (enumTypeLambda, valueLambda) => System.Enum.ToObject(enumTypeLambda, valueLambda));
+            return Observable.Zip(enumType, value,
+                (enumTypeLambda, valueLambda) => System.Enum.ToObject(enumTypeLambda, valueLambda));
         }
 
 
-        public static IObservable<System.Object> ToObject(IObservable<System.Type> enumType, IObservable<System.Int16> value)
+        public static IObservable<System.Object> ToObject(IObservable<System.Type> enumType,
+            IObservable<System.Int16> value)
         {
-            return Observable.Zip(enumType, value, (enumTypeLambda, valueLambda) => System.Enum.ToObject(enumTypeLambda, valueLambda));
+            return Observable.Zip(enumType, value,
+                (enumTypeLambda, valueLambda) => System.Enum.ToObject(enumTypeLambda, valueLambda));
         }
 
 
-        public static IObservable<System.Object> ToObject(IObservable<System.Type> enumType, IObservable<System.Int32> value)
+        public static IObservable<System.Object> ToObject(IObservable<System.Type> enumType,
+            IObservable<System.Int32> value)
         {
-            return Observable.Zip(enumType, value, (enumTypeLambda, valueLambda) => System.Enum.ToObject(enumTypeLambda, valueLambda));
+            return Observable.Zip(enumType, value,
+                (enumTypeLambda, valueLambda) => System.Enum.ToObject(enumTypeLambda, valueLambda));
         }
 
 
-        public static IObservable<System.Object> ToObject(IObservable<System.Type> enumType, IObservable<System.Byte> value)
+        public static IObservable<System.Object> ToObject(IObservable<System.Type> enumType,
+            IObservable<System.Byte> value)
         {
-            return Observable.Zip(enumType, value, (enumTypeLambda, valueLambda) => System.Enum.ToObject(enumTypeLambda, valueLambda));
+            return Observable.Zip(enumType, value,
+                (enumTypeLambda, valueLambda) => System.Enum.ToObject(enumTypeLambda, valueLambda));
         }
 
 
-        public static IObservable<System.Object> ToObject(IObservable<System.Type> enumType, IObservable<System.UInt16> value)
+        public static IObservable<System.Object> ToObject(IObservable<System.Type> enumType,
+            IObservable<System.UInt16> value)
         {
-            return Observable.Zip(enumType, value, (enumTypeLambda, valueLambda) => System.Enum.ToObject(enumTypeLambda, valueLambda));
+            return Observable.Zip(enumType, value,
+                (enumTypeLambda, valueLambda) => System.Enum.ToObject(enumTypeLambda, valueLambda));
         }
 
 
-        public static IObservable<System.Object> ToObject(IObservable<System.Type> enumType, IObservable<System.UInt32> value)
+        public static IObservable<System.Object> ToObject(IObservable<System.Type> enumType,
+            IObservable<System.UInt32> value)
         {
-            return Observable.Zip(enumType, value, (enumTypeLambda, valueLambda) => System.Enum.ToObject(enumTypeLambda, valueLambda));
+            return Observable.Zip(enumType, value,
+                (enumTypeLambda, valueLambda) => System.Enum.ToObject(enumTypeLambda, valueLambda));
         }
 
 
-        public static IObservable<System.Object> ToObject(IObservable<System.Type> enumType, IObservable<System.Int64> value)
+        public static IObservable<System.Object> ToObject(IObservable<System.Type> enumType,
+            IObservable<System.Int64> value)
         {
-            return Observable.Zip(enumType, value, (enumTypeLambda, valueLambda) => System.Enum.ToObject(enumTypeLambda, valueLambda));
+            return Observable.Zip(enumType, value,
+                (enumTypeLambda, valueLambda) => System.Enum.ToObject(enumTypeLambda, valueLambda));
         }
 
 
-        public static IObservable<System.Object> ToObject(IObservable<System.Type> enumType, IObservable<System.UInt64> value)
+        public static IObservable<System.Object> ToObject(IObservable<System.Type> enumType,
+            IObservable<System.UInt64> value)
         {
-            return Observable.Zip(enumType, value, (enumTypeLambda, valueLambda) => System.Enum.ToObject(enumTypeLambda, valueLambda));
+            return Observable.Zip(enumType, value,
+                (enumTypeLambda, valueLambda) => System.Enum.ToObject(enumTypeLambda, valueLambda));
         }
-
     }
 }

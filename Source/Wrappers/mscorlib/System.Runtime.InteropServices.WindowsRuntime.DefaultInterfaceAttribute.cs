@@ -8,11 +8,12 @@ namespace System.Runtime.InteropServices.WindowsRuntime
 {
     public static class __DefaultInterfaceAttribute
     {
-        
-        public static IObservable<System.Type> get_DefaultInterface(this IObservable<System.Runtime.InteropServices.WindowsRuntime.DefaultInterfaceAttribute> DefaultInterfaceAttributeValue)
+        public static IObservable<System.Type> get_DefaultInterface(
+            this IObservable<System.Runtime.InteropServices.WindowsRuntime.DefaultInterfaceAttribute>
+                DefaultInterfaceAttributeValue)
         {
-            return Observable.Select(DefaultInterfaceAttributeValue, (DefaultInterfaceAttributeValueLambda) => DefaultInterfaceAttributeValueLambda.DefaultInterface);
+            return Observable.Select(DefaultInterfaceAttributeValue,
+                (DefaultInterfaceAttributeValueLambda) => DefaultInterfaceAttributeValueLambda.DefaultInterface);
         }
-
     }
 }

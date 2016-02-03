@@ -8,11 +8,12 @@ namespace System.Runtime.Remoting.Lifetime
 {
     public static class __ISponsor
     {
-        
-        public static IObservable<System.TimeSpan> Renewal(this IObservable<System.Runtime.Remoting.Lifetime.ISponsor> ISponsorValue, IObservable<System.Runtime.Remoting.Lifetime.ILease> lease)
+        public static IObservable<System.TimeSpan> Renewal(
+            this IObservable<System.Runtime.Remoting.Lifetime.ISponsor> ISponsorValue,
+            IObservable<System.Runtime.Remoting.Lifetime.ILease> lease)
         {
-            return Observable.Zip(ISponsorValue, lease, (ISponsorValueLambda, leaseLambda) => ISponsorValueLambda.Renewal(leaseLambda));
+            return Observable.Zip(ISponsorValue, lease,
+                (ISponsorValueLambda, leaseLambda) => ISponsorValueLambda.Renewal(leaseLambda));
         }
-
     }
 }

@@ -8,29 +8,37 @@ namespace System.Text
 {
     public static class __DecoderExceptionFallback
     {
-        
-        public static IObservable<System.Text.DecoderFallbackBuffer> CreateFallbackBuffer(this IObservable<System.Text.DecoderExceptionFallback> DecoderExceptionFallbackValue)
+        public static IObservable<System.Text.DecoderFallbackBuffer> CreateFallbackBuffer(
+            this IObservable<System.Text.DecoderExceptionFallback> DecoderExceptionFallbackValue)
         {
-            return Observable.Select(DecoderExceptionFallbackValue, (DecoderExceptionFallbackValueLambda) => DecoderExceptionFallbackValueLambda.CreateFallbackBuffer());
+            return Observable.Select(DecoderExceptionFallbackValue,
+                (DecoderExceptionFallbackValueLambda) => DecoderExceptionFallbackValueLambda.CreateFallbackBuffer());
         }
 
 
-        public static IObservable<System.Boolean> Equals(this IObservable<System.Text.DecoderExceptionFallback> DecoderExceptionFallbackValue, IObservable<System.Object> value)
+        public static IObservable<System.Boolean> Equals(
+            this IObservable<System.Text.DecoderExceptionFallback> DecoderExceptionFallbackValue,
+            IObservable<System.Object> value)
         {
-            return Observable.Zip(DecoderExceptionFallbackValue, value, (DecoderExceptionFallbackValueLambda, valueLambda) => DecoderExceptionFallbackValueLambda.Equals(valueLambda));
+            return Observable.Zip(DecoderExceptionFallbackValue, value,
+                (DecoderExceptionFallbackValueLambda, valueLambda) =>
+                    DecoderExceptionFallbackValueLambda.Equals(valueLambda));
         }
 
 
-        public static IObservable<System.Int32> GetHashCode(this IObservable<System.Text.DecoderExceptionFallback> DecoderExceptionFallbackValue)
+        public static IObservable<System.Int32> GetHashCode(
+            this IObservable<System.Text.DecoderExceptionFallback> DecoderExceptionFallbackValue)
         {
-            return Observable.Select(DecoderExceptionFallbackValue, (DecoderExceptionFallbackValueLambda) => DecoderExceptionFallbackValueLambda.GetHashCode());
+            return Observable.Select(DecoderExceptionFallbackValue,
+                (DecoderExceptionFallbackValueLambda) => DecoderExceptionFallbackValueLambda.GetHashCode());
         }
 
 
-        public static IObservable<System.Int32> get_MaxCharCount(this IObservable<System.Text.DecoderExceptionFallback> DecoderExceptionFallbackValue)
+        public static IObservable<System.Int32> get_MaxCharCount(
+            this IObservable<System.Text.DecoderExceptionFallback> DecoderExceptionFallbackValue)
         {
-            return Observable.Select(DecoderExceptionFallbackValue, (DecoderExceptionFallbackValueLambda) => DecoderExceptionFallbackValueLambda.MaxCharCount);
+            return Observable.Select(DecoderExceptionFallbackValue,
+                (DecoderExceptionFallbackValueLambda) => DecoderExceptionFallbackValueLambda.MaxCharCount);
         }
-
     }
 }

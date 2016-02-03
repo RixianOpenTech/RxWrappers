@@ -8,6 +8,5 @@ namespace System.Security.Cryptography.X509Certificates
 {
     public static class __X509KeyStorageFlags
     {
-        
     }
 }

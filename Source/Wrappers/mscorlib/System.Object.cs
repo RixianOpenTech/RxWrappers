@@ -8,7 +8,6 @@ namespace System
 {
     public static class __Object
     {
-        
         public static IObservable<System.Type> GetType(this IObservable<System.Object> ObjectValue)
         {
             return Observable.Select(ObjectValue, (ObjectValueLambda) => ObjectValueLambda.GetType());
@@ -27,22 +26,26 @@ namespace System
         }
 
 
-        public static IObservable<System.Boolean> Equals(this IObservable<System.Object> ObjectValue, IObservable<System.Object> obj)
+        public static IObservable<System.Boolean> Equals(this IObservable<System.Object> ObjectValue,
+            IObservable<System.Object> obj)
         {
-            return Observable.Zip(ObjectValue, obj, (ObjectValueLambda, objLambda) => ObjectValueLambda.Equals(objLambda));
+            return Observable.Zip(ObjectValue, obj,
+                (ObjectValueLambda, objLambda) => ObjectValueLambda.Equals(objLambda));
         }
 
 
-        public static IObservable<System.Boolean> Equals_Static(IObservable<System.Object> objA, IObservable<System.Object> objB)
+        public static IObservable<System.Boolean> Equals_Static(IObservable<System.Object> objA,
+            IObservable<System.Object> objB)
         {
             return Observable.Zip(objA, objB, (objALambda, objBLambda) => System.Object.Equals(objALambda, objBLambda));
         }
 
 
-        public static IObservable<System.Boolean> ReferenceEquals(IObservable<System.Object> objA, IObservable<System.Object> objB)
+        public static IObservable<System.Boolean> ReferenceEquals(IObservable<System.Object> objA,
+            IObservable<System.Object> objB)
         {
-            return Observable.Zip(objA, objB, (objALambda, objBLambda) => System.Object.ReferenceEquals(objALambda, objBLambda));
+            return Observable.Zip(objA, objB,
+                (objALambda, objBLambda) => System.Object.ReferenceEquals(objALambda, objBLambda));
         }
-
     }
 }

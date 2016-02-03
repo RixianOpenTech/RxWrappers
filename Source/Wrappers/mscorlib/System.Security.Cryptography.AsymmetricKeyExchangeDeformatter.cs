@@ -8,29 +8,42 @@ namespace System.Security.Cryptography
 {
     public static class __AsymmetricKeyExchangeDeformatter
     {
-        
-        public static IObservable<System.Reactive.Unit> SetKey(this IObservable<System.Security.Cryptography.AsymmetricKeyExchangeDeformatter> AsymmetricKeyExchangeDeformatterValue, IObservable<System.Security.Cryptography.AsymmetricAlgorithm> key)
+        public static IObservable<System.Reactive.Unit> SetKey(
+            this IObservable<System.Security.Cryptography.AsymmetricKeyExchangeDeformatter>
+                AsymmetricKeyExchangeDeformatterValue, IObservable<System.Security.Cryptography.AsymmetricAlgorithm> key)
         {
-            return ObservableExt.ZipExecute(AsymmetricKeyExchangeDeformatterValue, key, (AsymmetricKeyExchangeDeformatterValueLambda, keyLambda) => AsymmetricKeyExchangeDeformatterValueLambda.SetKey(keyLambda));
+            return ObservableExt.ZipExecute(AsymmetricKeyExchangeDeformatterValue, key,
+                (AsymmetricKeyExchangeDeformatterValueLambda, keyLambda) =>
+                    AsymmetricKeyExchangeDeformatterValueLambda.SetKey(keyLambda));
         }
 
 
-        public static IObservable<System.Byte[]> DecryptKeyExchange(this IObservable<System.Security.Cryptography.AsymmetricKeyExchangeDeformatter> AsymmetricKeyExchangeDeformatterValue, IObservable<System.Byte[]> rgb)
+        public static IObservable<System.Byte[]> DecryptKeyExchange(
+            this IObservable<System.Security.Cryptography.AsymmetricKeyExchangeDeformatter>
+                AsymmetricKeyExchangeDeformatterValue, IObservable<System.Byte[]> rgb)
         {
-            return Observable.Zip(AsymmetricKeyExchangeDeformatterValue, rgb, (AsymmetricKeyExchangeDeformatterValueLambda, rgbLambda) => AsymmetricKeyExchangeDeformatterValueLambda.DecryptKeyExchange(rgbLambda));
+            return Observable.Zip(AsymmetricKeyExchangeDeformatterValue, rgb,
+                (AsymmetricKeyExchangeDeformatterValueLambda, rgbLambda) =>
+                    AsymmetricKeyExchangeDeformatterValueLambda.DecryptKeyExchange(rgbLambda));
         }
 
 
-        public static IObservable<System.String> get_Parameters(this IObservable<System.Security.Cryptography.AsymmetricKeyExchangeDeformatter> AsymmetricKeyExchangeDeformatterValue)
+        public static IObservable<System.String> get_Parameters(
+            this IObservable<System.Security.Cryptography.AsymmetricKeyExchangeDeformatter>
+                AsymmetricKeyExchangeDeformatterValue)
         {
-            return Observable.Select(AsymmetricKeyExchangeDeformatterValue, (AsymmetricKeyExchangeDeformatterValueLambda) => AsymmetricKeyExchangeDeformatterValueLambda.Parameters);
+            return Observable.Select(AsymmetricKeyExchangeDeformatterValue,
+                (AsymmetricKeyExchangeDeformatterValueLambda) => AsymmetricKeyExchangeDeformatterValueLambda.Parameters);
         }
 
 
-        public static IObservable<System.Reactive.Unit> set_Parameters(this IObservable<System.Security.Cryptography.AsymmetricKeyExchangeDeformatter> AsymmetricKeyExchangeDeformatterValue, IObservable<System.String> value)
+        public static IObservable<System.Reactive.Unit> set_Parameters(
+            this IObservable<System.Security.Cryptography.AsymmetricKeyExchangeDeformatter>
+                AsymmetricKeyExchangeDeformatterValue, IObservable<System.String> value)
         {
-            return ObservableExt.ZipExecute(AsymmetricKeyExchangeDeformatterValue, value, (AsymmetricKeyExchangeDeformatterValueLambda, valueLambda) => AsymmetricKeyExchangeDeformatterValueLambda.Parameters = valueLambda);
+            return ObservableExt.ZipExecute(AsymmetricKeyExchangeDeformatterValue, value,
+                (AsymmetricKeyExchangeDeformatterValueLambda, valueLambda) =>
+                    AsymmetricKeyExchangeDeformatterValueLambda.Parameters = valueLambda);
         }
-
     }
 }

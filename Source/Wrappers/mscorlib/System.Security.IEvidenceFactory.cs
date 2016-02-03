@@ -8,11 +8,11 @@ namespace System.Security
 {
     public static class __IEvidenceFactory
     {
-        
-        public static IObservable<System.Security.Policy.Evidence> get_Evidence(this IObservable<System.Security.IEvidenceFactory> IEvidenceFactoryValue)
+        public static IObservable<System.Security.Policy.Evidence> get_Evidence(
+            this IObservable<System.Security.IEvidenceFactory> IEvidenceFactoryValue)
         {
-            return Observable.Select(IEvidenceFactoryValue, (IEvidenceFactoryValueLambda) => IEvidenceFactoryValueLambda.Evidence);
+            return Observable.Select(IEvidenceFactoryValue,
+                (IEvidenceFactoryValueLambda) => IEvidenceFactoryValueLambda.Evidence);
         }
-
     }
 }

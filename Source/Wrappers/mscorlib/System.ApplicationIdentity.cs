@@ -8,23 +8,27 @@ namespace System
 {
     public static class __ApplicationIdentity
     {
-        
-        public static IObservable<System.String> ToString(this IObservable<System.ApplicationIdentity> ApplicationIdentityValue)
+        public static IObservable<System.String> ToString(
+            this IObservable<System.ApplicationIdentity> ApplicationIdentityValue)
         {
-            return Observable.Select(ApplicationIdentityValue, (ApplicationIdentityValueLambda) => ApplicationIdentityValueLambda.ToString());
+            return Observable.Select(ApplicationIdentityValue,
+                (ApplicationIdentityValueLambda) => ApplicationIdentityValueLambda.ToString());
         }
 
 
-        public static IObservable<System.String> get_FullName(this IObservable<System.ApplicationIdentity> ApplicationIdentityValue)
+        public static IObservable<System.String> get_FullName(
+            this IObservable<System.ApplicationIdentity> ApplicationIdentityValue)
         {
-            return Observable.Select(ApplicationIdentityValue, (ApplicationIdentityValueLambda) => ApplicationIdentityValueLambda.FullName);
+            return Observable.Select(ApplicationIdentityValue,
+                (ApplicationIdentityValueLambda) => ApplicationIdentityValueLambda.FullName);
         }
 
 
-        public static IObservable<System.String> get_CodeBase(this IObservable<System.ApplicationIdentity> ApplicationIdentityValue)
+        public static IObservable<System.String> get_CodeBase(
+            this IObservable<System.ApplicationIdentity> ApplicationIdentityValue)
         {
-            return Observable.Select(ApplicationIdentityValue, (ApplicationIdentityValueLambda) => ApplicationIdentityValueLambda.CodeBase);
+            return Observable.Select(ApplicationIdentityValue,
+                (ApplicationIdentityValueLambda) => ApplicationIdentityValueLambda.CodeBase);
         }
-
     }
 }

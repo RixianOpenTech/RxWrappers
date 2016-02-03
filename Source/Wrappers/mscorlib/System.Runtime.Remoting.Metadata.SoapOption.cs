@@ -8,6 +8,5 @@ namespace System.Runtime.Remoting.Metadata
 {
     public static class __SoapOption
     {
-        
     }
 }

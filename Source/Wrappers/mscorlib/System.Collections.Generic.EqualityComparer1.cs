@@ -8,16 +8,20 @@ namespace System.Collections.Generic
 {
     public static class __EqualityComparer1
     {
-        
-        public static IObservable<System.Boolean> Equals<T>(this IObservable<System.Collections.Generic.EqualityComparer<T>> EqualityComparerValue, IObservable<T> x, IObservable<T> y)
+        public static IObservable<System.Boolean> Equals<T>(
+            this IObservable<System.Collections.Generic.EqualityComparer<T>> EqualityComparerValue, IObservable<T> x,
+            IObservable<T> y)
         {
-            return Observable.Zip(EqualityComparerValue, x, y, (EqualityComparerValueLambda, xLambda, yLambda) => EqualityComparerValueLambda.Equals(xLambda, yLambda));
+            return Observable.Zip(EqualityComparerValue, x, y,
+                (EqualityComparerValueLambda, xLambda, yLambda) => EqualityComparerValueLambda.Equals(xLambda, yLambda));
         }
 
 
-        public static IObservable<System.Int32> GetHashCode<T>(this IObservable<System.Collections.Generic.EqualityComparer<T>> EqualityComparerValue, IObservable<T> obj)
+        public static IObservable<System.Int32> GetHashCode<T>(
+            this IObservable<System.Collections.Generic.EqualityComparer<T>> EqualityComparerValue, IObservable<T> obj)
         {
-            return Observable.Zip(EqualityComparerValue, obj, (EqualityComparerValueLambda, objLambda) => EqualityComparerValueLambda.GetHashCode(objLambda));
+            return Observable.Zip(EqualityComparerValue, obj,
+                (EqualityComparerValueLambda, objLambda) => EqualityComparerValueLambda.GetHashCode(objLambda));
         }
 
 
@@ -25,6 +29,5 @@ namespace System.Collections.Generic
         {
             return ObservableExt.Factory(() => System.Collections.Generic.EqualityComparer<T>.Default);
         }
-
     }
 }

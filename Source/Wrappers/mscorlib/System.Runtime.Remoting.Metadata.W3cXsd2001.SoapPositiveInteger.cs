@@ -8,22 +8,27 @@ namespace System.Runtime.Remoting.Metadata.W3cXsd2001
 {
     public static class __SoapPositiveInteger
     {
-        
-        public static IObservable<System.String> GetXsdType(this IObservable<System.Runtime.Remoting.Metadata.W3cXsd2001.SoapPositiveInteger> SoapPositiveIntegerValue)
+        public static IObservable<System.String> GetXsdType(
+            this IObservable<System.Runtime.Remoting.Metadata.W3cXsd2001.SoapPositiveInteger> SoapPositiveIntegerValue)
         {
-            return Observable.Select(SoapPositiveIntegerValue, (SoapPositiveIntegerValueLambda) => SoapPositiveIntegerValueLambda.GetXsdType());
+            return Observable.Select(SoapPositiveIntegerValue,
+                (SoapPositiveIntegerValueLambda) => SoapPositiveIntegerValueLambda.GetXsdType());
         }
 
 
-        public static IObservable<System.String> ToString(this IObservable<System.Runtime.Remoting.Metadata.W3cXsd2001.SoapPositiveInteger> SoapPositiveIntegerValue)
+        public static IObservable<System.String> ToString(
+            this IObservable<System.Runtime.Remoting.Metadata.W3cXsd2001.SoapPositiveInteger> SoapPositiveIntegerValue)
         {
-            return Observable.Select(SoapPositiveIntegerValue, (SoapPositiveIntegerValueLambda) => SoapPositiveIntegerValueLambda.ToString());
+            return Observable.Select(SoapPositiveIntegerValue,
+                (SoapPositiveIntegerValueLambda) => SoapPositiveIntegerValueLambda.ToString());
         }
 
 
-        public static IObservable<System.Runtime.Remoting.Metadata.W3cXsd2001.SoapPositiveInteger> Parse(IObservable<System.String> value)
+        public static IObservable<System.Runtime.Remoting.Metadata.W3cXsd2001.SoapPositiveInteger> Parse(
+            IObservable<System.String> value)
         {
-            return Observable.Select(value, (valueLambda) => System.Runtime.Remoting.Metadata.W3cXsd2001.SoapPositiveInteger.Parse(valueLambda));
+            return Observable.Select(value,
+                (valueLambda) => System.Runtime.Remoting.Metadata.W3cXsd2001.SoapPositiveInteger.Parse(valueLambda));
         }
 
 
@@ -33,16 +38,20 @@ namespace System.Runtime.Remoting.Metadata.W3cXsd2001
         }
 
 
-        public static IObservable<System.Decimal> get_Value(this IObservable<System.Runtime.Remoting.Metadata.W3cXsd2001.SoapPositiveInteger> SoapPositiveIntegerValue)
+        public static IObservable<System.Decimal> get_Value(
+            this IObservable<System.Runtime.Remoting.Metadata.W3cXsd2001.SoapPositiveInteger> SoapPositiveIntegerValue)
         {
-            return Observable.Select(SoapPositiveIntegerValue, (SoapPositiveIntegerValueLambda) => SoapPositiveIntegerValueLambda.Value);
+            return Observable.Select(SoapPositiveIntegerValue,
+                (SoapPositiveIntegerValueLambda) => SoapPositiveIntegerValueLambda.Value);
         }
 
 
-        public static IObservable<System.Reactive.Unit> set_Value(this IObservable<System.Runtime.Remoting.Metadata.W3cXsd2001.SoapPositiveInteger> SoapPositiveIntegerValue, IObservable<System.Decimal> value)
+        public static IObservable<System.Reactive.Unit> set_Value(
+            this IObservable<System.Runtime.Remoting.Metadata.W3cXsd2001.SoapPositiveInteger> SoapPositiveIntegerValue,
+            IObservable<System.Decimal> value)
         {
-            return ObservableExt.ZipExecute(SoapPositiveIntegerValue, value, (SoapPositiveIntegerValueLambda, valueLambda) => SoapPositiveIntegerValueLambda.Value = valueLambda);
+            return ObservableExt.ZipExecute(SoapPositiveIntegerValue, value,
+                (SoapPositiveIntegerValueLambda, valueLambda) => SoapPositiveIntegerValueLambda.Value = valueLambda);
         }
-
     }
 }

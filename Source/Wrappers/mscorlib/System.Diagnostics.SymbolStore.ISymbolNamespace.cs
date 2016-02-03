@@ -8,23 +8,27 @@ namespace System.Diagnostics.SymbolStore
 {
     public static class __ISymbolNamespace
     {
-        
-        public static IObservable<System.Diagnostics.SymbolStore.ISymbolNamespace[]> GetNamespaces(this IObservable<System.Diagnostics.SymbolStore.ISymbolNamespace> ISymbolNamespaceValue)
+        public static IObservable<System.Diagnostics.SymbolStore.ISymbolNamespace[]> GetNamespaces(
+            this IObservable<System.Diagnostics.SymbolStore.ISymbolNamespace> ISymbolNamespaceValue)
         {
-            return Observable.Select(ISymbolNamespaceValue, (ISymbolNamespaceValueLambda) => ISymbolNamespaceValueLambda.GetNamespaces());
+            return Observable.Select(ISymbolNamespaceValue,
+                (ISymbolNamespaceValueLambda) => ISymbolNamespaceValueLambda.GetNamespaces());
         }
 
 
-        public static IObservable<System.Diagnostics.SymbolStore.ISymbolVariable[]> GetVariables(this IObservable<System.Diagnostics.SymbolStore.ISymbolNamespace> ISymbolNamespaceValue)
+        public static IObservable<System.Diagnostics.SymbolStore.ISymbolVariable[]> GetVariables(
+            this IObservable<System.Diagnostics.SymbolStore.ISymbolNamespace> ISymbolNamespaceValue)
         {
-            return Observable.Select(ISymbolNamespaceValue, (ISymbolNamespaceValueLambda) => ISymbolNamespaceValueLambda.GetVariables());
+            return Observable.Select(ISymbolNamespaceValue,
+                (ISymbolNamespaceValueLambda) => ISymbolNamespaceValueLambda.GetVariables());
         }
 
 
-        public static IObservable<System.String> get_Name(this IObservable<System.Diagnostics.SymbolStore.ISymbolNamespace> ISymbolNamespaceValue)
+        public static IObservable<System.String> get_Name(
+            this IObservable<System.Diagnostics.SymbolStore.ISymbolNamespace> ISymbolNamespaceValue)
         {
-            return Observable.Select(ISymbolNamespaceValue, (ISymbolNamespaceValueLambda) => ISymbolNamespaceValueLambda.Name);
+            return Observable.Select(ISymbolNamespaceValue,
+                (ISymbolNamespaceValueLambda) => ISymbolNamespaceValueLambda.Name);
         }
-
     }
 }

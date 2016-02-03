@@ -8,10 +8,14 @@ namespace System
 {
     public static class __WeakReference
     {
-        
-        public static IObservable<System.Reactive.Unit> GetObjectData(this IObservable<System.WeakReference> WeakReferenceValue, IObservable<System.Runtime.Serialization.SerializationInfo> info, IObservable<System.Runtime.Serialization.StreamingContext> context)
+        public static IObservable<System.Reactive.Unit> GetObjectData(
+            this IObservable<System.WeakReference> WeakReferenceValue,
+            IObservable<System.Runtime.Serialization.SerializationInfo> info,
+            IObservable<System.Runtime.Serialization.StreamingContext> context)
         {
-            return ObservableExt.ZipExecute(WeakReferenceValue, info, context, (WeakReferenceValueLambda, infoLambda, contextLambda) => WeakReferenceValueLambda.GetObjectData(infoLambda, contextLambda));
+            return ObservableExt.ZipExecute(WeakReferenceValue, info, context,
+                (WeakReferenceValueLambda, infoLambda, contextLambda) =>
+                    WeakReferenceValueLambda.GetObjectData(infoLambda, contextLambda));
         }
 
 
@@ -21,9 +25,11 @@ namespace System
         }
 
 
-        public static IObservable<System.Boolean> get_TrackResurrection(this IObservable<System.WeakReference> WeakReferenceValue)
+        public static IObservable<System.Boolean> get_TrackResurrection(
+            this IObservable<System.WeakReference> WeakReferenceValue)
         {
-            return Observable.Select(WeakReferenceValue, (WeakReferenceValueLambda) => WeakReferenceValueLambda.TrackResurrection);
+            return Observable.Select(WeakReferenceValue,
+                (WeakReferenceValueLambda) => WeakReferenceValueLambda.TrackResurrection);
         }
 
 
@@ -33,10 +39,11 @@ namespace System
         }
 
 
-        public static IObservable<System.Reactive.Unit> set_Target(this IObservable<System.WeakReference> WeakReferenceValue, IObservable<System.Object> value)
+        public static IObservable<System.Reactive.Unit> set_Target(
+            this IObservable<System.WeakReference> WeakReferenceValue, IObservable<System.Object> value)
         {
-            return ObservableExt.ZipExecute(WeakReferenceValue, value, (WeakReferenceValueLambda, valueLambda) => WeakReferenceValueLambda.Target = valueLambda);
+            return ObservableExt.ZipExecute(WeakReferenceValue, value,
+                (WeakReferenceValueLambda, valueLambda) => WeakReferenceValueLambda.Target = valueLambda);
         }
-
     }
 }

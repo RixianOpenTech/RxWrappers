@@ -8,34 +8,46 @@ namespace System.Security.Cryptography
 {
     public static class __RSAEncryptionPadding
     {
-        
-        public static IObservable<System.Security.Cryptography.RSAEncryptionPadding> CreateOaep(IObservable<System.Security.Cryptography.HashAlgorithmName> hashAlgorithm)
+        public static IObservable<System.Security.Cryptography.RSAEncryptionPadding> CreateOaep(
+            IObservable<System.Security.Cryptography.HashAlgorithmName> hashAlgorithm)
         {
-            return Observable.Select(hashAlgorithm, (hashAlgorithmLambda) => System.Security.Cryptography.RSAEncryptionPadding.CreateOaep(hashAlgorithmLambda));
+            return Observable.Select(hashAlgorithm,
+                (hashAlgorithmLambda) =>
+                    System.Security.Cryptography.RSAEncryptionPadding.CreateOaep(hashAlgorithmLambda));
         }
 
 
-        public static IObservable<System.Int32> GetHashCode(this IObservable<System.Security.Cryptography.RSAEncryptionPadding> RSAEncryptionPaddingValue)
+        public static IObservable<System.Int32> GetHashCode(
+            this IObservable<System.Security.Cryptography.RSAEncryptionPadding> RSAEncryptionPaddingValue)
         {
-            return Observable.Select(RSAEncryptionPaddingValue, (RSAEncryptionPaddingValueLambda) => RSAEncryptionPaddingValueLambda.GetHashCode());
+            return Observable.Select(RSAEncryptionPaddingValue,
+                (RSAEncryptionPaddingValueLambda) => RSAEncryptionPaddingValueLambda.GetHashCode());
         }
 
 
-        public static IObservable<System.Boolean> Equals(this IObservable<System.Security.Cryptography.RSAEncryptionPadding> RSAEncryptionPaddingValue, IObservable<System.Object> obj)
+        public static IObservable<System.Boolean> Equals(
+            this IObservable<System.Security.Cryptography.RSAEncryptionPadding> RSAEncryptionPaddingValue,
+            IObservable<System.Object> obj)
         {
-            return Observable.Zip(RSAEncryptionPaddingValue, obj, (RSAEncryptionPaddingValueLambda, objLambda) => RSAEncryptionPaddingValueLambda.Equals(objLambda));
+            return Observable.Zip(RSAEncryptionPaddingValue, obj,
+                (RSAEncryptionPaddingValueLambda, objLambda) => RSAEncryptionPaddingValueLambda.Equals(objLambda));
         }
 
 
-        public static IObservable<System.Boolean> Equals(this IObservable<System.Security.Cryptography.RSAEncryptionPadding> RSAEncryptionPaddingValue, IObservable<System.Security.Cryptography.RSAEncryptionPadding> other)
+        public static IObservable<System.Boolean> Equals(
+            this IObservable<System.Security.Cryptography.RSAEncryptionPadding> RSAEncryptionPaddingValue,
+            IObservable<System.Security.Cryptography.RSAEncryptionPadding> other)
         {
-            return Observable.Zip(RSAEncryptionPaddingValue, other, (RSAEncryptionPaddingValueLambda, otherLambda) => RSAEncryptionPaddingValueLambda.Equals(otherLambda));
+            return Observable.Zip(RSAEncryptionPaddingValue, other,
+                (RSAEncryptionPaddingValueLambda, otherLambda) => RSAEncryptionPaddingValueLambda.Equals(otherLambda));
         }
 
 
-        public static IObservable<System.String> ToString(this IObservable<System.Security.Cryptography.RSAEncryptionPadding> RSAEncryptionPaddingValue)
+        public static IObservable<System.String> ToString(
+            this IObservable<System.Security.Cryptography.RSAEncryptionPadding> RSAEncryptionPaddingValue)
         {
-            return Observable.Select(RSAEncryptionPaddingValue, (RSAEncryptionPaddingValueLambda) => RSAEncryptionPaddingValueLambda.ToString());
+            return Observable.Select(RSAEncryptionPaddingValue,
+                (RSAEncryptionPaddingValueLambda) => RSAEncryptionPaddingValueLambda.ToString());
         }
 
 
@@ -69,16 +81,19 @@ namespace System.Security.Cryptography
         }
 
 
-        public static IObservable<System.Security.Cryptography.RSAEncryptionPaddingMode> get_Mode(this IObservable<System.Security.Cryptography.RSAEncryptionPadding> RSAEncryptionPaddingValue)
+        public static IObservable<System.Security.Cryptography.RSAEncryptionPaddingMode> get_Mode(
+            this IObservable<System.Security.Cryptography.RSAEncryptionPadding> RSAEncryptionPaddingValue)
         {
-            return Observable.Select(RSAEncryptionPaddingValue, (RSAEncryptionPaddingValueLambda) => RSAEncryptionPaddingValueLambda.Mode);
+            return Observable.Select(RSAEncryptionPaddingValue,
+                (RSAEncryptionPaddingValueLambda) => RSAEncryptionPaddingValueLambda.Mode);
         }
 
 
-        public static IObservable<System.Security.Cryptography.HashAlgorithmName> get_OaepHashAlgorithm(this IObservable<System.Security.Cryptography.RSAEncryptionPadding> RSAEncryptionPaddingValue)
+        public static IObservable<System.Security.Cryptography.HashAlgorithmName> get_OaepHashAlgorithm(
+            this IObservable<System.Security.Cryptography.RSAEncryptionPadding> RSAEncryptionPaddingValue)
         {
-            return Observable.Select(RSAEncryptionPaddingValue, (RSAEncryptionPaddingValueLambda) => RSAEncryptionPaddingValueLambda.OaepHashAlgorithm);
+            return Observable.Select(RSAEncryptionPaddingValue,
+                (RSAEncryptionPaddingValueLambda) => RSAEncryptionPaddingValueLambda.OaepHashAlgorithm);
         }
-
     }
 }

@@ -8,10 +8,11 @@ namespace System
 {
     public static class __TimeSpan
     {
-        
-        public static IObservable<System.TimeSpan> Add(this IObservable<System.TimeSpan> TimeSpanValue, IObservable<System.TimeSpan> ts)
+        public static IObservable<System.TimeSpan> Add(this IObservable<System.TimeSpan> TimeSpanValue,
+            IObservable<System.TimeSpan> ts)
         {
-            return Observable.Zip(TimeSpanValue, ts, (TimeSpanValueLambda, tsLambda) => TimeSpanValueLambda.Add(tsLambda));
+            return Observable.Zip(TimeSpanValue, ts,
+                (TimeSpanValueLambda, tsLambda) => TimeSpanValueLambda.Add(tsLambda));
         }
 
 
@@ -21,15 +22,19 @@ namespace System
         }
 
 
-        public static IObservable<System.Int32> CompareTo(this IObservable<System.TimeSpan> TimeSpanValue, IObservable<System.Object> value)
+        public static IObservable<System.Int32> CompareTo(this IObservable<System.TimeSpan> TimeSpanValue,
+            IObservable<System.Object> value)
         {
-            return Observable.Zip(TimeSpanValue, value, (TimeSpanValueLambda, valueLambda) => TimeSpanValueLambda.CompareTo(valueLambda));
+            return Observable.Zip(TimeSpanValue, value,
+                (TimeSpanValueLambda, valueLambda) => TimeSpanValueLambda.CompareTo(valueLambda));
         }
 
 
-        public static IObservable<System.Int32> CompareTo(this IObservable<System.TimeSpan> TimeSpanValue, IObservable<System.TimeSpan> value)
+        public static IObservable<System.Int32> CompareTo(this IObservable<System.TimeSpan> TimeSpanValue,
+            IObservable<System.TimeSpan> value)
         {
-            return Observable.Zip(TimeSpanValue, value, (TimeSpanValueLambda, valueLambda) => TimeSpanValueLambda.CompareTo(valueLambda));
+            return Observable.Zip(TimeSpanValue, value,
+                (TimeSpanValueLambda, valueLambda) => TimeSpanValueLambda.CompareTo(valueLambda));
         }
 
 
@@ -45,19 +50,24 @@ namespace System
         }
 
 
-        public static IObservable<System.Boolean> Equals(this IObservable<System.TimeSpan> TimeSpanValue, IObservable<System.Object> value)
+        public static IObservable<System.Boolean> Equals(this IObservable<System.TimeSpan> TimeSpanValue,
+            IObservable<System.Object> value)
         {
-            return Observable.Zip(TimeSpanValue, value, (TimeSpanValueLambda, valueLambda) => TimeSpanValueLambda.Equals(valueLambda));
+            return Observable.Zip(TimeSpanValue, value,
+                (TimeSpanValueLambda, valueLambda) => TimeSpanValueLambda.Equals(valueLambda));
         }
 
 
-        public static IObservable<System.Boolean> Equals(this IObservable<System.TimeSpan> TimeSpanValue, IObservable<System.TimeSpan> obj)
+        public static IObservable<System.Boolean> Equals(this IObservable<System.TimeSpan> TimeSpanValue,
+            IObservable<System.TimeSpan> obj)
         {
-            return Observable.Zip(TimeSpanValue, obj, (TimeSpanValueLambda, objLambda) => TimeSpanValueLambda.Equals(objLambda));
+            return Observable.Zip(TimeSpanValue, obj,
+                (TimeSpanValueLambda, objLambda) => TimeSpanValueLambda.Equals(objLambda));
         }
 
 
-        public static IObservable<System.Boolean> Equals_Static(IObservable<System.TimeSpan> t1, IObservable<System.TimeSpan> t2)
+        public static IObservable<System.Boolean> Equals_Static(IObservable<System.TimeSpan> t1,
+            IObservable<System.TimeSpan> t2)
         {
             return Observable.Zip(t1, t2, (t1Lambda, t2Lambda) => System.TimeSpan.Equals(t1Lambda, t2Lambda));
         }
@@ -99,9 +109,11 @@ namespace System
         }
 
 
-        public static IObservable<System.TimeSpan> Subtract(this IObservable<System.TimeSpan> TimeSpanValue, IObservable<System.TimeSpan> ts)
+        public static IObservable<System.TimeSpan> Subtract(this IObservable<System.TimeSpan> TimeSpanValue,
+            IObservable<System.TimeSpan> ts)
         {
-            return Observable.Zip(TimeSpanValue, ts, (TimeSpanValueLambda, tsLambda) => TimeSpanValueLambda.Subtract(tsLambda));
+            return Observable.Zip(TimeSpanValue, ts,
+                (TimeSpanValueLambda, tsLambda) => TimeSpanValueLambda.Subtract(tsLambda));
         }
 
 
@@ -117,93 +129,130 @@ namespace System
         }
 
 
-        public static IObservable<System.TimeSpan> Parse(IObservable<System.String> input, IObservable<System.IFormatProvider> formatProvider)
+        public static IObservable<System.TimeSpan> Parse(IObservable<System.String> input,
+            IObservable<System.IFormatProvider> formatProvider)
         {
-            return Observable.Zip(input, formatProvider, (inputLambda, formatProviderLambda) => System.TimeSpan.Parse(inputLambda, formatProviderLambda));
+            return Observable.Zip(input, formatProvider,
+                (inputLambda, formatProviderLambda) => System.TimeSpan.Parse(inputLambda, formatProviderLambda));
         }
 
 
-        public static IObservable<System.TimeSpan> ParseExact(IObservable<System.String> input, IObservable<System.String> format, IObservable<System.IFormatProvider> formatProvider)
+        public static IObservable<System.TimeSpan> ParseExact(IObservable<System.String> input,
+            IObservable<System.String> format, IObservable<System.IFormatProvider> formatProvider)
         {
-            return Observable.Zip(input, format, formatProvider, (inputLambda, formatLambda, formatProviderLambda) => System.TimeSpan.ParseExact(inputLambda, formatLambda, formatProviderLambda));
+            return Observable.Zip(input, format, formatProvider,
+                (inputLambda, formatLambda, formatProviderLambda) =>
+                    System.TimeSpan.ParseExact(inputLambda, formatLambda, formatProviderLambda));
         }
 
 
-        public static IObservable<System.TimeSpan> ParseExact(IObservable<System.String> input, IObservable<System.String[]> formats, IObservable<System.IFormatProvider> formatProvider)
+        public static IObservable<System.TimeSpan> ParseExact(IObservable<System.String> input,
+            IObservable<System.String[]> formats, IObservable<System.IFormatProvider> formatProvider)
         {
-            return Observable.Zip(input, formats, formatProvider, (inputLambda, formatsLambda, formatProviderLambda) => System.TimeSpan.ParseExact(inputLambda, formatsLambda, formatProviderLambda));
+            return Observable.Zip(input, formats, formatProvider,
+                (inputLambda, formatsLambda, formatProviderLambda) =>
+                    System.TimeSpan.ParseExact(inputLambda, formatsLambda, formatProviderLambda));
         }
 
 
-        public static IObservable<System.TimeSpan> ParseExact(IObservable<System.String> input, IObservable<System.String> format, IObservable<System.IFormatProvider> formatProvider, IObservable<System.Globalization.TimeSpanStyles> styles)
+        public static IObservable<System.TimeSpan> ParseExact(IObservable<System.String> input,
+            IObservable<System.String> format, IObservable<System.IFormatProvider> formatProvider,
+            IObservable<System.Globalization.TimeSpanStyles> styles)
         {
-            return Observable.Zip(input, format, formatProvider, styles, (inputLambda, formatLambda, formatProviderLambda, stylesLambda) => System.TimeSpan.ParseExact(inputLambda, formatLambda, formatProviderLambda, stylesLambda));
+            return Observable.Zip(input, format, formatProvider, styles,
+                (inputLambda, formatLambda, formatProviderLambda, stylesLambda) =>
+                    System.TimeSpan.ParseExact(inputLambda, formatLambda, formatProviderLambda, stylesLambda));
         }
 
 
-        public static IObservable<System.TimeSpan> ParseExact(IObservable<System.String> input, IObservable<System.String[]> formats, IObservable<System.IFormatProvider> formatProvider, IObservable<System.Globalization.TimeSpanStyles> styles)
+        public static IObservable<System.TimeSpan> ParseExact(IObservable<System.String> input,
+            IObservable<System.String[]> formats, IObservable<System.IFormatProvider> formatProvider,
+            IObservable<System.Globalization.TimeSpanStyles> styles)
         {
-            return Observable.Zip(input, formats, formatProvider, styles, (inputLambda, formatsLambda, formatProviderLambda, stylesLambda) => System.TimeSpan.ParseExact(inputLambda, formatsLambda, formatProviderLambda, stylesLambda));
+            return Observable.Zip(input, formats, formatProvider, styles,
+                (inputLambda, formatsLambda, formatProviderLambda, stylesLambda) =>
+                    System.TimeSpan.ParseExact(inputLambda, formatsLambda, formatProviderLambda, stylesLambda));
         }
 
 
         public static IObservable<Tuple<System.Boolean, System.TimeSpan>> TryParse(IObservable<System.String> s)
         {
-            return Observable.Select(s, (sLambda) => {
-System.TimeSpan resultOutput = default(System.TimeSpan);
-var result = System.TimeSpan.TryParse(sLambda, out resultOutput);
-return Tuple.Create(result, resultOutput);
-});
+            return Observable.Select(s, (sLambda) =>
+            {
+                System.TimeSpan resultOutput = default(System.TimeSpan);
+                var result = System.TimeSpan.TryParse(sLambda, out resultOutput);
+                return Tuple.Create(result, resultOutput);
+            });
         }
 
 
-        public static IObservable<Tuple<System.Boolean, System.TimeSpan>> TryParse(IObservable<System.String> input, IObservable<System.IFormatProvider> formatProvider)
+        public static IObservable<Tuple<System.Boolean, System.TimeSpan>> TryParse(IObservable<System.String> input,
+            IObservable<System.IFormatProvider> formatProvider)
         {
-            return Observable.Zip(input, formatProvider, (inputLambda, formatProviderLambda) => {
-System.TimeSpan resultOutput = default(System.TimeSpan);
-var result = System.TimeSpan.TryParse(inputLambda, formatProviderLambda, out resultOutput);
-return Tuple.Create(result, resultOutput);
-});
+            return Observable.Zip(input, formatProvider, (inputLambda, formatProviderLambda) =>
+            {
+                System.TimeSpan resultOutput = default(System.TimeSpan);
+                var result = System.TimeSpan.TryParse(inputLambda, formatProviderLambda, out resultOutput);
+                return Tuple.Create(result, resultOutput);
+            });
         }
 
 
-        public static IObservable<Tuple<System.Boolean, System.TimeSpan>> TryParseExact(IObservable<System.String> input, IObservable<System.String> format, IObservable<System.IFormatProvider> formatProvider)
+        public static IObservable<Tuple<System.Boolean, System.TimeSpan>> TryParseExact(
+            IObservable<System.String> input, IObservable<System.String> format,
+            IObservable<System.IFormatProvider> formatProvider)
         {
-            return Observable.Zip(input, format, formatProvider, (inputLambda, formatLambda, formatProviderLambda) => {
-System.TimeSpan resultOutput = default(System.TimeSpan);
-var result = System.TimeSpan.TryParseExact(inputLambda, formatLambda, formatProviderLambda, out resultOutput);
-return Tuple.Create(result, resultOutput);
-});
+            return Observable.Zip(input, format, formatProvider, (inputLambda, formatLambda, formatProviderLambda) =>
+            {
+                System.TimeSpan resultOutput = default(System.TimeSpan);
+                var result = System.TimeSpan.TryParseExact(inputLambda, formatLambda, formatProviderLambda,
+                    out resultOutput);
+                return Tuple.Create(result, resultOutput);
+            });
         }
 
 
-        public static IObservable<Tuple<System.Boolean, System.TimeSpan>> TryParseExact(IObservable<System.String> input, IObservable<System.String[]> formats, IObservable<System.IFormatProvider> formatProvider)
+        public static IObservable<Tuple<System.Boolean, System.TimeSpan>> TryParseExact(
+            IObservable<System.String> input, IObservable<System.String[]> formats,
+            IObservable<System.IFormatProvider> formatProvider)
         {
-            return Observable.Zip(input, formats, formatProvider, (inputLambda, formatsLambda, formatProviderLambda) => {
-System.TimeSpan resultOutput = default(System.TimeSpan);
-var result = System.TimeSpan.TryParseExact(inputLambda, formatsLambda, formatProviderLambda, out resultOutput);
-return Tuple.Create(result, resultOutput);
-});
+            return Observable.Zip(input, formats, formatProvider, (inputLambda, formatsLambda, formatProviderLambda) =>
+            {
+                System.TimeSpan resultOutput = default(System.TimeSpan);
+                var result = System.TimeSpan.TryParseExact(inputLambda, formatsLambda, formatProviderLambda,
+                    out resultOutput);
+                return Tuple.Create(result, resultOutput);
+            });
         }
 
 
-        public static IObservable<Tuple<System.Boolean, System.TimeSpan>> TryParseExact(IObservable<System.String> input, IObservable<System.String> format, IObservable<System.IFormatProvider> formatProvider, IObservable<System.Globalization.TimeSpanStyles> styles)
+        public static IObservable<Tuple<System.Boolean, System.TimeSpan>> TryParseExact(
+            IObservable<System.String> input, IObservable<System.String> format,
+            IObservable<System.IFormatProvider> formatProvider, IObservable<System.Globalization.TimeSpanStyles> styles)
         {
-            return Observable.Zip(input, format, formatProvider, styles, (inputLambda, formatLambda, formatProviderLambda, stylesLambda) => {
-System.TimeSpan resultOutput = default(System.TimeSpan);
-var result = System.TimeSpan.TryParseExact(inputLambda, formatLambda, formatProviderLambda, stylesLambda, out resultOutput);
-return Tuple.Create(result, resultOutput);
-});
+            return Observable.Zip(input, format, formatProvider, styles,
+                (inputLambda, formatLambda, formatProviderLambda, stylesLambda) =>
+                {
+                    System.TimeSpan resultOutput = default(System.TimeSpan);
+                    var result = System.TimeSpan.TryParseExact(inputLambda, formatLambda, formatProviderLambda,
+                        stylesLambda, out resultOutput);
+                    return Tuple.Create(result, resultOutput);
+                });
         }
 
 
-        public static IObservable<Tuple<System.Boolean, System.TimeSpan>> TryParseExact(IObservable<System.String> input, IObservable<System.String[]> formats, IObservable<System.IFormatProvider> formatProvider, IObservable<System.Globalization.TimeSpanStyles> styles)
+        public static IObservable<Tuple<System.Boolean, System.TimeSpan>> TryParseExact(
+            IObservable<System.String> input, IObservable<System.String[]> formats,
+            IObservable<System.IFormatProvider> formatProvider, IObservable<System.Globalization.TimeSpanStyles> styles)
         {
-            return Observable.Zip(input, formats, formatProvider, styles, (inputLambda, formatsLambda, formatProviderLambda, stylesLambda) => {
-System.TimeSpan resultOutput = default(System.TimeSpan);
-var result = System.TimeSpan.TryParseExact(inputLambda, formatsLambda, formatProviderLambda, stylesLambda, out resultOutput);
-return Tuple.Create(result, resultOutput);
-});
+            return Observable.Zip(input, formats, formatProvider, styles,
+                (inputLambda, formatsLambda, formatProviderLambda, stylesLambda) =>
+                {
+                    System.TimeSpan resultOutput = default(System.TimeSpan);
+                    var result = System.TimeSpan.TryParseExact(inputLambda, formatsLambda, formatProviderLambda,
+                        stylesLambda, out resultOutput);
+                    return Tuple.Create(result, resultOutput);
+                });
         }
 
 
@@ -213,15 +262,20 @@ return Tuple.Create(result, resultOutput);
         }
 
 
-        public static IObservable<System.String> ToString(this IObservable<System.TimeSpan> TimeSpanValue, IObservable<System.String> format)
+        public static IObservable<System.String> ToString(this IObservable<System.TimeSpan> TimeSpanValue,
+            IObservable<System.String> format)
         {
-            return Observable.Zip(TimeSpanValue, format, (TimeSpanValueLambda, formatLambda) => TimeSpanValueLambda.ToString(formatLambda));
+            return Observable.Zip(TimeSpanValue, format,
+                (TimeSpanValueLambda, formatLambda) => TimeSpanValueLambda.ToString(formatLambda));
         }
 
 
-        public static IObservable<System.String> ToString(this IObservable<System.TimeSpan> TimeSpanValue, IObservable<System.String> format, IObservable<System.IFormatProvider> formatProvider)
+        public static IObservable<System.String> ToString(this IObservable<System.TimeSpan> TimeSpanValue,
+            IObservable<System.String> format, IObservable<System.IFormatProvider> formatProvider)
         {
-            return Observable.Zip(TimeSpanValue, format, formatProvider, (TimeSpanValueLambda, formatLambda, formatProviderLambda) => TimeSpanValueLambda.ToString(formatLambda, formatProviderLambda));
+            return Observable.Zip(TimeSpanValue, format, formatProvider,
+                (TimeSpanValueLambda, formatLambda, formatProviderLambda) =>
+                    TimeSpanValueLambda.ToString(formatLambda, formatProviderLambda));
         }
 
 
@@ -289,6 +343,5 @@ return Tuple.Create(result, resultOutput);
         {
             return Observable.Select(TimeSpanValue, (TimeSpanValueLambda) => TimeSpanValueLambda.TotalSeconds);
         }
-
     }
 }

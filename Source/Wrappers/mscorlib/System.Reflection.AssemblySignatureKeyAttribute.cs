@@ -8,17 +8,19 @@ namespace System.Reflection
 {
     public static class __AssemblySignatureKeyAttribute
     {
-        
-        public static IObservable<System.String> get_PublicKey(this IObservable<System.Reflection.AssemblySignatureKeyAttribute> AssemblySignatureKeyAttributeValue)
+        public static IObservable<System.String> get_PublicKey(
+            this IObservable<System.Reflection.AssemblySignatureKeyAttribute> AssemblySignatureKeyAttributeValue)
         {
-            return Observable.Select(AssemblySignatureKeyAttributeValue, (AssemblySignatureKeyAttributeValueLambda) => AssemblySignatureKeyAttributeValueLambda.PublicKey);
+            return Observable.Select(AssemblySignatureKeyAttributeValue,
+                (AssemblySignatureKeyAttributeValueLambda) => AssemblySignatureKeyAttributeValueLambda.PublicKey);
         }
 
 
-        public static IObservable<System.String> get_Countersignature(this IObservable<System.Reflection.AssemblySignatureKeyAttribute> AssemblySignatureKeyAttributeValue)
+        public static IObservable<System.String> get_Countersignature(
+            this IObservable<System.Reflection.AssemblySignatureKeyAttribute> AssemblySignatureKeyAttributeValue)
         {
-            return Observable.Select(AssemblySignatureKeyAttributeValue, (AssemblySignatureKeyAttributeValueLambda) => AssemblySignatureKeyAttributeValueLambda.Countersignature);
+            return Observable.Select(AssemblySignatureKeyAttributeValue,
+                (AssemblySignatureKeyAttributeValueLambda) => AssemblySignatureKeyAttributeValueLambda.Countersignature);
         }
-
     }
 }

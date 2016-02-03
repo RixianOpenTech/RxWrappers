@@ -8,22 +8,27 @@ namespace System.Security.Claims
 {
     public static class __Claim
     {
-        
-        public static IObservable<System.Security.Claims.Claim> Clone(this IObservable<System.Security.Claims.Claim> ClaimValue)
+        public static IObservable<System.Security.Claims.Claim> Clone(
+            this IObservable<System.Security.Claims.Claim> ClaimValue)
         {
             return Observable.Select(ClaimValue, (ClaimValueLambda) => ClaimValueLambda.Clone());
         }
 
 
-        public static IObservable<System.Security.Claims.Claim> Clone(this IObservable<System.Security.Claims.Claim> ClaimValue, IObservable<System.Security.Claims.ClaimsIdentity> identity)
+        public static IObservable<System.Security.Claims.Claim> Clone(
+            this IObservable<System.Security.Claims.Claim> ClaimValue,
+            IObservable<System.Security.Claims.ClaimsIdentity> identity)
         {
-            return Observable.Zip(ClaimValue, identity, (ClaimValueLambda, identityLambda) => ClaimValueLambda.Clone(identityLambda));
+            return Observable.Zip(ClaimValue, identity,
+                (ClaimValueLambda, identityLambda) => ClaimValueLambda.Clone(identityLambda));
         }
 
 
-        public static IObservable<System.Reactive.Unit> WriteTo(this IObservable<System.Security.Claims.Claim> ClaimValue, IObservable<System.IO.BinaryWriter> writer)
+        public static IObservable<System.Reactive.Unit> WriteTo(
+            this IObservable<System.Security.Claims.Claim> ClaimValue, IObservable<System.IO.BinaryWriter> writer)
         {
-            return ObservableExt.ZipExecute(ClaimValue, writer, (ClaimValueLambda, writerLambda) => ClaimValueLambda.WriteTo(writerLambda));
+            return ObservableExt.ZipExecute(ClaimValue, writer,
+                (ClaimValueLambda, writerLambda) => ClaimValueLambda.WriteTo(writerLambda));
         }
 
 
@@ -39,19 +44,22 @@ namespace System.Security.Claims
         }
 
 
-        public static IObservable<System.String> get_OriginalIssuer(this IObservable<System.Security.Claims.Claim> ClaimValue)
+        public static IObservable<System.String> get_OriginalIssuer(
+            this IObservable<System.Security.Claims.Claim> ClaimValue)
         {
             return Observable.Select(ClaimValue, (ClaimValueLambda) => ClaimValueLambda.OriginalIssuer);
         }
 
 
-        public static IObservable<System.Collections.Generic.IDictionary<System.String, System.String>> get_Properties(this IObservable<System.Security.Claims.Claim> ClaimValue)
+        public static IObservable<System.Collections.Generic.IDictionary<System.String, System.String>> get_Properties(
+            this IObservable<System.Security.Claims.Claim> ClaimValue)
         {
             return Observable.Select(ClaimValue, (ClaimValueLambda) => ClaimValueLambda.Properties);
         }
 
 
-        public static IObservable<System.Security.Claims.ClaimsIdentity> get_Subject(this IObservable<System.Security.Claims.Claim> ClaimValue)
+        public static IObservable<System.Security.Claims.ClaimsIdentity> get_Subject(
+            this IObservable<System.Security.Claims.Claim> ClaimValue)
         {
             return Observable.Select(ClaimValue, (ClaimValueLambda) => ClaimValueLambda.Subject);
         }
@@ -73,6 +81,5 @@ namespace System.Security.Claims
         {
             return Observable.Select(ClaimValue, (ClaimValueLambda) => ClaimValueLambda.ValueType);
         }
-
     }
 }

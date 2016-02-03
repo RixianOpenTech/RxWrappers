@@ -8,11 +8,11 @@ namespace System.Runtime.InteropServices
 {
     public static class __MarshalAsAttribute
     {
-        
-        public static IObservable<System.Runtime.InteropServices.UnmanagedType> get_Value(this IObservable<System.Runtime.InteropServices.MarshalAsAttribute> MarshalAsAttributeValue)
+        public static IObservable<System.Runtime.InteropServices.UnmanagedType> get_Value(
+            this IObservable<System.Runtime.InteropServices.MarshalAsAttribute> MarshalAsAttributeValue)
         {
-            return Observable.Select(MarshalAsAttributeValue, (MarshalAsAttributeValueLambda) => MarshalAsAttributeValueLambda.Value);
+            return Observable.Select(MarshalAsAttributeValue,
+                (MarshalAsAttributeValueLambda) => MarshalAsAttributeValueLambda.Value);
         }
-
     }
 }

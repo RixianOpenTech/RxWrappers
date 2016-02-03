@@ -8,6 +8,5 @@ namespace System.Security
 {
     public static class __SecurityCriticalScope
     {
-        
     }
 }

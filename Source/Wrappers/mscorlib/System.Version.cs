@@ -8,34 +8,41 @@ namespace System
 {
     public static class __Version
     {
-        
         public static IObservable<System.Object> Clone(this IObservable<System.Version> VersionValue)
         {
             return Observable.Select(VersionValue, (VersionValueLambda) => VersionValueLambda.Clone());
         }
 
 
-        public static IObservable<System.Int32> CompareTo(this IObservable<System.Version> VersionValue, IObservable<System.Object> version)
+        public static IObservable<System.Int32> CompareTo(this IObservable<System.Version> VersionValue,
+            IObservable<System.Object> version)
         {
-            return Observable.Zip(VersionValue, version, (VersionValueLambda, versionLambda) => VersionValueLambda.CompareTo(versionLambda));
+            return Observable.Zip(VersionValue, version,
+                (VersionValueLambda, versionLambda) => VersionValueLambda.CompareTo(versionLambda));
         }
 
 
-        public static IObservable<System.Int32> CompareTo(this IObservable<System.Version> VersionValue, IObservable<System.Version> value)
+        public static IObservable<System.Int32> CompareTo(this IObservable<System.Version> VersionValue,
+            IObservable<System.Version> value)
         {
-            return Observable.Zip(VersionValue, value, (VersionValueLambda, valueLambda) => VersionValueLambda.CompareTo(valueLambda));
+            return Observable.Zip(VersionValue, value,
+                (VersionValueLambda, valueLambda) => VersionValueLambda.CompareTo(valueLambda));
         }
 
 
-        public static IObservable<System.Boolean> Equals(this IObservable<System.Version> VersionValue, IObservable<System.Object> obj)
+        public static IObservable<System.Boolean> Equals(this IObservable<System.Version> VersionValue,
+            IObservable<System.Object> obj)
         {
-            return Observable.Zip(VersionValue, obj, (VersionValueLambda, objLambda) => VersionValueLambda.Equals(objLambda));
+            return Observable.Zip(VersionValue, obj,
+                (VersionValueLambda, objLambda) => VersionValueLambda.Equals(objLambda));
         }
 
 
-        public static IObservable<System.Boolean> Equals(this IObservable<System.Version> VersionValue, IObservable<System.Version> obj)
+        public static IObservable<System.Boolean> Equals(this IObservable<System.Version> VersionValue,
+            IObservable<System.Version> obj)
         {
-            return Observable.Zip(VersionValue, obj, (VersionValueLambda, objLambda) => VersionValueLambda.Equals(objLambda));
+            return Observable.Zip(VersionValue, obj,
+                (VersionValueLambda, objLambda) => VersionValueLambda.Equals(objLambda));
         }
 
 
@@ -51,9 +58,11 @@ namespace System
         }
 
 
-        public static IObservable<System.String> ToString(this IObservable<System.Version> VersionValue, IObservable<System.Int32> fieldCount)
+        public static IObservable<System.String> ToString(this IObservable<System.Version> VersionValue,
+            IObservable<System.Int32> fieldCount)
         {
-            return Observable.Zip(VersionValue, fieldCount, (VersionValueLambda, fieldCountLambda) => VersionValueLambda.ToString(fieldCountLambda));
+            return Observable.Zip(VersionValue, fieldCount,
+                (VersionValueLambda, fieldCountLambda) => VersionValueLambda.ToString(fieldCountLambda));
         }
 
 
@@ -65,11 +74,12 @@ namespace System
 
         public static IObservable<Tuple<System.Boolean, System.Version>> TryParse(IObservable<System.String> input)
         {
-            return Observable.Select(input, (inputLambda) => {
-System.Version resultOutput = default(System.Version);
-var result = System.Version.TryParse(inputLambda, out resultOutput);
-return Tuple.Create(result, resultOutput);
-});
+            return Observable.Select(input, (inputLambda) =>
+            {
+                System.Version resultOutput = default(System.Version);
+                var result = System.Version.TryParse(inputLambda, out resultOutput);
+                return Tuple.Create(result, resultOutput);
+            });
         }
 
 
@@ -107,6 +117,5 @@ return Tuple.Create(result, resultOutput);
         {
             return Observable.Select(VersionValue, (VersionValueLambda) => VersionValueLambda.MinorRevision);
         }
-
     }
 }

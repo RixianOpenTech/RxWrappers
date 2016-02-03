@@ -8,11 +8,12 @@ namespace System.Runtime.InteropServices
 {
     public static class __ComSourceInterfacesAttribute
     {
-        
-        public static IObservable<System.String> get_Value(this IObservable<System.Runtime.InteropServices.ComSourceInterfacesAttribute> ComSourceInterfacesAttributeValue)
+        public static IObservable<System.String> get_Value(
+            this IObservable<System.Runtime.InteropServices.ComSourceInterfacesAttribute>
+                ComSourceInterfacesAttributeValue)
         {
-            return Observable.Select(ComSourceInterfacesAttributeValue, (ComSourceInterfacesAttributeValueLambda) => ComSourceInterfacesAttributeValueLambda.Value);
+            return Observable.Select(ComSourceInterfacesAttributeValue,
+                (ComSourceInterfacesAttributeValueLambda) => ComSourceInterfacesAttributeValueLambda.Value);
         }
-
     }
 }

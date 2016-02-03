@@ -8,10 +8,11 @@ namespace System.Text
 {
     public static class __EncoderFallback
     {
-        
-        public static IObservable<System.Text.EncoderFallbackBuffer> CreateFallbackBuffer(this IObservable<System.Text.EncoderFallback> EncoderFallbackValue)
+        public static IObservable<System.Text.EncoderFallbackBuffer> CreateFallbackBuffer(
+            this IObservable<System.Text.EncoderFallback> EncoderFallbackValue)
         {
-            return Observable.Select(EncoderFallbackValue, (EncoderFallbackValueLambda) => EncoderFallbackValueLambda.CreateFallbackBuffer());
+            return Observable.Select(EncoderFallbackValue,
+                (EncoderFallbackValueLambda) => EncoderFallbackValueLambda.CreateFallbackBuffer());
         }
 
 
@@ -27,10 +28,11 @@ namespace System.Text
         }
 
 
-        public static IObservable<System.Int32> get_MaxCharCount(this IObservable<System.Text.EncoderFallback> EncoderFallbackValue)
+        public static IObservable<System.Int32> get_MaxCharCount(
+            this IObservable<System.Text.EncoderFallback> EncoderFallbackValue)
         {
-            return Observable.Select(EncoderFallbackValue, (EncoderFallbackValueLambda) => EncoderFallbackValueLambda.MaxCharCount);
+            return Observable.Select(EncoderFallbackValue,
+                (EncoderFallbackValueLambda) => EncoderFallbackValueLambda.MaxCharCount);
         }
-
     }
 }

@@ -8,14 +8,16 @@ namespace System.Security.Policy
 {
     public static class __Url
     {
-        
-        public static IObservable<System.Security.IPermission> CreateIdentityPermission(this IObservable<System.Security.Policy.Url> UrlValue, IObservable<System.Security.Policy.Evidence> evidence)
+        public static IObservable<System.Security.IPermission> CreateIdentityPermission(
+            this IObservable<System.Security.Policy.Url> UrlValue, IObservable<System.Security.Policy.Evidence> evidence)
         {
-            return Observable.Zip(UrlValue, evidence, (UrlValueLambda, evidenceLambda) => UrlValueLambda.CreateIdentityPermission(evidenceLambda));
+            return Observable.Zip(UrlValue, evidence,
+                (UrlValueLambda, evidenceLambda) => UrlValueLambda.CreateIdentityPermission(evidenceLambda));
         }
 
 
-        public static IObservable<System.Boolean> Equals(this IObservable<System.Security.Policy.Url> UrlValue, IObservable<System.Object> o)
+        public static IObservable<System.Boolean> Equals(this IObservable<System.Security.Policy.Url> UrlValue,
+            IObservable<System.Object> o)
         {
             return Observable.Zip(UrlValue, o, (UrlValueLambda, oLambda) => UrlValueLambda.Equals(oLambda));
         }
@@ -27,7 +29,8 @@ namespace System.Security.Policy
         }
 
 
-        public static IObservable<System.Security.Policy.EvidenceBase> Clone(this IObservable<System.Security.Policy.Url> UrlValue)
+        public static IObservable<System.Security.Policy.EvidenceBase> Clone(
+            this IObservable<System.Security.Policy.Url> UrlValue)
         {
             return Observable.Select(UrlValue, (UrlValueLambda) => UrlValueLambda.Clone());
         }
@@ -49,6 +52,5 @@ namespace System.Security.Policy
         {
             return Observable.Select(UrlValue, (UrlValueLambda) => UrlValueLambda.Value);
         }
-
     }
 }

@@ -8,16 +8,18 @@ namespace System
 {
     public static class __IAsyncResult
     {
-        
-        public static IObservable<System.Boolean> get_IsCompleted(this IObservable<System.IAsyncResult> IAsyncResultValue)
+        public static IObservable<System.Boolean> get_IsCompleted(
+            this IObservable<System.IAsyncResult> IAsyncResultValue)
         {
             return Observable.Select(IAsyncResultValue, (IAsyncResultValueLambda) => IAsyncResultValueLambda.IsCompleted);
         }
 
 
-        public static IObservable<System.Threading.WaitHandle> get_AsyncWaitHandle(this IObservable<System.IAsyncResult> IAsyncResultValue)
+        public static IObservable<System.Threading.WaitHandle> get_AsyncWaitHandle(
+            this IObservable<System.IAsyncResult> IAsyncResultValue)
         {
-            return Observable.Select(IAsyncResultValue, (IAsyncResultValueLambda) => IAsyncResultValueLambda.AsyncWaitHandle);
+            return Observable.Select(IAsyncResultValue,
+                (IAsyncResultValueLambda) => IAsyncResultValueLambda.AsyncWaitHandle);
         }
 
 
@@ -27,10 +29,11 @@ namespace System
         }
 
 
-        public static IObservable<System.Boolean> get_CompletedSynchronously(this IObservable<System.IAsyncResult> IAsyncResultValue)
+        public static IObservable<System.Boolean> get_CompletedSynchronously(
+            this IObservable<System.IAsyncResult> IAsyncResultValue)
         {
-            return Observable.Select(IAsyncResultValue, (IAsyncResultValueLambda) => IAsyncResultValueLambda.CompletedSynchronously);
+            return Observable.Select(IAsyncResultValue,
+                (IAsyncResultValueLambda) => IAsyncResultValueLambda.CompletedSynchronously);
         }
-
     }
 }

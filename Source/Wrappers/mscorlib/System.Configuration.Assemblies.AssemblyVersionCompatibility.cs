@@ -8,6 +8,5 @@ namespace System.Configuration.Assemblies
 {
     public static class __AssemblyVersionCompatibility
     {
-        
     }
 }

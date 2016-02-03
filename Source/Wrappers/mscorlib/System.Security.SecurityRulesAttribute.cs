@@ -8,23 +8,29 @@ namespace System.Security
 {
     public static class __SecurityRulesAttribute
     {
-        
-        public static IObservable<System.Boolean> get_SkipVerificationInFullTrust(this IObservable<System.Security.SecurityRulesAttribute> SecurityRulesAttributeValue)
+        public static IObservable<System.Boolean> get_SkipVerificationInFullTrust(
+            this IObservable<System.Security.SecurityRulesAttribute> SecurityRulesAttributeValue)
         {
-            return Observable.Select(SecurityRulesAttributeValue, (SecurityRulesAttributeValueLambda) => SecurityRulesAttributeValueLambda.SkipVerificationInFullTrust);
+            return Observable.Select(SecurityRulesAttributeValue,
+                (SecurityRulesAttributeValueLambda) => SecurityRulesAttributeValueLambda.SkipVerificationInFullTrust);
         }
 
 
-        public static IObservable<System.Security.SecurityRuleSet> get_RuleSet(this IObservable<System.Security.SecurityRulesAttribute> SecurityRulesAttributeValue)
+        public static IObservable<System.Security.SecurityRuleSet> get_RuleSet(
+            this IObservable<System.Security.SecurityRulesAttribute> SecurityRulesAttributeValue)
         {
-            return Observable.Select(SecurityRulesAttributeValue, (SecurityRulesAttributeValueLambda) => SecurityRulesAttributeValueLambda.RuleSet);
+            return Observable.Select(SecurityRulesAttributeValue,
+                (SecurityRulesAttributeValueLambda) => SecurityRulesAttributeValueLambda.RuleSet);
         }
 
 
-        public static IObservable<System.Reactive.Unit> set_SkipVerificationInFullTrust(this IObservable<System.Security.SecurityRulesAttribute> SecurityRulesAttributeValue, IObservable<System.Boolean> value)
+        public static IObservable<System.Reactive.Unit> set_SkipVerificationInFullTrust(
+            this IObservable<System.Security.SecurityRulesAttribute> SecurityRulesAttributeValue,
+            IObservable<System.Boolean> value)
         {
-            return ObservableExt.ZipExecute(SecurityRulesAttributeValue, value, (SecurityRulesAttributeValueLambda, valueLambda) => SecurityRulesAttributeValueLambda.SkipVerificationInFullTrust = valueLambda);
+            return ObservableExt.ZipExecute(SecurityRulesAttributeValue, value,
+                (SecurityRulesAttributeValueLambda, valueLambda) =>
+                    SecurityRulesAttributeValueLambda.SkipVerificationInFullTrust = valueLambda);
         }
-
     }
 }

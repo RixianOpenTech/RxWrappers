@@ -8,29 +8,35 @@ namespace System.Reflection.Emit
 {
     public static class __ParameterToken
     {
-        
-        public static IObservable<System.Int32> GetHashCode(this IObservable<System.Reflection.Emit.ParameterToken> ParameterTokenValue)
+        public static IObservable<System.Int32> GetHashCode(
+            this IObservable<System.Reflection.Emit.ParameterToken> ParameterTokenValue)
         {
-            return Observable.Select(ParameterTokenValue, (ParameterTokenValueLambda) => ParameterTokenValueLambda.GetHashCode());
+            return Observable.Select(ParameterTokenValue,
+                (ParameterTokenValueLambda) => ParameterTokenValueLambda.GetHashCode());
         }
 
 
-        public static IObservable<System.Boolean> Equals(this IObservable<System.Reflection.Emit.ParameterToken> ParameterTokenValue, IObservable<System.Object> obj)
+        public static IObservable<System.Boolean> Equals(
+            this IObservable<System.Reflection.Emit.ParameterToken> ParameterTokenValue, IObservable<System.Object> obj)
         {
-            return Observable.Zip(ParameterTokenValue, obj, (ParameterTokenValueLambda, objLambda) => ParameterTokenValueLambda.Equals(objLambda));
+            return Observable.Zip(ParameterTokenValue, obj,
+                (ParameterTokenValueLambda, objLambda) => ParameterTokenValueLambda.Equals(objLambda));
         }
 
 
-        public static IObservable<System.Boolean> Equals(this IObservable<System.Reflection.Emit.ParameterToken> ParameterTokenValue, IObservable<System.Reflection.Emit.ParameterToken> obj)
+        public static IObservable<System.Boolean> Equals(
+            this IObservable<System.Reflection.Emit.ParameterToken> ParameterTokenValue,
+            IObservable<System.Reflection.Emit.ParameterToken> obj)
         {
-            return Observable.Zip(ParameterTokenValue, obj, (ParameterTokenValueLambda, objLambda) => ParameterTokenValueLambda.Equals(objLambda));
+            return Observable.Zip(ParameterTokenValue, obj,
+                (ParameterTokenValueLambda, objLambda) => ParameterTokenValueLambda.Equals(objLambda));
         }
 
 
-        public static IObservable<System.Int32> get_Token(this IObservable<System.Reflection.Emit.ParameterToken> ParameterTokenValue)
+        public static IObservable<System.Int32> get_Token(
+            this IObservable<System.Reflection.Emit.ParameterToken> ParameterTokenValue)
         {
             return Observable.Select(ParameterTokenValue, (ParameterTokenValueLambda) => ParameterTokenValueLambda.Token);
         }
-
     }
 }

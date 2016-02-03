@@ -8,11 +8,11 @@ namespace System.Runtime.InteropServices
 {
     public static class __DispatchWrapper
     {
-        
-        public static IObservable<System.Object> get_WrappedObject(this IObservable<System.Runtime.InteropServices.DispatchWrapper> DispatchWrapperValue)
+        public static IObservable<System.Object> get_WrappedObject(
+            this IObservable<System.Runtime.InteropServices.DispatchWrapper> DispatchWrapperValue)
         {
-            return Observable.Select(DispatchWrapperValue, (DispatchWrapperValueLambda) => DispatchWrapperValueLambda.WrappedObject);
+            return Observable.Select(DispatchWrapperValue,
+                (DispatchWrapperValueLambda) => DispatchWrapperValueLambda.WrappedObject);
         }
-
     }
 }

@@ -8,11 +8,11 @@ namespace System.Runtime.CompilerServices
 {
     public static class __DefaultDependencyAttribute
     {
-        
-        public static IObservable<System.Runtime.CompilerServices.LoadHint> get_LoadHint(this IObservable<System.Runtime.CompilerServices.DefaultDependencyAttribute> DefaultDependencyAttributeValue)
+        public static IObservable<System.Runtime.CompilerServices.LoadHint> get_LoadHint(
+            this IObservable<System.Runtime.CompilerServices.DefaultDependencyAttribute> DefaultDependencyAttributeValue)
         {
-            return Observable.Select(DefaultDependencyAttributeValue, (DefaultDependencyAttributeValueLambda) => DefaultDependencyAttributeValueLambda.LoadHint);
+            return Observable.Select(DefaultDependencyAttributeValue,
+                (DefaultDependencyAttributeValueLambda) => DefaultDependencyAttributeValueLambda.LoadHint);
         }
-
     }
 }

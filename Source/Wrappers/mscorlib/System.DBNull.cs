@@ -8,10 +8,13 @@ namespace System
 {
     public static class __DBNull
     {
-        
-        public static IObservable<System.Reactive.Unit> GetObjectData(this IObservable<System.DBNull> DBNullValue, IObservable<System.Runtime.Serialization.SerializationInfo> info, IObservable<System.Runtime.Serialization.StreamingContext> context)
+        public static IObservable<System.Reactive.Unit> GetObjectData(this IObservable<System.DBNull> DBNullValue,
+            IObservable<System.Runtime.Serialization.SerializationInfo> info,
+            IObservable<System.Runtime.Serialization.StreamingContext> context)
         {
-            return ObservableExt.ZipExecute(DBNullValue, info, context, (DBNullValueLambda, infoLambda, contextLambda) => DBNullValueLambda.GetObjectData(infoLambda, contextLambda));
+            return ObservableExt.ZipExecute(DBNullValue, info, context,
+                (DBNullValueLambda, infoLambda, contextLambda) =>
+                    DBNullValueLambda.GetObjectData(infoLambda, contextLambda));
         }
 
 
@@ -21,9 +24,11 @@ namespace System
         }
 
 
-        public static IObservable<System.String> ToString(this IObservable<System.DBNull> DBNullValue, IObservable<System.IFormatProvider> provider)
+        public static IObservable<System.String> ToString(this IObservable<System.DBNull> DBNullValue,
+            IObservable<System.IFormatProvider> provider)
         {
-            return Observable.Zip(DBNullValue, provider, (DBNullValueLambda, providerLambda) => DBNullValueLambda.ToString(providerLambda));
+            return Observable.Zip(DBNullValue, provider,
+                (DBNullValueLambda, providerLambda) => DBNullValueLambda.ToString(providerLambda));
         }
 
 
@@ -31,6 +36,5 @@ namespace System
         {
             return Observable.Select(DBNullValue, (DBNullValueLambda) => DBNullValueLambda.GetTypeCode());
         }
-
     }
 }

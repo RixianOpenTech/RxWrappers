@@ -8,6 +8,5 @@ namespace System.Runtime.Serialization.Formatters
 {
     public static class __FormatterAssemblyStyle
     {
-        
     }
 }

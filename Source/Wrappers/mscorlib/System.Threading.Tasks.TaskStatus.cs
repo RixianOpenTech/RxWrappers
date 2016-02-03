@@ -8,6 +8,5 @@ namespace System.Threading.Tasks
 {
     public static class __TaskStatus
     {
-        
     }
 }

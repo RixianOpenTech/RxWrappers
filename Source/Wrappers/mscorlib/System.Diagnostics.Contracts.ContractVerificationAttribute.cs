@@ -8,11 +8,12 @@ namespace System.Diagnostics.Contracts
 {
     public static class __ContractVerificationAttribute
     {
-        
-        public static IObservable<System.Boolean> get_Value(this IObservable<System.Diagnostics.Contracts.ContractVerificationAttribute> ContractVerificationAttributeValue)
+        public static IObservable<System.Boolean> get_Value(
+            this IObservable<System.Diagnostics.Contracts.ContractVerificationAttribute>
+                ContractVerificationAttributeValue)
         {
-            return Observable.Select(ContractVerificationAttributeValue, (ContractVerificationAttributeValueLambda) => ContractVerificationAttributeValueLambda.Value);
+            return Observable.Select(ContractVerificationAttributeValue,
+                (ContractVerificationAttributeValueLambda) => ContractVerificationAttributeValueLambda.Value);
         }
-
     }
 }

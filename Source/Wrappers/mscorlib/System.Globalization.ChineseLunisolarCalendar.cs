@@ -8,29 +8,37 @@ namespace System.Globalization
 {
     public static class __ChineseLunisolarCalendar
     {
-        
-        public static IObservable<System.Int32> GetEra(this IObservable<System.Globalization.ChineseLunisolarCalendar> ChineseLunisolarCalendarValue, IObservable<System.DateTime> time)
+        public static IObservable<System.Int32> GetEra(
+            this IObservable<System.Globalization.ChineseLunisolarCalendar> ChineseLunisolarCalendarValue,
+            IObservable<System.DateTime> time)
         {
-            return Observable.Zip(ChineseLunisolarCalendarValue, time, (ChineseLunisolarCalendarValueLambda, timeLambda) => ChineseLunisolarCalendarValueLambda.GetEra(timeLambda));
+            return Observable.Zip(ChineseLunisolarCalendarValue, time,
+                (ChineseLunisolarCalendarValueLambda, timeLambda) =>
+                    ChineseLunisolarCalendarValueLambda.GetEra(timeLambda));
         }
 
 
-        public static IObservable<System.DateTime> get_MinSupportedDateTime(this IObservable<System.Globalization.ChineseLunisolarCalendar> ChineseLunisolarCalendarValue)
+        public static IObservable<System.DateTime> get_MinSupportedDateTime(
+            this IObservable<System.Globalization.ChineseLunisolarCalendar> ChineseLunisolarCalendarValue)
         {
-            return Observable.Select(ChineseLunisolarCalendarValue, (ChineseLunisolarCalendarValueLambda) => ChineseLunisolarCalendarValueLambda.MinSupportedDateTime);
+            return Observable.Select(ChineseLunisolarCalendarValue,
+                (ChineseLunisolarCalendarValueLambda) => ChineseLunisolarCalendarValueLambda.MinSupportedDateTime);
         }
 
 
-        public static IObservable<System.DateTime> get_MaxSupportedDateTime(this IObservable<System.Globalization.ChineseLunisolarCalendar> ChineseLunisolarCalendarValue)
+        public static IObservable<System.DateTime> get_MaxSupportedDateTime(
+            this IObservable<System.Globalization.ChineseLunisolarCalendar> ChineseLunisolarCalendarValue)
         {
-            return Observable.Select(ChineseLunisolarCalendarValue, (ChineseLunisolarCalendarValueLambda) => ChineseLunisolarCalendarValueLambda.MaxSupportedDateTime);
+            return Observable.Select(ChineseLunisolarCalendarValue,
+                (ChineseLunisolarCalendarValueLambda) => ChineseLunisolarCalendarValueLambda.MaxSupportedDateTime);
         }
 
 
-        public static IObservable<System.Int32[]> get_Eras(this IObservable<System.Globalization.ChineseLunisolarCalendar> ChineseLunisolarCalendarValue)
+        public static IObservable<System.Int32[]> get_Eras(
+            this IObservable<System.Globalization.ChineseLunisolarCalendar> ChineseLunisolarCalendarValue)
         {
-            return Observable.Select(ChineseLunisolarCalendarValue, (ChineseLunisolarCalendarValueLambda) => ChineseLunisolarCalendarValueLambda.Eras);
+            return Observable.Select(ChineseLunisolarCalendarValue,
+                (ChineseLunisolarCalendarValueLambda) => ChineseLunisolarCalendarValueLambda.Eras);
         }
-
     }
 }

@@ -8,11 +8,10 @@ namespace System.Runtime.Remoting.Metadata.W3cXsd2001
 {
     public static class __ISoapXsd
     {
-        
-        public static IObservable<System.String> GetXsdType(this IObservable<System.Runtime.Remoting.Metadata.W3cXsd2001.ISoapXsd> ISoapXsdValue)
+        public static IObservable<System.String> GetXsdType(
+            this IObservable<System.Runtime.Remoting.Metadata.W3cXsd2001.ISoapXsd> ISoapXsdValue)
         {
             return Observable.Select(ISoapXsdValue, (ISoapXsdValueLambda) => ISoapXsdValueLambda.GetXsdType());
         }
-
     }
 }

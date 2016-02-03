@@ -8,46 +8,59 @@ namespace System
 {
     public static class __StringComparer
     {
-        
-        public static IObservable<System.StringComparer> Create(IObservable<System.Globalization.CultureInfo> culture, IObservable<System.Boolean> ignoreCase)
+        public static IObservable<System.StringComparer> Create(IObservable<System.Globalization.CultureInfo> culture,
+            IObservable<System.Boolean> ignoreCase)
         {
-            return Observable.Zip(culture, ignoreCase, (cultureLambda, ignoreCaseLambda) => System.StringComparer.Create(cultureLambda, ignoreCaseLambda));
+            return Observable.Zip(culture, ignoreCase,
+                (cultureLambda, ignoreCaseLambda) => System.StringComparer.Create(cultureLambda, ignoreCaseLambda));
         }
 
 
-        public static IObservable<System.Int32> Compare(this IObservable<System.StringComparer> StringComparerValue, IObservable<System.Object> x, IObservable<System.Object> y)
+        public static IObservable<System.Int32> Compare(this IObservable<System.StringComparer> StringComparerValue,
+            IObservable<System.Object> x, IObservable<System.Object> y)
         {
-            return Observable.Zip(StringComparerValue, x, y, (StringComparerValueLambda, xLambda, yLambda) => StringComparerValueLambda.Compare(xLambda, yLambda));
+            return Observable.Zip(StringComparerValue, x, y,
+                (StringComparerValueLambda, xLambda, yLambda) => StringComparerValueLambda.Compare(xLambda, yLambda));
         }
 
 
-        public static IObservable<System.Boolean> Equals(this IObservable<System.StringComparer> StringComparerValue, IObservable<System.Object> x, IObservable<System.Object> y)
+        public static IObservable<System.Boolean> Equals(this IObservable<System.StringComparer> StringComparerValue,
+            IObservable<System.Object> x, IObservable<System.Object> y)
         {
-            return Observable.Zip(StringComparerValue, x, y, (StringComparerValueLambda, xLambda, yLambda) => StringComparerValueLambda.Equals(xLambda, yLambda));
+            return Observable.Zip(StringComparerValue, x, y,
+                (StringComparerValueLambda, xLambda, yLambda) => StringComparerValueLambda.Equals(xLambda, yLambda));
         }
 
 
-        public static IObservable<System.Int32> GetHashCode(this IObservable<System.StringComparer> StringComparerValue, IObservable<System.Object> obj)
+        public static IObservable<System.Int32> GetHashCode(this IObservable<System.StringComparer> StringComparerValue,
+            IObservable<System.Object> obj)
         {
-            return Observable.Zip(StringComparerValue, obj, (StringComparerValueLambda, objLambda) => StringComparerValueLambda.GetHashCode(objLambda));
+            return Observable.Zip(StringComparerValue, obj,
+                (StringComparerValueLambda, objLambda) => StringComparerValueLambda.GetHashCode(objLambda));
         }
 
 
-        public static IObservable<System.Int32> Compare(this IObservable<System.StringComparer> StringComparerValue, IObservable<System.String> x, IObservable<System.String> y)
+        public static IObservable<System.Int32> Compare(this IObservable<System.StringComparer> StringComparerValue,
+            IObservable<System.String> x, IObservable<System.String> y)
         {
-            return Observable.Zip(StringComparerValue, x, y, (StringComparerValueLambda, xLambda, yLambda) => StringComparerValueLambda.Compare(xLambda, yLambda));
+            return Observable.Zip(StringComparerValue, x, y,
+                (StringComparerValueLambda, xLambda, yLambda) => StringComparerValueLambda.Compare(xLambda, yLambda));
         }
 
 
-        public static IObservable<System.Boolean> Equals(this IObservable<System.StringComparer> StringComparerValue, IObservable<System.String> x, IObservable<System.String> y)
+        public static IObservable<System.Boolean> Equals(this IObservable<System.StringComparer> StringComparerValue,
+            IObservable<System.String> x, IObservable<System.String> y)
         {
-            return Observable.Zip(StringComparerValue, x, y, (StringComparerValueLambda, xLambda, yLambda) => StringComparerValueLambda.Equals(xLambda, yLambda));
+            return Observable.Zip(StringComparerValue, x, y,
+                (StringComparerValueLambda, xLambda, yLambda) => StringComparerValueLambda.Equals(xLambda, yLambda));
         }
 
 
-        public static IObservable<System.Int32> GetHashCode(this IObservable<System.StringComparer> StringComparerValue, IObservable<System.String> obj)
+        public static IObservable<System.Int32> GetHashCode(this IObservable<System.StringComparer> StringComparerValue,
+            IObservable<System.String> obj)
         {
-            return Observable.Zip(StringComparerValue, obj, (StringComparerValueLambda, objLambda) => StringComparerValueLambda.GetHashCode(objLambda));
+            return Observable.Zip(StringComparerValue, obj,
+                (StringComparerValueLambda, objLambda) => StringComparerValueLambda.GetHashCode(objLambda));
         }
 
 
@@ -85,6 +98,5 @@ namespace System
         {
             return ObservableExt.Factory(() => System.StringComparer.OrdinalIgnoreCase);
         }
-
     }
 }

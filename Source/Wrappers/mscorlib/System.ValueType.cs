@@ -8,10 +8,11 @@ namespace System
 {
     public static class __ValueType
     {
-        
-        public static IObservable<System.Boolean> Equals(this IObservable<System.ValueType> ValueTypeValue, IObservable<System.Object> obj)
+        public static IObservable<System.Boolean> Equals(this IObservable<System.ValueType> ValueTypeValue,
+            IObservable<System.Object> obj)
         {
-            return Observable.Zip(ValueTypeValue, obj, (ValueTypeValueLambda, objLambda) => ValueTypeValueLambda.Equals(objLambda));
+            return Observable.Zip(ValueTypeValue, obj,
+                (ValueTypeValueLambda, objLambda) => ValueTypeValueLambda.Equals(objLambda));
         }
 
 
@@ -25,6 +26,5 @@ namespace System
         {
             return Observable.Select(ValueTypeValue, (ValueTypeValueLambda) => ValueTypeValueLambda.ToString());
         }
-
     }
 }

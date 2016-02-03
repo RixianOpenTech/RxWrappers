@@ -8,16 +8,19 @@ namespace System.Collections.Generic
 {
     public static class __Comparer1
     {
-        
-        public static IObservable<System.Collections.Generic.Comparer<T>> Create<T>(IObservable<Comparison<T>> comparison)
+        public static IObservable<System.Collections.Generic.Comparer<T>> Create<T>(
+            IObservable<Comparison<T>> comparison)
         {
-            return Observable.Select(comparison, (comparisonLambda) => System.Collections.Generic.Comparer<T>.Create(comparisonLambda));
+            return Observable.Select(comparison,
+                (comparisonLambda) => System.Collections.Generic.Comparer<T>.Create(comparisonLambda));
         }
 
 
-        public static IObservable<System.Int32> Compare<T>(this IObservable<System.Collections.Generic.Comparer<T>> ComparerValue, IObservable<T> x, IObservable<T> y)
+        public static IObservable<System.Int32> Compare<T>(
+            this IObservable<System.Collections.Generic.Comparer<T>> ComparerValue, IObservable<T> x, IObservable<T> y)
         {
-            return Observable.Zip(ComparerValue, x, y, (ComparerValueLambda, xLambda, yLambda) => ComparerValueLambda.Compare(xLambda, yLambda));
+            return Observable.Zip(ComparerValue, x, y,
+                (ComparerValueLambda, xLambda, yLambda) => ComparerValueLambda.Compare(xLambda, yLambda));
         }
 
 
@@ -25,6 +28,5 @@ namespace System.Collections.Generic
         {
             return ObservableExt.Factory(() => System.Collections.Generic.Comparer<T>.Default);
         }
-
     }
 }

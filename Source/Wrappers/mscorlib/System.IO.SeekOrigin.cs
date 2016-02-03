@@ -8,6 +8,5 @@ namespace System.IO
 {
     public static class __SeekOrigin
     {
-        
     }
 }

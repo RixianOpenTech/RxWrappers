@@ -8,11 +8,11 @@ namespace System.Reflection
 {
     public static class __AssemblyTrademarkAttribute
     {
-        
-        public static IObservable<System.String> get_Trademark(this IObservable<System.Reflection.AssemblyTrademarkAttribute> AssemblyTrademarkAttributeValue)
+        public static IObservable<System.String> get_Trademark(
+            this IObservable<System.Reflection.AssemblyTrademarkAttribute> AssemblyTrademarkAttributeValue)
         {
-            return Observable.Select(AssemblyTrademarkAttributeValue, (AssemblyTrademarkAttributeValueLambda) => AssemblyTrademarkAttributeValueLambda.Trademark);
+            return Observable.Select(AssemblyTrademarkAttributeValue,
+                (AssemblyTrademarkAttributeValueLambda) => AssemblyTrademarkAttributeValueLambda.Trademark);
         }
-
     }
 }

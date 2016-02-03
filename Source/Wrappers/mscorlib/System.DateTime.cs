@@ -8,58 +8,75 @@ namespace System
 {
     public static class __DateTime
     {
-        
-        public static IObservable<System.DateTime> Add(this IObservable<System.DateTime> DateTimeValue, IObservable<System.TimeSpan> value)
+        public static IObservable<System.DateTime> Add(this IObservable<System.DateTime> DateTimeValue,
+            IObservable<System.TimeSpan> value)
         {
-            return Observable.Zip(DateTimeValue, value, (DateTimeValueLambda, valueLambda) => DateTimeValueLambda.Add(valueLambda));
+            return Observable.Zip(DateTimeValue, value,
+                (DateTimeValueLambda, valueLambda) => DateTimeValueLambda.Add(valueLambda));
         }
 
 
-        public static IObservable<System.DateTime> AddDays(this IObservable<System.DateTime> DateTimeValue, IObservable<System.Double> value)
+        public static IObservable<System.DateTime> AddDays(this IObservable<System.DateTime> DateTimeValue,
+            IObservable<System.Double> value)
         {
-            return Observable.Zip(DateTimeValue, value, (DateTimeValueLambda, valueLambda) => DateTimeValueLambda.AddDays(valueLambda));
+            return Observable.Zip(DateTimeValue, value,
+                (DateTimeValueLambda, valueLambda) => DateTimeValueLambda.AddDays(valueLambda));
         }
 
 
-        public static IObservable<System.DateTime> AddHours(this IObservable<System.DateTime> DateTimeValue, IObservable<System.Double> value)
+        public static IObservable<System.DateTime> AddHours(this IObservable<System.DateTime> DateTimeValue,
+            IObservable<System.Double> value)
         {
-            return Observable.Zip(DateTimeValue, value, (DateTimeValueLambda, valueLambda) => DateTimeValueLambda.AddHours(valueLambda));
+            return Observable.Zip(DateTimeValue, value,
+                (DateTimeValueLambda, valueLambda) => DateTimeValueLambda.AddHours(valueLambda));
         }
 
 
-        public static IObservable<System.DateTime> AddMilliseconds(this IObservable<System.DateTime> DateTimeValue, IObservable<System.Double> value)
+        public static IObservable<System.DateTime> AddMilliseconds(this IObservable<System.DateTime> DateTimeValue,
+            IObservable<System.Double> value)
         {
-            return Observable.Zip(DateTimeValue, value, (DateTimeValueLambda, valueLambda) => DateTimeValueLambda.AddMilliseconds(valueLambda));
+            return Observable.Zip(DateTimeValue, value,
+                (DateTimeValueLambda, valueLambda) => DateTimeValueLambda.AddMilliseconds(valueLambda));
         }
 
 
-        public static IObservable<System.DateTime> AddMinutes(this IObservable<System.DateTime> DateTimeValue, IObservable<System.Double> value)
+        public static IObservable<System.DateTime> AddMinutes(this IObservable<System.DateTime> DateTimeValue,
+            IObservable<System.Double> value)
         {
-            return Observable.Zip(DateTimeValue, value, (DateTimeValueLambda, valueLambda) => DateTimeValueLambda.AddMinutes(valueLambda));
+            return Observable.Zip(DateTimeValue, value,
+                (DateTimeValueLambda, valueLambda) => DateTimeValueLambda.AddMinutes(valueLambda));
         }
 
 
-        public static IObservable<System.DateTime> AddMonths(this IObservable<System.DateTime> DateTimeValue, IObservable<System.Int32> months)
+        public static IObservable<System.DateTime> AddMonths(this IObservable<System.DateTime> DateTimeValue,
+            IObservable<System.Int32> months)
         {
-            return Observable.Zip(DateTimeValue, months, (DateTimeValueLambda, monthsLambda) => DateTimeValueLambda.AddMonths(monthsLambda));
+            return Observable.Zip(DateTimeValue, months,
+                (DateTimeValueLambda, monthsLambda) => DateTimeValueLambda.AddMonths(monthsLambda));
         }
 
 
-        public static IObservable<System.DateTime> AddSeconds(this IObservable<System.DateTime> DateTimeValue, IObservable<System.Double> value)
+        public static IObservable<System.DateTime> AddSeconds(this IObservable<System.DateTime> DateTimeValue,
+            IObservable<System.Double> value)
         {
-            return Observable.Zip(DateTimeValue, value, (DateTimeValueLambda, valueLambda) => DateTimeValueLambda.AddSeconds(valueLambda));
+            return Observable.Zip(DateTimeValue, value,
+                (DateTimeValueLambda, valueLambda) => DateTimeValueLambda.AddSeconds(valueLambda));
         }
 
 
-        public static IObservable<System.DateTime> AddTicks(this IObservable<System.DateTime> DateTimeValue, IObservable<System.Int64> value)
+        public static IObservable<System.DateTime> AddTicks(this IObservable<System.DateTime> DateTimeValue,
+            IObservable<System.Int64> value)
         {
-            return Observable.Zip(DateTimeValue, value, (DateTimeValueLambda, valueLambda) => DateTimeValueLambda.AddTicks(valueLambda));
+            return Observable.Zip(DateTimeValue, value,
+                (DateTimeValueLambda, valueLambda) => DateTimeValueLambda.AddTicks(valueLambda));
         }
 
 
-        public static IObservable<System.DateTime> AddYears(this IObservable<System.DateTime> DateTimeValue, IObservable<System.Int32> value)
+        public static IObservable<System.DateTime> AddYears(this IObservable<System.DateTime> DateTimeValue,
+            IObservable<System.Int32> value)
         {
-            return Observable.Zip(DateTimeValue, value, (DateTimeValueLambda, valueLambda) => DateTimeValueLambda.AddYears(valueLambda));
+            return Observable.Zip(DateTimeValue, value,
+                (DateTimeValueLambda, valueLambda) => DateTimeValueLambda.AddYears(valueLambda));
         }
 
 
@@ -69,33 +86,43 @@ namespace System
         }
 
 
-        public static IObservable<System.Int32> CompareTo(this IObservable<System.DateTime> DateTimeValue, IObservable<System.Object> value)
+        public static IObservable<System.Int32> CompareTo(this IObservable<System.DateTime> DateTimeValue,
+            IObservable<System.Object> value)
         {
-            return Observable.Zip(DateTimeValue, value, (DateTimeValueLambda, valueLambda) => DateTimeValueLambda.CompareTo(valueLambda));
+            return Observable.Zip(DateTimeValue, value,
+                (DateTimeValueLambda, valueLambda) => DateTimeValueLambda.CompareTo(valueLambda));
         }
 
 
-        public static IObservable<System.Int32> CompareTo(this IObservable<System.DateTime> DateTimeValue, IObservable<System.DateTime> value)
+        public static IObservable<System.Int32> CompareTo(this IObservable<System.DateTime> DateTimeValue,
+            IObservable<System.DateTime> value)
         {
-            return Observable.Zip(DateTimeValue, value, (DateTimeValueLambda, valueLambda) => DateTimeValueLambda.CompareTo(valueLambda));
+            return Observable.Zip(DateTimeValue, value,
+                (DateTimeValueLambda, valueLambda) => DateTimeValueLambda.CompareTo(valueLambda));
         }
 
 
-        public static IObservable<System.Int32> DaysInMonth(IObservable<System.Int32> year, IObservable<System.Int32> month)
+        public static IObservable<System.Int32> DaysInMonth(IObservable<System.Int32> year,
+            IObservable<System.Int32> month)
         {
-            return Observable.Zip(year, month, (yearLambda, monthLambda) => System.DateTime.DaysInMonth(yearLambda, monthLambda));
+            return Observable.Zip(year, month,
+                (yearLambda, monthLambda) => System.DateTime.DaysInMonth(yearLambda, monthLambda));
         }
 
 
-        public static IObservable<System.Boolean> Equals(this IObservable<System.DateTime> DateTimeValue, IObservable<System.Object> value)
+        public static IObservable<System.Boolean> Equals(this IObservable<System.DateTime> DateTimeValue,
+            IObservable<System.Object> value)
         {
-            return Observable.Zip(DateTimeValue, value, (DateTimeValueLambda, valueLambda) => DateTimeValueLambda.Equals(valueLambda));
+            return Observable.Zip(DateTimeValue, value,
+                (DateTimeValueLambda, valueLambda) => DateTimeValueLambda.Equals(valueLambda));
         }
 
 
-        public static IObservable<System.Boolean> Equals(this IObservable<System.DateTime> DateTimeValue, IObservable<System.DateTime> value)
+        public static IObservable<System.Boolean> Equals(this IObservable<System.DateTime> DateTimeValue,
+            IObservable<System.DateTime> value)
         {
-            return Observable.Zip(DateTimeValue, value, (DateTimeValueLambda, valueLambda) => DateTimeValueLambda.Equals(valueLambda));
+            return Observable.Zip(DateTimeValue, value,
+                (DateTimeValueLambda, valueLambda) => DateTimeValueLambda.Equals(valueLambda));
         }
 
 
@@ -129,9 +156,11 @@ namespace System
         }
 
 
-        public static IObservable<System.DateTime> SpecifyKind(IObservable<System.DateTime> value, IObservable<System.DateTimeKind> kind)
+        public static IObservable<System.DateTime> SpecifyKind(IObservable<System.DateTime> value,
+            IObservable<System.DateTimeKind> kind)
         {
-            return Observable.Zip(value, kind, (valueLambda, kindLambda) => System.DateTime.SpecifyKind(valueLambda, kindLambda));
+            return Observable.Zip(value, kind,
+                (valueLambda, kindLambda) => System.DateTime.SpecifyKind(valueLambda, kindLambda));
         }
 
 
@@ -159,45 +188,64 @@ namespace System
         }
 
 
-        public static IObservable<System.DateTime> Parse(IObservable<System.String> s, IObservable<System.IFormatProvider> provider)
+        public static IObservable<System.DateTime> Parse(IObservable<System.String> s,
+            IObservable<System.IFormatProvider> provider)
         {
-            return Observable.Zip(s, provider, (sLambda, providerLambda) => System.DateTime.Parse(sLambda, providerLambda));
+            return Observable.Zip(s, provider,
+                (sLambda, providerLambda) => System.DateTime.Parse(sLambda, providerLambda));
         }
 
 
-        public static IObservable<System.DateTime> Parse(IObservable<System.String> s, IObservable<System.IFormatProvider> provider, IObservable<System.Globalization.DateTimeStyles> styles)
+        public static IObservable<System.DateTime> Parse(IObservable<System.String> s,
+            IObservable<System.IFormatProvider> provider, IObservable<System.Globalization.DateTimeStyles> styles)
         {
-            return Observable.Zip(s, provider, styles, (sLambda, providerLambda, stylesLambda) => System.DateTime.Parse(sLambda, providerLambda, stylesLambda));
+            return Observable.Zip(s, provider, styles,
+                (sLambda, providerLambda, stylesLambda) => System.DateTime.Parse(sLambda, providerLambda, stylesLambda));
         }
 
 
-        public static IObservable<System.DateTime> ParseExact(IObservable<System.String> s, IObservable<System.String> format, IObservable<System.IFormatProvider> provider)
+        public static IObservable<System.DateTime> ParseExact(IObservable<System.String> s,
+            IObservable<System.String> format, IObservable<System.IFormatProvider> provider)
         {
-            return Observable.Zip(s, format, provider, (sLambda, formatLambda, providerLambda) => System.DateTime.ParseExact(sLambda, formatLambda, providerLambda));
+            return Observable.Zip(s, format, provider,
+                (sLambda, formatLambda, providerLambda) =>
+                    System.DateTime.ParseExact(sLambda, formatLambda, providerLambda));
         }
 
 
-        public static IObservable<System.DateTime> ParseExact(IObservable<System.String> s, IObservable<System.String> format, IObservable<System.IFormatProvider> provider, IObservable<System.Globalization.DateTimeStyles> style)
+        public static IObservable<System.DateTime> ParseExact(IObservable<System.String> s,
+            IObservable<System.String> format, IObservable<System.IFormatProvider> provider,
+            IObservable<System.Globalization.DateTimeStyles> style)
         {
-            return Observable.Zip(s, format, provider, style, (sLambda, formatLambda, providerLambda, styleLambda) => System.DateTime.ParseExact(sLambda, formatLambda, providerLambda, styleLambda));
+            return Observable.Zip(s, format, provider, style,
+                (sLambda, formatLambda, providerLambda, styleLambda) =>
+                    System.DateTime.ParseExact(sLambda, formatLambda, providerLambda, styleLambda));
         }
 
 
-        public static IObservable<System.DateTime> ParseExact(IObservable<System.String> s, IObservable<System.String[]> formats, IObservable<System.IFormatProvider> provider, IObservable<System.Globalization.DateTimeStyles> style)
+        public static IObservable<System.DateTime> ParseExact(IObservable<System.String> s,
+            IObservable<System.String[]> formats, IObservable<System.IFormatProvider> provider,
+            IObservable<System.Globalization.DateTimeStyles> style)
         {
-            return Observable.Zip(s, formats, provider, style, (sLambda, formatsLambda, providerLambda, styleLambda) => System.DateTime.ParseExact(sLambda, formatsLambda, providerLambda, styleLambda));
+            return Observable.Zip(s, formats, provider, style,
+                (sLambda, formatsLambda, providerLambda, styleLambda) =>
+                    System.DateTime.ParseExact(sLambda, formatsLambda, providerLambda, styleLambda));
         }
 
 
-        public static IObservable<System.TimeSpan> Subtract(this IObservable<System.DateTime> DateTimeValue, IObservable<System.DateTime> value)
+        public static IObservable<System.TimeSpan> Subtract(this IObservable<System.DateTime> DateTimeValue,
+            IObservable<System.DateTime> value)
         {
-            return Observable.Zip(DateTimeValue, value, (DateTimeValueLambda, valueLambda) => DateTimeValueLambda.Subtract(valueLambda));
+            return Observable.Zip(DateTimeValue, value,
+                (DateTimeValueLambda, valueLambda) => DateTimeValueLambda.Subtract(valueLambda));
         }
 
 
-        public static IObservable<System.DateTime> Subtract(this IObservable<System.DateTime> DateTimeValue, IObservable<System.TimeSpan> value)
+        public static IObservable<System.DateTime> Subtract(this IObservable<System.DateTime> DateTimeValue,
+            IObservable<System.TimeSpan> value)
         {
-            return Observable.Zip(DateTimeValue, value, (DateTimeValueLambda, valueLambda) => DateTimeValueLambda.Subtract(valueLambda));
+            return Observable.Zip(DateTimeValue, value,
+                (DateTimeValueLambda, valueLambda) => DateTimeValueLambda.Subtract(valueLambda));
         }
 
 
@@ -255,21 +303,28 @@ namespace System
         }
 
 
-        public static IObservable<System.String> ToString(this IObservable<System.DateTime> DateTimeValue, IObservable<System.String> format)
+        public static IObservable<System.String> ToString(this IObservable<System.DateTime> DateTimeValue,
+            IObservable<System.String> format)
         {
-            return Observable.Zip(DateTimeValue, format, (DateTimeValueLambda, formatLambda) => DateTimeValueLambda.ToString(formatLambda));
+            return Observable.Zip(DateTimeValue, format,
+                (DateTimeValueLambda, formatLambda) => DateTimeValueLambda.ToString(formatLambda));
         }
 
 
-        public static IObservable<System.String> ToString(this IObservable<System.DateTime> DateTimeValue, IObservable<System.IFormatProvider> provider)
+        public static IObservable<System.String> ToString(this IObservable<System.DateTime> DateTimeValue,
+            IObservable<System.IFormatProvider> provider)
         {
-            return Observable.Zip(DateTimeValue, provider, (DateTimeValueLambda, providerLambda) => DateTimeValueLambda.ToString(providerLambda));
+            return Observable.Zip(DateTimeValue, provider,
+                (DateTimeValueLambda, providerLambda) => DateTimeValueLambda.ToString(providerLambda));
         }
 
 
-        public static IObservable<System.String> ToString(this IObservable<System.DateTime> DateTimeValue, IObservable<System.String> format, IObservable<System.IFormatProvider> provider)
+        public static IObservable<System.String> ToString(this IObservable<System.DateTime> DateTimeValue,
+            IObservable<System.String> format, IObservable<System.IFormatProvider> provider)
         {
-            return Observable.Zip(DateTimeValue, format, provider, (DateTimeValueLambda, formatLambda, providerLambda) => DateTimeValueLambda.ToString(formatLambda, providerLambda));
+            return Observable.Zip(DateTimeValue, format, provider,
+                (DateTimeValueLambda, formatLambda, providerLambda) =>
+                    DateTimeValueLambda.ToString(formatLambda, providerLambda));
         }
 
 
@@ -281,41 +336,52 @@ namespace System
 
         public static IObservable<Tuple<System.Boolean, System.DateTime>> TryParse(IObservable<System.String> s)
         {
-            return Observable.Select(s, (sLambda) => {
-System.DateTime resultOutput = default(System.DateTime);
-var result = System.DateTime.TryParse(sLambda, out resultOutput);
-return Tuple.Create(result, resultOutput);
-});
+            return Observable.Select(s, (sLambda) =>
+            {
+                System.DateTime resultOutput = default(System.DateTime);
+                var result = System.DateTime.TryParse(sLambda, out resultOutput);
+                return Tuple.Create(result, resultOutput);
+            });
         }
 
 
-        public static IObservable<Tuple<System.Boolean, System.DateTime>> TryParse(IObservable<System.String> s, IObservable<System.IFormatProvider> provider, IObservable<System.Globalization.DateTimeStyles> styles)
+        public static IObservable<Tuple<System.Boolean, System.DateTime>> TryParse(IObservable<System.String> s,
+            IObservable<System.IFormatProvider> provider, IObservable<System.Globalization.DateTimeStyles> styles)
         {
-            return Observable.Zip(s, provider, styles, (sLambda, providerLambda, stylesLambda) => {
-System.DateTime resultOutput = default(System.DateTime);
-var result = System.DateTime.TryParse(sLambda, providerLambda, stylesLambda, out resultOutput);
-return Tuple.Create(result, resultOutput);
-});
+            return Observable.Zip(s, provider, styles, (sLambda, providerLambda, stylesLambda) =>
+            {
+                System.DateTime resultOutput = default(System.DateTime);
+                var result = System.DateTime.TryParse(sLambda, providerLambda, stylesLambda, out resultOutput);
+                return Tuple.Create(result, resultOutput);
+            });
         }
 
 
-        public static IObservable<Tuple<System.Boolean, System.DateTime>> TryParseExact(IObservable<System.String> s, IObservable<System.String> format, IObservable<System.IFormatProvider> provider, IObservable<System.Globalization.DateTimeStyles> style)
+        public static IObservable<Tuple<System.Boolean, System.DateTime>> TryParseExact(IObservable<System.String> s,
+            IObservable<System.String> format, IObservable<System.IFormatProvider> provider,
+            IObservable<System.Globalization.DateTimeStyles> style)
         {
-            return Observable.Zip(s, format, provider, style, (sLambda, formatLambda, providerLambda, styleLambda) => {
-System.DateTime resultOutput = default(System.DateTime);
-var result = System.DateTime.TryParseExact(sLambda, formatLambda, providerLambda, styleLambda, out resultOutput);
-return Tuple.Create(result, resultOutput);
-});
+            return Observable.Zip(s, format, provider, style, (sLambda, formatLambda, providerLambda, styleLambda) =>
+            {
+                System.DateTime resultOutput = default(System.DateTime);
+                var result = System.DateTime.TryParseExact(sLambda, formatLambda, providerLambda, styleLambda,
+                    out resultOutput);
+                return Tuple.Create(result, resultOutput);
+            });
         }
 
 
-        public static IObservable<Tuple<System.Boolean, System.DateTime>> TryParseExact(IObservable<System.String> s, IObservable<System.String[]> formats, IObservable<System.IFormatProvider> provider, IObservable<System.Globalization.DateTimeStyles> style)
+        public static IObservable<Tuple<System.Boolean, System.DateTime>> TryParseExact(IObservable<System.String> s,
+            IObservable<System.String[]> formats, IObservable<System.IFormatProvider> provider,
+            IObservable<System.Globalization.DateTimeStyles> style)
         {
-            return Observable.Zip(s, formats, provider, style, (sLambda, formatsLambda, providerLambda, styleLambda) => {
-System.DateTime resultOutput = default(System.DateTime);
-var result = System.DateTime.TryParseExact(sLambda, formatsLambda, providerLambda, styleLambda, out resultOutput);
-return Tuple.Create(result, resultOutput);
-});
+            return Observable.Zip(s, formats, provider, style, (sLambda, formatsLambda, providerLambda, styleLambda) =>
+            {
+                System.DateTime resultOutput = default(System.DateTime);
+                var result = System.DateTime.TryParseExact(sLambda, formatsLambda, providerLambda, styleLambda,
+                    out resultOutput);
+                return Tuple.Create(result, resultOutput);
+            });
         }
 
 
@@ -325,21 +391,28 @@ return Tuple.Create(result, resultOutput);
         }
 
 
-        public static IObservable<System.String[]> GetDateTimeFormats(this IObservable<System.DateTime> DateTimeValue, IObservable<System.IFormatProvider> provider)
+        public static IObservable<System.String[]> GetDateTimeFormats(this IObservable<System.DateTime> DateTimeValue,
+            IObservable<System.IFormatProvider> provider)
         {
-            return Observable.Zip(DateTimeValue, provider, (DateTimeValueLambda, providerLambda) => DateTimeValueLambda.GetDateTimeFormats(providerLambda));
+            return Observable.Zip(DateTimeValue, provider,
+                (DateTimeValueLambda, providerLambda) => DateTimeValueLambda.GetDateTimeFormats(providerLambda));
         }
 
 
-        public static IObservable<System.String[]> GetDateTimeFormats(this IObservable<System.DateTime> DateTimeValue, IObservable<System.Char> format)
+        public static IObservable<System.String[]> GetDateTimeFormats(this IObservable<System.DateTime> DateTimeValue,
+            IObservable<System.Char> format)
         {
-            return Observable.Zip(DateTimeValue, format, (DateTimeValueLambda, formatLambda) => DateTimeValueLambda.GetDateTimeFormats(formatLambda));
+            return Observable.Zip(DateTimeValue, format,
+                (DateTimeValueLambda, formatLambda) => DateTimeValueLambda.GetDateTimeFormats(formatLambda));
         }
 
 
-        public static IObservable<System.String[]> GetDateTimeFormats(this IObservable<System.DateTime> DateTimeValue, IObservable<System.Char> format, IObservable<System.IFormatProvider> provider)
+        public static IObservable<System.String[]> GetDateTimeFormats(this IObservable<System.DateTime> DateTimeValue,
+            IObservable<System.Char> format, IObservable<System.IFormatProvider> provider)
         {
-            return Observable.Zip(DateTimeValue, format, provider, (DateTimeValueLambda, formatLambda, providerLambda) => DateTimeValueLambda.GetDateTimeFormats(formatLambda, providerLambda));
+            return Observable.Zip(DateTimeValue, format, provider,
+                (DateTimeValueLambda, formatLambda, providerLambda) =>
+                    DateTimeValueLambda.GetDateTimeFormats(formatLambda, providerLambda));
         }
 
 
@@ -443,6 +516,5 @@ return Tuple.Create(result, resultOutput);
         {
             return Observable.Select(DateTimeValue, (DateTimeValueLambda) => DateTimeValueLambda.Year);
         }
-
     }
 }

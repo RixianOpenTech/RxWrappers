@@ -8,6 +8,5 @@ namespace System.Diagnostics.Tracing
 {
     public static class __EventTask
     {
-        
     }
 }

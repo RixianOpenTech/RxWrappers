@@ -8,23 +8,30 @@ namespace System.Threading
 {
     public static class __HostExecutionContext
     {
-        
-        public static IObservable<System.Threading.HostExecutionContext> CreateCopy(this IObservable<System.Threading.HostExecutionContext> HostExecutionContextValue)
+        public static IObservable<System.Threading.HostExecutionContext> CreateCopy(
+            this IObservable<System.Threading.HostExecutionContext> HostExecutionContextValue)
         {
-            return Observable.Select(HostExecutionContextValue, (HostExecutionContextValueLambda) => HostExecutionContextValueLambda.CreateCopy());
+            return Observable.Select(HostExecutionContextValue,
+                (HostExecutionContextValueLambda) => HostExecutionContextValueLambda.CreateCopy());
         }
 
 
-        public static IObservable<System.Reactive.Unit> Dispose(this IObservable<System.Threading.HostExecutionContext> HostExecutionContextValue)
+        public static IObservable<System.Reactive.Unit> Dispose(
+            this IObservable<System.Threading.HostExecutionContext> HostExecutionContextValue)
         {
-            return Observable.Do(HostExecutionContextValue, (HostExecutionContextValueLambda) => HostExecutionContextValueLambda.Dispose()).ToUnit();
+            return
+                Observable.Do(HostExecutionContextValue,
+                    (HostExecutionContextValueLambda) => HostExecutionContextValueLambda.Dispose()).ToUnit();
         }
 
 
-        public static IObservable<System.Reactive.Unit> Dispose(this IObservable<System.Threading.HostExecutionContext> HostExecutionContextValue, IObservable<System.Boolean> disposing)
+        public static IObservable<System.Reactive.Unit> Dispose(
+            this IObservable<System.Threading.HostExecutionContext> HostExecutionContextValue,
+            IObservable<System.Boolean> disposing)
         {
-            return ObservableExt.ZipExecute(HostExecutionContextValue, disposing, (HostExecutionContextValueLambda, disposingLambda) => HostExecutionContextValueLambda.Dispose(disposingLambda));
+            return ObservableExt.ZipExecute(HostExecutionContextValue, disposing,
+                (HostExecutionContextValueLambda, disposingLambda) =>
+                    HostExecutionContextValueLambda.Dispose(disposingLambda));
         }
-
     }
 }

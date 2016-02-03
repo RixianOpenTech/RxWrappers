@@ -8,35 +8,47 @@ namespace System
 {
     public static class __AttributeUsageAttribute
     {
-        
-        public static IObservable<System.AttributeTargets> get_ValidOn(this IObservable<System.AttributeUsageAttribute> AttributeUsageAttributeValue)
+        public static IObservable<System.AttributeTargets> get_ValidOn(
+            this IObservable<System.AttributeUsageAttribute> AttributeUsageAttributeValue)
         {
-            return Observable.Select(AttributeUsageAttributeValue, (AttributeUsageAttributeValueLambda) => AttributeUsageAttributeValueLambda.ValidOn);
+            return Observable.Select(AttributeUsageAttributeValue,
+                (AttributeUsageAttributeValueLambda) => AttributeUsageAttributeValueLambda.ValidOn);
         }
 
 
-        public static IObservable<System.Boolean> get_AllowMultiple(this IObservable<System.AttributeUsageAttribute> AttributeUsageAttributeValue)
+        public static IObservable<System.Boolean> get_AllowMultiple(
+            this IObservable<System.AttributeUsageAttribute> AttributeUsageAttributeValue)
         {
-            return Observable.Select(AttributeUsageAttributeValue, (AttributeUsageAttributeValueLambda) => AttributeUsageAttributeValueLambda.AllowMultiple);
+            return Observable.Select(AttributeUsageAttributeValue,
+                (AttributeUsageAttributeValueLambda) => AttributeUsageAttributeValueLambda.AllowMultiple);
         }
 
 
-        public static IObservable<System.Boolean> get_Inherited(this IObservable<System.AttributeUsageAttribute> AttributeUsageAttributeValue)
+        public static IObservable<System.Boolean> get_Inherited(
+            this IObservable<System.AttributeUsageAttribute> AttributeUsageAttributeValue)
         {
-            return Observable.Select(AttributeUsageAttributeValue, (AttributeUsageAttributeValueLambda) => AttributeUsageAttributeValueLambda.Inherited);
+            return Observable.Select(AttributeUsageAttributeValue,
+                (AttributeUsageAttributeValueLambda) => AttributeUsageAttributeValueLambda.Inherited);
         }
 
 
-        public static IObservable<System.Reactive.Unit> set_AllowMultiple(this IObservable<System.AttributeUsageAttribute> AttributeUsageAttributeValue, IObservable<System.Boolean> value)
+        public static IObservable<System.Reactive.Unit> set_AllowMultiple(
+            this IObservable<System.AttributeUsageAttribute> AttributeUsageAttributeValue,
+            IObservable<System.Boolean> value)
         {
-            return ObservableExt.ZipExecute(AttributeUsageAttributeValue, value, (AttributeUsageAttributeValueLambda, valueLambda) => AttributeUsageAttributeValueLambda.AllowMultiple = valueLambda);
+            return ObservableExt.ZipExecute(AttributeUsageAttributeValue, value,
+                (AttributeUsageAttributeValueLambda, valueLambda) =>
+                    AttributeUsageAttributeValueLambda.AllowMultiple = valueLambda);
         }
 
 
-        public static IObservable<System.Reactive.Unit> set_Inherited(this IObservable<System.AttributeUsageAttribute> AttributeUsageAttributeValue, IObservable<System.Boolean> value)
+        public static IObservable<System.Reactive.Unit> set_Inherited(
+            this IObservable<System.AttributeUsageAttribute> AttributeUsageAttributeValue,
+            IObservable<System.Boolean> value)
         {
-            return ObservableExt.ZipExecute(AttributeUsageAttributeValue, value, (AttributeUsageAttributeValueLambda, valueLambda) => AttributeUsageAttributeValueLambda.Inherited = valueLambda);
+            return ObservableExt.ZipExecute(AttributeUsageAttributeValue, value,
+                (AttributeUsageAttributeValueLambda, valueLambda) =>
+                    AttributeUsageAttributeValueLambda.Inherited = valueLambda);
         }
-
     }
 }

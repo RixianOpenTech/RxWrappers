@@ -8,11 +8,11 @@ namespace System.Runtime.InteropServices
 {
     public static class __LCIDConversionAttribute
     {
-        
-        public static IObservable<System.Int32> get_Value(this IObservable<System.Runtime.InteropServices.LCIDConversionAttribute> LCIDConversionAttributeValue)
+        public static IObservable<System.Int32> get_Value(
+            this IObservable<System.Runtime.InteropServices.LCIDConversionAttribute> LCIDConversionAttributeValue)
         {
-            return Observable.Select(LCIDConversionAttributeValue, (LCIDConversionAttributeValueLambda) => LCIDConversionAttributeValueLambda.Value);
+            return Observable.Select(LCIDConversionAttributeValue,
+                (LCIDConversionAttributeValueLambda) => LCIDConversionAttributeValueLambda.Value);
         }
-
     }
 }

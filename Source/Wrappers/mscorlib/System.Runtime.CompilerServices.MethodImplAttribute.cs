@@ -8,11 +8,11 @@ namespace System.Runtime.CompilerServices
 {
     public static class __MethodImplAttribute
     {
-        
-        public static IObservable<System.Runtime.CompilerServices.MethodImplOptions> get_Value(this IObservable<System.Runtime.CompilerServices.MethodImplAttribute> MethodImplAttributeValue)
+        public static IObservable<System.Runtime.CompilerServices.MethodImplOptions> get_Value(
+            this IObservable<System.Runtime.CompilerServices.MethodImplAttribute> MethodImplAttributeValue)
         {
-            return Observable.Select(MethodImplAttributeValue, (MethodImplAttributeValueLambda) => MethodImplAttributeValueLambda.Value);
+            return Observable.Select(MethodImplAttributeValue,
+                (MethodImplAttributeValueLambda) => MethodImplAttributeValueLambda.Value);
         }
-
     }
 }

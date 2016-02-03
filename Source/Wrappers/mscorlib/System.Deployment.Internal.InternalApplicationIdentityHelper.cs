@@ -8,11 +8,10 @@ namespace System.Deployment.Internal
 {
     public static class __InternalApplicationIdentityHelper
     {
-        
         public static IObservable<System.Object> GetInternalAppId(IObservable<System.ApplicationIdentity> id)
         {
-            return Observable.Select(id, (idLambda) => System.Deployment.Internal.InternalApplicationIdentityHelper.GetInternalAppId(idLambda));
+            return Observable.Select(id,
+                (idLambda) => System.Deployment.Internal.InternalApplicationIdentityHelper.GetInternalAppId(idLambda));
         }
-
     }
 }

@@ -8,17 +8,19 @@ namespace System
 {
     public static class __UnhandledExceptionEventArgs
     {
-        
-        public static IObservable<System.Object> get_ExceptionObject(this IObservable<System.UnhandledExceptionEventArgs> UnhandledExceptionEventArgsValue)
+        public static IObservable<System.Object> get_ExceptionObject(
+            this IObservable<System.UnhandledExceptionEventArgs> UnhandledExceptionEventArgsValue)
         {
-            return Observable.Select(UnhandledExceptionEventArgsValue, (UnhandledExceptionEventArgsValueLambda) => UnhandledExceptionEventArgsValueLambda.ExceptionObject);
+            return Observable.Select(UnhandledExceptionEventArgsValue,
+                (UnhandledExceptionEventArgsValueLambda) => UnhandledExceptionEventArgsValueLambda.ExceptionObject);
         }
 
 
-        public static IObservable<System.Boolean> get_IsTerminating(this IObservable<System.UnhandledExceptionEventArgs> UnhandledExceptionEventArgsValue)
+        public static IObservable<System.Boolean> get_IsTerminating(
+            this IObservable<System.UnhandledExceptionEventArgs> UnhandledExceptionEventArgsValue)
         {
-            return Observable.Select(UnhandledExceptionEventArgsValue, (UnhandledExceptionEventArgsValueLambda) => UnhandledExceptionEventArgsValueLambda.IsTerminating);
+            return Observable.Select(UnhandledExceptionEventArgsValue,
+                (UnhandledExceptionEventArgsValueLambda) => UnhandledExceptionEventArgsValueLambda.IsTerminating);
         }
-
     }
 }

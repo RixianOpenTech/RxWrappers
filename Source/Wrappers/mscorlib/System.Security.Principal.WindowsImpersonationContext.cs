@@ -8,17 +8,22 @@ namespace System.Security.Principal
 {
     public static class __WindowsImpersonationContext
     {
-        
-        public static IObservable<System.Reactive.Unit> Undo(this IObservable<System.Security.Principal.WindowsImpersonationContext> WindowsImpersonationContextValue)
+        public static IObservable<System.Reactive.Unit> Undo(
+            this IObservable<System.Security.Principal.WindowsImpersonationContext> WindowsImpersonationContextValue)
         {
-            return Observable.Do(WindowsImpersonationContextValue, (WindowsImpersonationContextValueLambda) => WindowsImpersonationContextValueLambda.Undo()).ToUnit();
+            return
+                Observable.Do(WindowsImpersonationContextValue,
+                    (WindowsImpersonationContextValueLambda) => WindowsImpersonationContextValueLambda.Undo()).ToUnit();
         }
 
 
-        public static IObservable<System.Reactive.Unit> Dispose(this IObservable<System.Security.Principal.WindowsImpersonationContext> WindowsImpersonationContextValue)
+        public static IObservable<System.Reactive.Unit> Dispose(
+            this IObservable<System.Security.Principal.WindowsImpersonationContext> WindowsImpersonationContextValue)
         {
-            return Observable.Do(WindowsImpersonationContextValue, (WindowsImpersonationContextValueLambda) => WindowsImpersonationContextValueLambda.Dispose()).ToUnit();
+            return
+                Observable.Do(WindowsImpersonationContextValue,
+                    (WindowsImpersonationContextValueLambda) => WindowsImpersonationContextValueLambda.Dispose())
+                    .ToUnit();
         }
-
     }
 }

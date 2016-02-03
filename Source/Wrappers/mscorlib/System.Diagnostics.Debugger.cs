@@ -8,7 +8,6 @@ namespace System.Diagnostics
 {
     public static class __Debugger
     {
-        
         public static IObservable<System.Reactive.Unit> Break()
         {
             return ObservableExt.Factory(() => System.Diagnostics.Debugger.Break());
@@ -27,9 +26,12 @@ namespace System.Diagnostics
         }
 
 
-        public static IObservable<System.Reactive.Unit> Log(IObservable<System.Int32> level, IObservable<System.String> category, IObservable<System.String> message)
+        public static IObservable<System.Reactive.Unit> Log(IObservable<System.Int32> level,
+            IObservable<System.String> category, IObservable<System.String> message)
         {
-            return ObservableExt.ZipExecute(level, category, message, (levelLambda, categoryLambda, messageLambda) => System.Diagnostics.Debugger.Log(levelLambda, categoryLambda, messageLambda));
+            return ObservableExt.ZipExecute(level, category, message,
+                (levelLambda, categoryLambda, messageLambda) =>
+                    System.Diagnostics.Debugger.Log(levelLambda, categoryLambda, messageLambda));
         }
 
 
@@ -43,6 +45,5 @@ namespace System.Diagnostics
         {
             return ObservableExt.Factory(() => System.Diagnostics.Debugger.IsAttached);
         }
-
     }
 }

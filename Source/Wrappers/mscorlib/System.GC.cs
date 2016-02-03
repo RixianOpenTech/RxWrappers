@@ -8,16 +8,19 @@ namespace System
 {
     public static class __GC
     {
-        
         public static IObservable<System.Reactive.Unit> AddMemoryPressure(IObservable<System.Int64> bytesAllocated)
         {
-            return Observable.Do(bytesAllocated, (bytesAllocatedLambda) => System.GC.AddMemoryPressure(bytesAllocatedLambda)).ToUnit();
+            return
+                Observable.Do(bytesAllocated,
+                    (bytesAllocatedLambda) => System.GC.AddMemoryPressure(bytesAllocatedLambda)).ToUnit();
         }
 
 
         public static IObservable<System.Reactive.Unit> RemoveMemoryPressure(IObservable<System.Int64> bytesAllocated)
         {
-            return Observable.Do(bytesAllocated, (bytesAllocatedLambda) => System.GC.RemoveMemoryPressure(bytesAllocatedLambda)).ToUnit();
+            return
+                Observable.Do(bytesAllocated,
+                    (bytesAllocatedLambda) => System.GC.RemoveMemoryPressure(bytesAllocatedLambda)).ToUnit();
         }
 
 
@@ -39,21 +42,30 @@ namespace System
         }
 
 
-        public static IObservable<System.Reactive.Unit> Collect(IObservable<System.Int32> generation, IObservable<System.GCCollectionMode> mode)
+        public static IObservable<System.Reactive.Unit> Collect(IObservable<System.Int32> generation,
+            IObservable<System.GCCollectionMode> mode)
         {
-            return ObservableExt.ZipExecute(generation, mode, (generationLambda, modeLambda) => System.GC.Collect(generationLambda, modeLambda));
+            return ObservableExt.ZipExecute(generation, mode,
+                (generationLambda, modeLambda) => System.GC.Collect(generationLambda, modeLambda));
         }
 
 
-        public static IObservable<System.Reactive.Unit> Collect(IObservable<System.Int32> generation, IObservable<System.GCCollectionMode> mode, IObservable<System.Boolean> blocking)
+        public static IObservable<System.Reactive.Unit> Collect(IObservable<System.Int32> generation,
+            IObservable<System.GCCollectionMode> mode, IObservable<System.Boolean> blocking)
         {
-            return ObservableExt.ZipExecute(generation, mode, blocking, (generationLambda, modeLambda, blockingLambda) => System.GC.Collect(generationLambda, modeLambda, blockingLambda));
+            return ObservableExt.ZipExecute(generation, mode, blocking,
+                (generationLambda, modeLambda, blockingLambda) =>
+                    System.GC.Collect(generationLambda, modeLambda, blockingLambda));
         }
 
 
-        public static IObservable<System.Reactive.Unit> Collect(IObservable<System.Int32> generation, IObservable<System.GCCollectionMode> mode, IObservable<System.Boolean> blocking, IObservable<System.Boolean> compacting)
+        public static IObservable<System.Reactive.Unit> Collect(IObservable<System.Int32> generation,
+            IObservable<System.GCCollectionMode> mode, IObservable<System.Boolean> blocking,
+            IObservable<System.Boolean> compacting)
         {
-            return ObservableExt.ZipExecute(generation, mode, blocking, compacting, (generationLambda, modeLambda, blockingLambda, compactingLambda) => System.GC.Collect(generationLambda, modeLambda, blockingLambda, compactingLambda));
+            return ObservableExt.ZipExecute(generation, mode, blocking, compacting,
+                (generationLambda, modeLambda, blockingLambda, compactingLambda) =>
+                    System.GC.Collect(generationLambda, modeLambda, blockingLambda, compactingLambda));
         }
 
 
@@ -95,13 +107,17 @@ namespace System
 
         public static IObservable<System.Int64> GetTotalMemory(IObservable<System.Boolean> forceFullCollection)
         {
-            return Observable.Select(forceFullCollection, (forceFullCollectionLambda) => System.GC.GetTotalMemory(forceFullCollectionLambda));
+            return Observable.Select(forceFullCollection,
+                (forceFullCollectionLambda) => System.GC.GetTotalMemory(forceFullCollectionLambda));
         }
 
 
-        public static IObservable<System.Reactive.Unit> RegisterForFullGCNotification(IObservable<System.Int32> maxGenerationThreshold, IObservable<System.Int32> largeObjectHeapThreshold)
+        public static IObservable<System.Reactive.Unit> RegisterForFullGCNotification(
+            IObservable<System.Int32> maxGenerationThreshold, IObservable<System.Int32> largeObjectHeapThreshold)
         {
-            return ObservableExt.ZipExecute(maxGenerationThreshold, largeObjectHeapThreshold, (maxGenerationThresholdLambda, largeObjectHeapThresholdLambda) => System.GC.RegisterForFullGCNotification(maxGenerationThresholdLambda, largeObjectHeapThresholdLambda));
+            return ObservableExt.ZipExecute(maxGenerationThreshold, largeObjectHeapThreshold,
+                (maxGenerationThresholdLambda, largeObjectHeapThresholdLambda) =>
+                    System.GC.RegisterForFullGCNotification(maxGenerationThresholdLambda, largeObjectHeapThresholdLambda));
         }
 
 
@@ -117,9 +133,11 @@ namespace System
         }
 
 
-        public static IObservable<System.GCNotificationStatus> WaitForFullGCApproach(IObservable<System.Int32> millisecondsTimeout)
+        public static IObservable<System.GCNotificationStatus> WaitForFullGCApproach(
+            IObservable<System.Int32> millisecondsTimeout)
         {
-            return Observable.Select(millisecondsTimeout, (millisecondsTimeoutLambda) => System.GC.WaitForFullGCApproach(millisecondsTimeoutLambda));
+            return Observable.Select(millisecondsTimeout,
+                (millisecondsTimeoutLambda) => System.GC.WaitForFullGCApproach(millisecondsTimeoutLambda));
         }
 
 
@@ -129,9 +147,11 @@ namespace System
         }
 
 
-        public static IObservable<System.GCNotificationStatus> WaitForFullGCComplete(IObservable<System.Int32> millisecondsTimeout)
+        public static IObservable<System.GCNotificationStatus> WaitForFullGCComplete(
+            IObservable<System.Int32> millisecondsTimeout)
         {
-            return Observable.Select(millisecondsTimeout, (millisecondsTimeoutLambda) => System.GC.WaitForFullGCComplete(millisecondsTimeoutLambda));
+            return Observable.Select(millisecondsTimeout,
+                (millisecondsTimeoutLambda) => System.GC.WaitForFullGCComplete(millisecondsTimeoutLambda));
         }
 
 
@@ -141,21 +161,29 @@ namespace System
         }
 
 
-        public static IObservable<System.Boolean> TryStartNoGCRegion(IObservable<System.Int64> totalSize, IObservable<System.Int64> lohSize)
+        public static IObservable<System.Boolean> TryStartNoGCRegion(IObservable<System.Int64> totalSize,
+            IObservable<System.Int64> lohSize)
         {
-            return Observable.Zip(totalSize, lohSize, (totalSizeLambda, lohSizeLambda) => System.GC.TryStartNoGCRegion(totalSizeLambda, lohSizeLambda));
+            return Observable.Zip(totalSize, lohSize,
+                (totalSizeLambda, lohSizeLambda) => System.GC.TryStartNoGCRegion(totalSizeLambda, lohSizeLambda));
         }
 
 
-        public static IObservable<System.Boolean> TryStartNoGCRegion(IObservable<System.Int64> totalSize, IObservable<System.Boolean> disallowFullBlockingGC)
+        public static IObservable<System.Boolean> TryStartNoGCRegion(IObservable<System.Int64> totalSize,
+            IObservable<System.Boolean> disallowFullBlockingGC)
         {
-            return Observable.Zip(totalSize, disallowFullBlockingGC, (totalSizeLambda, disallowFullBlockingGCLambda) => System.GC.TryStartNoGCRegion(totalSizeLambda, disallowFullBlockingGCLambda));
+            return Observable.Zip(totalSize, disallowFullBlockingGC,
+                (totalSizeLambda, disallowFullBlockingGCLambda) =>
+                    System.GC.TryStartNoGCRegion(totalSizeLambda, disallowFullBlockingGCLambda));
         }
 
 
-        public static IObservable<System.Boolean> TryStartNoGCRegion(IObservable<System.Int64> totalSize, IObservable<System.Int64> lohSize, IObservable<System.Boolean> disallowFullBlockingGC)
+        public static IObservable<System.Boolean> TryStartNoGCRegion(IObservable<System.Int64> totalSize,
+            IObservable<System.Int64> lohSize, IObservable<System.Boolean> disallowFullBlockingGC)
         {
-            return Observable.Zip(totalSize, lohSize, disallowFullBlockingGC, (totalSizeLambda, lohSizeLambda, disallowFullBlockingGCLambda) => System.GC.TryStartNoGCRegion(totalSizeLambda, lohSizeLambda, disallowFullBlockingGCLambda));
+            return Observable.Zip(totalSize, lohSize, disallowFullBlockingGC,
+                (totalSizeLambda, lohSizeLambda, disallowFullBlockingGCLambda) =>
+                    System.GC.TryStartNoGCRegion(totalSizeLambda, lohSizeLambda, disallowFullBlockingGCLambda));
         }
 
 
@@ -169,6 +197,5 @@ namespace System
         {
             return ObservableExt.Factory(() => System.GC.MaxGeneration);
         }
-
     }
 }

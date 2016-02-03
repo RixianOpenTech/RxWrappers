@@ -8,11 +8,11 @@ namespace System.Runtime.InteropServices
 {
     public static class __ClassInterfaceAttribute
     {
-        
-        public static IObservable<System.Runtime.InteropServices.ClassInterfaceType> get_Value(this IObservable<System.Runtime.InteropServices.ClassInterfaceAttribute> ClassInterfaceAttributeValue)
+        public static IObservable<System.Runtime.InteropServices.ClassInterfaceType> get_Value(
+            this IObservable<System.Runtime.InteropServices.ClassInterfaceAttribute> ClassInterfaceAttributeValue)
         {
-            return Observable.Select(ClassInterfaceAttributeValue, (ClassInterfaceAttributeValueLambda) => ClassInterfaceAttributeValueLambda.Value);
+            return Observable.Select(ClassInterfaceAttributeValue,
+                (ClassInterfaceAttributeValueLambda) => ClassInterfaceAttributeValueLambda.Value);
         }
-
     }
 }

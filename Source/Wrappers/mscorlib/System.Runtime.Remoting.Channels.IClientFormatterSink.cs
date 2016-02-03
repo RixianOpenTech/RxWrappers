@@ -8,6 +8,5 @@ namespace System.Runtime.Remoting.Channels
 {
     public static class __IClientFormatterSink
     {
-        
     }
 }

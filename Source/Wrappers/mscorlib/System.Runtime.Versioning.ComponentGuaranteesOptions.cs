@@ -8,6 +8,5 @@ namespace System.Runtime.Versioning
 {
     public static class __ComponentGuaranteesOptions
     {
-        
     }
 }

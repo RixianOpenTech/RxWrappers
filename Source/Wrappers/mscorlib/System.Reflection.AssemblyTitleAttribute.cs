@@ -8,11 +8,11 @@ namespace System.Reflection
 {
     public static class __AssemblyTitleAttribute
     {
-        
-        public static IObservable<System.String> get_Title(this IObservable<System.Reflection.AssemblyTitleAttribute> AssemblyTitleAttributeValue)
+        public static IObservable<System.String> get_Title(
+            this IObservable<System.Reflection.AssemblyTitleAttribute> AssemblyTitleAttributeValue)
         {
-            return Observable.Select(AssemblyTitleAttributeValue, (AssemblyTitleAttributeValueLambda) => AssemblyTitleAttributeValueLambda.Title);
+            return Observable.Select(AssemblyTitleAttributeValue,
+                (AssemblyTitleAttributeValueLambda) => AssemblyTitleAttributeValueLambda.Title);
         }
-
     }
 }

@@ -8,11 +8,12 @@ namespace System.Security.Cryptography
 {
     public static class __RIPEMD160Managed
     {
-        
-        public static IObservable<System.Reactive.Unit> Initialize(this IObservable<System.Security.Cryptography.RIPEMD160Managed> RIPEMD160ManagedValue)
+        public static IObservable<System.Reactive.Unit> Initialize(
+            this IObservable<System.Security.Cryptography.RIPEMD160Managed> RIPEMD160ManagedValue)
         {
-            return Observable.Do(RIPEMD160ManagedValue, (RIPEMD160ManagedValueLambda) => RIPEMD160ManagedValueLambda.Initialize()).ToUnit();
+            return
+                Observable.Do(RIPEMD160ManagedValue,
+                    (RIPEMD160ManagedValueLambda) => RIPEMD160ManagedValueLambda.Initialize()).ToUnit();
         }
-
     }
 }

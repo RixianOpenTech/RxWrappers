@@ -8,11 +8,11 @@ namespace System.Runtime.CompilerServices
 {
     public static class __IDispatchConstantAttribute
     {
-        
-        public static IObservable<System.Object> get_Value(this IObservable<System.Runtime.CompilerServices.IDispatchConstantAttribute> IDispatchConstantAttributeValue)
+        public static IObservable<System.Object> get_Value(
+            this IObservable<System.Runtime.CompilerServices.IDispatchConstantAttribute> IDispatchConstantAttributeValue)
         {
-            return Observable.Select(IDispatchConstantAttributeValue, (IDispatchConstantAttributeValueLambda) => IDispatchConstantAttributeValueLambda.Value);
+            return Observable.Select(IDispatchConstantAttributeValue,
+                (IDispatchConstantAttributeValueLambda) => IDispatchConstantAttributeValueLambda.Value);
         }
-
     }
 }

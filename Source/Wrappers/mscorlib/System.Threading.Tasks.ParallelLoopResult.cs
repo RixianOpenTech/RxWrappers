@@ -8,17 +8,19 @@ namespace System.Threading.Tasks
 {
     public static class __ParallelLoopResult
     {
-        
-        public static IObservable<System.Boolean> get_IsCompleted(this IObservable<System.Threading.Tasks.ParallelLoopResult> ParallelLoopResultValue)
+        public static IObservable<System.Boolean> get_IsCompleted(
+            this IObservable<System.Threading.Tasks.ParallelLoopResult> ParallelLoopResultValue)
         {
-            return Observable.Select(ParallelLoopResultValue, (ParallelLoopResultValueLambda) => ParallelLoopResultValueLambda.IsCompleted);
+            return Observable.Select(ParallelLoopResultValue,
+                (ParallelLoopResultValueLambda) => ParallelLoopResultValueLambda.IsCompleted);
         }
 
 
-        public static IObservable<System.Nullable<System.Int64>> get_LowestBreakIteration(this IObservable<System.Threading.Tasks.ParallelLoopResult> ParallelLoopResultValue)
+        public static IObservable<System.Nullable<System.Int64>> get_LowestBreakIteration(
+            this IObservable<System.Threading.Tasks.ParallelLoopResult> ParallelLoopResultValue)
         {
-            return Observable.Select(ParallelLoopResultValue, (ParallelLoopResultValueLambda) => ParallelLoopResultValueLambda.LowestBreakIteration);
+            return Observable.Select(ParallelLoopResultValue,
+                (ParallelLoopResultValueLambda) => ParallelLoopResultValueLambda.LowestBreakIteration);
         }
-
     }
 }

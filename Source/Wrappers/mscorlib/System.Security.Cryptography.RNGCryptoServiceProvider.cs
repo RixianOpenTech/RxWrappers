@@ -8,17 +8,23 @@ namespace System.Security.Cryptography
 {
     public static class __RNGCryptoServiceProvider
     {
-        
-        public static IObservable<System.Reactive.Unit> GetBytes(this IObservable<System.Security.Cryptography.RNGCryptoServiceProvider> RNGCryptoServiceProviderValue, IObservable<System.Byte[]> data)
+        public static IObservable<System.Reactive.Unit> GetBytes(
+            this IObservable<System.Security.Cryptography.RNGCryptoServiceProvider> RNGCryptoServiceProviderValue,
+            IObservable<System.Byte[]> data)
         {
-            return ObservableExt.ZipExecute(RNGCryptoServiceProviderValue, data, (RNGCryptoServiceProviderValueLambda, dataLambda) => RNGCryptoServiceProviderValueLambda.GetBytes(dataLambda));
+            return ObservableExt.ZipExecute(RNGCryptoServiceProviderValue, data,
+                (RNGCryptoServiceProviderValueLambda, dataLambda) =>
+                    RNGCryptoServiceProviderValueLambda.GetBytes(dataLambda));
         }
 
 
-        public static IObservable<System.Reactive.Unit> GetNonZeroBytes(this IObservable<System.Security.Cryptography.RNGCryptoServiceProvider> RNGCryptoServiceProviderValue, IObservable<System.Byte[]> data)
+        public static IObservable<System.Reactive.Unit> GetNonZeroBytes(
+            this IObservable<System.Security.Cryptography.RNGCryptoServiceProvider> RNGCryptoServiceProviderValue,
+            IObservable<System.Byte[]> data)
         {
-            return ObservableExt.ZipExecute(RNGCryptoServiceProviderValue, data, (RNGCryptoServiceProviderValueLambda, dataLambda) => RNGCryptoServiceProviderValueLambda.GetNonZeroBytes(dataLambda));
+            return ObservableExt.ZipExecute(RNGCryptoServiceProviderValue, data,
+                (RNGCryptoServiceProviderValueLambda, dataLambda) =>
+                    RNGCryptoServiceProviderValueLambda.GetNonZeroBytes(dataLambda));
         }
-
     }
 }

@@ -8,7 +8,6 @@ namespace System
 {
     public static class __Convert
     {
-        
         public static IObservable<System.TypeCode> GetTypeCode(IObservable<System.Object> value)
         {
             return Observable.Select(value, (valueLambda) => System.Convert.GetTypeCode(valueLambda));
@@ -21,27 +20,37 @@ namespace System
         }
 
 
-        public static IObservable<System.Object> ChangeType(IObservable<System.Object> value, IObservable<System.TypeCode> typeCode)
+        public static IObservable<System.Object> ChangeType(IObservable<System.Object> value,
+            IObservable<System.TypeCode> typeCode)
         {
-            return Observable.Zip(value, typeCode, (valueLambda, typeCodeLambda) => System.Convert.ChangeType(valueLambda, typeCodeLambda));
+            return Observable.Zip(value, typeCode,
+                (valueLambda, typeCodeLambda) => System.Convert.ChangeType(valueLambda, typeCodeLambda));
         }
 
 
-        public static IObservable<System.Object> ChangeType(IObservable<System.Object> value, IObservable<System.TypeCode> typeCode, IObservable<System.IFormatProvider> provider)
+        public static IObservable<System.Object> ChangeType(IObservable<System.Object> value,
+            IObservable<System.TypeCode> typeCode, IObservable<System.IFormatProvider> provider)
         {
-            return Observable.Zip(value, typeCode, provider, (valueLambda, typeCodeLambda, providerLambda) => System.Convert.ChangeType(valueLambda, typeCodeLambda, providerLambda));
+            return Observable.Zip(value, typeCode, provider,
+                (valueLambda, typeCodeLambda, providerLambda) =>
+                    System.Convert.ChangeType(valueLambda, typeCodeLambda, providerLambda));
         }
 
 
-        public static IObservable<System.Object> ChangeType(IObservable<System.Object> value, IObservable<System.Type> conversionType)
+        public static IObservable<System.Object> ChangeType(IObservable<System.Object> value,
+            IObservable<System.Type> conversionType)
         {
-            return Observable.Zip(value, conversionType, (valueLambda, conversionTypeLambda) => System.Convert.ChangeType(valueLambda, conversionTypeLambda));
+            return Observable.Zip(value, conversionType,
+                (valueLambda, conversionTypeLambda) => System.Convert.ChangeType(valueLambda, conversionTypeLambda));
         }
 
 
-        public static IObservable<System.Object> ChangeType(IObservable<System.Object> value, IObservable<System.Type> conversionType, IObservable<System.IFormatProvider> provider)
+        public static IObservable<System.Object> ChangeType(IObservable<System.Object> value,
+            IObservable<System.Type> conversionType, IObservable<System.IFormatProvider> provider)
         {
-            return Observable.Zip(value, conversionType, provider, (valueLambda, conversionTypeLambda, providerLambda) => System.Convert.ChangeType(valueLambda, conversionTypeLambda, providerLambda));
+            return Observable.Zip(value, conversionType, provider,
+                (valueLambda, conversionTypeLambda, providerLambda) =>
+                    System.Convert.ChangeType(valueLambda, conversionTypeLambda, providerLambda));
         }
 
 
@@ -51,9 +60,11 @@ namespace System
         }
 
 
-        public static IObservable<System.Boolean> ToBoolean(IObservable<System.Object> value, IObservable<System.IFormatProvider> provider)
+        public static IObservable<System.Boolean> ToBoolean(IObservable<System.Object> value,
+            IObservable<System.IFormatProvider> provider)
         {
-            return Observable.Zip(value, provider, (valueLambda, providerLambda) => System.Convert.ToBoolean(valueLambda, providerLambda));
+            return Observable.Zip(value, provider,
+                (valueLambda, providerLambda) => System.Convert.ToBoolean(valueLambda, providerLambda));
         }
 
 
@@ -123,9 +134,11 @@ namespace System
         }
 
 
-        public static IObservable<System.Boolean> ToBoolean(IObservable<System.String> value, IObservable<System.IFormatProvider> provider)
+        public static IObservable<System.Boolean> ToBoolean(IObservable<System.String> value,
+            IObservable<System.IFormatProvider> provider)
         {
-            return Observable.Zip(value, provider, (valueLambda, providerLambda) => System.Convert.ToBoolean(valueLambda, providerLambda));
+            return Observable.Zip(value, provider,
+                (valueLambda, providerLambda) => System.Convert.ToBoolean(valueLambda, providerLambda));
         }
 
 
@@ -159,9 +172,11 @@ namespace System
         }
 
 
-        public static IObservable<System.Char> ToChar(IObservable<System.Object> value, IObservable<System.IFormatProvider> provider)
+        public static IObservable<System.Char> ToChar(IObservable<System.Object> value,
+            IObservable<System.IFormatProvider> provider)
         {
-            return Observable.Zip(value, provider, (valueLambda, providerLambda) => System.Convert.ToChar(valueLambda, providerLambda));
+            return Observable.Zip(value, provider,
+                (valueLambda, providerLambda) => System.Convert.ToChar(valueLambda, providerLambda));
         }
 
 
@@ -231,9 +246,11 @@ namespace System
         }
 
 
-        public static IObservable<System.Char> ToChar(IObservable<System.String> value, IObservable<System.IFormatProvider> provider)
+        public static IObservable<System.Char> ToChar(IObservable<System.String> value,
+            IObservable<System.IFormatProvider> provider)
         {
-            return Observable.Zip(value, provider, (valueLambda, providerLambda) => System.Convert.ToChar(valueLambda, providerLambda));
+            return Observable.Zip(value, provider,
+                (valueLambda, providerLambda) => System.Convert.ToChar(valueLambda, providerLambda));
         }
 
 
@@ -267,9 +284,11 @@ namespace System
         }
 
 
-        public static IObservable<System.SByte> ToSByte(IObservable<System.Object> value, IObservable<System.IFormatProvider> provider)
+        public static IObservable<System.SByte> ToSByte(IObservable<System.Object> value,
+            IObservable<System.IFormatProvider> provider)
         {
-            return Observable.Zip(value, provider, (valueLambda, providerLambda) => System.Convert.ToSByte(valueLambda, providerLambda));
+            return Observable.Zip(value, provider,
+                (valueLambda, providerLambda) => System.Convert.ToSByte(valueLambda, providerLambda));
         }
 
 
@@ -357,9 +376,11 @@ namespace System
         }
 
 
-        public static IObservable<System.SByte> ToSByte(IObservable<System.String> value, IObservable<System.IFormatProvider> provider)
+        public static IObservable<System.SByte> ToSByte(IObservable<System.String> value,
+            IObservable<System.IFormatProvider> provider)
         {
-            return Observable.Zip(value, provider, (valueLambda, providerLambda) => System.Convert.ToSByte(valueLambda, providerLambda));
+            return Observable.Zip(value, provider,
+                (valueLambda, providerLambda) => System.Convert.ToSByte(valueLambda, providerLambda));
         }
 
 
@@ -375,9 +396,11 @@ namespace System
         }
 
 
-        public static IObservable<System.Byte> ToByte(IObservable<System.Object> value, IObservable<System.IFormatProvider> provider)
+        public static IObservable<System.Byte> ToByte(IObservable<System.Object> value,
+            IObservable<System.IFormatProvider> provider)
         {
-            return Observable.Zip(value, provider, (valueLambda, providerLambda) => System.Convert.ToByte(valueLambda, providerLambda));
+            return Observable.Zip(value, provider,
+                (valueLambda, providerLambda) => System.Convert.ToByte(valueLambda, providerLambda));
         }
 
 
@@ -465,9 +488,11 @@ namespace System
         }
 
 
-        public static IObservable<System.Byte> ToByte(IObservable<System.String> value, IObservable<System.IFormatProvider> provider)
+        public static IObservable<System.Byte> ToByte(IObservable<System.String> value,
+            IObservable<System.IFormatProvider> provider)
         {
-            return Observable.Zip(value, provider, (valueLambda, providerLambda) => System.Convert.ToByte(valueLambda, providerLambda));
+            return Observable.Zip(value, provider,
+                (valueLambda, providerLambda) => System.Convert.ToByte(valueLambda, providerLambda));
         }
 
 
@@ -483,9 +508,11 @@ namespace System
         }
 
 
-        public static IObservable<System.Int16> ToInt16(IObservable<System.Object> value, IObservable<System.IFormatProvider> provider)
+        public static IObservable<System.Int16> ToInt16(IObservable<System.Object> value,
+            IObservable<System.IFormatProvider> provider)
         {
-            return Observable.Zip(value, provider, (valueLambda, providerLambda) => System.Convert.ToInt16(valueLambda, providerLambda));
+            return Observable.Zip(value, provider,
+                (valueLambda, providerLambda) => System.Convert.ToInt16(valueLambda, providerLambda));
         }
 
 
@@ -573,9 +600,11 @@ namespace System
         }
 
 
-        public static IObservable<System.Int16> ToInt16(IObservable<System.String> value, IObservable<System.IFormatProvider> provider)
+        public static IObservable<System.Int16> ToInt16(IObservable<System.String> value,
+            IObservable<System.IFormatProvider> provider)
         {
-            return Observable.Zip(value, provider, (valueLambda, providerLambda) => System.Convert.ToInt16(valueLambda, providerLambda));
+            return Observable.Zip(value, provider,
+                (valueLambda, providerLambda) => System.Convert.ToInt16(valueLambda, providerLambda));
         }
 
 
@@ -591,9 +620,11 @@ namespace System
         }
 
 
-        public static IObservable<System.UInt16> ToUInt16(IObservable<System.Object> value, IObservable<System.IFormatProvider> provider)
+        public static IObservable<System.UInt16> ToUInt16(IObservable<System.Object> value,
+            IObservable<System.IFormatProvider> provider)
         {
-            return Observable.Zip(value, provider, (valueLambda, providerLambda) => System.Convert.ToUInt16(valueLambda, providerLambda));
+            return Observable.Zip(value, provider,
+                (valueLambda, providerLambda) => System.Convert.ToUInt16(valueLambda, providerLambda));
         }
 
 
@@ -681,9 +712,11 @@ namespace System
         }
 
 
-        public static IObservable<System.UInt16> ToUInt16(IObservable<System.String> value, IObservable<System.IFormatProvider> provider)
+        public static IObservable<System.UInt16> ToUInt16(IObservable<System.String> value,
+            IObservable<System.IFormatProvider> provider)
         {
-            return Observable.Zip(value, provider, (valueLambda, providerLambda) => System.Convert.ToUInt16(valueLambda, providerLambda));
+            return Observable.Zip(value, provider,
+                (valueLambda, providerLambda) => System.Convert.ToUInt16(valueLambda, providerLambda));
         }
 
 
@@ -699,9 +732,11 @@ namespace System
         }
 
 
-        public static IObservable<System.Int32> ToInt32(IObservable<System.Object> value, IObservable<System.IFormatProvider> provider)
+        public static IObservable<System.Int32> ToInt32(IObservable<System.Object> value,
+            IObservable<System.IFormatProvider> provider)
         {
-            return Observable.Zip(value, provider, (valueLambda, providerLambda) => System.Convert.ToInt32(valueLambda, providerLambda));
+            return Observable.Zip(value, provider,
+                (valueLambda, providerLambda) => System.Convert.ToInt32(valueLambda, providerLambda));
         }
 
 
@@ -789,9 +824,11 @@ namespace System
         }
 
 
-        public static IObservable<System.Int32> ToInt32(IObservable<System.String> value, IObservable<System.IFormatProvider> provider)
+        public static IObservable<System.Int32> ToInt32(IObservable<System.String> value,
+            IObservable<System.IFormatProvider> provider)
         {
-            return Observable.Zip(value, provider, (valueLambda, providerLambda) => System.Convert.ToInt32(valueLambda, providerLambda));
+            return Observable.Zip(value, provider,
+                (valueLambda, providerLambda) => System.Convert.ToInt32(valueLambda, providerLambda));
         }
 
 
@@ -807,9 +844,11 @@ namespace System
         }
 
 
-        public static IObservable<System.UInt32> ToUInt32(IObservable<System.Object> value, IObservable<System.IFormatProvider> provider)
+        public static IObservable<System.UInt32> ToUInt32(IObservable<System.Object> value,
+            IObservable<System.IFormatProvider> provider)
         {
-            return Observable.Zip(value, provider, (valueLambda, providerLambda) => System.Convert.ToUInt32(valueLambda, providerLambda));
+            return Observable.Zip(value, provider,
+                (valueLambda, providerLambda) => System.Convert.ToUInt32(valueLambda, providerLambda));
         }
 
 
@@ -897,9 +936,11 @@ namespace System
         }
 
 
-        public static IObservable<System.UInt32> ToUInt32(IObservable<System.String> value, IObservable<System.IFormatProvider> provider)
+        public static IObservable<System.UInt32> ToUInt32(IObservable<System.String> value,
+            IObservable<System.IFormatProvider> provider)
         {
-            return Observable.Zip(value, provider, (valueLambda, providerLambda) => System.Convert.ToUInt32(valueLambda, providerLambda));
+            return Observable.Zip(value, provider,
+                (valueLambda, providerLambda) => System.Convert.ToUInt32(valueLambda, providerLambda));
         }
 
 
@@ -915,9 +956,11 @@ namespace System
         }
 
 
-        public static IObservable<System.Int64> ToInt64(IObservable<System.Object> value, IObservable<System.IFormatProvider> provider)
+        public static IObservable<System.Int64> ToInt64(IObservable<System.Object> value,
+            IObservable<System.IFormatProvider> provider)
         {
-            return Observable.Zip(value, provider, (valueLambda, providerLambda) => System.Convert.ToInt64(valueLambda, providerLambda));
+            return Observable.Zip(value, provider,
+                (valueLambda, providerLambda) => System.Convert.ToInt64(valueLambda, providerLambda));
         }
 
 
@@ -1005,9 +1048,11 @@ namespace System
         }
 
 
-        public static IObservable<System.Int64> ToInt64(IObservable<System.String> value, IObservable<System.IFormatProvider> provider)
+        public static IObservable<System.Int64> ToInt64(IObservable<System.String> value,
+            IObservable<System.IFormatProvider> provider)
         {
-            return Observable.Zip(value, provider, (valueLambda, providerLambda) => System.Convert.ToInt64(valueLambda, providerLambda));
+            return Observable.Zip(value, provider,
+                (valueLambda, providerLambda) => System.Convert.ToInt64(valueLambda, providerLambda));
         }
 
 
@@ -1023,9 +1068,11 @@ namespace System
         }
 
 
-        public static IObservable<System.UInt64> ToUInt64(IObservable<System.Object> value, IObservable<System.IFormatProvider> provider)
+        public static IObservable<System.UInt64> ToUInt64(IObservable<System.Object> value,
+            IObservable<System.IFormatProvider> provider)
         {
-            return Observable.Zip(value, provider, (valueLambda, providerLambda) => System.Convert.ToUInt64(valueLambda, providerLambda));
+            return Observable.Zip(value, provider,
+                (valueLambda, providerLambda) => System.Convert.ToUInt64(valueLambda, providerLambda));
         }
 
 
@@ -1113,9 +1160,11 @@ namespace System
         }
 
 
-        public static IObservable<System.UInt64> ToUInt64(IObservable<System.String> value, IObservable<System.IFormatProvider> provider)
+        public static IObservable<System.UInt64> ToUInt64(IObservable<System.String> value,
+            IObservable<System.IFormatProvider> provider)
         {
-            return Observable.Zip(value, provider, (valueLambda, providerLambda) => System.Convert.ToUInt64(valueLambda, providerLambda));
+            return Observable.Zip(value, provider,
+                (valueLambda, providerLambda) => System.Convert.ToUInt64(valueLambda, providerLambda));
         }
 
 
@@ -1131,9 +1180,11 @@ namespace System
         }
 
 
-        public static IObservable<System.Single> ToSingle(IObservable<System.Object> value, IObservable<System.IFormatProvider> provider)
+        public static IObservable<System.Single> ToSingle(IObservable<System.Object> value,
+            IObservable<System.IFormatProvider> provider)
         {
-            return Observable.Zip(value, provider, (valueLambda, providerLambda) => System.Convert.ToSingle(valueLambda, providerLambda));
+            return Observable.Zip(value, provider,
+                (valueLambda, providerLambda) => System.Convert.ToSingle(valueLambda, providerLambda));
         }
 
 
@@ -1215,9 +1266,11 @@ namespace System
         }
 
 
-        public static IObservable<System.Single> ToSingle(IObservable<System.String> value, IObservable<System.IFormatProvider> provider)
+        public static IObservable<System.Single> ToSingle(IObservable<System.String> value,
+            IObservable<System.IFormatProvider> provider)
         {
-            return Observable.Zip(value, provider, (valueLambda, providerLambda) => System.Convert.ToSingle(valueLambda, providerLambda));
+            return Observable.Zip(value, provider,
+                (valueLambda, providerLambda) => System.Convert.ToSingle(valueLambda, providerLambda));
         }
 
 
@@ -1239,9 +1292,11 @@ namespace System
         }
 
 
-        public static IObservable<System.Double> ToDouble(IObservable<System.Object> value, IObservable<System.IFormatProvider> provider)
+        public static IObservable<System.Double> ToDouble(IObservable<System.Object> value,
+            IObservable<System.IFormatProvider> provider)
         {
-            return Observable.Zip(value, provider, (valueLambda, providerLambda) => System.Convert.ToDouble(valueLambda, providerLambda));
+            return Observable.Zip(value, provider,
+                (valueLambda, providerLambda) => System.Convert.ToDouble(valueLambda, providerLambda));
         }
 
 
@@ -1323,9 +1378,11 @@ namespace System
         }
 
 
-        public static IObservable<System.Double> ToDouble(IObservable<System.String> value, IObservable<System.IFormatProvider> provider)
+        public static IObservable<System.Double> ToDouble(IObservable<System.String> value,
+            IObservable<System.IFormatProvider> provider)
         {
-            return Observable.Zip(value, provider, (valueLambda, providerLambda) => System.Convert.ToDouble(valueLambda, providerLambda));
+            return Observable.Zip(value, provider,
+                (valueLambda, providerLambda) => System.Convert.ToDouble(valueLambda, providerLambda));
         }
 
 
@@ -1347,9 +1404,11 @@ namespace System
         }
 
 
-        public static IObservable<System.Decimal> ToDecimal(IObservable<System.Object> value, IObservable<System.IFormatProvider> provider)
+        public static IObservable<System.Decimal> ToDecimal(IObservable<System.Object> value,
+            IObservable<System.IFormatProvider> provider)
         {
-            return Observable.Zip(value, provider, (valueLambda, providerLambda) => System.Convert.ToDecimal(valueLambda, providerLambda));
+            return Observable.Zip(value, provider,
+                (valueLambda, providerLambda) => System.Convert.ToDecimal(valueLambda, providerLambda));
         }
 
 
@@ -1425,9 +1484,11 @@ namespace System
         }
 
 
-        public static IObservable<System.Decimal> ToDecimal(IObservable<System.String> value, IObservable<System.IFormatProvider> provider)
+        public static IObservable<System.Decimal> ToDecimal(IObservable<System.String> value,
+            IObservable<System.IFormatProvider> provider)
         {
-            return Observable.Zip(value, provider, (valueLambda, providerLambda) => System.Convert.ToDecimal(valueLambda, providerLambda));
+            return Observable.Zip(value, provider,
+                (valueLambda, providerLambda) => System.Convert.ToDecimal(valueLambda, providerLambda));
         }
 
 
@@ -1461,9 +1522,11 @@ namespace System
         }
 
 
-        public static IObservable<System.DateTime> ToDateTime(IObservable<System.Object> value, IObservable<System.IFormatProvider> provider)
+        public static IObservable<System.DateTime> ToDateTime(IObservable<System.Object> value,
+            IObservable<System.IFormatProvider> provider)
         {
-            return Observable.Zip(value, provider, (valueLambda, providerLambda) => System.Convert.ToDateTime(valueLambda, providerLambda));
+            return Observable.Zip(value, provider,
+                (valueLambda, providerLambda) => System.Convert.ToDateTime(valueLambda, providerLambda));
         }
 
 
@@ -1473,9 +1536,11 @@ namespace System
         }
 
 
-        public static IObservable<System.DateTime> ToDateTime(IObservable<System.String> value, IObservable<System.IFormatProvider> provider)
+        public static IObservable<System.DateTime> ToDateTime(IObservable<System.String> value,
+            IObservable<System.IFormatProvider> provider)
         {
-            return Observable.Zip(value, provider, (valueLambda, providerLambda) => System.Convert.ToDateTime(valueLambda, providerLambda));
+            return Observable.Zip(value, provider,
+                (valueLambda, providerLambda) => System.Convert.ToDateTime(valueLambda, providerLambda));
         }
 
 
@@ -1563,9 +1628,11 @@ namespace System
         }
 
 
-        public static IObservable<System.String> ToString(IObservable<System.Object> value, IObservable<System.IFormatProvider> provider)
+        public static IObservable<System.String> ToString(IObservable<System.Object> value,
+            IObservable<System.IFormatProvider> provider)
         {
-            return Observable.Zip(value, provider, (valueLambda, providerLambda) => System.Convert.ToString(valueLambda, providerLambda));
+            return Observable.Zip(value, provider,
+                (valueLambda, providerLambda) => System.Convert.ToString(valueLambda, providerLambda));
         }
 
 
@@ -1575,9 +1642,11 @@ namespace System
         }
 
 
-        public static IObservable<System.String> ToString(IObservable<System.Boolean> value, IObservable<System.IFormatProvider> provider)
+        public static IObservable<System.String> ToString(IObservable<System.Boolean> value,
+            IObservable<System.IFormatProvider> provider)
         {
-            return Observable.Zip(value, provider, (valueLambda, providerLambda) => System.Convert.ToString(valueLambda, providerLambda));
+            return Observable.Zip(value, provider,
+                (valueLambda, providerLambda) => System.Convert.ToString(valueLambda, providerLambda));
         }
 
 
@@ -1587,9 +1656,11 @@ namespace System
         }
 
 
-        public static IObservable<System.String> ToString(IObservable<System.Char> value, IObservable<System.IFormatProvider> provider)
+        public static IObservable<System.String> ToString(IObservable<System.Char> value,
+            IObservable<System.IFormatProvider> provider)
         {
-            return Observable.Zip(value, provider, (valueLambda, providerLambda) => System.Convert.ToString(valueLambda, providerLambda));
+            return Observable.Zip(value, provider,
+                (valueLambda, providerLambda) => System.Convert.ToString(valueLambda, providerLambda));
         }
 
 
@@ -1599,9 +1670,11 @@ namespace System
         }
 
 
-        public static IObservable<System.String> ToString(IObservable<System.SByte> value, IObservable<System.IFormatProvider> provider)
+        public static IObservable<System.String> ToString(IObservable<System.SByte> value,
+            IObservable<System.IFormatProvider> provider)
         {
-            return Observable.Zip(value, provider, (valueLambda, providerLambda) => System.Convert.ToString(valueLambda, providerLambda));
+            return Observable.Zip(value, provider,
+                (valueLambda, providerLambda) => System.Convert.ToString(valueLambda, providerLambda));
         }
 
 
@@ -1611,9 +1684,11 @@ namespace System
         }
 
 
-        public static IObservable<System.String> ToString(IObservable<System.Byte> value, IObservable<System.IFormatProvider> provider)
+        public static IObservable<System.String> ToString(IObservable<System.Byte> value,
+            IObservable<System.IFormatProvider> provider)
         {
-            return Observable.Zip(value, provider, (valueLambda, providerLambda) => System.Convert.ToString(valueLambda, providerLambda));
+            return Observable.Zip(value, provider,
+                (valueLambda, providerLambda) => System.Convert.ToString(valueLambda, providerLambda));
         }
 
 
@@ -1623,9 +1698,11 @@ namespace System
         }
 
 
-        public static IObservable<System.String> ToString(IObservable<System.Int16> value, IObservable<System.IFormatProvider> provider)
+        public static IObservable<System.String> ToString(IObservable<System.Int16> value,
+            IObservable<System.IFormatProvider> provider)
         {
-            return Observable.Zip(value, provider, (valueLambda, providerLambda) => System.Convert.ToString(valueLambda, providerLambda));
+            return Observable.Zip(value, provider,
+                (valueLambda, providerLambda) => System.Convert.ToString(valueLambda, providerLambda));
         }
 
 
@@ -1635,9 +1712,11 @@ namespace System
         }
 
 
-        public static IObservable<System.String> ToString(IObservable<System.UInt16> value, IObservable<System.IFormatProvider> provider)
+        public static IObservable<System.String> ToString(IObservable<System.UInt16> value,
+            IObservable<System.IFormatProvider> provider)
         {
-            return Observable.Zip(value, provider, (valueLambda, providerLambda) => System.Convert.ToString(valueLambda, providerLambda));
+            return Observable.Zip(value, provider,
+                (valueLambda, providerLambda) => System.Convert.ToString(valueLambda, providerLambda));
         }
 
 
@@ -1647,9 +1726,11 @@ namespace System
         }
 
 
-        public static IObservable<System.String> ToString(IObservable<System.Int32> value, IObservable<System.IFormatProvider> provider)
+        public static IObservable<System.String> ToString(IObservable<System.Int32> value,
+            IObservable<System.IFormatProvider> provider)
         {
-            return Observable.Zip(value, provider, (valueLambda, providerLambda) => System.Convert.ToString(valueLambda, providerLambda));
+            return Observable.Zip(value, provider,
+                (valueLambda, providerLambda) => System.Convert.ToString(valueLambda, providerLambda));
         }
 
 
@@ -1659,9 +1740,11 @@ namespace System
         }
 
 
-        public static IObservable<System.String> ToString(IObservable<System.UInt32> value, IObservable<System.IFormatProvider> provider)
+        public static IObservable<System.String> ToString(IObservable<System.UInt32> value,
+            IObservable<System.IFormatProvider> provider)
         {
-            return Observable.Zip(value, provider, (valueLambda, providerLambda) => System.Convert.ToString(valueLambda, providerLambda));
+            return Observable.Zip(value, provider,
+                (valueLambda, providerLambda) => System.Convert.ToString(valueLambda, providerLambda));
         }
 
 
@@ -1671,9 +1754,11 @@ namespace System
         }
 
 
-        public static IObservable<System.String> ToString(IObservable<System.Int64> value, IObservable<System.IFormatProvider> provider)
+        public static IObservable<System.String> ToString(IObservable<System.Int64> value,
+            IObservable<System.IFormatProvider> provider)
         {
-            return Observable.Zip(value, provider, (valueLambda, providerLambda) => System.Convert.ToString(valueLambda, providerLambda));
+            return Observable.Zip(value, provider,
+                (valueLambda, providerLambda) => System.Convert.ToString(valueLambda, providerLambda));
         }
 
 
@@ -1683,9 +1768,11 @@ namespace System
         }
 
 
-        public static IObservable<System.String> ToString(IObservable<System.UInt64> value, IObservable<System.IFormatProvider> provider)
+        public static IObservable<System.String> ToString(IObservable<System.UInt64> value,
+            IObservable<System.IFormatProvider> provider)
         {
-            return Observable.Zip(value, provider, (valueLambda, providerLambda) => System.Convert.ToString(valueLambda, providerLambda));
+            return Observable.Zip(value, provider,
+                (valueLambda, providerLambda) => System.Convert.ToString(valueLambda, providerLambda));
         }
 
 
@@ -1695,9 +1782,11 @@ namespace System
         }
 
 
-        public static IObservable<System.String> ToString(IObservable<System.Single> value, IObservable<System.IFormatProvider> provider)
+        public static IObservable<System.String> ToString(IObservable<System.Single> value,
+            IObservable<System.IFormatProvider> provider)
         {
-            return Observable.Zip(value, provider, (valueLambda, providerLambda) => System.Convert.ToString(valueLambda, providerLambda));
+            return Observable.Zip(value, provider,
+                (valueLambda, providerLambda) => System.Convert.ToString(valueLambda, providerLambda));
         }
 
 
@@ -1707,9 +1796,11 @@ namespace System
         }
 
 
-        public static IObservable<System.String> ToString(IObservable<System.Double> value, IObservable<System.IFormatProvider> provider)
+        public static IObservable<System.String> ToString(IObservable<System.Double> value,
+            IObservable<System.IFormatProvider> provider)
         {
-            return Observable.Zip(value, provider, (valueLambda, providerLambda) => System.Convert.ToString(valueLambda, providerLambda));
+            return Observable.Zip(value, provider,
+                (valueLambda, providerLambda) => System.Convert.ToString(valueLambda, providerLambda));
         }
 
 
@@ -1719,9 +1810,11 @@ namespace System
         }
 
 
-        public static IObservable<System.String> ToString(IObservable<System.Decimal> value, IObservable<System.IFormatProvider> provider)
+        public static IObservable<System.String> ToString(IObservable<System.Decimal> value,
+            IObservable<System.IFormatProvider> provider)
         {
-            return Observable.Zip(value, provider, (valueLambda, providerLambda) => System.Convert.ToString(valueLambda, providerLambda));
+            return Observable.Zip(value, provider,
+                (valueLambda, providerLambda) => System.Convert.ToString(valueLambda, providerLambda));
         }
 
 
@@ -1731,9 +1824,11 @@ namespace System
         }
 
 
-        public static IObservable<System.String> ToString(IObservable<System.DateTime> value, IObservable<System.IFormatProvider> provider)
+        public static IObservable<System.String> ToString(IObservable<System.DateTime> value,
+            IObservable<System.IFormatProvider> provider)
         {
-            return Observable.Zip(value, provider, (valueLambda, providerLambda) => System.Convert.ToString(valueLambda, providerLambda));
+            return Observable.Zip(value, provider,
+                (valueLambda, providerLambda) => System.Convert.ToString(valueLambda, providerLambda));
         }
 
 
@@ -1743,81 +1838,107 @@ namespace System
         }
 
 
-        public static IObservable<System.String> ToString(IObservable<System.String> value, IObservable<System.IFormatProvider> provider)
+        public static IObservable<System.String> ToString(IObservable<System.String> value,
+            IObservable<System.IFormatProvider> provider)
         {
-            return Observable.Zip(value, provider, (valueLambda, providerLambda) => System.Convert.ToString(valueLambda, providerLambda));
+            return Observable.Zip(value, provider,
+                (valueLambda, providerLambda) => System.Convert.ToString(valueLambda, providerLambda));
         }
 
 
-        public static IObservable<System.Byte> ToByte(IObservable<System.String> value, IObservable<System.Int32> fromBase)
+        public static IObservable<System.Byte> ToByte(IObservable<System.String> value,
+            IObservable<System.Int32> fromBase)
         {
-            return Observable.Zip(value, fromBase, (valueLambda, fromBaseLambda) => System.Convert.ToByte(valueLambda, fromBaseLambda));
+            return Observable.Zip(value, fromBase,
+                (valueLambda, fromBaseLambda) => System.Convert.ToByte(valueLambda, fromBaseLambda));
         }
 
 
-        public static IObservable<System.SByte> ToSByte(IObservable<System.String> value, IObservable<System.Int32> fromBase)
+        public static IObservable<System.SByte> ToSByte(IObservable<System.String> value,
+            IObservable<System.Int32> fromBase)
         {
-            return Observable.Zip(value, fromBase, (valueLambda, fromBaseLambda) => System.Convert.ToSByte(valueLambda, fromBaseLambda));
+            return Observable.Zip(value, fromBase,
+                (valueLambda, fromBaseLambda) => System.Convert.ToSByte(valueLambda, fromBaseLambda));
         }
 
 
-        public static IObservable<System.Int16> ToInt16(IObservable<System.String> value, IObservable<System.Int32> fromBase)
+        public static IObservable<System.Int16> ToInt16(IObservable<System.String> value,
+            IObservable<System.Int32> fromBase)
         {
-            return Observable.Zip(value, fromBase, (valueLambda, fromBaseLambda) => System.Convert.ToInt16(valueLambda, fromBaseLambda));
+            return Observable.Zip(value, fromBase,
+                (valueLambda, fromBaseLambda) => System.Convert.ToInt16(valueLambda, fromBaseLambda));
         }
 
 
-        public static IObservable<System.UInt16> ToUInt16(IObservable<System.String> value, IObservable<System.Int32> fromBase)
+        public static IObservable<System.UInt16> ToUInt16(IObservable<System.String> value,
+            IObservable<System.Int32> fromBase)
         {
-            return Observable.Zip(value, fromBase, (valueLambda, fromBaseLambda) => System.Convert.ToUInt16(valueLambda, fromBaseLambda));
+            return Observable.Zip(value, fromBase,
+                (valueLambda, fromBaseLambda) => System.Convert.ToUInt16(valueLambda, fromBaseLambda));
         }
 
 
-        public static IObservable<System.Int32> ToInt32(IObservable<System.String> value, IObservable<System.Int32> fromBase)
+        public static IObservable<System.Int32> ToInt32(IObservable<System.String> value,
+            IObservable<System.Int32> fromBase)
         {
-            return Observable.Zip(value, fromBase, (valueLambda, fromBaseLambda) => System.Convert.ToInt32(valueLambda, fromBaseLambda));
+            return Observable.Zip(value, fromBase,
+                (valueLambda, fromBaseLambda) => System.Convert.ToInt32(valueLambda, fromBaseLambda));
         }
 
 
-        public static IObservable<System.UInt32> ToUInt32(IObservable<System.String> value, IObservable<System.Int32> fromBase)
+        public static IObservable<System.UInt32> ToUInt32(IObservable<System.String> value,
+            IObservable<System.Int32> fromBase)
         {
-            return Observable.Zip(value, fromBase, (valueLambda, fromBaseLambda) => System.Convert.ToUInt32(valueLambda, fromBaseLambda));
+            return Observable.Zip(value, fromBase,
+                (valueLambda, fromBaseLambda) => System.Convert.ToUInt32(valueLambda, fromBaseLambda));
         }
 
 
-        public static IObservable<System.Int64> ToInt64(IObservable<System.String> value, IObservable<System.Int32> fromBase)
+        public static IObservable<System.Int64> ToInt64(IObservable<System.String> value,
+            IObservable<System.Int32> fromBase)
         {
-            return Observable.Zip(value, fromBase, (valueLambda, fromBaseLambda) => System.Convert.ToInt64(valueLambda, fromBaseLambda));
+            return Observable.Zip(value, fromBase,
+                (valueLambda, fromBaseLambda) => System.Convert.ToInt64(valueLambda, fromBaseLambda));
         }
 
 
-        public static IObservable<System.UInt64> ToUInt64(IObservable<System.String> value, IObservable<System.Int32> fromBase)
+        public static IObservable<System.UInt64> ToUInt64(IObservable<System.String> value,
+            IObservable<System.Int32> fromBase)
         {
-            return Observable.Zip(value, fromBase, (valueLambda, fromBaseLambda) => System.Convert.ToUInt64(valueLambda, fromBaseLambda));
+            return Observable.Zip(value, fromBase,
+                (valueLambda, fromBaseLambda) => System.Convert.ToUInt64(valueLambda, fromBaseLambda));
         }
 
 
-        public static IObservable<System.String> ToString(IObservable<System.Byte> value, IObservable<System.Int32> toBase)
+        public static IObservable<System.String> ToString(IObservable<System.Byte> value,
+            IObservable<System.Int32> toBase)
         {
-            return Observable.Zip(value, toBase, (valueLambda, toBaseLambda) => System.Convert.ToString(valueLambda, toBaseLambda));
+            return Observable.Zip(value, toBase,
+                (valueLambda, toBaseLambda) => System.Convert.ToString(valueLambda, toBaseLambda));
         }
 
 
-        public static IObservable<System.String> ToString(IObservable<System.Int16> value, IObservable<System.Int32> toBase)
+        public static IObservable<System.String> ToString(IObservable<System.Int16> value,
+            IObservable<System.Int32> toBase)
         {
-            return Observable.Zip(value, toBase, (valueLambda, toBaseLambda) => System.Convert.ToString(valueLambda, toBaseLambda));
+            return Observable.Zip(value, toBase,
+                (valueLambda, toBaseLambda) => System.Convert.ToString(valueLambda, toBaseLambda));
         }
 
 
-        public static IObservable<System.String> ToString(IObservable<System.Int32> value, IObservable<System.Int32> toBase)
+        public static IObservable<System.String> ToString(IObservable<System.Int32> value,
+            IObservable<System.Int32> toBase)
         {
-            return Observable.Zip(value, toBase, (valueLambda, toBaseLambda) => System.Convert.ToString(valueLambda, toBaseLambda));
+            return Observable.Zip(value, toBase,
+                (valueLambda, toBaseLambda) => System.Convert.ToString(valueLambda, toBaseLambda));
         }
 
 
-        public static IObservable<System.String> ToString(IObservable<System.Int64> value, IObservable<System.Int32> toBase)
+        public static IObservable<System.String> ToString(IObservable<System.Int64> value,
+            IObservable<System.Int32> toBase)
         {
-            return Observable.Zip(value, toBase, (valueLambda, toBaseLambda) => System.Convert.ToString(valueLambda, toBaseLambda));
+            return Observable.Zip(value, toBase,
+                (valueLambda, toBaseLambda) => System.Convert.ToString(valueLambda, toBaseLambda));
         }
 
 
@@ -1827,33 +1948,52 @@ namespace System
         }
 
 
-        public static IObservable<System.String> ToBase64String(IObservable<System.Byte[]> inArray, IObservable<System.Base64FormattingOptions> options)
+        public static IObservable<System.String> ToBase64String(IObservable<System.Byte[]> inArray,
+            IObservable<System.Base64FormattingOptions> options)
         {
-            return Observable.Zip(inArray, options, (inArrayLambda, optionsLambda) => System.Convert.ToBase64String(inArrayLambda, optionsLambda));
+            return Observable.Zip(inArray, options,
+                (inArrayLambda, optionsLambda) => System.Convert.ToBase64String(inArrayLambda, optionsLambda));
         }
 
 
-        public static IObservable<System.String> ToBase64String(IObservable<System.Byte[]> inArray, IObservable<System.Int32> offset, IObservable<System.Int32> length)
+        public static IObservable<System.String> ToBase64String(IObservable<System.Byte[]> inArray,
+            IObservable<System.Int32> offset, IObservable<System.Int32> length)
         {
-            return Observable.Zip(inArray, offset, length, (inArrayLambda, offsetLambda, lengthLambda) => System.Convert.ToBase64String(inArrayLambda, offsetLambda, lengthLambda));
+            return Observable.Zip(inArray, offset, length,
+                (inArrayLambda, offsetLambda, lengthLambda) =>
+                    System.Convert.ToBase64String(inArrayLambda, offsetLambda, lengthLambda));
         }
 
 
-        public static IObservable<System.String> ToBase64String(IObservable<System.Byte[]> inArray, IObservable<System.Int32> offset, IObservable<System.Int32> length, IObservable<System.Base64FormattingOptions> options)
+        public static IObservable<System.String> ToBase64String(IObservable<System.Byte[]> inArray,
+            IObservable<System.Int32> offset, IObservable<System.Int32> length,
+            IObservable<System.Base64FormattingOptions> options)
         {
-            return Observable.Zip(inArray, offset, length, options, (inArrayLambda, offsetLambda, lengthLambda, optionsLambda) => System.Convert.ToBase64String(inArrayLambda, offsetLambda, lengthLambda, optionsLambda));
+            return Observable.Zip(inArray, offset, length, options,
+                (inArrayLambda, offsetLambda, lengthLambda, optionsLambda) =>
+                    System.Convert.ToBase64String(inArrayLambda, offsetLambda, lengthLambda, optionsLambda));
         }
 
 
-        public static IObservable<System.Int32> ToBase64CharArray(IObservable<System.Byte[]> inArray, IObservable<System.Int32> offsetIn, IObservable<System.Int32> length, IObservable<System.Char[]> outArray, IObservable<System.Int32> offsetOut)
+        public static IObservable<System.Int32> ToBase64CharArray(IObservable<System.Byte[]> inArray,
+            IObservable<System.Int32> offsetIn, IObservable<System.Int32> length, IObservable<System.Char[]> outArray,
+            IObservable<System.Int32> offsetOut)
         {
-            return Observable.Zip(inArray, offsetIn, length, outArray, offsetOut, (inArrayLambda, offsetInLambda, lengthLambda, outArrayLambda, offsetOutLambda) => System.Convert.ToBase64CharArray(inArrayLambda, offsetInLambda, lengthLambda, outArrayLambda, offsetOutLambda));
+            return Observable.Zip(inArray, offsetIn, length, outArray, offsetOut,
+                (inArrayLambda, offsetInLambda, lengthLambda, outArrayLambda, offsetOutLambda) =>
+                    System.Convert.ToBase64CharArray(inArrayLambda, offsetInLambda, lengthLambda, outArrayLambda,
+                        offsetOutLambda));
         }
 
 
-        public static IObservable<System.Int32> ToBase64CharArray(IObservable<System.Byte[]> inArray, IObservable<System.Int32> offsetIn, IObservable<System.Int32> length, IObservable<System.Char[]> outArray, IObservable<System.Int32> offsetOut, IObservable<System.Base64FormattingOptions> options)
+        public static IObservable<System.Int32> ToBase64CharArray(IObservable<System.Byte[]> inArray,
+            IObservable<System.Int32> offsetIn, IObservable<System.Int32> length, IObservable<System.Char[]> outArray,
+            IObservable<System.Int32> offsetOut, IObservable<System.Base64FormattingOptions> options)
         {
-            return Observable.Zip(inArray, offsetIn, length, outArray, offsetOut, options, (inArrayLambda, offsetInLambda, lengthLambda, outArrayLambda, offsetOutLambda, optionsLambda) => System.Convert.ToBase64CharArray(inArrayLambda, offsetInLambda, lengthLambda, outArrayLambda, offsetOutLambda, optionsLambda));
+            return Observable.Zip(inArray, offsetIn, length, outArray, offsetOut, options,
+                (inArrayLambda, offsetInLambda, lengthLambda, outArrayLambda, offsetOutLambda, optionsLambda) =>
+                    System.Convert.ToBase64CharArray(inArrayLambda, offsetInLambda, lengthLambda, outArrayLambda,
+                        offsetOutLambda, optionsLambda));
         }
 
 
@@ -1863,10 +2003,12 @@ namespace System
         }
 
 
-        public static IObservable<System.Byte[]> FromBase64CharArray(IObservable<System.Char[]> inArray, IObservable<System.Int32> offset, IObservable<System.Int32> length)
+        public static IObservable<System.Byte[]> FromBase64CharArray(IObservable<System.Char[]> inArray,
+            IObservable<System.Int32> offset, IObservable<System.Int32> length)
         {
-            return Observable.Zip(inArray, offset, length, (inArrayLambda, offsetLambda, lengthLambda) => System.Convert.FromBase64CharArray(inArrayLambda, offsetLambda, lengthLambda));
+            return Observable.Zip(inArray, offset, length,
+                (inArrayLambda, offsetLambda, lengthLambda) =>
+                    System.Convert.FromBase64CharArray(inArrayLambda, offsetLambda, lengthLambda));
         }
-
     }
 }

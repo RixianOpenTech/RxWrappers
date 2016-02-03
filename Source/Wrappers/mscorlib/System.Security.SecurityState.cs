@@ -8,17 +8,20 @@ namespace System.Security
 {
     public static class __SecurityState
     {
-        
-        public static IObservable<System.Boolean> IsStateAvailable(this IObservable<System.Security.SecurityState> SecurityStateValue)
+        public static IObservable<System.Boolean> IsStateAvailable(
+            this IObservable<System.Security.SecurityState> SecurityStateValue)
         {
-            return Observable.Select(SecurityStateValue, (SecurityStateValueLambda) => SecurityStateValueLambda.IsStateAvailable());
+            return Observable.Select(SecurityStateValue,
+                (SecurityStateValueLambda) => SecurityStateValueLambda.IsStateAvailable());
         }
 
 
-        public static IObservable<System.Reactive.Unit> EnsureState(this IObservable<System.Security.SecurityState> SecurityStateValue)
+        public static IObservable<System.Reactive.Unit> EnsureState(
+            this IObservable<System.Security.SecurityState> SecurityStateValue)
         {
-            return Observable.Do(SecurityStateValue, (SecurityStateValueLambda) => SecurityStateValueLambda.EnsureState()).ToUnit();
+            return
+                Observable.Do(SecurityStateValue, (SecurityStateValueLambda) => SecurityStateValueLambda.EnsureState())
+                    .ToUnit();
         }
-
     }
 }

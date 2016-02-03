@@ -8,6 +8,5 @@ namespace System.Reflection
 {
     public static class __ExceptionHandlingClauseOptions
     {
-        
     }
 }

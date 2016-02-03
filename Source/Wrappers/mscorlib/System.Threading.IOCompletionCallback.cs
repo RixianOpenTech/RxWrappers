@@ -8,11 +8,13 @@ namespace System.Threading
 {
     public static class __IOCompletionCallback
     {
-        
-        public static IObservable<System.Reactive.Unit> EndInvoke(this IObservable<System.Threading.IOCompletionCallback> IOCompletionCallbackValue, IObservable<System.IAsyncResult> result)
+        public static IObservable<System.Reactive.Unit> EndInvoke(
+            this IObservable<System.Threading.IOCompletionCallback> IOCompletionCallbackValue,
+            IObservable<System.IAsyncResult> result)
         {
-            return ObservableExt.ZipExecute(IOCompletionCallbackValue, result, (IOCompletionCallbackValueLambda, resultLambda) => IOCompletionCallbackValueLambda.EndInvoke(resultLambda));
+            return ObservableExt.ZipExecute(IOCompletionCallbackValue, result,
+                (IOCompletionCallbackValueLambda, resultLambda) =>
+                    IOCompletionCallbackValueLambda.EndInvoke(resultLambda));
         }
-
     }
 }

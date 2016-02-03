@@ -8,22 +8,27 @@ namespace System
 {
     public static class __ArraySegment1
     {
-        
-        public static IObservable<System.Int32> GetHashCode<T>(this IObservable<System.ArraySegment<T>> ArraySegmentValue)
+        public static IObservable<System.Int32> GetHashCode<T>(
+            this IObservable<System.ArraySegment<T>> ArraySegmentValue)
         {
-            return Observable.Select(ArraySegmentValue, (ArraySegmentValueLambda) => ArraySegmentValueLambda.GetHashCode());
+            return Observable.Select(ArraySegmentValue,
+                (ArraySegmentValueLambda) => ArraySegmentValueLambda.GetHashCode());
         }
 
 
-        public static IObservable<System.Boolean> Equals<T>(this IObservable<System.ArraySegment<T>> ArraySegmentValue, IObservable<System.Object> obj)
+        public static IObservable<System.Boolean> Equals<T>(this IObservable<System.ArraySegment<T>> ArraySegmentValue,
+            IObservable<System.Object> obj)
         {
-            return Observable.Zip(ArraySegmentValue, obj, (ArraySegmentValueLambda, objLambda) => ArraySegmentValueLambda.Equals(objLambda));
+            return Observable.Zip(ArraySegmentValue, obj,
+                (ArraySegmentValueLambda, objLambda) => ArraySegmentValueLambda.Equals(objLambda));
         }
 
 
-        public static IObservable<System.Boolean> Equals<T>(this IObservable<System.ArraySegment<T>> ArraySegmentValue, IObservable<System.ArraySegment<T>> obj)
+        public static IObservable<System.Boolean> Equals<T>(this IObservable<System.ArraySegment<T>> ArraySegmentValue,
+            IObservable<System.ArraySegment<T>> obj)
         {
-            return Observable.Zip(ArraySegmentValue, obj, (ArraySegmentValueLambda, objLambda) => ArraySegmentValueLambda.Equals(objLambda));
+            return Observable.Zip(ArraySegmentValue, obj,
+                (ArraySegmentValueLambda, objLambda) => ArraySegmentValueLambda.Equals(objLambda));
         }
 
 
@@ -43,6 +48,5 @@ namespace System
         {
             return Observable.Select(ArraySegmentValue, (ArraySegmentValueLambda) => ArraySegmentValueLambda.Count);
         }
-
     }
 }

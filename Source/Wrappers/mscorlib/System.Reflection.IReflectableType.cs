@@ -8,11 +8,11 @@ namespace System.Reflection
 {
     public static class __IReflectableType
     {
-        
-        public static IObservable<System.Reflection.TypeInfo> GetTypeInfo(this IObservable<System.Reflection.IReflectableType> IReflectableTypeValue)
+        public static IObservable<System.Reflection.TypeInfo> GetTypeInfo(
+            this IObservable<System.Reflection.IReflectableType> IReflectableTypeValue)
         {
-            return Observable.Select(IReflectableTypeValue, (IReflectableTypeValueLambda) => IReflectableTypeValueLambda.GetTypeInfo());
+            return Observable.Select(IReflectableTypeValue,
+                (IReflectableTypeValueLambda) => IReflectableTypeValueLambda.GetTypeInfo());
         }
-
     }
 }

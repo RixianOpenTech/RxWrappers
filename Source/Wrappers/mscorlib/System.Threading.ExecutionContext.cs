@@ -8,22 +8,30 @@ namespace System.Threading
 {
     public static class __ExecutionContext
     {
-        
-        public static IObservable<System.Reactive.Unit> Dispose(this IObservable<System.Threading.ExecutionContext> ExecutionContextValue)
+        public static IObservable<System.Reactive.Unit> Dispose(
+            this IObservable<System.Threading.ExecutionContext> ExecutionContextValue)
         {
-            return Observable.Do(ExecutionContextValue, (ExecutionContextValueLambda) => ExecutionContextValueLambda.Dispose()).ToUnit();
+            return
+                Observable.Do(ExecutionContextValue,
+                    (ExecutionContextValueLambda) => ExecutionContextValueLambda.Dispose()).ToUnit();
         }
 
 
-        public static IObservable<System.Reactive.Unit> Run(IObservable<System.Threading.ExecutionContext> executionContext, IObservable<System.Threading.ContextCallback> callback, IObservable<System.Object> state)
+        public static IObservable<System.Reactive.Unit> Run(
+            IObservable<System.Threading.ExecutionContext> executionContext,
+            IObservable<System.Threading.ContextCallback> callback, IObservable<System.Object> state)
         {
-            return ObservableExt.ZipExecute(executionContext, callback, state, (executionContextLambda, callbackLambda, stateLambda) => System.Threading.ExecutionContext.Run(executionContextLambda, callbackLambda, stateLambda));
+            return ObservableExt.ZipExecute(executionContext, callback, state,
+                (executionContextLambda, callbackLambda, stateLambda) =>
+                    System.Threading.ExecutionContext.Run(executionContextLambda, callbackLambda, stateLambda));
         }
 
 
-        public static IObservable<System.Threading.ExecutionContext> CreateCopy(this IObservable<System.Threading.ExecutionContext> ExecutionContextValue)
+        public static IObservable<System.Threading.ExecutionContext> CreateCopy(
+            this IObservable<System.Threading.ExecutionContext> ExecutionContextValue)
         {
-            return Observable.Select(ExecutionContextValue, (ExecutionContextValueLambda) => ExecutionContextValueLambda.CreateCopy());
+            return Observable.Select(ExecutionContextValue,
+                (ExecutionContextValueLambda) => ExecutionContextValueLambda.CreateCopy());
         }
 
 
@@ -51,10 +59,14 @@ namespace System.Threading
         }
 
 
-        public static IObservable<System.Reactive.Unit> GetObjectData(this IObservable<System.Threading.ExecutionContext> ExecutionContextValue, IObservable<System.Runtime.Serialization.SerializationInfo> info, IObservable<System.Runtime.Serialization.StreamingContext> context)
+        public static IObservable<System.Reactive.Unit> GetObjectData(
+            this IObservable<System.Threading.ExecutionContext> ExecutionContextValue,
+            IObservable<System.Runtime.Serialization.SerializationInfo> info,
+            IObservable<System.Runtime.Serialization.StreamingContext> context)
         {
-            return ObservableExt.ZipExecute(ExecutionContextValue, info, context, (ExecutionContextValueLambda, infoLambda, contextLambda) => ExecutionContextValueLambda.GetObjectData(infoLambda, contextLambda));
+            return ObservableExt.ZipExecute(ExecutionContextValue, info, context,
+                (ExecutionContextValueLambda, infoLambda, contextLambda) =>
+                    ExecutionContextValueLambda.GetObjectData(infoLambda, contextLambda));
         }
-
     }
 }

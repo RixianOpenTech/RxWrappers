@@ -8,16 +8,17 @@ namespace System.Runtime.Remoting.Metadata.W3cXsd2001
 {
     public static class __SoapDateTime
     {
-        
         public static IObservable<System.String> ToString(IObservable<System.DateTime> value)
         {
-            return Observable.Select(value, (valueLambda) => System.Runtime.Remoting.Metadata.W3cXsd2001.SoapDateTime.ToString(valueLambda));
+            return Observable.Select(value,
+                (valueLambda) => System.Runtime.Remoting.Metadata.W3cXsd2001.SoapDateTime.ToString(valueLambda));
         }
 
 
         public static IObservable<System.DateTime> Parse(IObservable<System.String> value)
         {
-            return Observable.Select(value, (valueLambda) => System.Runtime.Remoting.Metadata.W3cXsd2001.SoapDateTime.Parse(valueLambda));
+            return Observable.Select(value,
+                (valueLambda) => System.Runtime.Remoting.Metadata.W3cXsd2001.SoapDateTime.Parse(valueLambda));
         }
 
 
@@ -25,6 +26,5 @@ namespace System.Runtime.Remoting.Metadata.W3cXsd2001
         {
             return ObservableExt.Factory(() => System.Runtime.Remoting.Metadata.W3cXsd2001.SoapDateTime.XsdType);
         }
-
     }
 }

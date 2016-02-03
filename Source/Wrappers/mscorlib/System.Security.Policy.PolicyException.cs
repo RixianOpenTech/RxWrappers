@@ -8,6 +8,5 @@ namespace System.Security.Policy
 {
     public static class __PolicyException
     {
-        
     }
 }

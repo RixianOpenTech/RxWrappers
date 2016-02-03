@@ -8,7 +8,6 @@ namespace System.Collections
 {
     public static class __Stack
     {
-        
         public static IObservable<System.Reactive.Unit> Clear(this IObservable<System.Collections.Stack> StackValue)
         {
             return Observable.Do(StackValue, (StackValueLambda) => StackValueLambda.Clear()).ToUnit();
@@ -21,19 +20,23 @@ namespace System.Collections
         }
 
 
-        public static IObservable<System.Boolean> Contains(this IObservable<System.Collections.Stack> StackValue, IObservable<System.Object> obj)
+        public static IObservable<System.Boolean> Contains(this IObservable<System.Collections.Stack> StackValue,
+            IObservable<System.Object> obj)
         {
             return Observable.Zip(StackValue, obj, (StackValueLambda, objLambda) => StackValueLambda.Contains(objLambda));
         }
 
 
-        public static IObservable<System.Reactive.Unit> CopyTo(this IObservable<System.Collections.Stack> StackValue, IObservable<System.Array> array, IObservable<System.Int32> index)
+        public static IObservable<System.Reactive.Unit> CopyTo(this IObservable<System.Collections.Stack> StackValue,
+            IObservable<System.Array> array, IObservable<System.Int32> index)
         {
-            return ObservableExt.ZipExecute(StackValue, array, index, (StackValueLambda, arrayLambda, indexLambda) => StackValueLambda.CopyTo(arrayLambda, indexLambda));
+            return ObservableExt.ZipExecute(StackValue, array, index,
+                (StackValueLambda, arrayLambda, indexLambda) => StackValueLambda.CopyTo(arrayLambda, indexLambda));
         }
 
 
-        public static IObservable<System.Collections.IEnumerator> GetEnumerator(this IObservable<System.Collections.Stack> StackValue)
+        public static IObservable<System.Collections.IEnumerator> GetEnumerator(
+            this IObservable<System.Collections.Stack> StackValue)
         {
             return Observable.Select(StackValue, (StackValueLambda) => StackValueLambda.GetEnumerator());
         }
@@ -51,9 +54,11 @@ namespace System.Collections
         }
 
 
-        public static IObservable<System.Reactive.Unit> Push(this IObservable<System.Collections.Stack> StackValue, IObservable<System.Object> obj)
+        public static IObservable<System.Reactive.Unit> Push(this IObservable<System.Collections.Stack> StackValue,
+            IObservable<System.Object> obj)
         {
-            return ObservableExt.ZipExecute(StackValue, obj, (StackValueLambda, objLambda) => StackValueLambda.Push(objLambda));
+            return ObservableExt.ZipExecute(StackValue, obj,
+                (StackValueLambda, objLambda) => StackValueLambda.Push(objLambda));
         }
 
 
@@ -75,7 +80,8 @@ namespace System.Collections
         }
 
 
-        public static IObservable<System.Boolean> get_IsSynchronized(this IObservable<System.Collections.Stack> StackValue)
+        public static IObservable<System.Boolean> get_IsSynchronized(
+            this IObservable<System.Collections.Stack> StackValue)
         {
             return Observable.Select(StackValue, (StackValueLambda) => StackValueLambda.IsSynchronized);
         }
@@ -85,6 +91,5 @@ namespace System.Collections
         {
             return Observable.Select(StackValue, (StackValueLambda) => StackValueLambda.SyncRoot);
         }
-
     }
 }

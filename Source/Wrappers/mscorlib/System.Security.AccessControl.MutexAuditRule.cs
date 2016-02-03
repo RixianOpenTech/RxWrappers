@@ -8,11 +8,11 @@ namespace System.Security.AccessControl
 {
     public static class __MutexAuditRule
     {
-        
-        public static IObservable<System.Security.AccessControl.MutexRights> get_MutexRights(this IObservable<System.Security.AccessControl.MutexAuditRule> MutexAuditRuleValue)
+        public static IObservable<System.Security.AccessControl.MutexRights> get_MutexRights(
+            this IObservable<System.Security.AccessControl.MutexAuditRule> MutexAuditRuleValue)
         {
-            return Observable.Select(MutexAuditRuleValue, (MutexAuditRuleValueLambda) => MutexAuditRuleValueLambda.MutexRights);
+            return Observable.Select(MutexAuditRuleValue,
+                (MutexAuditRuleValueLambda) => MutexAuditRuleValueLambda.MutexRights);
         }
-
     }
 }

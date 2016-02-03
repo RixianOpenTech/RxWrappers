@@ -8,11 +8,13 @@ namespace System.Runtime.InteropServices
 {
     public static class __UnmanagedFunctionPointerAttribute
     {
-        
-        public static IObservable<System.Runtime.InteropServices.CallingConvention> get_CallingConvention(this IObservable<System.Runtime.InteropServices.UnmanagedFunctionPointerAttribute> UnmanagedFunctionPointerAttributeValue)
+        public static IObservable<System.Runtime.InteropServices.CallingConvention> get_CallingConvention(
+            this IObservable<System.Runtime.InteropServices.UnmanagedFunctionPointerAttribute>
+                UnmanagedFunctionPointerAttributeValue)
         {
-            return Observable.Select(UnmanagedFunctionPointerAttributeValue, (UnmanagedFunctionPointerAttributeValueLambda) => UnmanagedFunctionPointerAttributeValueLambda.CallingConvention);
+            return Observable.Select(UnmanagedFunctionPointerAttributeValue,
+                (UnmanagedFunctionPointerAttributeValueLambda) =>
+                    UnmanagedFunctionPointerAttributeValueLambda.CallingConvention);
         }
-
     }
 }

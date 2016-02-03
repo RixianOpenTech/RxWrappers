@@ -8,11 +8,12 @@ namespace System.Diagnostics.Contracts
 {
     public static class __ContractPublicPropertyNameAttribute
     {
-        
-        public static IObservable<System.String> get_Name(this IObservable<System.Diagnostics.Contracts.ContractPublicPropertyNameAttribute> ContractPublicPropertyNameAttributeValue)
+        public static IObservable<System.String> get_Name(
+            this IObservable<System.Diagnostics.Contracts.ContractPublicPropertyNameAttribute>
+                ContractPublicPropertyNameAttributeValue)
         {
-            return Observable.Select(ContractPublicPropertyNameAttributeValue, (ContractPublicPropertyNameAttributeValueLambda) => ContractPublicPropertyNameAttributeValueLambda.Name);
+            return Observable.Select(ContractPublicPropertyNameAttributeValue,
+                (ContractPublicPropertyNameAttributeValueLambda) => ContractPublicPropertyNameAttributeValueLambda.Name);
         }
-
     }
 }

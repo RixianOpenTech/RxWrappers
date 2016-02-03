@@ -8,29 +8,36 @@ namespace System.Runtime.InteropServices.ComTypes
 {
     public static class __IEnumVARIANT
     {
-        
-        public static IObservable<int> Next(this IObservable<System.Runtime.InteropServices.ComTypes.IEnumVARIANT> IEnumVARIANTValue, IObservable<System.Int32> celt, IObservable<System.Object[]> rgVar, IObservable<System.IntPtr> pceltFetched)
+        public static IObservable<int> Next(
+            this IObservable<System.Runtime.InteropServices.ComTypes.IEnumVARIANT> IEnumVARIANTValue,
+            IObservable<System.Int32> celt, IObservable<System.Object[]> rgVar, IObservable<System.IntPtr> pceltFetched)
         {
-            return Observable.Zip(IEnumVARIANTValue, celt, rgVar, pceltFetched, (IEnumVARIANTValueLambda, celtLambda, rgVarLambda, pceltFetchedLambda) => IEnumVARIANTValueLambda.Next(celtLambda, rgVarLambda, pceltFetchedLambda));
+            return Observable.Zip(IEnumVARIANTValue, celt, rgVar, pceltFetched,
+                (IEnumVARIANTValueLambda, celtLambda, rgVarLambda, pceltFetchedLambda) =>
+                    IEnumVARIANTValueLambda.Next(celtLambda, rgVarLambda, pceltFetchedLambda));
         }
 
 
-        public static IObservable<System.Int32> Skip(this IObservable<System.Runtime.InteropServices.ComTypes.IEnumVARIANT> IEnumVARIANTValue, IObservable<System.Int32> celt)
+        public static IObservable<System.Int32> Skip(
+            this IObservable<System.Runtime.InteropServices.ComTypes.IEnumVARIANT> IEnumVARIANTValue,
+            IObservable<System.Int32> celt)
         {
-            return Observable.Zip(IEnumVARIANTValue, celt, (IEnumVARIANTValueLambda, celtLambda) => IEnumVARIANTValueLambda.Skip(celtLambda));
+            return Observable.Zip(IEnumVARIANTValue, celt,
+                (IEnumVARIANTValueLambda, celtLambda) => IEnumVARIANTValueLambda.Skip(celtLambda));
         }
 
 
-        public static IObservable<System.Int32> Reset(this IObservable<System.Runtime.InteropServices.ComTypes.IEnumVARIANT> IEnumVARIANTValue)
+        public static IObservable<System.Int32> Reset(
+            this IObservable<System.Runtime.InteropServices.ComTypes.IEnumVARIANT> IEnumVARIANTValue)
         {
             return Observable.Select(IEnumVARIANTValue, (IEnumVARIANTValueLambda) => IEnumVARIANTValueLambda.Reset());
         }
 
 
-        public static IObservable<System.Runtime.InteropServices.ComTypes.IEnumVARIANT> Clone(this IObservable<System.Runtime.InteropServices.ComTypes.IEnumVARIANT> IEnumVARIANTValue)
+        public static IObservable<System.Runtime.InteropServices.ComTypes.IEnumVARIANT> Clone(
+            this IObservable<System.Runtime.InteropServices.ComTypes.IEnumVARIANT> IEnumVARIANTValue)
         {
             return Observable.Select(IEnumVARIANTValue, (IEnumVARIANTValueLambda) => IEnumVARIANTValueLambda.Clone());
         }
-
     }
 }

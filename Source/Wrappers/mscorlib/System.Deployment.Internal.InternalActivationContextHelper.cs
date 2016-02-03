@@ -8,47 +8,67 @@ namespace System.Deployment.Internal
 {
     public static class __InternalActivationContextHelper
     {
-        
         public static IObservable<System.Object> GetActivationContextData(IObservable<System.ActivationContext> appInfo)
         {
-            return Observable.Select(appInfo, (appInfoLambda) => System.Deployment.Internal.InternalActivationContextHelper.GetActivationContextData(appInfoLambda));
+            return Observable.Select(appInfo,
+                (appInfoLambda) =>
+                    System.Deployment.Internal.InternalActivationContextHelper.GetActivationContextData(appInfoLambda));
         }
 
 
-        public static IObservable<System.Object> GetApplicationComponentManifest(IObservable<System.ActivationContext> appInfo)
+        public static IObservable<System.Object> GetApplicationComponentManifest(
+            IObservable<System.ActivationContext> appInfo)
         {
-            return Observable.Select(appInfo, (appInfoLambda) => System.Deployment.Internal.InternalActivationContextHelper.GetApplicationComponentManifest(appInfoLambda));
+            return Observable.Select(appInfo,
+                (appInfoLambda) =>
+                    System.Deployment.Internal.InternalActivationContextHelper.GetApplicationComponentManifest(
+                        appInfoLambda));
         }
 
 
-        public static IObservable<System.Object> GetDeploymentComponentManifest(IObservable<System.ActivationContext> appInfo)
+        public static IObservable<System.Object> GetDeploymentComponentManifest(
+            IObservable<System.ActivationContext> appInfo)
         {
-            return Observable.Select(appInfo, (appInfoLambda) => System.Deployment.Internal.InternalActivationContextHelper.GetDeploymentComponentManifest(appInfoLambda));
+            return Observable.Select(appInfo,
+                (appInfoLambda) =>
+                    System.Deployment.Internal.InternalActivationContextHelper.GetDeploymentComponentManifest(
+                        appInfoLambda));
         }
 
 
-        public static IObservable<System.Reactive.Unit> PrepareForExecution(IObservable<System.ActivationContext> appInfo)
+        public static IObservable<System.Reactive.Unit> PrepareForExecution(
+            IObservable<System.ActivationContext> appInfo)
         {
-            return Observable.Do(appInfo, (appInfoLambda) => System.Deployment.Internal.InternalActivationContextHelper.PrepareForExecution(appInfoLambda)).ToUnit();
+            return
+                Observable.Do(appInfo,
+                    (appInfoLambda) =>
+                        System.Deployment.Internal.InternalActivationContextHelper.PrepareForExecution(appInfoLambda))
+                    .ToUnit();
         }
 
 
         public static IObservable<System.Boolean> IsFirstRun(IObservable<System.ActivationContext> appInfo)
         {
-            return Observable.Select(appInfo, (appInfoLambda) => System.Deployment.Internal.InternalActivationContextHelper.IsFirstRun(appInfoLambda));
+            return Observable.Select(appInfo,
+                (appInfoLambda) => System.Deployment.Internal.InternalActivationContextHelper.IsFirstRun(appInfoLambda));
         }
 
 
-        public static IObservable<System.Byte[]> GetApplicationManifestBytes(IObservable<System.ActivationContext> appInfo)
+        public static IObservable<System.Byte[]> GetApplicationManifestBytes(
+            IObservable<System.ActivationContext> appInfo)
         {
-            return Observable.Select(appInfo, (appInfoLambda) => System.Deployment.Internal.InternalActivationContextHelper.GetApplicationManifestBytes(appInfoLambda));
+            return Observable.Select(appInfo,
+                (appInfoLambda) =>
+                    System.Deployment.Internal.InternalActivationContextHelper.GetApplicationManifestBytes(appInfoLambda));
         }
 
 
-        public static IObservable<System.Byte[]> GetDeploymentManifestBytes(IObservable<System.ActivationContext> appInfo)
+        public static IObservable<System.Byte[]> GetDeploymentManifestBytes(
+            IObservable<System.ActivationContext> appInfo)
         {
-            return Observable.Select(appInfo, (appInfoLambda) => System.Deployment.Internal.InternalActivationContextHelper.GetDeploymentManifestBytes(appInfoLambda));
+            return Observable.Select(appInfo,
+                (appInfoLambda) =>
+                    System.Deployment.Internal.InternalActivationContextHelper.GetDeploymentManifestBytes(appInfoLambda));
         }
-
     }
 }

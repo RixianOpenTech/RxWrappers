@@ -8,22 +8,27 @@ namespace System.Runtime.Remoting.Metadata.W3cXsd2001
 {
     public static class __SoapNormalizedString
     {
-        
-        public static IObservable<System.String> GetXsdType(this IObservable<System.Runtime.Remoting.Metadata.W3cXsd2001.SoapNormalizedString> SoapNormalizedStringValue)
+        public static IObservable<System.String> GetXsdType(
+            this IObservable<System.Runtime.Remoting.Metadata.W3cXsd2001.SoapNormalizedString> SoapNormalizedStringValue)
         {
-            return Observable.Select(SoapNormalizedStringValue, (SoapNormalizedStringValueLambda) => SoapNormalizedStringValueLambda.GetXsdType());
+            return Observable.Select(SoapNormalizedStringValue,
+                (SoapNormalizedStringValueLambda) => SoapNormalizedStringValueLambda.GetXsdType());
         }
 
 
-        public static IObservable<System.String> ToString(this IObservable<System.Runtime.Remoting.Metadata.W3cXsd2001.SoapNormalizedString> SoapNormalizedStringValue)
+        public static IObservable<System.String> ToString(
+            this IObservable<System.Runtime.Remoting.Metadata.W3cXsd2001.SoapNormalizedString> SoapNormalizedStringValue)
         {
-            return Observable.Select(SoapNormalizedStringValue, (SoapNormalizedStringValueLambda) => SoapNormalizedStringValueLambda.ToString());
+            return Observable.Select(SoapNormalizedStringValue,
+                (SoapNormalizedStringValueLambda) => SoapNormalizedStringValueLambda.ToString());
         }
 
 
-        public static IObservable<System.Runtime.Remoting.Metadata.W3cXsd2001.SoapNormalizedString> Parse(IObservable<System.String> value)
+        public static IObservable<System.Runtime.Remoting.Metadata.W3cXsd2001.SoapNormalizedString> Parse(
+            IObservable<System.String> value)
         {
-            return Observable.Select(value, (valueLambda) => System.Runtime.Remoting.Metadata.W3cXsd2001.SoapNormalizedString.Parse(valueLambda));
+            return Observable.Select(value,
+                (valueLambda) => System.Runtime.Remoting.Metadata.W3cXsd2001.SoapNormalizedString.Parse(valueLambda));
         }
 
 
@@ -33,16 +38,20 @@ namespace System.Runtime.Remoting.Metadata.W3cXsd2001
         }
 
 
-        public static IObservable<System.String> get_Value(this IObservable<System.Runtime.Remoting.Metadata.W3cXsd2001.SoapNormalizedString> SoapNormalizedStringValue)
+        public static IObservable<System.String> get_Value(
+            this IObservable<System.Runtime.Remoting.Metadata.W3cXsd2001.SoapNormalizedString> SoapNormalizedStringValue)
         {
-            return Observable.Select(SoapNormalizedStringValue, (SoapNormalizedStringValueLambda) => SoapNormalizedStringValueLambda.Value);
+            return Observable.Select(SoapNormalizedStringValue,
+                (SoapNormalizedStringValueLambda) => SoapNormalizedStringValueLambda.Value);
         }
 
 
-        public static IObservable<System.Reactive.Unit> set_Value(this IObservable<System.Runtime.Remoting.Metadata.W3cXsd2001.SoapNormalizedString> SoapNormalizedStringValue, IObservable<System.String> value)
+        public static IObservable<System.Reactive.Unit> set_Value(
+            this IObservable<System.Runtime.Remoting.Metadata.W3cXsd2001.SoapNormalizedString> SoapNormalizedStringValue,
+            IObservable<System.String> value)
         {
-            return ObservableExt.ZipExecute(SoapNormalizedStringValue, value, (SoapNormalizedStringValueLambda, valueLambda) => SoapNormalizedStringValueLambda.Value = valueLambda);
+            return ObservableExt.ZipExecute(SoapNormalizedStringValue, value,
+                (SoapNormalizedStringValueLambda, valueLambda) => SoapNormalizedStringValueLambda.Value = valueLambda);
         }
-
     }
 }

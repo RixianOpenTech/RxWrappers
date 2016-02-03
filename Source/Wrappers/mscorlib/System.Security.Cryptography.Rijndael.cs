@@ -8,7 +8,6 @@ namespace System.Security.Cryptography
 {
     public static class __Rijndael
     {
-        
         public static IObservable<System.Security.Cryptography.Rijndael> Create()
         {
             return ObservableExt.Factory(() => System.Security.Cryptography.Rijndael.Create());
@@ -17,8 +16,8 @@ namespace System.Security.Cryptography
 
         public static IObservable<System.Security.Cryptography.Rijndael> Create(IObservable<System.String> algName)
         {
-            return Observable.Select(algName, (algNameLambda) => System.Security.Cryptography.Rijndael.Create(algNameLambda));
+            return Observable.Select(algName,
+                (algNameLambda) => System.Security.Cryptography.Rijndael.Create(algNameLambda));
         }
-
     }
 }

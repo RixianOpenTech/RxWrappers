@@ -8,29 +8,43 @@ namespace System.Security.Cryptography
 {
     public static class __AsymmetricKeyExchangeFormatter
     {
-        
-        public static IObservable<System.Reactive.Unit> SetKey(this IObservable<System.Security.Cryptography.AsymmetricKeyExchangeFormatter> AsymmetricKeyExchangeFormatterValue, IObservable<System.Security.Cryptography.AsymmetricAlgorithm> key)
+        public static IObservable<System.Reactive.Unit> SetKey(
+            this IObservable<System.Security.Cryptography.AsymmetricKeyExchangeFormatter>
+                AsymmetricKeyExchangeFormatterValue, IObservable<System.Security.Cryptography.AsymmetricAlgorithm> key)
         {
-            return ObservableExt.ZipExecute(AsymmetricKeyExchangeFormatterValue, key, (AsymmetricKeyExchangeFormatterValueLambda, keyLambda) => AsymmetricKeyExchangeFormatterValueLambda.SetKey(keyLambda));
+            return ObservableExt.ZipExecute(AsymmetricKeyExchangeFormatterValue, key,
+                (AsymmetricKeyExchangeFormatterValueLambda, keyLambda) =>
+                    AsymmetricKeyExchangeFormatterValueLambda.SetKey(keyLambda));
         }
 
 
-        public static IObservable<System.Byte[]> CreateKeyExchange(this IObservable<System.Security.Cryptography.AsymmetricKeyExchangeFormatter> AsymmetricKeyExchangeFormatterValue, IObservable<System.Byte[]> data)
+        public static IObservable<System.Byte[]> CreateKeyExchange(
+            this IObservable<System.Security.Cryptography.AsymmetricKeyExchangeFormatter>
+                AsymmetricKeyExchangeFormatterValue, IObservable<System.Byte[]> data)
         {
-            return Observable.Zip(AsymmetricKeyExchangeFormatterValue, data, (AsymmetricKeyExchangeFormatterValueLambda, dataLambda) => AsymmetricKeyExchangeFormatterValueLambda.CreateKeyExchange(dataLambda));
+            return Observable.Zip(AsymmetricKeyExchangeFormatterValue, data,
+                (AsymmetricKeyExchangeFormatterValueLambda, dataLambda) =>
+                    AsymmetricKeyExchangeFormatterValueLambda.CreateKeyExchange(dataLambda));
         }
 
 
-        public static IObservable<System.Byte[]> CreateKeyExchange(this IObservable<System.Security.Cryptography.AsymmetricKeyExchangeFormatter> AsymmetricKeyExchangeFormatterValue, IObservable<System.Byte[]> data, IObservable<System.Type> symAlgType)
+        public static IObservable<System.Byte[]> CreateKeyExchange(
+            this IObservable<System.Security.Cryptography.AsymmetricKeyExchangeFormatter>
+                AsymmetricKeyExchangeFormatterValue, IObservable<System.Byte[]> data,
+            IObservable<System.Type> symAlgType)
         {
-            return Observable.Zip(AsymmetricKeyExchangeFormatterValue, data, symAlgType, (AsymmetricKeyExchangeFormatterValueLambda, dataLambda, symAlgTypeLambda) => AsymmetricKeyExchangeFormatterValueLambda.CreateKeyExchange(dataLambda, symAlgTypeLambda));
+            return Observable.Zip(AsymmetricKeyExchangeFormatterValue, data, symAlgType,
+                (AsymmetricKeyExchangeFormatterValueLambda, dataLambda, symAlgTypeLambda) =>
+                    AsymmetricKeyExchangeFormatterValueLambda.CreateKeyExchange(dataLambda, symAlgTypeLambda));
         }
 
 
-        public static IObservable<System.String> get_Parameters(this IObservable<System.Security.Cryptography.AsymmetricKeyExchangeFormatter> AsymmetricKeyExchangeFormatterValue)
+        public static IObservable<System.String> get_Parameters(
+            this IObservable<System.Security.Cryptography.AsymmetricKeyExchangeFormatter>
+                AsymmetricKeyExchangeFormatterValue)
         {
-            return Observable.Select(AsymmetricKeyExchangeFormatterValue, (AsymmetricKeyExchangeFormatterValueLambda) => AsymmetricKeyExchangeFormatterValueLambda.Parameters);
+            return Observable.Select(AsymmetricKeyExchangeFormatterValue,
+                (AsymmetricKeyExchangeFormatterValueLambda) => AsymmetricKeyExchangeFormatterValueLambda.Parameters);
         }
-
     }
 }

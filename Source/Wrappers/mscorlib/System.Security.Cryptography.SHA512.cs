@@ -8,7 +8,6 @@ namespace System.Security.Cryptography
 {
     public static class __SHA512
     {
-        
         public static IObservable<System.Security.Cryptography.SHA512> Create()
         {
             return ObservableExt.Factory(() => System.Security.Cryptography.SHA512.Create());
@@ -17,8 +16,8 @@ namespace System.Security.Cryptography
 
         public static IObservable<System.Security.Cryptography.SHA512> Create(IObservable<System.String> hashName)
         {
-            return Observable.Select(hashName, (hashNameLambda) => System.Security.Cryptography.SHA512.Create(hashNameLambda));
+            return Observable.Select(hashName,
+                (hashNameLambda) => System.Security.Cryptography.SHA512.Create(hashNameLambda));
         }
-
     }
 }

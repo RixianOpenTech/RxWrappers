@@ -8,23 +8,31 @@ namespace System.Security.Cryptography
 {
     public static class __ICspAsymmetricAlgorithm
     {
-        
-        public static IObservable<System.Byte[]> ExportCspBlob(this IObservable<System.Security.Cryptography.ICspAsymmetricAlgorithm> ICspAsymmetricAlgorithmValue, IObservable<System.Boolean> includePrivateParameters)
+        public static IObservable<System.Byte[]> ExportCspBlob(
+            this IObservable<System.Security.Cryptography.ICspAsymmetricAlgorithm> ICspAsymmetricAlgorithmValue,
+            IObservable<System.Boolean> includePrivateParameters)
         {
-            return Observable.Zip(ICspAsymmetricAlgorithmValue, includePrivateParameters, (ICspAsymmetricAlgorithmValueLambda, includePrivateParametersLambda) => ICspAsymmetricAlgorithmValueLambda.ExportCspBlob(includePrivateParametersLambda));
+            return Observable.Zip(ICspAsymmetricAlgorithmValue, includePrivateParameters,
+                (ICspAsymmetricAlgorithmValueLambda, includePrivateParametersLambda) =>
+                    ICspAsymmetricAlgorithmValueLambda.ExportCspBlob(includePrivateParametersLambda));
         }
 
 
-        public static IObservable<System.Reactive.Unit> ImportCspBlob(this IObservable<System.Security.Cryptography.ICspAsymmetricAlgorithm> ICspAsymmetricAlgorithmValue, IObservable<System.Byte[]> rawData)
+        public static IObservable<System.Reactive.Unit> ImportCspBlob(
+            this IObservable<System.Security.Cryptography.ICspAsymmetricAlgorithm> ICspAsymmetricAlgorithmValue,
+            IObservable<System.Byte[]> rawData)
         {
-            return ObservableExt.ZipExecute(ICspAsymmetricAlgorithmValue, rawData, (ICspAsymmetricAlgorithmValueLambda, rawDataLambda) => ICspAsymmetricAlgorithmValueLambda.ImportCspBlob(rawDataLambda));
+            return ObservableExt.ZipExecute(ICspAsymmetricAlgorithmValue, rawData,
+                (ICspAsymmetricAlgorithmValueLambda, rawDataLambda) =>
+                    ICspAsymmetricAlgorithmValueLambda.ImportCspBlob(rawDataLambda));
         }
 
 
-        public static IObservable<System.Security.Cryptography.CspKeyContainerInfo> get_CspKeyContainerInfo(this IObservable<System.Security.Cryptography.ICspAsymmetricAlgorithm> ICspAsymmetricAlgorithmValue)
+        public static IObservable<System.Security.Cryptography.CspKeyContainerInfo> get_CspKeyContainerInfo(
+            this IObservable<System.Security.Cryptography.ICspAsymmetricAlgorithm> ICspAsymmetricAlgorithmValue)
         {
-            return Observable.Select(ICspAsymmetricAlgorithmValue, (ICspAsymmetricAlgorithmValueLambda) => ICspAsymmetricAlgorithmValueLambda.CspKeyContainerInfo);
+            return Observable.Select(ICspAsymmetricAlgorithmValue,
+                (ICspAsymmetricAlgorithmValueLambda) => ICspAsymmetricAlgorithmValueLambda.CspKeyContainerInfo);
         }
-
     }
 }

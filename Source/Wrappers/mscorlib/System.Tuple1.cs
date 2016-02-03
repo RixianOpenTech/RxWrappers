@@ -8,8 +8,8 @@ namespace System
 {
     public static class __Tuple1
     {
-        
-        public static IObservable<System.Boolean> Equals<T1>(this IObservable<System.Tuple<T1>> TupleValue, IObservable<System.Object> obj)
+        public static IObservable<System.Boolean> Equals<T1>(this IObservable<System.Tuple<T1>> TupleValue,
+            IObservable<System.Object> obj)
         {
             return Observable.Zip(TupleValue, obj, (TupleValueLambda, objLambda) => TupleValueLambda.Equals(objLambda));
         }
@@ -31,6 +31,5 @@ namespace System
         {
             return Observable.Select(TupleValue, (TupleValueLambda) => TupleValueLambda.Item1);
         }
-
     }
 }

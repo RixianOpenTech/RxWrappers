@@ -8,16 +8,19 @@ namespace System.Reflection.Emit
 {
     public static class __OpCode
     {
-        
-        public static IObservable<System.Boolean> Equals(this IObservable<System.Reflection.Emit.OpCode> OpCodeValue, IObservable<System.Object> obj)
+        public static IObservable<System.Boolean> Equals(this IObservable<System.Reflection.Emit.OpCode> OpCodeValue,
+            IObservable<System.Object> obj)
         {
-            return Observable.Zip(OpCodeValue, obj, (OpCodeValueLambda, objLambda) => OpCodeValueLambda.Equals(objLambda));
+            return Observable.Zip(OpCodeValue, obj,
+                (OpCodeValueLambda, objLambda) => OpCodeValueLambda.Equals(objLambda));
         }
 
 
-        public static IObservable<System.Boolean> Equals(this IObservable<System.Reflection.Emit.OpCode> OpCodeValue, IObservable<System.Reflection.Emit.OpCode> obj)
+        public static IObservable<System.Boolean> Equals(this IObservable<System.Reflection.Emit.OpCode> OpCodeValue,
+            IObservable<System.Reflection.Emit.OpCode> obj)
         {
-            return Observable.Zip(OpCodeValue, obj, (OpCodeValueLambda, objLambda) => OpCodeValueLambda.Equals(objLambda));
+            return Observable.Zip(OpCodeValue, obj,
+                (OpCodeValueLambda, objLambda) => OpCodeValueLambda.Equals(objLambda));
         }
 
 
@@ -33,31 +36,36 @@ namespace System.Reflection.Emit
         }
 
 
-        public static IObservable<System.Reflection.Emit.OperandType> get_OperandType(this IObservable<System.Reflection.Emit.OpCode> OpCodeValue)
+        public static IObservable<System.Reflection.Emit.OperandType> get_OperandType(
+            this IObservable<System.Reflection.Emit.OpCode> OpCodeValue)
         {
             return Observable.Select(OpCodeValue, (OpCodeValueLambda) => OpCodeValueLambda.OperandType);
         }
 
 
-        public static IObservable<System.Reflection.Emit.FlowControl> get_FlowControl(this IObservable<System.Reflection.Emit.OpCode> OpCodeValue)
+        public static IObservable<System.Reflection.Emit.FlowControl> get_FlowControl(
+            this IObservable<System.Reflection.Emit.OpCode> OpCodeValue)
         {
             return Observable.Select(OpCodeValue, (OpCodeValueLambda) => OpCodeValueLambda.FlowControl);
         }
 
 
-        public static IObservable<System.Reflection.Emit.OpCodeType> get_OpCodeType(this IObservable<System.Reflection.Emit.OpCode> OpCodeValue)
+        public static IObservable<System.Reflection.Emit.OpCodeType> get_OpCodeType(
+            this IObservable<System.Reflection.Emit.OpCode> OpCodeValue)
         {
             return Observable.Select(OpCodeValue, (OpCodeValueLambda) => OpCodeValueLambda.OpCodeType);
         }
 
 
-        public static IObservable<System.Reflection.Emit.StackBehaviour> get_StackBehaviourPop(this IObservable<System.Reflection.Emit.OpCode> OpCodeValue)
+        public static IObservable<System.Reflection.Emit.StackBehaviour> get_StackBehaviourPop(
+            this IObservable<System.Reflection.Emit.OpCode> OpCodeValue)
         {
             return Observable.Select(OpCodeValue, (OpCodeValueLambda) => OpCodeValueLambda.StackBehaviourPop);
         }
 
 
-        public static IObservable<System.Reflection.Emit.StackBehaviour> get_StackBehaviourPush(this IObservable<System.Reflection.Emit.OpCode> OpCodeValue)
+        public static IObservable<System.Reflection.Emit.StackBehaviour> get_StackBehaviourPush(
+            this IObservable<System.Reflection.Emit.OpCode> OpCodeValue)
         {
             return Observable.Select(OpCodeValue, (OpCodeValueLambda) => OpCodeValueLambda.StackBehaviourPush);
         }
@@ -79,6 +87,5 @@ namespace System.Reflection.Emit
         {
             return Observable.Select(OpCodeValue, (OpCodeValueLambda) => OpCodeValueLambda.Name);
         }
-
     }
 }

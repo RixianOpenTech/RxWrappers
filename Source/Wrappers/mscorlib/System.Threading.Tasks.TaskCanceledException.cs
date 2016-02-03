@@ -8,11 +8,14 @@ namespace System.Threading.Tasks
 {
     public static class __TaskCanceledException
     {
-        
-        public static IObservable<System.Reactive.Unit> get_Task(this IObservable<System.Threading.Tasks.TaskCanceledException> TaskCanceledExceptionValue)
+        public static IObservable<System.Reactive.Unit> get_Task(
+            this IObservable<System.Threading.Tasks.TaskCanceledException> TaskCanceledExceptionValue)
         {
-            return Observable.Select(TaskCanceledExceptionValue, (TaskCanceledExceptionValueLambda) => TaskCanceledExceptionValueLambda.Task.ToObservable()).Flatten().ToUnit();
+            return
+                Observable.Select(TaskCanceledExceptionValue,
+                    (TaskCanceledExceptionValueLambda) => TaskCanceledExceptionValueLambda.Task.ToObservable())
+                    .Flatten()
+                    .ToUnit();
         }
-
     }
 }

@@ -8,11 +8,12 @@ namespace System
 {
     public static class __IServiceProvider
     {
-        
-        public static IObservable<System.Object> GetService(this IObservable<System.IServiceProvider> IServiceProviderValue, IObservable<System.Type> serviceType)
+        public static IObservable<System.Object> GetService(
+            this IObservable<System.IServiceProvider> IServiceProviderValue, IObservable<System.Type> serviceType)
         {
-            return Observable.Zip(IServiceProviderValue, serviceType, (IServiceProviderValueLambda, serviceTypeLambda) => IServiceProviderValueLambda.GetService(serviceTypeLambda));
+            return Observable.Zip(IServiceProviderValue, serviceType,
+                (IServiceProviderValueLambda, serviceTypeLambda) =>
+                    IServiceProviderValueLambda.GetService(serviceTypeLambda));
         }
-
     }
 }

@@ -8,11 +8,11 @@ namespace System
 {
     public static class __IObservable1
     {
-        
-        public static IObservable<System.IDisposable> Subscribe<T>(this IObservable<System.IObservable<T>> IObservableValue, IObservable<IObserver<T>> observer)
+        public static IObservable<System.IDisposable> Subscribe<T>(
+            this IObservable<System.IObservable<T>> IObservableValue, IObservable<IObserver<T>> observer)
         {
-            return Observable.Zip(IObservableValue, observer, (IObservableValueLambda, observerLambda) => IObservableValueLambda.Subscribe(observerLambda));
+            return Observable.Zip(IObservableValue, observer,
+                (IObservableValueLambda, observerLambda) => IObservableValueLambda.Subscribe(observerLambda));
         }
-
     }
 }

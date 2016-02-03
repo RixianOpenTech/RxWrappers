@@ -8,11 +8,11 @@ namespace System.Reflection
 {
     public static class __AssemblyKeyNameAttribute
     {
-        
-        public static IObservable<System.String> get_KeyName(this IObservable<System.Reflection.AssemblyKeyNameAttribute> AssemblyKeyNameAttributeValue)
+        public static IObservable<System.String> get_KeyName(
+            this IObservable<System.Reflection.AssemblyKeyNameAttribute> AssemblyKeyNameAttributeValue)
         {
-            return Observable.Select(AssemblyKeyNameAttributeValue, (AssemblyKeyNameAttributeValueLambda) => AssemblyKeyNameAttributeValueLambda.KeyName);
+            return Observable.Select(AssemblyKeyNameAttributeValue,
+                (AssemblyKeyNameAttributeValueLambda) => AssemblyKeyNameAttributeValueLambda.KeyName);
         }
-
     }
 }

@@ -8,11 +8,12 @@ namespace System.Runtime.CompilerServices
 {
     public static class __ConfiguredTaskAwaitable
     {
-        
-        public static IObservable<System.Runtime.CompilerServices.ConfiguredTaskAwaitable.ConfiguredTaskAwaiter> GetAwaiter(this IObservable<System.Runtime.CompilerServices.ConfiguredTaskAwaitable> ConfiguredTaskAwaitableValue)
+        public static IObservable<System.Runtime.CompilerServices.ConfiguredTaskAwaitable.ConfiguredTaskAwaiter>
+            GetAwaiter(
+            this IObservable<System.Runtime.CompilerServices.ConfiguredTaskAwaitable> ConfiguredTaskAwaitableValue)
         {
-            return Observable.Select(ConfiguredTaskAwaitableValue, (ConfiguredTaskAwaitableValueLambda) => ConfiguredTaskAwaitableValueLambda.GetAwaiter());
+            return Observable.Select(ConfiguredTaskAwaitableValue,
+                (ConfiguredTaskAwaitableValueLambda) => ConfiguredTaskAwaitableValueLambda.GetAwaiter());
         }
-
     }
 }

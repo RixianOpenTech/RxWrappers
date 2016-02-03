@@ -8,16 +8,17 @@ namespace System
 {
     public static class __Console
     {
-        
         public static IObservable<System.Reactive.Unit> Beep()
         {
             return ObservableExt.Factory(() => System.Console.Beep());
         }
 
 
-        public static IObservable<System.Reactive.Unit> Beep(IObservable<System.Int32> frequency, IObservable<System.Int32> duration)
+        public static IObservable<System.Reactive.Unit> Beep(IObservable<System.Int32> frequency,
+            IObservable<System.Int32> duration)
         {
-            return ObservableExt.ZipExecute(frequency, duration, (frequencyLambda, durationLambda) => System.Console.Beep(frequencyLambda, durationLambda));
+            return ObservableExt.ZipExecute(frequency, duration,
+                (frequencyLambda, durationLambda) => System.Console.Beep(frequencyLambda, durationLambda));
         }
 
 
@@ -33,39 +34,64 @@ namespace System
         }
 
 
-        public static IObservable<System.Reactive.Unit> MoveBufferArea(IObservable<System.Int32> sourceLeft, IObservable<System.Int32> sourceTop, IObservable<System.Int32> sourceWidth, IObservable<System.Int32> sourceHeight, IObservable<System.Int32> targetLeft, IObservable<System.Int32> targetTop)
+        public static IObservable<System.Reactive.Unit> MoveBufferArea(IObservable<System.Int32> sourceLeft,
+            IObservable<System.Int32> sourceTop, IObservable<System.Int32> sourceWidth,
+            IObservable<System.Int32> sourceHeight, IObservable<System.Int32> targetLeft,
+            IObservable<System.Int32> targetTop)
         {
-            return ObservableExt.ZipExecute(sourceLeft, sourceTop, sourceWidth, sourceHeight, targetLeft, targetTop, (sourceLeftLambda, sourceTopLambda, sourceWidthLambda, sourceHeightLambda, targetLeftLambda, targetTopLambda) => System.Console.MoveBufferArea(sourceLeftLambda, sourceTopLambda, sourceWidthLambda, sourceHeightLambda, targetLeftLambda, targetTopLambda));
+            return ObservableExt.ZipExecute(sourceLeft, sourceTop, sourceWidth, sourceHeight, targetLeft, targetTop,
+                (sourceLeftLambda, sourceTopLambda, sourceWidthLambda, sourceHeightLambda, targetLeftLambda,
+                    targetTopLambda) =>
+                    System.Console.MoveBufferArea(sourceLeftLambda, sourceTopLambda, sourceWidthLambda,
+                        sourceHeightLambda, targetLeftLambda, targetTopLambda));
         }
 
 
-        public static IObservable<System.Reactive.Unit> MoveBufferArea(IObservable<System.Int32> sourceLeft, IObservable<System.Int32> sourceTop, IObservable<System.Int32> sourceWidth, IObservable<System.Int32> sourceHeight, IObservable<System.Int32> targetLeft, IObservable<System.Int32> targetTop, IObservable<System.Char> sourceChar, IObservable<System.ConsoleColor> sourceForeColor, IObservable<System.ConsoleColor> sourceBackColor)
+        public static IObservable<System.Reactive.Unit> MoveBufferArea(IObservable<System.Int32> sourceLeft,
+            IObservable<System.Int32> sourceTop, IObservable<System.Int32> sourceWidth,
+            IObservable<System.Int32> sourceHeight, IObservable<System.Int32> targetLeft,
+            IObservable<System.Int32> targetTop, IObservable<System.Char> sourceChar,
+            IObservable<System.ConsoleColor> sourceForeColor, IObservable<System.ConsoleColor> sourceBackColor)
         {
-            return ObservableExt.ZipExecute(sourceLeft, sourceTop, sourceWidth, sourceHeight, targetLeft, targetTop, sourceChar, sourceForeColor, sourceBackColor, (sourceLeftLambda, sourceTopLambda, sourceWidthLambda, sourceHeightLambda, targetLeftLambda, targetTopLambda, sourceCharLambda, sourceForeColorLambda, sourceBackColorLambda) => System.Console.MoveBufferArea(sourceLeftLambda, sourceTopLambda, sourceWidthLambda, sourceHeightLambda, targetLeftLambda, targetTopLambda, sourceCharLambda, sourceForeColorLambda, sourceBackColorLambda));
+            return ObservableExt.ZipExecute(sourceLeft, sourceTop, sourceWidth, sourceHeight, targetLeft, targetTop,
+                sourceChar, sourceForeColor, sourceBackColor,
+                (sourceLeftLambda, sourceTopLambda, sourceWidthLambda, sourceHeightLambda, targetLeftLambda,
+                    targetTopLambda, sourceCharLambda, sourceForeColorLambda, sourceBackColorLambda) =>
+                    System.Console.MoveBufferArea(sourceLeftLambda, sourceTopLambda, sourceWidthLambda,
+                        sourceHeightLambda, targetLeftLambda, targetTopLambda, sourceCharLambda, sourceForeColorLambda,
+                        sourceBackColorLambda));
         }
 
 
-        public static IObservable<System.Reactive.Unit> SetBufferSize(IObservable<System.Int32> width, IObservable<System.Int32> height)
+        public static IObservable<System.Reactive.Unit> SetBufferSize(IObservable<System.Int32> width,
+            IObservable<System.Int32> height)
         {
-            return ObservableExt.ZipExecute(width, height, (widthLambda, heightLambda) => System.Console.SetBufferSize(widthLambda, heightLambda));
+            return ObservableExt.ZipExecute(width, height,
+                (widthLambda, heightLambda) => System.Console.SetBufferSize(widthLambda, heightLambda));
         }
 
 
-        public static IObservable<System.Reactive.Unit> SetWindowSize(IObservable<System.Int32> width, IObservable<System.Int32> height)
+        public static IObservable<System.Reactive.Unit> SetWindowSize(IObservable<System.Int32> width,
+            IObservable<System.Int32> height)
         {
-            return ObservableExt.ZipExecute(width, height, (widthLambda, heightLambda) => System.Console.SetWindowSize(widthLambda, heightLambda));
+            return ObservableExt.ZipExecute(width, height,
+                (widthLambda, heightLambda) => System.Console.SetWindowSize(widthLambda, heightLambda));
         }
 
 
-        public static IObservable<System.Reactive.Unit> SetWindowPosition(IObservable<System.Int32> left, IObservable<System.Int32> top)
+        public static IObservable<System.Reactive.Unit> SetWindowPosition(IObservable<System.Int32> left,
+            IObservable<System.Int32> top)
         {
-            return ObservableExt.ZipExecute(left, top, (leftLambda, topLambda) => System.Console.SetWindowPosition(leftLambda, topLambda));
+            return ObservableExt.ZipExecute(left, top,
+                (leftLambda, topLambda) => System.Console.SetWindowPosition(leftLambda, topLambda));
         }
 
 
-        public static IObservable<System.Reactive.Unit> SetCursorPosition(IObservable<System.Int32> left, IObservable<System.Int32> top)
+        public static IObservable<System.Reactive.Unit> SetCursorPosition(IObservable<System.Int32> left,
+            IObservable<System.Int32> top)
         {
-            return ObservableExt.ZipExecute(left, top, (leftLambda, topLambda) => System.Console.SetCursorPosition(leftLambda, topLambda));
+            return ObservableExt.ZipExecute(left, top,
+                (leftLambda, topLambda) => System.Console.SetCursorPosition(leftLambda, topLambda));
         }
 
 
@@ -89,7 +115,8 @@ namespace System
 
         public static IObservable<System.IO.Stream> OpenStandardError(IObservable<System.Int32> bufferSize)
         {
-            return Observable.Select(bufferSize, (bufferSizeLambda) => System.Console.OpenStandardError(bufferSizeLambda));
+            return Observable.Select(bufferSize,
+                (bufferSizeLambda) => System.Console.OpenStandardError(bufferSizeLambda));
         }
 
 
@@ -101,7 +128,8 @@ namespace System
 
         public static IObservable<System.IO.Stream> OpenStandardInput(IObservable<System.Int32> bufferSize)
         {
-            return Observable.Select(bufferSize, (bufferSizeLambda) => System.Console.OpenStandardInput(bufferSizeLambda));
+            return Observable.Select(bufferSize,
+                (bufferSizeLambda) => System.Console.OpenStandardInput(bufferSizeLambda));
         }
 
 
@@ -113,7 +141,8 @@ namespace System
 
         public static IObservable<System.IO.Stream> OpenStandardOutput(IObservable<System.Int32> bufferSize)
         {
-            return Observable.Select(bufferSize, (bufferSizeLambda) => System.Console.OpenStandardOutput(bufferSizeLambda));
+            return Observable.Select(bufferSize,
+                (bufferSizeLambda) => System.Console.OpenStandardOutput(bufferSizeLambda));
         }
 
 
@@ -171,9 +200,12 @@ namespace System
         }
 
 
-        public static IObservable<System.Reactive.Unit> WriteLine(IObservable<System.Char[]> buffer, IObservable<System.Int32> index, IObservable<System.Int32> count)
+        public static IObservable<System.Reactive.Unit> WriteLine(IObservable<System.Char[]> buffer,
+            IObservable<System.Int32> index, IObservable<System.Int32> count)
         {
-            return ObservableExt.ZipExecute(buffer, index, count, (bufferLambda, indexLambda, countLambda) => System.Console.WriteLine(bufferLambda, indexLambda, countLambda));
+            return ObservableExt.ZipExecute(buffer, index, count,
+                (bufferLambda, indexLambda, countLambda) =>
+                    System.Console.WriteLine(bufferLambda, indexLambda, countLambda));
         }
 
 
@@ -231,63 +263,89 @@ namespace System
         }
 
 
-        public static IObservable<System.Reactive.Unit> WriteLine(IObservable<System.String> format, IObservable<System.Object> arg0)
+        public static IObservable<System.Reactive.Unit> WriteLine(IObservable<System.String> format,
+            IObservable<System.Object> arg0)
         {
-            return ObservableExt.ZipExecute(format, arg0, (formatLambda, arg0Lambda) => System.Console.WriteLine(formatLambda, arg0Lambda));
+            return ObservableExt.ZipExecute(format, arg0,
+                (formatLambda, arg0Lambda) => System.Console.WriteLine(formatLambda, arg0Lambda));
         }
 
 
-        public static IObservable<System.Reactive.Unit> WriteLine(IObservable<System.String> format, IObservable<System.Object> arg0, IObservable<System.Object> arg1)
+        public static IObservable<System.Reactive.Unit> WriteLine(IObservable<System.String> format,
+            IObservable<System.Object> arg0, IObservable<System.Object> arg1)
         {
-            return ObservableExt.ZipExecute(format, arg0, arg1, (formatLambda, arg0Lambda, arg1Lambda) => System.Console.WriteLine(formatLambda, arg0Lambda, arg1Lambda));
+            return ObservableExt.ZipExecute(format, arg0, arg1,
+                (formatLambda, arg0Lambda, arg1Lambda) => System.Console.WriteLine(formatLambda, arg0Lambda, arg1Lambda));
         }
 
 
-        public static IObservable<System.Reactive.Unit> WriteLine(IObservable<System.String> format, IObservable<System.Object> arg0, IObservable<System.Object> arg1, IObservable<System.Object> arg2)
+        public static IObservable<System.Reactive.Unit> WriteLine(IObservable<System.String> format,
+            IObservable<System.Object> arg0, IObservable<System.Object> arg1, IObservable<System.Object> arg2)
         {
-            return ObservableExt.ZipExecute(format, arg0, arg1, arg2, (formatLambda, arg0Lambda, arg1Lambda, arg2Lambda) => System.Console.WriteLine(formatLambda, arg0Lambda, arg1Lambda, arg2Lambda));
+            return ObservableExt.ZipExecute(format, arg0, arg1, arg2,
+                (formatLambda, arg0Lambda, arg1Lambda, arg2Lambda) =>
+                    System.Console.WriteLine(formatLambda, arg0Lambda, arg1Lambda, arg2Lambda));
         }
 
 
-        public static IObservable<System.Reactive.Unit> WriteLine(IObservable<System.String> format, IObservable<System.Object> arg0, IObservable<System.Object> arg1, IObservable<System.Object> arg2, IObservable<System.Object> arg3)
+        public static IObservable<System.Reactive.Unit> WriteLine(IObservable<System.String> format,
+            IObservable<System.Object> arg0, IObservable<System.Object> arg1, IObservable<System.Object> arg2,
+            IObservable<System.Object> arg3)
         {
-            return ObservableExt.ZipExecute(format, arg0, arg1, arg2, arg3, (formatLambda, arg0Lambda, arg1Lambda, arg2Lambda, arg3Lambda) => System.Console.WriteLine(formatLambda, arg0Lambda, arg1Lambda, arg2Lambda, arg3Lambda));
+            return ObservableExt.ZipExecute(format, arg0, arg1, arg2, arg3,
+                (formatLambda, arg0Lambda, arg1Lambda, arg2Lambda, arg3Lambda) =>
+                    System.Console.WriteLine(formatLambda, arg0Lambda, arg1Lambda, arg2Lambda, arg3Lambda));
         }
 
 
-        public static IObservable<System.Reactive.Unit> WriteLine(IObservable<System.String> format, IObservable<System.Object[]> arg)
+        public static IObservable<System.Reactive.Unit> WriteLine(IObservable<System.String> format,
+            IObservable<System.Object[]> arg)
         {
-            return ObservableExt.ZipExecute(format, arg, (formatLambda, argLambda) => System.Console.WriteLine(formatLambda, argLambda));
+            return ObservableExt.ZipExecute(format, arg,
+                (formatLambda, argLambda) => System.Console.WriteLine(formatLambda, argLambda));
         }
 
 
-        public static IObservable<System.Reactive.Unit> Write(IObservable<System.String> format, IObservable<System.Object> arg0)
+        public static IObservable<System.Reactive.Unit> Write(IObservable<System.String> format,
+            IObservable<System.Object> arg0)
         {
-            return ObservableExt.ZipExecute(format, arg0, (formatLambda, arg0Lambda) => System.Console.Write(formatLambda, arg0Lambda));
+            return ObservableExt.ZipExecute(format, arg0,
+                (formatLambda, arg0Lambda) => System.Console.Write(formatLambda, arg0Lambda));
         }
 
 
-        public static IObservable<System.Reactive.Unit> Write(IObservable<System.String> format, IObservable<System.Object> arg0, IObservable<System.Object> arg1)
+        public static IObservable<System.Reactive.Unit> Write(IObservable<System.String> format,
+            IObservable<System.Object> arg0, IObservable<System.Object> arg1)
         {
-            return ObservableExt.ZipExecute(format, arg0, arg1, (formatLambda, arg0Lambda, arg1Lambda) => System.Console.Write(formatLambda, arg0Lambda, arg1Lambda));
+            return ObservableExt.ZipExecute(format, arg0, arg1,
+                (formatLambda, arg0Lambda, arg1Lambda) => System.Console.Write(formatLambda, arg0Lambda, arg1Lambda));
         }
 
 
-        public static IObservable<System.Reactive.Unit> Write(IObservable<System.String> format, IObservable<System.Object> arg0, IObservable<System.Object> arg1, IObservable<System.Object> arg2)
+        public static IObservable<System.Reactive.Unit> Write(IObservable<System.String> format,
+            IObservable<System.Object> arg0, IObservable<System.Object> arg1, IObservable<System.Object> arg2)
         {
-            return ObservableExt.ZipExecute(format, arg0, arg1, arg2, (formatLambda, arg0Lambda, arg1Lambda, arg2Lambda) => System.Console.Write(formatLambda, arg0Lambda, arg1Lambda, arg2Lambda));
+            return ObservableExt.ZipExecute(format, arg0, arg1, arg2,
+                (formatLambda, arg0Lambda, arg1Lambda, arg2Lambda) =>
+                    System.Console.Write(formatLambda, arg0Lambda, arg1Lambda, arg2Lambda));
         }
 
 
-        public static IObservable<System.Reactive.Unit> Write(IObservable<System.String> format, IObservable<System.Object> arg0, IObservable<System.Object> arg1, IObservable<System.Object> arg2, IObservable<System.Object> arg3)
+        public static IObservable<System.Reactive.Unit> Write(IObservable<System.String> format,
+            IObservable<System.Object> arg0, IObservable<System.Object> arg1, IObservable<System.Object> arg2,
+            IObservable<System.Object> arg3)
         {
-            return ObservableExt.ZipExecute(format, arg0, arg1, arg2, arg3, (formatLambda, arg0Lambda, arg1Lambda, arg2Lambda, arg3Lambda) => System.Console.Write(formatLambda, arg0Lambda, arg1Lambda, arg2Lambda, arg3Lambda));
+            return ObservableExt.ZipExecute(format, arg0, arg1, arg2, arg3,
+                (formatLambda, arg0Lambda, arg1Lambda, arg2Lambda, arg3Lambda) =>
+                    System.Console.Write(formatLambda, arg0Lambda, arg1Lambda, arg2Lambda, arg3Lambda));
         }
 
 
-        public static IObservable<System.Reactive.Unit> Write(IObservable<System.String> format, IObservable<System.Object[]> arg)
+        public static IObservable<System.Reactive.Unit> Write(IObservable<System.String> format,
+            IObservable<System.Object[]> arg)
         {
-            return ObservableExt.ZipExecute(format, arg, (formatLambda, argLambda) => System.Console.Write(formatLambda, argLambda));
+            return ObservableExt.ZipExecute(format, arg,
+                (formatLambda, argLambda) => System.Console.Write(formatLambda, argLambda));
         }
 
 
@@ -309,9 +367,11 @@ namespace System
         }
 
 
-        public static IObservable<System.Reactive.Unit> Write(IObservable<System.Char[]> buffer, IObservable<System.Int32> index, IObservable<System.Int32> count)
+        public static IObservable<System.Reactive.Unit> Write(IObservable<System.Char[]> buffer,
+            IObservable<System.Int32> index, IObservable<System.Int32> count)
         {
-            return ObservableExt.ZipExecute(buffer, index, count, (bufferLambda, indexLambda, countLambda) => System.Console.Write(bufferLambda, indexLambda, countLambda));
+            return ObservableExt.ZipExecute(buffer, index, count,
+                (bufferLambda, indexLambda, countLambda) => System.Console.Write(bufferLambda, indexLambda, countLambda));
         }
 
 
@@ -625,6 +685,5 @@ namespace System
         {
             return Observable.Do(value, (valueLambda) => System.Console.TreatControlCAsInput = valueLambda).ToUnit();
         }
-
     }
 }

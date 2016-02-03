@@ -8,7 +8,6 @@ namespace System
 {
     public static class __Lazy1
     {
-        
         public static IObservable<System.String> ToString<T>(this IObservable<System.Lazy<T>> LazyValue)
         {
             return Observable.Select(LazyValue, (LazyValueLambda) => LazyValueLambda.ToString());
@@ -25,6 +24,5 @@ namespace System
         {
             return Observable.Select(LazyValue, (LazyValueLambda) => LazyValueLambda.Value);
         }
-
     }
 }

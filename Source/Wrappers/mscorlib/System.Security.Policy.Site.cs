@@ -8,20 +8,23 @@ namespace System.Security.Policy
 {
     public static class __Site
     {
-        
         public static IObservable<System.Security.Policy.Site> CreateFromUrl(IObservable<System.String> url)
         {
             return Observable.Select(url, (urlLambda) => System.Security.Policy.Site.CreateFromUrl(urlLambda));
         }
 
 
-        public static IObservable<System.Security.IPermission> CreateIdentityPermission(this IObservable<System.Security.Policy.Site> SiteValue, IObservable<System.Security.Policy.Evidence> evidence)
+        public static IObservable<System.Security.IPermission> CreateIdentityPermission(
+            this IObservable<System.Security.Policy.Site> SiteValue,
+            IObservable<System.Security.Policy.Evidence> evidence)
         {
-            return Observable.Zip(SiteValue, evidence, (SiteValueLambda, evidenceLambda) => SiteValueLambda.CreateIdentityPermission(evidenceLambda));
+            return Observable.Zip(SiteValue, evidence,
+                (SiteValueLambda, evidenceLambda) => SiteValueLambda.CreateIdentityPermission(evidenceLambda));
         }
 
 
-        public static IObservable<System.Boolean> Equals(this IObservable<System.Security.Policy.Site> SiteValue, IObservable<System.Object> o)
+        public static IObservable<System.Boolean> Equals(this IObservable<System.Security.Policy.Site> SiteValue,
+            IObservable<System.Object> o)
         {
             return Observable.Zip(SiteValue, o, (SiteValueLambda, oLambda) => SiteValueLambda.Equals(oLambda));
         }
@@ -33,7 +36,8 @@ namespace System.Security.Policy
         }
 
 
-        public static IObservable<System.Security.Policy.EvidenceBase> Clone(this IObservable<System.Security.Policy.Site> SiteValue)
+        public static IObservable<System.Security.Policy.EvidenceBase> Clone(
+            this IObservable<System.Security.Policy.Site> SiteValue)
         {
             return Observable.Select(SiteValue, (SiteValueLambda) => SiteValueLambda.Clone());
         }
@@ -55,6 +59,5 @@ namespace System.Security.Policy
         {
             return Observable.Select(SiteValue, (SiteValueLambda) => SiteValueLambda.Name);
         }
-
     }
 }

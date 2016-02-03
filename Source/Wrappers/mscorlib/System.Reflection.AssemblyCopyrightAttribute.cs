@@ -8,11 +8,11 @@ namespace System.Reflection
 {
     public static class __AssemblyCopyrightAttribute
     {
-        
-        public static IObservable<System.String> get_Copyright(this IObservable<System.Reflection.AssemblyCopyrightAttribute> AssemblyCopyrightAttributeValue)
+        public static IObservable<System.String> get_Copyright(
+            this IObservable<System.Reflection.AssemblyCopyrightAttribute> AssemblyCopyrightAttributeValue)
         {
-            return Observable.Select(AssemblyCopyrightAttributeValue, (AssemblyCopyrightAttributeValueLambda) => AssemblyCopyrightAttributeValueLambda.Copyright);
+            return Observable.Select(AssemblyCopyrightAttributeValue,
+                (AssemblyCopyrightAttributeValueLambda) => AssemblyCopyrightAttributeValueLambda.Copyright);
         }
-
     }
 }

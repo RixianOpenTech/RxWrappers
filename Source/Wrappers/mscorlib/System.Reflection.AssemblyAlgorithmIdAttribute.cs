@@ -8,11 +8,11 @@ namespace System.Reflection
 {
     public static class __AssemblyAlgorithmIdAttribute
     {
-        
-        public static IObservable<System.UInt32> get_AlgorithmId(this IObservable<System.Reflection.AssemblyAlgorithmIdAttribute> AssemblyAlgorithmIdAttributeValue)
+        public static IObservable<System.UInt32> get_AlgorithmId(
+            this IObservable<System.Reflection.AssemblyAlgorithmIdAttribute> AssemblyAlgorithmIdAttributeValue)
         {
-            return Observable.Select(AssemblyAlgorithmIdAttributeValue, (AssemblyAlgorithmIdAttributeValueLambda) => AssemblyAlgorithmIdAttributeValueLambda.AlgorithmId);
+            return Observable.Select(AssemblyAlgorithmIdAttributeValue,
+                (AssemblyAlgorithmIdAttributeValueLambda) => AssemblyAlgorithmIdAttributeValueLambda.AlgorithmId);
         }
-
     }
 }

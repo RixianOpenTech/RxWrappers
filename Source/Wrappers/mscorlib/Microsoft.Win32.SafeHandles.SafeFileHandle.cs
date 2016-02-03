@@ -8,6 +8,5 @@ namespace Microsoft.Win32.SafeHandles
 {
     public static class __SafeFileHandle
     {
-        
     }
 }

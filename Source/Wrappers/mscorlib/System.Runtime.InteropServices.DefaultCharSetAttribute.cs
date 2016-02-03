@@ -8,11 +8,11 @@ namespace System.Runtime.InteropServices
 {
     public static class __DefaultCharSetAttribute
     {
-        
-        public static IObservable<System.Runtime.InteropServices.CharSet> get_CharSet(this IObservable<System.Runtime.InteropServices.DefaultCharSetAttribute> DefaultCharSetAttributeValue)
+        public static IObservable<System.Runtime.InteropServices.CharSet> get_CharSet(
+            this IObservable<System.Runtime.InteropServices.DefaultCharSetAttribute> DefaultCharSetAttributeValue)
         {
-            return Observable.Select(DefaultCharSetAttributeValue, (DefaultCharSetAttributeValueLambda) => DefaultCharSetAttributeValueLambda.CharSet);
+            return Observable.Select(DefaultCharSetAttributeValue,
+                (DefaultCharSetAttributeValueLambda) => DefaultCharSetAttributeValueLambda.CharSet);
         }
-
     }
 }

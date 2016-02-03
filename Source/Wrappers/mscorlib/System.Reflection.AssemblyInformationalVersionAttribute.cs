@@ -8,11 +8,13 @@ namespace System.Reflection
 {
     public static class __AssemblyInformationalVersionAttribute
     {
-        
-        public static IObservable<System.String> get_InformationalVersion(this IObservable<System.Reflection.AssemblyInformationalVersionAttribute> AssemblyInformationalVersionAttributeValue)
+        public static IObservable<System.String> get_InformationalVersion(
+            this IObservable<System.Reflection.AssemblyInformationalVersionAttribute>
+                AssemblyInformationalVersionAttributeValue)
         {
-            return Observable.Select(AssemblyInformationalVersionAttributeValue, (AssemblyInformationalVersionAttributeValueLambda) => AssemblyInformationalVersionAttributeValueLambda.InformationalVersion);
+            return Observable.Select(AssemblyInformationalVersionAttributeValue,
+                (AssemblyInformationalVersionAttributeValueLambda) =>
+                    AssemblyInformationalVersionAttributeValueLambda.InformationalVersion);
         }
-
     }
 }

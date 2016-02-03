@@ -8,10 +8,11 @@ namespace System.IO
 {
     public static class __Path
     {
-        
-        public static IObservable<System.String> ChangeExtension(IObservable<System.String> path, IObservable<System.String> extension)
+        public static IObservable<System.String> ChangeExtension(IObservable<System.String> path,
+            IObservable<System.String> extension)
         {
-            return Observable.Zip(path, extension, (pathLambda, extensionLambda) => System.IO.Path.ChangeExtension(pathLambda, extensionLambda));
+            return Observable.Zip(path, extension,
+                (pathLambda, extensionLambda) => System.IO.Path.ChangeExtension(pathLambda, extensionLambda));
         }
 
 
@@ -93,21 +94,28 @@ namespace System.IO
         }
 
 
-        public static IObservable<System.String> Combine(IObservable<System.String> path1, IObservable<System.String> path2)
+        public static IObservable<System.String> Combine(IObservable<System.String> path1,
+            IObservable<System.String> path2)
         {
-            return Observable.Zip(path1, path2, (path1Lambda, path2Lambda) => System.IO.Path.Combine(path1Lambda, path2Lambda));
+            return Observable.Zip(path1, path2,
+                (path1Lambda, path2Lambda) => System.IO.Path.Combine(path1Lambda, path2Lambda));
         }
 
 
-        public static IObservable<System.String> Combine(IObservable<System.String> path1, IObservable<System.String> path2, IObservable<System.String> path3)
+        public static IObservable<System.String> Combine(IObservable<System.String> path1,
+            IObservable<System.String> path2, IObservable<System.String> path3)
         {
-            return Observable.Zip(path1, path2, path3, (path1Lambda, path2Lambda, path3Lambda) => System.IO.Path.Combine(path1Lambda, path2Lambda, path3Lambda));
+            return Observable.Zip(path1, path2, path3,
+                (path1Lambda, path2Lambda, path3Lambda) => System.IO.Path.Combine(path1Lambda, path2Lambda, path3Lambda));
         }
 
 
-        public static IObservable<System.String> Combine(IObservable<System.String> path1, IObservable<System.String> path2, IObservable<System.String> path3, IObservable<System.String> path4)
+        public static IObservable<System.String> Combine(IObservable<System.String> path1,
+            IObservable<System.String> path2, IObservable<System.String> path3, IObservable<System.String> path4)
         {
-            return Observable.Zip(path1, path2, path3, path4, (path1Lambda, path2Lambda, path3Lambda, path4Lambda) => System.IO.Path.Combine(path1Lambda, path2Lambda, path3Lambda, path4Lambda));
+            return Observable.Zip(path1, path2, path3, path4,
+                (path1Lambda, path2Lambda, path3Lambda, path4Lambda) =>
+                    System.IO.Path.Combine(path1Lambda, path2Lambda, path3Lambda, path4Lambda));
         }
 
 
@@ -115,6 +123,5 @@ namespace System.IO
         {
             return Observable.Select(paths, (pathsLambda) => System.IO.Path.Combine(pathsLambda));
         }
-
     }
 }

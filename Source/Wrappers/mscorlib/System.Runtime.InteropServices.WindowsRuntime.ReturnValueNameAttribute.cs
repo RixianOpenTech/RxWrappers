@@ -8,11 +8,12 @@ namespace System.Runtime.InteropServices.WindowsRuntime
 {
     public static class __ReturnValueNameAttribute
     {
-        
-        public static IObservable<System.String> get_Name(this IObservable<System.Runtime.InteropServices.WindowsRuntime.ReturnValueNameAttribute> ReturnValueNameAttributeValue)
+        public static IObservable<System.String> get_Name(
+            this IObservable<System.Runtime.InteropServices.WindowsRuntime.ReturnValueNameAttribute>
+                ReturnValueNameAttributeValue)
         {
-            return Observable.Select(ReturnValueNameAttributeValue, (ReturnValueNameAttributeValueLambda) => ReturnValueNameAttributeValueLambda.Name);
+            return Observable.Select(ReturnValueNameAttributeValue,
+                (ReturnValueNameAttributeValueLambda) => ReturnValueNameAttributeValueLambda.Name);
         }
-
     }
 }

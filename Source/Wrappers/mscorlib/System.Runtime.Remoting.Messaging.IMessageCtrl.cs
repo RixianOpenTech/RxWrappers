@@ -8,11 +8,12 @@ namespace System.Runtime.Remoting.Messaging
 {
     public static class __IMessageCtrl
     {
-        
-        public static IObservable<System.Reactive.Unit> Cancel(this IObservable<System.Runtime.Remoting.Messaging.IMessageCtrl> IMessageCtrlValue, IObservable<System.Int32> msToCancel)
+        public static IObservable<System.Reactive.Unit> Cancel(
+            this IObservable<System.Runtime.Remoting.Messaging.IMessageCtrl> IMessageCtrlValue,
+            IObservable<System.Int32> msToCancel)
         {
-            return ObservableExt.ZipExecute(IMessageCtrlValue, msToCancel, (IMessageCtrlValueLambda, msToCancelLambda) => IMessageCtrlValueLambda.Cancel(msToCancelLambda));
+            return ObservableExt.ZipExecute(IMessageCtrlValue, msToCancel,
+                (IMessageCtrlValueLambda, msToCancelLambda) => IMessageCtrlValueLambda.Cancel(msToCancelLambda));
         }
-
     }
 }

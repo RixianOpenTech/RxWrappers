@@ -8,7 +8,6 @@ namespace System
 {
     public static class __Environment
     {
-        
         public static IObservable<System.Reactive.Unit> Exit(IObservable<System.Int32> exitCode)
         {
             return Observable.Do(exitCode, (exitCodeLambda) => System.Environment.Exit(exitCodeLambda)).ToUnit();
@@ -21,9 +20,11 @@ namespace System
         }
 
 
-        public static IObservable<System.Reactive.Unit> FailFast(IObservable<System.String> message, IObservable<System.Exception> exception)
+        public static IObservable<System.Reactive.Unit> FailFast(IObservable<System.String> message,
+            IObservable<System.Exception> exception)
         {
-            return ObservableExt.ZipExecute(message, exception, (messageLambda, exceptionLambda) => System.Environment.FailFast(messageLambda, exceptionLambda));
+            return ObservableExt.ZipExecute(message, exception,
+                (messageLambda, exceptionLambda) => System.Environment.FailFast(messageLambda, exceptionLambda));
         }
 
 
@@ -41,13 +42,17 @@ namespace System
 
         public static IObservable<System.String> GetEnvironmentVariable(IObservable<System.String> variable)
         {
-            return Observable.Select(variable, (variableLambda) => System.Environment.GetEnvironmentVariable(variableLambda));
+            return Observable.Select(variable,
+                (variableLambda) => System.Environment.GetEnvironmentVariable(variableLambda));
         }
 
 
-        public static IObservable<System.String> GetEnvironmentVariable(IObservable<System.String> variable, IObservable<System.EnvironmentVariableTarget> target)
+        public static IObservable<System.String> GetEnvironmentVariable(IObservable<System.String> variable,
+            IObservable<System.EnvironmentVariableTarget> target)
         {
-            return Observable.Zip(variable, target, (variableLambda, targetLambda) => System.Environment.GetEnvironmentVariable(variableLambda, targetLambda));
+            return Observable.Zip(variable, target,
+                (variableLambda, targetLambda) =>
+                    System.Environment.GetEnvironmentVariable(variableLambda, targetLambda));
         }
 
 
@@ -57,21 +62,27 @@ namespace System
         }
 
 
-        public static IObservable<System.Collections.IDictionary> GetEnvironmentVariables(IObservable<System.EnvironmentVariableTarget> target)
+        public static IObservable<System.Collections.IDictionary> GetEnvironmentVariables(
+            IObservable<System.EnvironmentVariableTarget> target)
         {
             return Observable.Select(target, (targetLambda) => System.Environment.GetEnvironmentVariables(targetLambda));
         }
 
 
-        public static IObservable<System.Reactive.Unit> SetEnvironmentVariable(IObservable<System.String> variable, IObservable<System.String> value)
+        public static IObservable<System.Reactive.Unit> SetEnvironmentVariable(IObservable<System.String> variable,
+            IObservable<System.String> value)
         {
-            return ObservableExt.ZipExecute(variable, value, (variableLambda, valueLambda) => System.Environment.SetEnvironmentVariable(variableLambda, valueLambda));
+            return ObservableExt.ZipExecute(variable, value,
+                (variableLambda, valueLambda) => System.Environment.SetEnvironmentVariable(variableLambda, valueLambda));
         }
 
 
-        public static IObservable<System.Reactive.Unit> SetEnvironmentVariable(IObservable<System.String> variable, IObservable<System.String> value, IObservable<System.EnvironmentVariableTarget> target)
+        public static IObservable<System.Reactive.Unit> SetEnvironmentVariable(IObservable<System.String> variable,
+            IObservable<System.String> value, IObservable<System.EnvironmentVariableTarget> target)
         {
-            return ObservableExt.ZipExecute(variable, value, target, (variableLambda, valueLambda, targetLambda) => System.Environment.SetEnvironmentVariable(variableLambda, valueLambda, targetLambda));
+            return ObservableExt.ZipExecute(variable, value, target,
+                (variableLambda, valueLambda, targetLambda) =>
+                    System.Environment.SetEnvironmentVariable(variableLambda, valueLambda, targetLambda));
         }
 
 
@@ -87,9 +98,11 @@ namespace System
         }
 
 
-        public static IObservable<System.String> GetFolderPath(IObservable<System.Environment.SpecialFolder> folder, IObservable<System.Environment.SpecialFolderOption> option)
+        public static IObservable<System.String> GetFolderPath(IObservable<System.Environment.SpecialFolder> folder,
+            IObservable<System.Environment.SpecialFolderOption> option)
         {
-            return Observable.Zip(folder, option, (folderLambda, optionLambda) => System.Environment.GetFolderPath(folderLambda, optionLambda));
+            return Observable.Zip(folder, option,
+                (folderLambda, optionLambda) => System.Environment.GetFolderPath(folderLambda, optionLambda));
         }
 
 
@@ -223,6 +236,5 @@ namespace System
         {
             return Observable.Do(value, (valueLambda) => System.Environment.CurrentDirectory = valueLambda).ToUnit();
         }
-
     }
 }

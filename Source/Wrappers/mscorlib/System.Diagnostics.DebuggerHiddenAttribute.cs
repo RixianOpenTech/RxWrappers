@@ -8,6 +8,5 @@ namespace System.Diagnostics
 {
     public static class __DebuggerHiddenAttribute
     {
-        
     }
 }

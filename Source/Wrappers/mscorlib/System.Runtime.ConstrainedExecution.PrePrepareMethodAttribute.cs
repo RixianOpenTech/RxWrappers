@@ -8,6 +8,5 @@ namespace System.Runtime.ConstrainedExecution
 {
     public static class __PrePrepareMethodAttribute
     {
-        
     }
 }

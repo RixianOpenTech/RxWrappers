@@ -8,11 +8,11 @@ namespace System.Runtime.CompilerServices
 {
     public static class __IUnknownConstantAttribute
     {
-        
-        public static IObservable<System.Object> get_Value(this IObservable<System.Runtime.CompilerServices.IUnknownConstantAttribute> IUnknownConstantAttributeValue)
+        public static IObservable<System.Object> get_Value(
+            this IObservable<System.Runtime.CompilerServices.IUnknownConstantAttribute> IUnknownConstantAttributeValue)
         {
-            return Observable.Select(IUnknownConstantAttributeValue, (IUnknownConstantAttributeValueLambda) => IUnknownConstantAttributeValueLambda.Value);
+            return Observable.Select(IUnknownConstantAttributeValue,
+                (IUnknownConstantAttributeValueLambda) => IUnknownConstantAttributeValueLambda.Value);
         }
-
     }
 }
