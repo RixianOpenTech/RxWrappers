@@ -1,0 +1,224 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{EDBD1277-8CC7-4939-8BB3-93B27607D5C9}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Microsoft.Net.Http</RootNamespace>
+    <AssemblyName>Microsoft.Net.Http</AssemblyName>
+    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MS.Core, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\MS.Core.1.0.0-alpha-160127170347\lib\net452\MS.Core.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Net.Http.Extensions, Version=2.2.29.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\Microsoft.Net.Http.2.2.29\lib\net45\System.Net.Http.Extensions.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Net.Http.Primitives, Version=4.2.29.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\Microsoft.Net.Http.2.2.29\lib\net45\System.Net.Http.Primitives.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest" />
+    <Reference Include="System.Reactive.Core, Version=2.2.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\Rx-Core.2.2.5\lib\net45\System.Reactive.Core.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Reactive.Interfaces, Version=2.2.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\Rx-Interfaces.2.2.5\lib\net45\System.Reactive.Interfaces.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Reactive.Linq, Version=2.2.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\Rx-Linq.2.2.5\lib\net45\System.Reactive.Linq.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\..\..\Wrappers\Microsoft.Net.Http\System.Net.Http.ByteArrayContent.cs">
+      <Link>System.Net.Http.ByteArrayContent.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Wrappers\Microsoft.Net.Http\System.Net.Http.ClientCertificateOption.cs">
+      <Link>System.Net.Http.ClientCertificateOption.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Wrappers\Microsoft.Net.Http\System.Net.Http.DelegatingHandler.cs">
+      <Link>System.Net.Http.DelegatingHandler.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Wrappers\Microsoft.Net.Http\System.Net.Http.FormUrlEncodedContent.cs">
+      <Link>System.Net.Http.FormUrlEncodedContent.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Wrappers\Microsoft.Net.Http\System.Net.Http.Headers.AuthenticationHeaderValue.cs">
+      <Link>System.Net.Http.Headers.AuthenticationHeaderValue.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Wrappers\Microsoft.Net.Http\System.Net.Http.Headers.CacheControlHeaderValue.cs">
+      <Link>System.Net.Http.Headers.CacheControlHeaderValue.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Wrappers\Microsoft.Net.Http\System.Net.Http.Headers.ContentDispositionHeaderValue.cs">
+      <Link>System.Net.Http.Headers.ContentDispositionHeaderValue.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Wrappers\Microsoft.Net.Http\System.Net.Http.Headers.ContentRangeHeaderValue.cs">
+      <Link>System.Net.Http.Headers.ContentRangeHeaderValue.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Wrappers\Microsoft.Net.Http\System.Net.Http.Headers.EntityTagHeaderValue.cs">
+      <Link>System.Net.Http.Headers.EntityTagHeaderValue.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Wrappers\Microsoft.Net.Http\System.Net.Http.Headers.HttpContentHeaders.cs">
+      <Link>System.Net.Http.Headers.HttpContentHeaders.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Wrappers\Microsoft.Net.Http\System.Net.Http.Headers.HttpHeaders.cs">
+      <Link>System.Net.Http.Headers.HttpHeaders.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Wrappers\Microsoft.Net.Http\System.Net.Http.Headers.HttpHeaderValueCollection1.cs">
+      <Link>System.Net.Http.Headers.HttpHeaderValueCollection1.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Wrappers\Microsoft.Net.Http\System.Net.Http.Headers.HttpRequestHeaders.cs">
+      <Link>System.Net.Http.Headers.HttpRequestHeaders.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Wrappers\Microsoft.Net.Http\System.Net.Http.Headers.HttpResponseHeaders.cs">
+      <Link>System.Net.Http.Headers.HttpResponseHeaders.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Wrappers\Microsoft.Net.Http\System.Net.Http.Headers.MediaTypeHeaderValue.cs">
+      <Link>System.Net.Http.Headers.MediaTypeHeaderValue.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Wrappers\Microsoft.Net.Http\System.Net.Http.Headers.MediaTypeWithQualityHeaderValue.cs">
+      <Link>System.Net.Http.Headers.MediaTypeWithQualityHeaderValue.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Wrappers\Microsoft.Net.Http\System.Net.Http.Headers.NameValueHeaderValue.cs">
+      <Link>System.Net.Http.Headers.NameValueHeaderValue.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Wrappers\Microsoft.Net.Http\System.Net.Http.Headers.NameValueWithParametersHeaderValue.cs">
+      <Link>System.Net.Http.Headers.NameValueWithParametersHeaderValue.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Wrappers\Microsoft.Net.Http\System.Net.Http.Headers.ProductHeaderValue.cs">
+      <Link>System.Net.Http.Headers.ProductHeaderValue.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Wrappers\Microsoft.Net.Http\System.Net.Http.Headers.ProductInfoHeaderValue.cs">
+      <Link>System.Net.Http.Headers.ProductInfoHeaderValue.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Wrappers\Microsoft.Net.Http\System.Net.Http.Headers.RangeConditionHeaderValue.cs">
+      <Link>System.Net.Http.Headers.RangeConditionHeaderValue.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Wrappers\Microsoft.Net.Http\System.Net.Http.Headers.RangeHeaderValue.cs">
+      <Link>System.Net.Http.Headers.RangeHeaderValue.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Wrappers\Microsoft.Net.Http\System.Net.Http.Headers.RangeItemHeaderValue.cs">
+      <Link>System.Net.Http.Headers.RangeItemHeaderValue.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Wrappers\Microsoft.Net.Http\System.Net.Http.Headers.RetryConditionHeaderValue.cs">
+      <Link>System.Net.Http.Headers.RetryConditionHeaderValue.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Wrappers\Microsoft.Net.Http\System.Net.Http.Headers.StringWithQualityHeaderValue.cs">
+      <Link>System.Net.Http.Headers.StringWithQualityHeaderValue.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Wrappers\Microsoft.Net.Http\System.Net.Http.Headers.TransferCodingHeaderValue.cs">
+      <Link>System.Net.Http.Headers.TransferCodingHeaderValue.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Wrappers\Microsoft.Net.Http\System.Net.Http.Headers.TransferCodingWithQualityHeaderValue.cs">
+      <Link>System.Net.Http.Headers.TransferCodingWithQualityHeaderValue.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Wrappers\Microsoft.Net.Http\System.Net.Http.Headers.ViaHeaderValue.cs">
+      <Link>System.Net.Http.Headers.ViaHeaderValue.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Wrappers\Microsoft.Net.Http\System.Net.Http.Headers.WarningHeaderValue.cs">
+      <Link>System.Net.Http.Headers.WarningHeaderValue.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Wrappers\Microsoft.Net.Http\System.Net.Http.HttpClient.cs">
+      <Link>System.Net.Http.HttpClient.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Wrappers\Microsoft.Net.Http\System.Net.Http.HttpClientHandler.cs">
+      <Link>System.Net.Http.HttpClientHandler.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Wrappers\Microsoft.Net.Http\System.Net.Http.HttpClientHandlerExtensions.cs">
+      <Link>System.Net.Http.HttpClientHandlerExtensions.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Wrappers\Microsoft.Net.Http\System.Net.Http.HttpCompletionOption.cs">
+      <Link>System.Net.Http.HttpCompletionOption.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Wrappers\Microsoft.Net.Http\System.Net.Http.HttpContent.cs">
+      <Link>System.Net.Http.HttpContent.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Wrappers\Microsoft.Net.Http\System.Net.Http.HttpMessageHandler.cs">
+      <Link>System.Net.Http.HttpMessageHandler.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Wrappers\Microsoft.Net.Http\System.Net.Http.HttpMessageInvoker.cs">
+      <Link>System.Net.Http.HttpMessageInvoker.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Wrappers\Microsoft.Net.Http\System.Net.Http.HttpMethod.cs">
+      <Link>System.Net.Http.HttpMethod.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Wrappers\Microsoft.Net.Http\System.Net.Http.HttpRequestException.cs">
+      <Link>System.Net.Http.HttpRequestException.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Wrappers\Microsoft.Net.Http\System.Net.Http.HttpRequestMessage.cs">
+      <Link>System.Net.Http.HttpRequestMessage.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Wrappers\Microsoft.Net.Http\System.Net.Http.HttpResponseMessage.cs">
+      <Link>System.Net.Http.HttpResponseMessage.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Wrappers\Microsoft.Net.Http\System.Net.Http.MessageProcessingHandler.cs">
+      <Link>System.Net.Http.MessageProcessingHandler.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Wrappers\Microsoft.Net.Http\System.Net.Http.MultipartContent.cs">
+      <Link>System.Net.Http.MultipartContent.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Wrappers\Microsoft.Net.Http\System.Net.Http.MultipartFormDataContent.cs">
+      <Link>System.Net.Http.MultipartFormDataContent.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Wrappers\Microsoft.Net.Http\System.Net.Http.StreamContent.cs">
+      <Link>System.Net.Http.StreamContent.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Wrappers\Microsoft.Net.Http\System.Net.Http.StringContent.cs">
+      <Link>System.Net.Http.StringContent.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Wrappers\Microsoft.Net.Http\System.Net.Http.WebRequestHandler.cs">
+      <Link>System.Net.Http.WebRequestHandler.cs</Link>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="..\..\..\packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets" Condition="Exists('..\..\..\packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets')" />
+  <Target Name="EnsureBclBuildImported" BeforeTargets="BeforeBuild" Condition="'$(BclBuildImported)' == ''">
+    <Error Condition="!Exists('..\..\..\packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets')" Text="This project references NuGet package(s) that are missing on this computer. Enable NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=317567." HelpKeyword="BCLBUILD2001" />
+    <Error Condition="Exists('..\..\..\packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets')" Text="The build restored NuGet packages. Build the project again to include these packages in the build. For more information, see http://go.microsoft.com/fwlink/?LinkID=317568." HelpKeyword="BCLBUILD2002" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
