@@ -7,6 +7,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Net46", "Net46", "{D5BA642C
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "mscorlib.Rx", "Libraries\Net46\mscorlib.Rx\mscorlib.Rx.csproj", "{5834919F-D2CB-4AD5-B876-2706F83F7078}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Newtonsoft.Json.Rx", "Libraries\Net46\Newtonsoft.Json.Rx\Newtonsoft.Json.Rx.csproj", "{2D196812-7168-423C-9617-9F7F87085121}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -17,11 +19,16 @@ Global
 		{5834919F-D2CB-4AD5-B876-2706F83F7078}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5834919F-D2CB-4AD5-B876-2706F83F7078}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5834919F-D2CB-4AD5-B876-2706F83F7078}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2D196812-7168-423C-9617-9F7F87085121}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2D196812-7168-423C-9617-9F7F87085121}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2D196812-7168-423C-9617-9F7F87085121}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2D196812-7168-423C-9617-9F7F87085121}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{5834919F-D2CB-4AD5-B876-2706F83F7078} = {D5BA642C-F5F5-4877-8149-EBEC9752ACF8}
+		{2D196812-7168-423C-9617-9F7F87085121} = {D5BA642C-F5F5-4877-8149-EBEC9752ACF8}
 	EndGlobalSection
 EndGlobal
