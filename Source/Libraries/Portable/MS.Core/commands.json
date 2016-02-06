@@ -1,0 +1,19 @@
+{
+  "commands": {
+    "UpdateNuGetPackages": {
+      "fileName": "powershell.exe",
+      "workingDirectory": ".",
+      "arguments": "-ExecutionPolicy Bypass -File UpdateNuGetPackages.ps1"
+    },
+    "PushNuGetPackages": {
+      "fileName": "powershell.exe",
+      "workingDirectory": ".",
+      "arguments": "-ExecutionPolicy Bypass -File PushNuGetPackages.ps1"
+    },
+    "DeleteNuGetPackages": {
+      "fileName": "powershell.exe",
+      "workingDirectory": ".",
+      "arguments": "-ExecutionPolicy Bypass -File DeleteNuGetPackages.ps1"
+    }
+  }
+}

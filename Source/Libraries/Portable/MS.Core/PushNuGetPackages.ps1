@@ -1,0 +1,1 @@
+﻿.nuget\nuget.exe push NuGet\**\*.nupkg 44d42bfa-e8b1-4eff-823c-7a27ef2f28a2 -source https://www.myget.org/F/rixian/api/v2/package

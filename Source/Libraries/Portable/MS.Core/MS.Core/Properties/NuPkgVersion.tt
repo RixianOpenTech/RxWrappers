@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<#@template language="C#" #>
+<#@output extension=".targets"#>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <VersionDependsOn>$(VersionDependsOn);GetNuPkgVersion</VersionDependsOn>
+  </PropertyGroup>
+  <Target Name="GetNuPkgVersion">
+    <PropertyGroup>
+      <Version>1.0.0-alpha-<#= this.prereleaseVersion #></Version>
+    </PropertyGroup> 
+  </Target>
+</Project>
+<#+
+readonly string prereleaseVersion = DateTime.UtcNow.ToString("yyMMddHHmmss");
+#>

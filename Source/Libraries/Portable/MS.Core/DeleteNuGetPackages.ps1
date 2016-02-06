@@ -1,0 +1,1 @@
+﻿Get-ChildItem .\NuGet -Recurse -Filter "*.nupkg" | Remove-Item

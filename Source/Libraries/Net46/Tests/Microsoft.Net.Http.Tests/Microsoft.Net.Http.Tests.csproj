@@ -35,10 +35,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="MS.Core, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\..\..\packages\MS.Core.1.0.0-alpha-160127170347\lib\net452\MS.Core.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
     <Reference Include="Newtonsoft.Json, Version=8.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>..\..\..\..\packages\Newtonsoft.Json.8.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
       <Private>True</Private>
@@ -87,6 +83,10 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\..\Portable\MS.Core\MS.Core\MS.Core.csproj">
+      <Project>{38765ef8-fc9b-43a3-bbc9-875d4d98d709}</Project>
+      <Name>MS.Core</Name>
+    </ProjectReference>
     <ProjectReference Include="..\..\Microsoft.Net.Http\Microsoft.Net.Http.csproj">
       <Project>{edbd1277-8cc7-4939-8bb3-93b27607d5c9}</Project>
       <Name>Microsoft.Net.Http</Name>

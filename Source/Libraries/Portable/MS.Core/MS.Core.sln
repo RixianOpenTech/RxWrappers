@@ -1,0 +1,41 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.24720.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "External Scripts", "External Scripts", "{4EE024DA-E320-4F3B-AEB5-BFC834EABA37}"
+	ProjectSection(SolutionItems) = preProject
+		commands.json = commands.json
+		DeleteNuGetPackages.ps1 = DeleteNuGetPackages.ps1
+		PushNuGetPackages.ps1 = PushNuGetPackages.ps1
+		UpdateNuGetPackages.ps1 = UpdateNuGetPackages.ps1
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "NuGet", "NuGet", "{53E8C21C-2366-4E10-8DCC-09B0D51E7D71}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MS.Core", "MS.Core\MS.Core.csproj", "{38765EF8-FC9B-43A3-BBC9-875D4D98D709}"
+EndProject
+Project("{FF286327-C783-4F7A-AB73-9BCBAD0D4460}") = "MS.Core.NuGet", "NuGet\MS.Core.NuGet\MS.Core.NuGet.nuproj", "{55500E67-CE77-4C55-BADB-75A2A728CAB8}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{38765EF8-FC9B-43A3-BBC9-875D4D98D709}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{38765EF8-FC9B-43A3-BBC9-875D4D98D709}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{38765EF8-FC9B-43A3-BBC9-875D4D98D709}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{38765EF8-FC9B-43A3-BBC9-875D4D98D709}.Release|Any CPU.Build.0 = Release|Any CPU
+		{55500E67-CE77-4C55-BADB-75A2A728CAB8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{55500E67-CE77-4C55-BADB-75A2A728CAB8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{55500E67-CE77-4C55-BADB-75A2A728CAB8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{55500E67-CE77-4C55-BADB-75A2A728CAB8}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{55500E67-CE77-4C55-BADB-75A2A728CAB8} = {53E8C21C-2366-4E10-8DCC-09B0D51E7D71}
+	EndGlobalSection
+EndGlobal

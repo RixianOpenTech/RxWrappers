@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Net.Http;
 using System.Reactive.Linq;
 using System.Threading;
@@ -19,7 +20,8 @@ namespace Microsoft.Net.Http.Tests
             variable<string> url = "http://jsonplaceholder.typicode.com/users";
             variable<Formatting> formatting = Formatting.Indented;
             var result = client.GetStringAsync(url);
-            var deserialized = __JsonConvert.DeserializeObject<List<User>>(result);
+            var deserialized = __JsonConvert.DeserializeObject<IEnumerable<User>>(result);
+            deserialized = deserialized.Select(l => l.Where(u => u.ID % 2 == 0));
             await __Console.WriteLine(__JsonConvert.SerializeObject(deserialized, formatting));
         }
     }
