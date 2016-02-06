@@ -18,11 +18,11 @@ namespace Microsoft.Net.Http.Tests
         {
             variable<HttpClient> client = new HttpClient();
             variable<string> url = "http://jsonplaceholder.typicode.com/users";
-            variable<Formatting> formatting = Formatting.Indented;
             var result = client.GetStringAsync(url);
             var deserialized = __JsonConvert.DeserializeObject<IEnumerable<User>>(result);
-            deserialized = deserialized.Select(l => l.Where(u => u.ID % 2 == 0));
-            await __Console.WriteLine(__JsonConvert.SerializeObject(deserialized, formatting));
+            deserialized = deserialized.FirstAsync();
+            var serialized = __JsonConvert.SerializeObject(deserialized);
+            await __Console.WriteLine(serialized);
         }
     }
 
